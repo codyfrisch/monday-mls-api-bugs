@@ -1,0 +1,49 @@
+{
+  "file": "06-write-a-2026-04",
+  "case": "write",
+  "description": "Write A's own rollup cells",
+  "endpoint": "https://api.monday.com/v2",
+  "method": "POST",
+  "requestHeaders": {
+    "API-Version": "2026-04",
+    "Content-Type": "application/json"
+  },
+  "authorizationHeader": "sent; value not recorded",
+  "apiVersion": "2026-04",
+  "requestBody": "{\"query\":\"mutation ($b: ID!, $i: ID!, $v: JSON!) { change_multiple_column_values(board_id: $b, item_id: $i, column_values: $v) { id } }\",\"variables\":{\"b\":\"18436846804\",\"i\":\"13374271723\",\"v\":\"{\\\"numeric_mm8er9xg\\\":1000,\\\"numeric_mm8esxg1\\\":1,\\\"numeric_mm8e1qed\\\":999,\\\"numeric_mm8e1myd\\\":1000,\\\"date_mm8e937y\\\":{\\\"date\\\":\\\"2019-01-01\\\"},\\\"date_mm8es1zd\\\":{\\\"date\\\":\\\"2031-01-01\\\"},\\\"timerange_mkyvnykb\\\":{\\\"from\\\":\\\"2019-01-01\\\",\\\"to\\\":\\\"2031-01-01\\\"}}\"}}",
+  "query": "mutation ($b: ID!, $i: ID!, $v: JSON!) { change_multiple_column_values(board_id: $b, item_id: $i, column_values: $v) { id } }",
+  "variables": {
+    "b": "18436846804",
+    "i": "13374271723",
+    "v": "{\"numeric_mm8er9xg\":1000,\"numeric_mm8esxg1\":1,\"numeric_mm8e1qed\":999,\"numeric_mm8e1myd\":1000,\"date_mm8e937y\":{\"date\":\"2019-01-01\"},\"date_mm8es1zd\":{\"date\":\"2031-01-01\"},\"timerange_mkyvnykb\":{\"from\":\"2019-01-01\",\"to\":\"2031-01-01\"}}"
+  },
+  "startedAt": "2026-10-25T02:41:26.316Z",
+  "endedAt": "2026-10-25T02:41:27.150Z",
+  "durationMs": 834,
+  "status": 200,
+  "xRequestId": "9301c9c4-4f81-9799-bcb6-c418e7e95b9b",
+  "rateLimitHeaders": {
+    "ratelimit": "\"minuteRate\";r=3311, \"concurrency\";r=199, \"complexityMinute\";r=9669226;t=7",
+    "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\""
+  },
+  "responseHeaders": {
+    "api-version": "2026-04",
+    "content-type": "application/json; charset=utf-8",
+    "date": "Sun, 25 Oct 2026 02:41:27 GMT",
+    "ratelimit": "\"minuteRate\";r=3311, \"concurrency\";r=199, \"complexityMinute\";r=9669226;t=7",
+    "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\"",
+    "x-request-id": "9301c9c4-4f81-9799-bcb6-c418e7e95b9b"
+  },
+  "extensionsRequestId": "9301c9c4-4f81-9799-bcb6-c418e7e95b9b",
+  "responseBodyRaw": "{\"data\":{\"change_multiple_column_values\":{\"id\":\"13374271723\"}},\"extensions\":{\"request_id\":\"9301c9c4-4f81-9799-bcb6-c418e7e95b9b\"}}",
+  "responseBody": {
+    "data": {
+      "change_multiple_column_values": {
+        "id": "13374271723"
+      }
+    },
+    "extensions": {
+      "request_id": "9301c9c4-4f81-9799-bcb6-c418e7e95b9b"
+    }
+  }
+}

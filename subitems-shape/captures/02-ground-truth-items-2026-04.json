@@ -1,0 +1,188 @@
+{
+  "file": "02-ground-truth-items-2026-04",
+  "case": "ground-truth",
+  "description": "parent_item chains of every sandbox item, five hops",
+  "endpoint": "https://api.monday.com/v2",
+  "method": "POST",
+  "requestHeaders": {
+    "API-Version": "2026-04",
+    "Content-Type": "application/json"
+  },
+  "authorizationHeader": "sent; value not recorded",
+  "apiVersion": "2026-04",
+  "requestBody": "{\"query\":\"query ($ids: [ID!]) { items(ids: $ids) { id name board { id } parent_item { id parent_item { id parent_item { id parent_item { id parent_item { id } } } } } } }\",\"variables\":{\"ids\":[\"13374290733\",\"13374271723\",\"13374266669\",\"13374259848\",\"13374242116\",\"13374259917\",\"13374223931\",\"13374276846\",\"13374267172\",\"13374224094\",\"13377169129\"]}}",
+  "query": "query ($ids: [ID!]) { items(ids: $ids) { id name board { id } parent_item { id parent_item { id parent_item { id parent_item { id parent_item { id } } } } } } }",
+  "variables": {
+    "ids": [
+      "13374290733",
+      "13374271723",
+      "13374266669",
+      "13374259848",
+      "13374242116",
+      "13374259917",
+      "13374223931",
+      "13374276846",
+      "13374267172",
+      "13374224094",
+      "13377169129"
+    ]
+  },
+  "startedAt": "2026-10-25T02:29:24.505Z",
+  "endedAt": "2026-10-25T02:29:24.745Z",
+  "durationMs": 240,
+  "status": 200,
+  "xRequestId": "453aba00-15bc-914f-9137-db74d8db275d",
+  "rateLimitHeaders": {
+    "ratelimit": "\"minuteRate\";r=3332, \"concurrency\";r=199, \"complexityMinute\";r=9999480;t=58",
+    "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\""
+  },
+  "responseHeaders": {
+    "api-version": "2026-04",
+    "content-type": "application/json; charset=utf-8",
+    "date": "Sun, 25 Oct 2026 02:29:24 GMT",
+    "ratelimit": "\"minuteRate\";r=3332, \"concurrency\";r=199, \"complexityMinute\";r=9999480;t=58",
+    "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\"",
+    "x-request-id": "453aba00-15bc-914f-9137-db74d8db275d"
+  },
+  "extensionsRequestId": "453aba00-15bc-914f-9137-db74d8db275d",
+  "responseBodyRaw": "{\"data\":{\"items\":[{\"id\":\"13374223931\",\"name\":\"B (L2 leaf)\",\"board\":{\"id\":\"18436846804\"},\"parent_item\":{\"id\":\"13374290733\",\"parent_item\":null}},{\"id\":\"13374224094\",\"name\":\"R3c (empty leaf)\",\"board\":{\"id\":\"18436846804\"},\"parent_item\":{\"id\":\"13374267172\",\"parent_item\":null}},{\"id\":\"13374242116\",\"name\":\"A2x (L4)\",\"board\":{\"id\":\"18436846804\"},\"parent_item\":{\"id\":\"13374259848\",\"parent_item\":{\"id\":\"13374271723\",\"parent_item\":{\"id\":\"13374290733\",\"parent_item\":null}}}},{\"id\":\"13374259848\",\"name\":\"A2 (L3)\",\"board\":{\"id\":\"18436846804\"},\"parent_item\":{\"id\":\"13374271723\",\"parent_item\":{\"id\":\"13374290733\",\"parent_item\":null}}},{\"id\":\"13374259917\",\"name\":\"A2y (L5 leaf)\",\"board\":{\"id\":\"18436846804\"},\"parent_item\":{\"id\":\"13374242116\",\"parent_item\":{\"id\":\"13374259848\",\"parent_item\":{\"id\":\"13374271723\",\"parent_item\":{\"id\":\"13374290733\",\"parent_item\":null}}}}},{\"id\":\"13374266669\",\"name\":\"A1 (L3 leaf)\",\"board\":{\"id\":\"18436846804\"},\"parent_item\":{\"id\":\"13374271723\",\"parent_item\":{\"id\":\"13374290733\",\"parent_item\":null}}},{\"id\":\"13374267172\",\"name\":\"R3 empty-child root\",\"board\":{\"id\":\"18436846804\"},\"parent_item\":null},{\"id\":\"13374271723\",\"name\":\"A (L2)\",\"board\":{\"id\":\"18436846804\"},\"parent_item\":{\"id\":\"13374290733\",\"parent_item\":null}},{\"id\":\"13374276846\",\"name\":\"R2 leaf root\",\"board\":{\"id\":\"18436846804\"},\"parent_item\":null},{\"id\":\"13374290733\",\"name\":\"R1 root\",\"board\":{\"id\":\"18436846804\"},\"parent_item\":null},{\"id\":\"13377169129\",\"name\":\"DC deep-chain source\",\"board\":{\"id\":\"18436846804\"},\"parent_item\":null}]},\"extensions\":{\"request_id\":\"453aba00-15bc-914f-9137-db74d8db275d\"}}",
+  "responseBody": {
+    "data": {
+      "items": [
+        {
+          "id": "13374223931",
+          "name": "B (L2 leaf)",
+          "board": {
+            "id": "18436846804"
+          },
+          "parent_item": {
+            "id": "13374290733",
+            "parent_item": null
+          }
+        },
+        {
+          "id": "13374224094",
+          "name": "R3c (empty leaf)",
+          "board": {
+            "id": "18436846804"
+          },
+          "parent_item": {
+            "id": "13374267172",
+            "parent_item": null
+          }
+        },
+        {
+          "id": "13374242116",
+          "name": "A2x (L4)",
+          "board": {
+            "id": "18436846804"
+          },
+          "parent_item": {
+            "id": "13374259848",
+            "parent_item": {
+              "id": "13374271723",
+              "parent_item": {
+                "id": "13374290733",
+                "parent_item": null
+              }
+            }
+          }
+        },
+        {
+          "id": "13374259848",
+          "name": "A2 (L3)",
+          "board": {
+            "id": "18436846804"
+          },
+          "parent_item": {
+            "id": "13374271723",
+            "parent_item": {
+              "id": "13374290733",
+              "parent_item": null
+            }
+          }
+        },
+        {
+          "id": "13374259917",
+          "name": "A2y (L5 leaf)",
+          "board": {
+            "id": "18436846804"
+          },
+          "parent_item": {
+            "id": "13374242116",
+            "parent_item": {
+              "id": "13374259848",
+              "parent_item": {
+                "id": "13374271723",
+                "parent_item": {
+                  "id": "13374290733",
+                  "parent_item": null
+                }
+              }
+            }
+          }
+        },
+        {
+          "id": "13374266669",
+          "name": "A1 (L3 leaf)",
+          "board": {
+            "id": "18436846804"
+          },
+          "parent_item": {
+            "id": "13374271723",
+            "parent_item": {
+              "id": "13374290733",
+              "parent_item": null
+            }
+          }
+        },
+        {
+          "id": "13374267172",
+          "name": "R3 empty-child root",
+          "board": {
+            "id": "18436846804"
+          },
+          "parent_item": null
+        },
+        {
+          "id": "13374271723",
+          "name": "A (L2)",
+          "board": {
+            "id": "18436846804"
+          },
+          "parent_item": {
+            "id": "13374290733",
+            "parent_item": null
+          }
+        },
+        {
+          "id": "13374276846",
+          "name": "R2 leaf root",
+          "board": {
+            "id": "18436846804"
+          },
+          "parent_item": null
+        },
+        {
+          "id": "13374290733",
+          "name": "R1 root",
+          "board": {
+            "id": "18436846804"
+          },
+          "parent_item": null
+        },
+        {
+          "id": "13377169129",
+          "name": "DC deep-chain source",
+          "board": {
+            "id": "18436846804"
+          },
+          "parent_item": null
+        }
+      ]
+    },
+    "extensions": {
+      "request_id": "453aba00-15bc-914f-9137-db74d8db275d"
+    }
+  }
+}

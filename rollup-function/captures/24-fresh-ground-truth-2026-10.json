@@ -1,0 +1,726 @@
+{
+  "file": "24-fresh-ground-truth-2026-10",
+  "case": "ground-truth",
+  "description": "Every item: parent_item, values with is_leaf",
+  "endpoint": "https://api.monday.com/v2",
+  "method": "POST",
+  "requestHeaders": {
+    "API-Version": "2026-10",
+    "Content-Type": "application/json"
+  },
+  "authorizationHeader": "sent; value not recorded",
+  "apiVersion": "2026-10",
+  "requestBody": "{\"query\":\"query ($b: [ID!], $c: [String!]) { boards(ids: $b) { items_page(limit: 100, hierarchy_scope_config: \\\"allItems\\\") { items { id name parent_item { id } column_values(ids: $c, capabilities: [CALCULATED]) { id type text value is_leaf ... on NumbersValue { number } ... on DateValue { date } ... on TimelineValue { from to } } } } } }\",\"variables\":{\"b\":[\"18436908354\"],\"c\":[\"numeric_mm8fkv6k\",\"numeric_mm8f3jz3\",\"numeric_mm8f56kg\",\"numeric_mm8fbpj2\",\"date_mm8fftdz\",\"date_mm8fswrb\",\"date_mm8f2n8y\",\"timerange_mm8fcct0\"]}}",
+  "query": "query ($b: [ID!], $c: [String!]) { boards(ids: $b) { items_page(limit: 100, hierarchy_scope_config: \"allItems\") { items { id name parent_item { id } column_values(ids: $c, capabilities: [CALCULATED]) { id type text value is_leaf ... on NumbersValue { number } ... on DateValue { date } ... on TimelineValue { from to } } } } } }",
+  "variables": {
+    "b": [
+      "18436908354"
+    ],
+    "c": [
+      "numeric_mm8fkv6k",
+      "numeric_mm8f3jz3",
+      "numeric_mm8f56kg",
+      "numeric_mm8fbpj2",
+      "date_mm8fftdz",
+      "date_mm8fswrb",
+      "date_mm8f2n8y",
+      "timerange_mm8fcct0"
+    ]
+  },
+  "startedAt": "2026-10-25T02:43:18.152Z",
+  "endedAt": "2026-10-25T02:43:19.304Z",
+  "durationMs": 1152,
+  "status": 200,
+  "xRequestId": "d9e2efc6-83c6-91ec-ae34-4fcbef5de4fb",
+  "rateLimitHeaders": {
+    "ratelimit": "\"minuteRate\";r=3322, \"concurrency\";r=199, \"complexityMinute\";r=9759335;t=18",
+    "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\""
+  },
+  "responseHeaders": {
+    "api-version": "2026-10",
+    "content-type": "application/json; charset=utf-8",
+    "date": "Sun, 25 Oct 2026 02:43:19 GMT",
+    "ratelimit": "\"minuteRate\";r=3322, \"concurrency\";r=199, \"complexityMinute\";r=9759335;t=18",
+    "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\"",
+    "x-request-id": "d9e2efc6-83c6-91ec-ae34-4fcbef5de4fb"
+  },
+  "extensionsRequestId": "d9e2efc6-83c6-91ec-ae34-4fcbef5de4fb",
+  "responseBodyRaw": "{\"data\":{\"boards\":[{\"items_page\":{\"items\":[{\"id\":\"13377336277\",\"name\":\"Item 1\",\"parent_item\":null,\"column_values\":[{\"id\":\"numeric_mm8fkv6k\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"number\":null},{\"id\":\"numeric_mm8f3jz3\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"number\":null},{\"id\":\"numeric_mm8f56kg\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"number\":null},{\"id\":\"numeric_mm8fbpj2\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"number\":null},{\"id\":\"date_mm8fftdz\",\"type\":\"date\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"date\":\"\"},{\"id\":\"date_mm8fswrb\",\"type\":\"date\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"date\":\"\"},{\"id\":\"date_mm8f2n8y\",\"type\":\"date\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"date\":\"\"},{\"id\":\"timerange_mm8fcct0\",\"type\":\"timeline\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"from\":null,\"to\":null}]},{\"id\":\"13377371463\",\"name\":\"P1 (L1 parent)\",\"parent_item\":null,\"column_values\":[{\"id\":\"numeric_mm8fkv6k\",\"type\":\"numbers\",\"text\":\"247\",\"value\":\"\\\"247\\\"\",\"is_leaf\":false,\"number\":247},{\"id\":\"numeric_mm8f3jz3\",\"type\":\"numbers\",\"text\":\"247\",\"value\":\"\\\"247\\\"\",\"is_leaf\":false,\"number\":247},{\"id\":\"numeric_mm8f56kg\",\"type\":\"numbers\",\"text\":\"247\",\"value\":\"\\\"247\\\"\",\"is_leaf\":false,\"number\":247},{\"id\":\"numeric_mm8fbpj2\",\"type\":\"numbers\",\"text\":\"247\",\"value\":\"\\\"247\\\"\",\"is_leaf\":false,\"number\":247},{\"id\":\"date_mm8fftdz\",\"type\":\"date\",\"text\":\"2026-01-20\",\"value\":\"{\\\"date\\\":\\\"2026-01-20\\\"}\",\"is_leaf\":false,\"date\":\"2026-01-20\"},{\"id\":\"date_mm8fswrb\",\"type\":\"date\",\"text\":\"2026-01-20\",\"value\":\"{\\\"date\\\":\\\"2026-01-20\\\"}\",\"is_leaf\":false,\"date\":\"2026-01-20\"},{\"id\":\"date_mm8f2n8y\",\"type\":\"date\",\"text\":\"2026-01-20\",\"value\":\"{\\\"date\\\":\\\"2026-01-20\\\"}\",\"is_leaf\":false,\"date\":\"2026-01-20\"},{\"id\":\"timerange_mm8fcct0\",\"type\":\"timeline\",\"text\":\"2026-01-10 - 2026-07-15\",\"value\":\"{\\\"to\\\":\\\"2026-07-15\\\",\\\"from\\\":\\\"2026-01-10\\\"}\",\"is_leaf\":false,\"from\":\"2026-01-10T00:00:00+00:00\",\"to\":\"2026-07-15T00:00:00+00:00\"}]},{\"id\":\"13377345834\",\"name\":\"Subitem Level 1\",\"parent_item\":{\"id\":\"13377336277\"},\"column_values\":[{\"id\":\"numeric_mm8fkv6k\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"number\":null},{\"id\":\"numeric_mm8f3jz3\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"number\":null},{\"id\":\"numeric_mm8f56kg\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"number\":null},{\"id\":\"numeric_mm8fbpj2\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"number\":null},{\"id\":\"date_mm8fftdz\",\"type\":\"date\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"date\":\"\"},{\"id\":\"date_mm8fswrb\",\"type\":\"date\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"date\":\"\"},{\"id\":\"date_mm8f2n8y\",\"type\":\"date\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"date\":\"\"},{\"id\":\"timerange_mm8fcct0\",\"type\":\"timeline\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"from\":null,\"to\":null}]},{\"id\":\"13377336278\",\"name\":\"Subitem Level 2\",\"parent_item\":{\"id\":\"13377345834\"},\"column_values\":[{\"id\":\"numeric_mm8fkv6k\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"number\":null},{\"id\":\"numeric_mm8f3jz3\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"number\":null},{\"id\":\"numeric_mm8f56kg\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"number\":null},{\"id\":\"numeric_mm8fbpj2\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"number\":null},{\"id\":\"date_mm8fftdz\",\"type\":\"date\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"date\":\"\"},{\"id\":\"date_mm8fswrb\",\"type\":\"date\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"date\":\"\"},{\"id\":\"date_mm8f2n8y\",\"type\":\"date\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"date\":\"\"},{\"id\":\"timerange_mm8fcct0\",\"type\":\"timeline\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"from\":null,\"to\":null}]},{\"id\":\"13377336279\",\"name\":\"Subitem Level 2\",\"parent_item\":{\"id\":\"13377345834\"},\"column_values\":[{\"id\":\"numeric_mm8fkv6k\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"number\":null},{\"id\":\"numeric_mm8f3jz3\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"number\":null},{\"id\":\"numeric_mm8f56kg\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"number\":null},{\"id\":\"numeric_mm8fbpj2\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"number\":null},{\"id\":\"date_mm8fftdz\",\"type\":\"date\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"date\":\"\"},{\"id\":\"date_mm8fswrb\",\"type\":\"date\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"date\":\"\"},{\"id\":\"date_mm8f2n8y\",\"type\":\"date\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"date\":\"\"},{\"id\":\"timerange_mm8fcct0\",\"type\":\"timeline\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"from\":null,\"to\":null}]},{\"id\":\"13377349365\",\"name\":\"Q1 (L2 parent)\",\"parent_item\":{\"id\":\"13377371463\"},\"column_values\":[{\"id\":\"numeric_mm8fkv6k\",\"type\":\"numbers\",\"text\":\"47\",\"value\":\"\\\"47\\\"\",\"is_leaf\":false,\"number\":47},{\"id\":\"numeric_mm8f3jz3\",\"type\":\"numbers\",\"text\":\"47\",\"value\":\"\\\"47\\\"\",\"is_leaf\":false,\"number\":47},{\"id\":\"numeric_mm8f56kg\",\"type\":\"numbers\",\"text\":\"47\",\"value\":\"\\\"47\\\"\",\"is_leaf\":false,\"number\":47},{\"id\":\"numeric_mm8fbpj2\",\"type\":\"numbers\",\"text\":\"47\",\"value\":\"\\\"47\\\"\",\"is_leaf\":false,\"number\":47},{\"id\":\"date_mm8fftdz\",\"type\":\"date\",\"text\":\"2026-03-03\",\"value\":\"{\\\"date\\\":\\\"2026-03-03\\\"}\",\"is_leaf\":false,\"date\":\"2026-03-03\"},{\"id\":\"date_mm8fswrb\",\"type\":\"date\",\"text\":\"2026-03-03\",\"value\":\"{\\\"date\\\":\\\"2026-03-03\\\"}\",\"is_leaf\":false,\"date\":\"2026-03-03\"},{\"id\":\"date_mm8f2n8y\",\"type\":\"date\",\"text\":\"2026-03-03\",\"value\":\"{\\\"date\\\":\\\"2026-03-03\\\"}\",\"is_leaf\":false,\"date\":\"2026-03-03\"},{\"id\":\"timerange_mm8fcct0\",\"type\":\"timeline\",\"text\":\"2026-03-01 - 2026-07-15\",\"value\":\"{\\\"to\\\":\\\"2026-07-15\\\",\\\"from\\\":\\\"2026-03-01\\\"}\",\"is_leaf\":false,\"from\":\"2026-03-01T00:00:00+00:00\",\"to\":\"2026-07-15T00:00:00+00:00\"}]},{\"id\":\"13377361219\",\"name\":\"Q1a (L3 leaf)\",\"parent_item\":{\"id\":\"13377349365\"},\"column_values\":[{\"id\":\"numeric_mm8fkv6k\",\"type\":\"numbers\",\"text\":\"40\",\"value\":\"\\\"40\\\"\",\"is_leaf\":true,\"number\":40},{\"id\":\"numeric_mm8f3jz3\",\"type\":\"numbers\",\"text\":\"40\",\"value\":\"\\\"40\\\"\",\"is_leaf\":true,\"number\":40},{\"id\":\"numeric_mm8f56kg\",\"type\":\"numbers\",\"text\":\"40\",\"value\":\"\\\"40\\\"\",\"is_leaf\":true,\"number\":40},{\"id\":\"numeric_mm8fbpj2\",\"type\":\"numbers\",\"text\":\"40\",\"value\":\"\\\"40\\\"\",\"is_leaf\":true,\"number\":40},{\"id\":\"date_mm8fftdz\",\"type\":\"date\",\"text\":\"2026-03-03\",\"value\":\"{\\\"date\\\":\\\"2026-03-03\\\",\\\"changed_at\\\":\\\"2026-10-25T02:42:54.516Z\\\"}\",\"is_leaf\":true,\"date\":\"2026-03-03\"},{\"id\":\"date_mm8fswrb\",\"type\":\"date\",\"text\":\"2026-03-03\",\"value\":\"{\\\"date\\\":\\\"2026-03-03\\\",\\\"changed_at\\\":\\\"2026-10-25T02:42:54.517Z\\\"}\",\"is_leaf\":true,\"date\":\"2026-03-03\"},{\"id\":\"date_mm8f2n8y\",\"type\":\"date\",\"text\":\"2026-03-03\",\"value\":\"{\\\"date\\\":\\\"2026-03-03\\\",\\\"changed_at\\\":\\\"2026-10-25T02:42:54.518Z\\\"}\",\"is_leaf\":true,\"date\":\"2026-03-03\"},{\"id\":\"timerange_mm8fcct0\",\"type\":\"timeline\",\"text\":\"2026-03-01 - 2026-03-20\",\"value\":\"{\\\"to\\\":\\\"2026-03-20\\\",\\\"from\\\":\\\"2026-03-01\\\",\\\"changed_at\\\":\\\"2026-10-25T02:42:54.518Z\\\"}\",\"is_leaf\":true,\"from\":\"2026-03-01T00:00:00+00:00\",\"to\":\"2026-03-20T00:00:00+00:00\"}]},{\"id\":\"13377349418\",\"name\":\"Q1b (L3 leaf)\",\"parent_item\":{\"id\":\"13377349365\"},\"column_values\":[{\"id\":\"numeric_mm8fkv6k\",\"type\":\"numbers\",\"text\":\"7\",\"value\":\"\\\"7\\\"\",\"is_leaf\":true,\"number\":7},{\"id\":\"numeric_mm8f3jz3\",\"type\":\"numbers\",\"text\":\"7\",\"value\":\"\\\"7\\\"\",\"is_leaf\":true,\"number\":7},{\"id\":\"numeric_mm8f56kg\",\"type\":\"numbers\",\"text\":\"7\",\"value\":\"\\\"7\\\"\",\"is_leaf\":true,\"number\":7},{\"id\":\"numeric_mm8fbpj2\",\"type\":\"numbers\",\"text\":\"7\",\"value\":\"\\\"7\\\"\",\"is_leaf\":true,\"number\":7},{\"id\":\"date_mm8fftdz\",\"type\":\"date\",\"text\":\"2026-06-30\",\"value\":\"{\\\"date\\\":\\\"2026-06-30\\\",\\\"changed_at\\\":\\\"2026-10-25T02:42:56.620Z\\\"}\",\"is_leaf\":true,\"date\":\"2026-06-30\"},{\"id\":\"date_mm8fswrb\",\"type\":\"date\",\"text\":\"2026-06-30\",\"value\":\"{\\\"date\\\":\\\"2026-06-30\\\",\\\"changed_at\\\":\\\"2026-10-25T02:42:56.621Z\\\"}\",\"is_leaf\":true,\"date\":\"2026-06-30\"},{\"id\":\"date_mm8f2n8y\",\"type\":\"date\",\"text\":\"2026-06-30\",\"value\":\"{\\\"date\\\":\\\"2026-06-30\\\",\\\"changed_at\\\":\\\"2026-10-25T02:42:56.622Z\\\"}\",\"is_leaf\":true,\"date\":\"2026-06-30\"},{\"id\":\"timerange_mm8fcct0\",\"type\":\"timeline\",\"text\":\"2026-05-01 - 2026-07-15\",\"value\":\"{\\\"to\\\":\\\"2026-07-15\\\",\\\"from\\\":\\\"2026-05-01\\\",\\\"changed_at\\\":\\\"2026-10-25T02:42:56.623Z\\\"}\",\"is_leaf\":true,\"from\":\"2026-05-01T00:00:00+00:00\",\"to\":\"2026-07-15T00:00:00+00:00\"}]},{\"id\":\"13377361160\",\"name\":\"P1c (L2 leaf)\",\"parent_item\":{\"id\":\"13377371463\"},\"column_values\":[{\"id\":\"numeric_mm8fkv6k\",\"type\":\"numbers\",\"text\":\"200\",\"value\":\"\\\"200\\\"\",\"is_leaf\":true,\"number\":200},{\"id\":\"numeric_mm8f3jz3\",\"type\":\"numbers\",\"text\":\"200\",\"value\":\"\\\"200\\\"\",\"is_leaf\":true,\"number\":200},{\"id\":\"numeric_mm8f56kg\",\"type\":\"numbers\",\"text\":\"200\",\"value\":\"\\\"200\\\"\",\"is_leaf\":true,\"number\":200},{\"id\":\"numeric_mm8fbpj2\",\"type\":\"numbers\",\"text\":\"200\",\"value\":\"\\\"200\\\"\",\"is_leaf\":true,\"number\":200},{\"id\":\"date_mm8fftdz\",\"type\":\"date\",\"text\":\"2026-01-20\",\"value\":\"{\\\"date\\\":\\\"2026-01-20\\\",\\\"changed_at\\\":\\\"2026-10-25T02:42:58.814Z\\\"}\",\"is_leaf\":true,\"date\":\"2026-01-20\"},{\"id\":\"date_mm8fswrb\",\"type\":\"date\",\"text\":\"2026-01-20\",\"value\":\"{\\\"date\\\":\\\"2026-01-20\\\",\\\"changed_at\\\":\\\"2026-10-25T02:42:58.815Z\\\"}\",\"is_leaf\":true,\"date\":\"2026-01-20\"},{\"id\":\"date_mm8f2n8y\",\"type\":\"date\",\"text\":\"2026-01-20\",\"value\":\"{\\\"date\\\":\\\"2026-01-20\\\",\\\"changed_at\\\":\\\"2026-10-25T02:42:58.816Z\\\"}\",\"is_leaf\":true,\"date\":\"2026-01-20\"},{\"id\":\"timerange_mm8fcct0\",\"type\":\"timeline\",\"text\":\"2026-01-10 - 2026-02-01\",\"value\":\"{\\\"to\\\":\\\"2026-02-01\\\",\\\"from\\\":\\\"2026-01-10\\\",\\\"changed_at\\\":\\\"2026-10-25T02:42:58.817Z\\\"}\",\"is_leaf\":true,\"from\":\"2026-01-10T00:00:00+00:00\",\"to\":\"2026-02-01T00:00:00+00:00\"}]}]}}]},\"extensions\":{\"request_id\":\"d9e2efc6-83c6-91ec-ae34-4fcbef5de4fb\"}}",
+  "responseBody": {
+    "data": {
+      "boards": [
+        {
+          "items_page": {
+            "items": [
+              {
+                "id": "13377336277",
+                "name": "Item 1",
+                "parent_item": null,
+                "column_values": [
+                  {
+                    "id": "numeric_mm8fkv6k",
+                    "type": "numbers",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": false,
+                    "number": null
+                  },
+                  {
+                    "id": "numeric_mm8f3jz3",
+                    "type": "numbers",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": false,
+                    "number": null
+                  },
+                  {
+                    "id": "numeric_mm8f56kg",
+                    "type": "numbers",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": false,
+                    "number": null
+                  },
+                  {
+                    "id": "numeric_mm8fbpj2",
+                    "type": "numbers",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": false,
+                    "number": null
+                  },
+                  {
+                    "id": "date_mm8fftdz",
+                    "type": "date",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": false,
+                    "date": ""
+                  },
+                  {
+                    "id": "date_mm8fswrb",
+                    "type": "date",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": false,
+                    "date": ""
+                  },
+                  {
+                    "id": "date_mm8f2n8y",
+                    "type": "date",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": false,
+                    "date": ""
+                  },
+                  {
+                    "id": "timerange_mm8fcct0",
+                    "type": "timeline",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": false,
+                    "from": null,
+                    "to": null
+                  }
+                ]
+              },
+              {
+                "id": "13377371463",
+                "name": "P1 (L1 parent)",
+                "parent_item": null,
+                "column_values": [
+                  {
+                    "id": "numeric_mm8fkv6k",
+                    "type": "numbers",
+                    "text": "247",
+                    "value": "\"247\"",
+                    "is_leaf": false,
+                    "number": 247
+                  },
+                  {
+                    "id": "numeric_mm8f3jz3",
+                    "type": "numbers",
+                    "text": "247",
+                    "value": "\"247\"",
+                    "is_leaf": false,
+                    "number": 247
+                  },
+                  {
+                    "id": "numeric_mm8f56kg",
+                    "type": "numbers",
+                    "text": "247",
+                    "value": "\"247\"",
+                    "is_leaf": false,
+                    "number": 247
+                  },
+                  {
+                    "id": "numeric_mm8fbpj2",
+                    "type": "numbers",
+                    "text": "247",
+                    "value": "\"247\"",
+                    "is_leaf": false,
+                    "number": 247
+                  },
+                  {
+                    "id": "date_mm8fftdz",
+                    "type": "date",
+                    "text": "2026-01-20",
+                    "value": "{\"date\":\"2026-01-20\"}",
+                    "is_leaf": false,
+                    "date": "2026-01-20"
+                  },
+                  {
+                    "id": "date_mm8fswrb",
+                    "type": "date",
+                    "text": "2026-01-20",
+                    "value": "{\"date\":\"2026-01-20\"}",
+                    "is_leaf": false,
+                    "date": "2026-01-20"
+                  },
+                  {
+                    "id": "date_mm8f2n8y",
+                    "type": "date",
+                    "text": "2026-01-20",
+                    "value": "{\"date\":\"2026-01-20\"}",
+                    "is_leaf": false,
+                    "date": "2026-01-20"
+                  },
+                  {
+                    "id": "timerange_mm8fcct0",
+                    "type": "timeline",
+                    "text": "2026-01-10 - 2026-07-15",
+                    "value": "{\"to\":\"2026-07-15\",\"from\":\"2026-01-10\"}",
+                    "is_leaf": false,
+                    "from": "2026-01-10T00:00:00+00:00",
+                    "to": "2026-07-15T00:00:00+00:00"
+                  }
+                ]
+              },
+              {
+                "id": "13377345834",
+                "name": "Subitem Level 1",
+                "parent_item": {
+                  "id": "13377336277"
+                },
+                "column_values": [
+                  {
+                    "id": "numeric_mm8fkv6k",
+                    "type": "numbers",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": false,
+                    "number": null
+                  },
+                  {
+                    "id": "numeric_mm8f3jz3",
+                    "type": "numbers",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": false,
+                    "number": null
+                  },
+                  {
+                    "id": "numeric_mm8f56kg",
+                    "type": "numbers",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": false,
+                    "number": null
+                  },
+                  {
+                    "id": "numeric_mm8fbpj2",
+                    "type": "numbers",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": false,
+                    "number": null
+                  },
+                  {
+                    "id": "date_mm8fftdz",
+                    "type": "date",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": false,
+                    "date": ""
+                  },
+                  {
+                    "id": "date_mm8fswrb",
+                    "type": "date",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": false,
+                    "date": ""
+                  },
+                  {
+                    "id": "date_mm8f2n8y",
+                    "type": "date",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": false,
+                    "date": ""
+                  },
+                  {
+                    "id": "timerange_mm8fcct0",
+                    "type": "timeline",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": false,
+                    "from": null,
+                    "to": null
+                  }
+                ]
+              },
+              {
+                "id": "13377336278",
+                "name": "Subitem Level 2",
+                "parent_item": {
+                  "id": "13377345834"
+                },
+                "column_values": [
+                  {
+                    "id": "numeric_mm8fkv6k",
+                    "type": "numbers",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": true,
+                    "number": null
+                  },
+                  {
+                    "id": "numeric_mm8f3jz3",
+                    "type": "numbers",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": true,
+                    "number": null
+                  },
+                  {
+                    "id": "numeric_mm8f56kg",
+                    "type": "numbers",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": true,
+                    "number": null
+                  },
+                  {
+                    "id": "numeric_mm8fbpj2",
+                    "type": "numbers",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": true,
+                    "number": null
+                  },
+                  {
+                    "id": "date_mm8fftdz",
+                    "type": "date",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": true,
+                    "date": ""
+                  },
+                  {
+                    "id": "date_mm8fswrb",
+                    "type": "date",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": true,
+                    "date": ""
+                  },
+                  {
+                    "id": "date_mm8f2n8y",
+                    "type": "date",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": true,
+                    "date": ""
+                  },
+                  {
+                    "id": "timerange_mm8fcct0",
+                    "type": "timeline",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": true,
+                    "from": null,
+                    "to": null
+                  }
+                ]
+              },
+              {
+                "id": "13377336279",
+                "name": "Subitem Level 2",
+                "parent_item": {
+                  "id": "13377345834"
+                },
+                "column_values": [
+                  {
+                    "id": "numeric_mm8fkv6k",
+                    "type": "numbers",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": true,
+                    "number": null
+                  },
+                  {
+                    "id": "numeric_mm8f3jz3",
+                    "type": "numbers",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": true,
+                    "number": null
+                  },
+                  {
+                    "id": "numeric_mm8f56kg",
+                    "type": "numbers",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": true,
+                    "number": null
+                  },
+                  {
+                    "id": "numeric_mm8fbpj2",
+                    "type": "numbers",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": true,
+                    "number": null
+                  },
+                  {
+                    "id": "date_mm8fftdz",
+                    "type": "date",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": true,
+                    "date": ""
+                  },
+                  {
+                    "id": "date_mm8fswrb",
+                    "type": "date",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": true,
+                    "date": ""
+                  },
+                  {
+                    "id": "date_mm8f2n8y",
+                    "type": "date",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": true,
+                    "date": ""
+                  },
+                  {
+                    "id": "timerange_mm8fcct0",
+                    "type": "timeline",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": true,
+                    "from": null,
+                    "to": null
+                  }
+                ]
+              },
+              {
+                "id": "13377349365",
+                "name": "Q1 (L2 parent)",
+                "parent_item": {
+                  "id": "13377371463"
+                },
+                "column_values": [
+                  {
+                    "id": "numeric_mm8fkv6k",
+                    "type": "numbers",
+                    "text": "47",
+                    "value": "\"47\"",
+                    "is_leaf": false,
+                    "number": 47
+                  },
+                  {
+                    "id": "numeric_mm8f3jz3",
+                    "type": "numbers",
+                    "text": "47",
+                    "value": "\"47\"",
+                    "is_leaf": false,
+                    "number": 47
+                  },
+                  {
+                    "id": "numeric_mm8f56kg",
+                    "type": "numbers",
+                    "text": "47",
+                    "value": "\"47\"",
+                    "is_leaf": false,
+                    "number": 47
+                  },
+                  {
+                    "id": "numeric_mm8fbpj2",
+                    "type": "numbers",
+                    "text": "47",
+                    "value": "\"47\"",
+                    "is_leaf": false,
+                    "number": 47
+                  },
+                  {
+                    "id": "date_mm8fftdz",
+                    "type": "date",
+                    "text": "2026-03-03",
+                    "value": "{\"date\":\"2026-03-03\"}",
+                    "is_leaf": false,
+                    "date": "2026-03-03"
+                  },
+                  {
+                    "id": "date_mm8fswrb",
+                    "type": "date",
+                    "text": "2026-03-03",
+                    "value": "{\"date\":\"2026-03-03\"}",
+                    "is_leaf": false,
+                    "date": "2026-03-03"
+                  },
+                  {
+                    "id": "date_mm8f2n8y",
+                    "type": "date",
+                    "text": "2026-03-03",
+                    "value": "{\"date\":\"2026-03-03\"}",
+                    "is_leaf": false,
+                    "date": "2026-03-03"
+                  },
+                  {
+                    "id": "timerange_mm8fcct0",
+                    "type": "timeline",
+                    "text": "2026-03-01 - 2026-07-15",
+                    "value": "{\"to\":\"2026-07-15\",\"from\":\"2026-03-01\"}",
+                    "is_leaf": false,
+                    "from": "2026-03-01T00:00:00+00:00",
+                    "to": "2026-07-15T00:00:00+00:00"
+                  }
+                ]
+              },
+              {
+                "id": "13377361219",
+                "name": "Q1a (L3 leaf)",
+                "parent_item": {
+                  "id": "13377349365"
+                },
+                "column_values": [
+                  {
+                    "id": "numeric_mm8fkv6k",
+                    "type": "numbers",
+                    "text": "40",
+                    "value": "\"40\"",
+                    "is_leaf": true,
+                    "number": 40
+                  },
+                  {
+                    "id": "numeric_mm8f3jz3",
+                    "type": "numbers",
+                    "text": "40",
+                    "value": "\"40\"",
+                    "is_leaf": true,
+                    "number": 40
+                  },
+                  {
+                    "id": "numeric_mm8f56kg",
+                    "type": "numbers",
+                    "text": "40",
+                    "value": "\"40\"",
+                    "is_leaf": true,
+                    "number": 40
+                  },
+                  {
+                    "id": "numeric_mm8fbpj2",
+                    "type": "numbers",
+                    "text": "40",
+                    "value": "\"40\"",
+                    "is_leaf": true,
+                    "number": 40
+                  },
+                  {
+                    "id": "date_mm8fftdz",
+                    "type": "date",
+                    "text": "2026-03-03",
+                    "value": "{\"date\":\"2026-03-03\",\"changed_at\":\"2026-10-25T02:42:54.516Z\"}",
+                    "is_leaf": true,
+                    "date": "2026-03-03"
+                  },
+                  {
+                    "id": "date_mm8fswrb",
+                    "type": "date",
+                    "text": "2026-03-03",
+                    "value": "{\"date\":\"2026-03-03\",\"changed_at\":\"2026-10-25T02:42:54.517Z\"}",
+                    "is_leaf": true,
+                    "date": "2026-03-03"
+                  },
+                  {
+                    "id": "date_mm8f2n8y",
+                    "type": "date",
+                    "text": "2026-03-03",
+                    "value": "{\"date\":\"2026-03-03\",\"changed_at\":\"2026-10-25T02:42:54.518Z\"}",
+                    "is_leaf": true,
+                    "date": "2026-03-03"
+                  },
+                  {
+                    "id": "timerange_mm8fcct0",
+                    "type": "timeline",
+                    "text": "2026-03-01 - 2026-03-20",
+                    "value": "{\"to\":\"2026-03-20\",\"from\":\"2026-03-01\",\"changed_at\":\"2026-10-25T02:42:54.518Z\"}",
+                    "is_leaf": true,
+                    "from": "2026-03-01T00:00:00+00:00",
+                    "to": "2026-03-20T00:00:00+00:00"
+                  }
+                ]
+              },
+              {
+                "id": "13377349418",
+                "name": "Q1b (L3 leaf)",
+                "parent_item": {
+                  "id": "13377349365"
+                },
+                "column_values": [
+                  {
+                    "id": "numeric_mm8fkv6k",
+                    "type": "numbers",
+                    "text": "7",
+                    "value": "\"7\"",
+                    "is_leaf": true,
+                    "number": 7
+                  },
+                  {
+                    "id": "numeric_mm8f3jz3",
+                    "type": "numbers",
+                    "text": "7",
+                    "value": "\"7\"",
+                    "is_leaf": true,
+                    "number": 7
+                  },
+                  {
+                    "id": "numeric_mm8f56kg",
+                    "type": "numbers",
+                    "text": "7",
+                    "value": "\"7\"",
+                    "is_leaf": true,
+                    "number": 7
+                  },
+                  {
+                    "id": "numeric_mm8fbpj2",
+                    "type": "numbers",
+                    "text": "7",
+                    "value": "\"7\"",
+                    "is_leaf": true,
+                    "number": 7
+                  },
+                  {
+                    "id": "date_mm8fftdz",
+                    "type": "date",
+                    "text": "2026-06-30",
+                    "value": "{\"date\":\"2026-06-30\",\"changed_at\":\"2026-10-25T02:42:56.620Z\"}",
+                    "is_leaf": true,
+                    "date": "2026-06-30"
+                  },
+                  {
+                    "id": "date_mm8fswrb",
+                    "type": "date",
+                    "text": "2026-06-30",
+                    "value": "{\"date\":\"2026-06-30\",\"changed_at\":\"2026-10-25T02:42:56.621Z\"}",
+                    "is_leaf": true,
+                    "date": "2026-06-30"
+                  },
+                  {
+                    "id": "date_mm8f2n8y",
+                    "type": "date",
+                    "text": "2026-06-30",
+                    "value": "{\"date\":\"2026-06-30\",\"changed_at\":\"2026-10-25T02:42:56.622Z\"}",
+                    "is_leaf": true,
+                    "date": "2026-06-30"
+                  },
+                  {
+                    "id": "timerange_mm8fcct0",
+                    "type": "timeline",
+                    "text": "2026-05-01 - 2026-07-15",
+                    "value": "{\"to\":\"2026-07-15\",\"from\":\"2026-05-01\",\"changed_at\":\"2026-10-25T02:42:56.623Z\"}",
+                    "is_leaf": true,
+                    "from": "2026-05-01T00:00:00+00:00",
+                    "to": "2026-07-15T00:00:00+00:00"
+                  }
+                ]
+              },
+              {
+                "id": "13377361160",
+                "name": "P1c (L2 leaf)",
+                "parent_item": {
+                  "id": "13377371463"
+                },
+                "column_values": [
+                  {
+                    "id": "numeric_mm8fkv6k",
+                    "type": "numbers",
+                    "text": "200",
+                    "value": "\"200\"",
+                    "is_leaf": true,
+                    "number": 200
+                  },
+                  {
+                    "id": "numeric_mm8f3jz3",
+                    "type": "numbers",
+                    "text": "200",
+                    "value": "\"200\"",
+                    "is_leaf": true,
+                    "number": 200
+                  },
+                  {
+                    "id": "numeric_mm8f56kg",
+                    "type": "numbers",
+                    "text": "200",
+                    "value": "\"200\"",
+                    "is_leaf": true,
+                    "number": 200
+                  },
+                  {
+                    "id": "numeric_mm8fbpj2",
+                    "type": "numbers",
+                    "text": "200",
+                    "value": "\"200\"",
+                    "is_leaf": true,
+                    "number": 200
+                  },
+                  {
+                    "id": "date_mm8fftdz",
+                    "type": "date",
+                    "text": "2026-01-20",
+                    "value": "{\"date\":\"2026-01-20\",\"changed_at\":\"2026-10-25T02:42:58.814Z\"}",
+                    "is_leaf": true,
+                    "date": "2026-01-20"
+                  },
+                  {
+                    "id": "date_mm8fswrb",
+                    "type": "date",
+                    "text": "2026-01-20",
+                    "value": "{\"date\":\"2026-01-20\",\"changed_at\":\"2026-10-25T02:42:58.815Z\"}",
+                    "is_leaf": true,
+                    "date": "2026-01-20"
+                  },
+                  {
+                    "id": "date_mm8f2n8y",
+                    "type": "date",
+                    "text": "2026-01-20",
+                    "value": "{\"date\":\"2026-01-20\",\"changed_at\":\"2026-10-25T02:42:58.816Z\"}",
+                    "is_leaf": true,
+                    "date": "2026-01-20"
+                  },
+                  {
+                    "id": "timerange_mm8fcct0",
+                    "type": "timeline",
+                    "text": "2026-01-10 - 2026-02-01",
+                    "value": "{\"to\":\"2026-02-01\",\"from\":\"2026-01-10\",\"changed_at\":\"2026-10-25T02:42:58.817Z\"}",
+                    "is_leaf": true,
+                    "from": "2026-01-10T00:00:00+00:00",
+                    "to": "2026-02-01T00:00:00+00:00"
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "extensions": {
+      "request_id": "d9e2efc6-83c6-91ec-ae34-4fcbef5de4fb"
+    }
+  }
+}

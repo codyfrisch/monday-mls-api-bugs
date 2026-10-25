@@ -1,0 +1,48 @@
+{
+  "file": "14-create-subitem-q1a-2026-10",
+  "case": "setup",
+  "description": "create_subitem Q1a (L3 leaf)",
+  "endpoint": "https://api.monday.com/v2",
+  "method": "POST",
+  "requestHeaders": {
+    "API-Version": "2026-10",
+    "Content-Type": "application/json"
+  },
+  "authorizationHeader": "sent; value not recorded",
+  "apiVersion": "2026-10",
+  "requestBody": "{\"query\":\"mutation ($p: ID!, $n: String!) { create_subitem(parent_item_id: $p, item_name: $n) { id } }\",\"variables\":{\"p\":\"13377349365\",\"n\":\"Q1a (L3 leaf)\"}}",
+  "query": "mutation ($p: ID!, $n: String!) { create_subitem(parent_item_id: $p, item_name: $n) { id } }",
+  "variables": {
+    "p": "13377349365",
+    "n": "Q1a (L3 leaf)"
+  },
+  "startedAt": "2026-10-25T02:42:45.967Z",
+  "endedAt": "2026-10-25T02:42:47.791Z",
+  "durationMs": 1824,
+  "status": 200,
+  "xRequestId": "575c0c5e-85de-983b-b261-0c11211c82f9",
+  "rateLimitHeaders": {
+    "ratelimit": "\"minuteRate\";r=3332, \"concurrency\";r=199, \"complexityMinute\";r=9909997;t=50",
+    "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\""
+  },
+  "responseHeaders": {
+    "api-version": "2026-10",
+    "content-type": "application/json; charset=utf-8",
+    "date": "Sun, 25 Oct 2026 02:42:47 GMT",
+    "ratelimit": "\"minuteRate\";r=3332, \"concurrency\";r=199, \"complexityMinute\";r=9909997;t=50",
+    "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\"",
+    "x-request-id": "575c0c5e-85de-983b-b261-0c11211c82f9"
+  },
+  "extensionsRequestId": "575c0c5e-85de-983b-b261-0c11211c82f9",
+  "responseBodyRaw": "{\"data\":{\"create_subitem\":{\"id\":\"13377361219\"}},\"extensions\":{\"request_id\":\"575c0c5e-85de-983b-b261-0c11211c82f9\"}}",
+  "responseBody": {
+    "data": {
+      "create_subitem": {
+        "id": "13377361219"
+      }
+    },
+    "extensions": {
+      "request_id": "575c0c5e-85de-983b-b261-0c11211c82f9"
+    }
+  }
+}

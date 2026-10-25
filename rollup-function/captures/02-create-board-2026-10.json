@@ -1,0 +1,50 @@
+{
+  "file": "02-create-board-2026-10",
+  "case": "setup",
+  "description": "create_board (use_mls_template, empty)",
+  "endpoint": "https://api.monday.com/v2",
+  "method": "POST",
+  "requestHeaders": {
+    "API-Version": "2026-10",
+    "Content-Type": "application/json"
+  },
+  "authorizationHeader": "sent; value not recorded",
+  "apiVersion": "2026-10",
+  "requestBody": "{\"query\":\"mutation ($n: String!, $w: ID!) { create_board(board_name: $n, board_kind: public, workspace_id: $w, use_mls_template: true, empty: true) { id name hierarchy_type } }\",\"variables\":{\"n\":\"R4 rollup function evidence 2026-10-25T02:42:12.568Z\",\"w\":\"<redacted>\"}}",
+  "query": "mutation ($n: String!, $w: ID!) { create_board(board_name: $n, board_kind: public, workspace_id: $w, use_mls_template: true, empty: true) { id name hierarchy_type } }",
+  "variables": {
+    "n": "R4 rollup function evidence 2026-10-25T02:42:12.568Z",
+    "w": "<redacted>"
+  },
+  "startedAt": "2026-10-25T02:42:13.769Z",
+  "endedAt": "2026-10-25T02:42:20.626Z",
+  "durationMs": 6857,
+  "status": 200,
+  "xRequestId": "b17ace37-25ac-9f1a-b0bb-2bfa2f3d8386",
+  "rateLimitHeaders": {
+    "ratelimit": "\"minuteRate\";r=3323, \"concurrency\";r=199, \"complexityMinute\";r=9849367;t=21",
+    "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\""
+  },
+  "responseHeaders": {
+    "api-version": "2026-10",
+    "content-type": "application/json; charset=utf-8",
+    "date": "Sun, 25 Oct 2026 02:42:20 GMT",
+    "ratelimit": "\"minuteRate\";r=3323, \"concurrency\";r=199, \"complexityMinute\";r=9849367;t=21",
+    "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\"",
+    "x-request-id": "b17ace37-25ac-9f1a-b0bb-2bfa2f3d8386"
+  },
+  "extensionsRequestId": "b17ace37-25ac-9f1a-b0bb-2bfa2f3d8386",
+  "responseBodyRaw": "{\"data\":{\"create_board\":{\"id\":\"18436908354\",\"name\":\"R4 rollup function evidence 2026-10-25T02:42:12.568Z\",\"hierarchy_type\":\"multi_level\"}},\"extensions\":{\"request_id\":\"b17ace37-25ac-9f1a-b0bb-2bfa2f3d8386\"}}",
+  "responseBody": {
+    "data": {
+      "create_board": {
+        "id": "18436908354",
+        "name": "R4 rollup function evidence 2026-10-25T02:42:12.568Z",
+        "hierarchy_type": "multi_level"
+      }
+    },
+    "extensions": {
+      "request_id": "b17ace37-25ac-9f1a-b0bb-2bfa2f3d8386"
+    }
+  }
+}

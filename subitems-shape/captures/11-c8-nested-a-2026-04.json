@@ -1,0 +1,84 @@
+{
+  "file": "11-c8-nested-a-2026-04",
+  "case": "C8",
+  "description": "nested subitems selection on [A]",
+  "endpoint": "https://api.monday.com/v2",
+  "method": "POST",
+  "requestHeaders": {
+    "API-Version": "2026-04",
+    "Content-Type": "application/json"
+  },
+  "authorizationHeader": "sent; value not recorded",
+  "apiVersion": "2026-04",
+  "requestBody": "{\"query\":\"query ($ids: [ID!]) { items(ids: $ids) { id name subitems { id name parent_item { id } subitems { id name parent_item { id } subitems { id name } } } } }\",\"variables\":{\"ids\":[\"13374271723\"]}}",
+  "query": "query ($ids: [ID!]) { items(ids: $ids) { id name subitems { id name parent_item { id } subitems { id name parent_item { id } subitems { id name } } } } }",
+  "variables": {
+    "ids": [
+      "13374271723"
+    ]
+  },
+  "startedAt": "2026-10-25T02:29:40.049Z",
+  "endedAt": "2026-10-25T02:29:40.984Z",
+  "durationMs": 935,
+  "status": 200,
+  "xRequestId": "fe10cdff-ba99-9efc-bb7e-a344c373b983",
+  "rateLimitHeaders": {
+    "ratelimit": "\"minuteRate\";r=3323, \"concurrency\";r=199, \"complexityMinute\";r=9994820;t=43",
+    "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\""
+  },
+  "responseHeaders": {
+    "api-version": "2026-04",
+    "content-type": "application/json; charset=utf-8",
+    "date": "Sun, 25 Oct 2026 02:29:40 GMT",
+    "ratelimit": "\"minuteRate\";r=3323, \"concurrency\";r=199, \"complexityMinute\";r=9994820;t=43",
+    "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\"",
+    "x-request-id": "fe10cdff-ba99-9efc-bb7e-a344c373b983"
+  },
+  "extensionsRequestId": "fe10cdff-ba99-9efc-bb7e-a344c373b983",
+  "responseBodyRaw": "{\"data\":{\"items\":[{\"id\":\"13374271723\",\"name\":\"A (L2)\",\"subitems\":[{\"id\":\"13374266669\",\"name\":\"A1 (L3 leaf)\",\"parent_item\":{\"id\":\"13374271723\"},\"subitems\":[]},{\"id\":\"13374259848\",\"name\":\"A2 (L3)\",\"parent_item\":{\"id\":\"13374271723\"},\"subitems\":[{\"id\":\"13374242116\",\"name\":\"A2x (L4)\",\"parent_item\":{\"id\":\"13374259848\"},\"subitems\":[{\"id\":\"13374259917\",\"name\":\"A2y (L5 leaf)\"}]}]}]}]},\"extensions\":{\"request_id\":\"fe10cdff-ba99-9efc-bb7e-a344c373b983\"}}",
+  "responseBody": {
+    "data": {
+      "items": [
+        {
+          "id": "13374271723",
+          "name": "A (L2)",
+          "subitems": [
+            {
+              "id": "13374266669",
+              "name": "A1 (L3 leaf)",
+              "parent_item": {
+                "id": "13374271723"
+              },
+              "subitems": []
+            },
+            {
+              "id": "13374259848",
+              "name": "A2 (L3)",
+              "parent_item": {
+                "id": "13374271723"
+              },
+              "subitems": [
+                {
+                  "id": "13374242116",
+                  "name": "A2x (L4)",
+                  "parent_item": {
+                    "id": "13374259848"
+                  },
+                  "subitems": [
+                    {
+                      "id": "13374259917",
+                      "name": "A2y (L5 leaf)"
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    "extensions": {
+      "request_id": "fe10cdff-ba99-9efc-bb7e-a344c373b983"
+    }
+  }
+}

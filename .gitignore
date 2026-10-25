@@ -1,0 +1,6 @@
+node_modules/
+.env
+.env.*
+# Outputs of a local repro run; the published copies live in repro/sample-run/
+/*/repro/fixture-ids.json
+/*/repro/repro-results.json

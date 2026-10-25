@@ -1,0 +1,59 @@
+{
+  "file": "01-fixture-board-2026-04",
+  "case": "fixture",
+  "description": "Account slug and name, board name and hierarchy_type",
+  "endpoint": "https://api.monday.com/v2",
+  "method": "POST",
+  "requestHeaders": {
+    "API-Version": "2026-04",
+    "Content-Type": "application/json"
+  },
+  "authorizationHeader": "sent; value not recorded",
+  "apiVersion": "2026-04",
+  "requestBody": "{\"query\":\"query ($b: [ID!]) { me { account { slug name } } boards(ids: $b) { id name hierarchy_type } }\",\"variables\":{\"b\":[\"18436846804\"]}}",
+  "query": "query ($b: [ID!]) { me { account { slug name } } boards(ids: $b) { id name hierarchy_type } }",
+  "variables": {
+    "b": [
+      "18436846804"
+    ]
+  },
+  "startedAt": "2026-10-25T02:29:23.017Z",
+  "endedAt": "2026-10-25T02:29:23.303Z",
+  "durationMs": 286,
+  "status": 200,
+  "xRequestId": "d95879d7-bc90-9402-b269-21a01f0300bf",
+  "rateLimitHeaders": {
+    "ratelimit": "\"minuteRate\";r=3333, \"concurrency\";r=199, \"complexityMinute\";r=9999950;t=60",
+    "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\""
+  },
+  "responseHeaders": {
+    "api-version": "2026-04",
+    "content-type": "application/json; charset=utf-8",
+    "date": "Sun, 25 Oct 2026 02:29:23 GMT",
+    "ratelimit": "\"minuteRate\";r=3333, \"concurrency\";r=199, \"complexityMinute\";r=9999950;t=60",
+    "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\"",
+    "x-request-id": "d95879d7-bc90-9402-b269-21a01f0300bf"
+  },
+  "extensionsRequestId": "d95879d7-bc90-9402-b269-21a01f0300bf",
+  "responseBodyRaw": "{\"data\":{\"me\":{\"account\":{\"slug\":\"sandbox-account\",\"name\":\"sandbox-account\"}},\"boards\":[{\"id\":\"18436846804\",\"name\":\"MLS Source\",\"hierarchy_type\":\"multi_level\"}]},\"extensions\":{\"request_id\":\"d95879d7-bc90-9402-b269-21a01f0300bf\"}}",
+  "responseBody": {
+    "data": {
+      "me": {
+        "account": {
+          "slug": "sandbox-account",
+          "name": "sandbox-account"
+        }
+      },
+      "boards": [
+        {
+          "id": "18436846804",
+          "name": "MLS Source",
+          "hierarchy_type": "multi_level"
+        }
+      ]
+    },
+    "extensions": {
+      "request_id": "d95879d7-bc90-9402-b269-21a01f0300bf"
+    }
+  }
+}

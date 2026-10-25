@@ -1,0 +1,205 @@
+{
+  "file": "23-fresh-metadata-2026-10",
+  "case": "metadata",
+  "description": "Rollup columns: function, settings, settings_str",
+  "endpoint": "https://api.monday.com/v2",
+  "method": "POST",
+  "requestHeaders": {
+    "API-Version": "2026-10",
+    "Content-Type": "application/json"
+  },
+  "authorizationHeader": "sent; value not recorded",
+  "apiVersion": "2026-10",
+  "requestBody": "{\"query\":\"query ($b: [ID!]) { boards(ids: $b) { id name hierarchy_type columns(capabilities: [CALCULATED]) { id title type settings settings_str capabilities { calculated { function } } } } }\",\"variables\":{\"b\":[\"18436908354\"]}}",
+  "query": "query ($b: [ID!]) { boards(ids: $b) { id name hierarchy_type columns(capabilities: [CALCULATED]) { id title type settings settings_str capabilities { calculated { function } } } } }",
+  "variables": {
+    "b": [
+      "18436908354"
+    ]
+  },
+  "startedAt": "2026-10-25T02:43:16.523Z",
+  "endedAt": "2026-10-25T02:43:16.951Z",
+  "durationMs": 428,
+  "status": 200,
+  "xRequestId": "dbc00389-2bab-9932-8e46-da133a4cb2fe",
+  "rateLimitHeaders": {
+    "ratelimit": "\"minuteRate\";r=3323, \"concurrency\";r=199, \"complexityMinute\";r=9759607;t=19",
+    "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\""
+  },
+  "responseHeaders": {
+    "api-version": "2026-10",
+    "content-type": "application/json; charset=utf-8",
+    "date": "Sun, 25 Oct 2026 02:43:16 GMT",
+    "ratelimit": "\"minuteRate\";r=3323, \"concurrency\";r=199, \"complexityMinute\";r=9759607;t=19",
+    "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\"",
+    "x-request-id": "dbc00389-2bab-9932-8e46-da133a4cb2fe"
+  },
+  "extensionsRequestId": "dbc00389-2bab-9932-8e46-da133a4cb2fe",
+  "responseBodyRaw": "{\"data\":{\"boards\":[{\"id\":\"18436908354\",\"name\":\"R4 rollup function evidence 2026-10-25T02:42:12.568Z\",\"hierarchy_type\":\"multi_level\",\"columns\":[{\"id\":\"color_mkv6tatz\",\"title\":\"Status\",\"type\":\"status\",\"settings\":{\"labels\":[{\"id\":0,\"color\":0,\"label\":\"Working on it\",\"index\":0,\"is_done\":false,\"is_deactivated\":false,\"hex\":\"#fdab3d\"},{\"id\":1,\"color\":1,\"label\":\"Done\",\"index\":1,\"is_done\":false,\"is_deactivated\":false,\"hex\":\"#00c875\"},{\"id\":2,\"color\":2,\"label\":\"Stuck\",\"index\":2,\"is_done\":false,\"is_deactivated\":false,\"hex\":\"#df2f4a\"}]},\"settings_str\":\"{\\\"labels\\\":{\\\"0\\\":\\\"Working on it\\\",\\\"1\\\":\\\"Done\\\",\\\"2\\\":\\\"Stuck\\\"},\\\"labels_colors\\\":{\\\"0\\\":{\\\"color\\\":\\\"#fdab3d\\\",\\\"border\\\":\\\"#e99729\\\",\\\"var_name\\\":\\\"orange\\\"},\\\"1\\\":{\\\"color\\\":\\\"#00c875\\\",\\\"border\\\":\\\"#00b461\\\",\\\"var_name\\\":\\\"green-shadow\\\"},\\\"2\\\":{\\\"color\\\":\\\"#df2f4a\\\",\\\"border\\\":\\\"#ce3048\\\",\\\"var_name\\\":\\\"red-shadow\\\"}}}\",\"capabilities\":{\"calculated\":{\"function\":\"COUNT_KEYS\"}}},{\"id\":\"timerange_mkyvnykb\",\"title\":\"Timeline\",\"type\":\"timeline\",\"settings\":{},\"settings_str\":\"{}\",\"capabilities\":{\"calculated\":{\"function\":\"MIN_MAX\"}}},{\"id\":\"numeric_mm8fkv6k\",\"title\":\"Num SUM\",\"type\":\"numbers\",\"settings\":{},\"settings_str\":\"{}\",\"capabilities\":{\"calculated\":{\"function\":\"SUM\"}}},{\"id\":\"numeric_mm8f3jz3\",\"title\":\"Num MIN\",\"type\":\"numbers\",\"settings\":{},\"settings_str\":\"{}\",\"capabilities\":{\"calculated\":{\"function\":\"MIN\"}}},{\"id\":\"numeric_mm8f56kg\",\"title\":\"Num MAX\",\"type\":\"numbers\",\"settings\":{},\"settings_str\":\"{}\",\"capabilities\":{\"calculated\":{\"function\":\"MAX\"}}},{\"id\":\"numeric_mm8fbpj2\",\"title\":\"Num NONE\",\"type\":\"numbers\",\"settings\":{},\"settings_str\":\"{}\",\"capabilities\":{\"calculated\":{\"function\":\"NONE\"}}},{\"id\":\"date_mm8fftdz\",\"title\":\"Date MIN\",\"type\":\"date\",\"settings\":{},\"settings_str\":\"{}\",\"capabilities\":{\"calculated\":{\"function\":\"MIN\"}}},{\"id\":\"date_mm8fswrb\",\"title\":\"Date MAX\",\"type\":\"date\",\"settings\":{},\"settings_str\":\"{}\",\"capabilities\":{\"calculated\":{\"function\":\"MAX\"}}},{\"id\":\"date_mm8f2n8y\",\"title\":\"Date default\",\"type\":\"date\",\"settings\":{},\"settings_str\":\"{}\",\"capabilities\":{\"calculated\":{\"function\":\"MIN\"}}},{\"id\":\"timerange_mm8fcct0\",\"title\":\"Timeline MIN_MAX\",\"type\":\"timeline\",\"settings\":{},\"settings_str\":\"{}\",\"capabilities\":{\"calculated\":{\"function\":\"MIN_MAX\"}}}]}]},\"extensions\":{\"request_id\":\"dbc00389-2bab-9932-8e46-da133a4cb2fe\"}}",
+  "responseBody": {
+    "data": {
+      "boards": [
+        {
+          "id": "18436908354",
+          "name": "R4 rollup function evidence 2026-10-25T02:42:12.568Z",
+          "hierarchy_type": "multi_level",
+          "columns": [
+            {
+              "id": "color_mkv6tatz",
+              "title": "Status",
+              "type": "status",
+              "settings": {
+                "labels": [
+                  {
+                    "id": 0,
+                    "color": 0,
+                    "label": "Working on it",
+                    "index": 0,
+                    "is_done": false,
+                    "is_deactivated": false,
+                    "hex": "#fdab3d"
+                  },
+                  {
+                    "id": 1,
+                    "color": 1,
+                    "label": "Done",
+                    "index": 1,
+                    "is_done": false,
+                    "is_deactivated": false,
+                    "hex": "#00c875"
+                  },
+                  {
+                    "id": 2,
+                    "color": 2,
+                    "label": "Stuck",
+                    "index": 2,
+                    "is_done": false,
+                    "is_deactivated": false,
+                    "hex": "#df2f4a"
+                  }
+                ]
+              },
+              "settings_str": "{\"labels\":{\"0\":\"Working on it\",\"1\":\"Done\",\"2\":\"Stuck\"},\"labels_colors\":{\"0\":{\"color\":\"#fdab3d\",\"border\":\"#e99729\",\"var_name\":\"orange\"},\"1\":{\"color\":\"#00c875\",\"border\":\"#00b461\",\"var_name\":\"green-shadow\"},\"2\":{\"color\":\"#df2f4a\",\"border\":\"#ce3048\",\"var_name\":\"red-shadow\"}}}",
+              "capabilities": {
+                "calculated": {
+                  "function": "COUNT_KEYS"
+                }
+              }
+            },
+            {
+              "id": "timerange_mkyvnykb",
+              "title": "Timeline",
+              "type": "timeline",
+              "settings": {},
+              "settings_str": "{}",
+              "capabilities": {
+                "calculated": {
+                  "function": "MIN_MAX"
+                }
+              }
+            },
+            {
+              "id": "numeric_mm8fkv6k",
+              "title": "Num SUM",
+              "type": "numbers",
+              "settings": {},
+              "settings_str": "{}",
+              "capabilities": {
+                "calculated": {
+                  "function": "SUM"
+                }
+              }
+            },
+            {
+              "id": "numeric_mm8f3jz3",
+              "title": "Num MIN",
+              "type": "numbers",
+              "settings": {},
+              "settings_str": "{}",
+              "capabilities": {
+                "calculated": {
+                  "function": "MIN"
+                }
+              }
+            },
+            {
+              "id": "numeric_mm8f56kg",
+              "title": "Num MAX",
+              "type": "numbers",
+              "settings": {},
+              "settings_str": "{}",
+              "capabilities": {
+                "calculated": {
+                  "function": "MAX"
+                }
+              }
+            },
+            {
+              "id": "numeric_mm8fbpj2",
+              "title": "Num NONE",
+              "type": "numbers",
+              "settings": {},
+              "settings_str": "{}",
+              "capabilities": {
+                "calculated": {
+                  "function": "NONE"
+                }
+              }
+            },
+            {
+              "id": "date_mm8fftdz",
+              "title": "Date MIN",
+              "type": "date",
+              "settings": {},
+              "settings_str": "{}",
+              "capabilities": {
+                "calculated": {
+                  "function": "MIN"
+                }
+              }
+            },
+            {
+              "id": "date_mm8fswrb",
+              "title": "Date MAX",
+              "type": "date",
+              "settings": {},
+              "settings_str": "{}",
+              "capabilities": {
+                "calculated": {
+                  "function": "MAX"
+                }
+              }
+            },
+            {
+              "id": "date_mm8f2n8y",
+              "title": "Date default",
+              "type": "date",
+              "settings": {},
+              "settings_str": "{}",
+              "capabilities": {
+                "calculated": {
+                  "function": "MIN"
+                }
+              }
+            },
+            {
+              "id": "timerange_mm8fcct0",
+              "title": "Timeline MIN_MAX",
+              "type": "timeline",
+              "settings": {},
+              "settings_str": "{}",
+              "capabilities": {
+                "calculated": {
+                  "function": "MIN_MAX"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "extensions": {
+      "request_id": "dbc00389-2bab-9932-8e46-da133a4cb2fe"
+    }
+  }
+}

@@ -1,0 +1,904 @@
+{
+  "account": {
+    "slug": "sandbox-account",
+    "name": "sandbox-account"
+  },
+  "board": {
+    "id": "18436846804",
+    "name": "MLS Source",
+    "hierarchy_type": "multi_level"
+  },
+  "items": [
+    {
+      "id": "13377169129",
+      "name": "DC deep-chain source",
+      "depth": 1,
+      "parentId": null,
+      "manifestKey": "DC",
+      "isLeaf": true,
+      "values": {
+        "numSum": {
+          "text": "",
+          "is_leaf": true,
+          "number": null
+        },
+        "numMin": {
+          "text": "",
+          "is_leaf": true,
+          "number": null
+        },
+        "numMax": {
+          "text": "",
+          "is_leaf": true,
+          "number": null
+        },
+        "numNone": {
+          "text": "",
+          "is_leaf": true,
+          "number": null
+        },
+        "dateMin": {
+          "text": "",
+          "is_leaf": true,
+          "date": ""
+        },
+        "dateMax": {
+          "text": "",
+          "is_leaf": true,
+          "date": ""
+        },
+        "timeline": {
+          "text": "",
+          "is_leaf": true,
+          "from": null,
+          "to": null
+        }
+      }
+    },
+    {
+      "id": "13374291641",
+      "name": "Item 1",
+      "depth": 1,
+      "parentId": null,
+      "manifestKey": null,
+      "isLeaf": false,
+      "values": {
+        "numSum": {
+          "text": "",
+          "is_leaf": false,
+          "number": null
+        },
+        "numMin": {
+          "text": "",
+          "is_leaf": false,
+          "number": null
+        },
+        "numMax": {
+          "text": "",
+          "is_leaf": false,
+          "number": null
+        },
+        "numNone": {
+          "text": "",
+          "is_leaf": false,
+          "number": null
+        },
+        "dateMin": {
+          "text": "",
+          "is_leaf": false,
+          "date": ""
+        },
+        "dateMax": {
+          "text": "",
+          "is_leaf": false,
+          "date": ""
+        },
+        "timeline": {
+          "text": "2025-12-16 - 2025-12-26",
+          "is_leaf": false,
+          "from": "2025-12-16T00:00:00+00:00",
+          "to": "2025-12-26T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "id": "13374290733",
+      "name": "R1 root",
+      "depth": 1,
+      "parentId": null,
+      "manifestKey": "R1",
+      "isLeaf": false,
+      "values": {
+        "numSum": {
+          "text": "136",
+          "is_leaf": false,
+          "number": 136
+        },
+        "numMin": {
+          "text": "136",
+          "is_leaf": false,
+          "number": 136
+        },
+        "numMax": {
+          "text": "136",
+          "is_leaf": false,
+          "number": 136
+        },
+        "numNone": {
+          "text": "136",
+          "is_leaf": false,
+          "number": 136
+        },
+        "dateMin": {
+          "text": "2026-01-10",
+          "is_leaf": false,
+          "date": "2026-01-10"
+        },
+        "dateMax": {
+          "text": "2026-01-10",
+          "is_leaf": false,
+          "date": "2026-01-10"
+        },
+        "timeline": {
+          "text": "2026-01-05 - 2026-05-20",
+          "is_leaf": false,
+          "from": "2026-01-05T00:00:00+00:00",
+          "to": "2026-05-20T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "id": "13374276846",
+      "name": "R2 leaf root",
+      "depth": 1,
+      "parentId": null,
+      "manifestKey": "R2",
+      "isLeaf": true,
+      "values": {
+        "numSum": {
+          "text": "7",
+          "is_leaf": true,
+          "number": 7
+        },
+        "numMin": {
+          "text": "7",
+          "is_leaf": true,
+          "number": 7
+        },
+        "numMax": {
+          "text": "7",
+          "is_leaf": true,
+          "number": 7
+        },
+        "numNone": {
+          "text": "7",
+          "is_leaf": true,
+          "number": 7
+        },
+        "dateMin": {
+          "text": "2026-02-02",
+          "is_leaf": true,
+          "date": "2026-02-02"
+        },
+        "dateMax": {
+          "text": "2026-02-02",
+          "is_leaf": true,
+          "date": "2026-02-02"
+        },
+        "timeline": {
+          "text": "2026-02-01 - 2026-02-03",
+          "is_leaf": true,
+          "from": "2026-02-01T00:00:00+00:00",
+          "to": "2026-02-03T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "id": "13374267172",
+      "name": "R3 empty-child root",
+      "depth": 1,
+      "parentId": null,
+      "manifestKey": "R3",
+      "isLeaf": false,
+      "values": {
+        "numSum": {
+          "text": "",
+          "is_leaf": false,
+          "number": null
+        },
+        "numMin": {
+          "text": "",
+          "is_leaf": false,
+          "number": null
+        },
+        "numMax": {
+          "text": "",
+          "is_leaf": false,
+          "number": null
+        },
+        "numNone": {
+          "text": "",
+          "is_leaf": false,
+          "number": null
+        },
+        "dateMin": {
+          "text": "",
+          "is_leaf": false,
+          "date": ""
+        },
+        "dateMax": {
+          "text": "",
+          "is_leaf": false,
+          "date": ""
+        },
+        "timeline": {
+          "text": "",
+          "is_leaf": false,
+          "from": null,
+          "to": null
+        }
+      }
+    },
+    {
+      "id": "13374271723",
+      "name": "A (L2)",
+      "depth": 2,
+      "parentId": "13374290733",
+      "manifestKey": "A",
+      "isLeaf": false,
+      "values": {
+        "numSum": {
+          "text": "36",
+          "is_leaf": false,
+          "number": 36
+        },
+        "numMin": {
+          "text": "36",
+          "is_leaf": false,
+          "number": 36
+        },
+        "numMax": {
+          "text": "36",
+          "is_leaf": false,
+          "number": 36
+        },
+        "numNone": {
+          "text": "36",
+          "is_leaf": false,
+          "number": 36
+        },
+        "dateMin": {
+          "text": "2026-03-02",
+          "is_leaf": false,
+          "date": "2026-03-02"
+        },
+        "dateMax": {
+          "text": "2026-03-02",
+          "is_leaf": false,
+          "date": "2026-03-02"
+        },
+        "timeline": {
+          "text": "2026-03-01 - 2026-05-20",
+          "is_leaf": false,
+          "from": "2026-03-01T00:00:00+00:00",
+          "to": "2026-05-20T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "id": "13374223931",
+      "name": "B (L2 leaf)",
+      "depth": 2,
+      "parentId": "13374290733",
+      "manifestKey": "B",
+      "isLeaf": true,
+      "values": {
+        "numSum": {
+          "text": "100",
+          "is_leaf": true,
+          "number": 100
+        },
+        "numMin": {
+          "text": "100",
+          "is_leaf": true,
+          "number": 100
+        },
+        "numMax": {
+          "text": "100",
+          "is_leaf": true,
+          "number": 100
+        },
+        "numNone": {
+          "text": "100",
+          "is_leaf": true,
+          "number": 100
+        },
+        "dateMin": {
+          "text": "2026-01-10",
+          "is_leaf": true,
+          "date": "2026-01-10"
+        },
+        "dateMax": {
+          "text": "2026-01-10",
+          "is_leaf": true,
+          "date": "2026-01-10"
+        },
+        "timeline": {
+          "text": "2026-01-05 - 2026-01-12",
+          "is_leaf": true,
+          "from": "2026-01-05T00:00:00+00:00",
+          "to": "2026-01-12T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "id": "13374224094",
+      "name": "R3c (empty leaf)",
+      "depth": 2,
+      "parentId": "13374267172",
+      "manifestKey": "R3c",
+      "isLeaf": true,
+      "values": {
+        "numSum": {
+          "text": "",
+          "is_leaf": true,
+          "number": null
+        },
+        "numMin": {
+          "text": "",
+          "is_leaf": true,
+          "number": null
+        },
+        "numMax": {
+          "text": "",
+          "is_leaf": true,
+          "number": null
+        },
+        "numNone": {
+          "text": "",
+          "is_leaf": true,
+          "number": null
+        },
+        "dateMin": {
+          "text": "",
+          "is_leaf": true,
+          "date": ""
+        },
+        "dateMax": {
+          "text": "",
+          "is_leaf": true,
+          "date": ""
+        },
+        "timeline": {
+          "text": "",
+          "is_leaf": true,
+          "from": null,
+          "to": null
+        }
+      }
+    },
+    {
+      "id": "13374291640",
+      "name": "Subitem Level 1",
+      "depth": 2,
+      "parentId": "13374291641",
+      "manifestKey": null,
+      "isLeaf": false,
+      "values": {
+        "numSum": {
+          "text": "",
+          "is_leaf": false,
+          "number": null
+        },
+        "numMin": {
+          "text": "",
+          "is_leaf": false,
+          "number": null
+        },
+        "numMax": {
+          "text": "",
+          "is_leaf": false,
+          "number": null
+        },
+        "numNone": {
+          "text": "",
+          "is_leaf": false,
+          "number": null
+        },
+        "dateMin": {
+          "text": "",
+          "is_leaf": false,
+          "date": ""
+        },
+        "dateMax": {
+          "text": "",
+          "is_leaf": false,
+          "date": ""
+        },
+        "timeline": {
+          "text": "2025-12-16 - 2025-12-26",
+          "is_leaf": false,
+          "from": "2025-12-16T00:00:00+00:00",
+          "to": "2025-12-26T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "id": "13374266669",
+      "name": "A1 (L3 leaf)",
+      "depth": 3,
+      "parentId": "13374271723",
+      "manifestKey": "A1",
+      "isLeaf": true,
+      "values": {
+        "numSum": {
+          "text": "11",
+          "is_leaf": true,
+          "number": 11
+        },
+        "numMin": {
+          "text": "11",
+          "is_leaf": true,
+          "number": 11
+        },
+        "numMax": {
+          "text": "11",
+          "is_leaf": true,
+          "number": 11
+        },
+        "numNone": {
+          "text": "11",
+          "is_leaf": true,
+          "number": 11
+        },
+        "dateMin": {
+          "text": "2026-03-02",
+          "is_leaf": true,
+          "date": "2026-03-02"
+        },
+        "dateMax": {
+          "text": "2026-03-02",
+          "is_leaf": true,
+          "date": "2026-03-02"
+        },
+        "timeline": {
+          "text": "2026-03-01 - 2026-03-10",
+          "is_leaf": true,
+          "from": "2026-03-01T00:00:00+00:00",
+          "to": "2026-03-10T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "id": "13374259848",
+      "name": "A2 (L3)",
+      "depth": 3,
+      "parentId": "13374271723",
+      "manifestKey": "A2",
+      "isLeaf": false,
+      "values": {
+        "numSum": {
+          "text": "25",
+          "is_leaf": false,
+          "number": 25
+        },
+        "numMin": {
+          "text": "25",
+          "is_leaf": false,
+          "number": 25
+        },
+        "numMax": {
+          "text": "25",
+          "is_leaf": false,
+          "number": 25
+        },
+        "numNone": {
+          "text": "25",
+          "is_leaf": false,
+          "number": 25
+        },
+        "dateMin": {
+          "text": "2026-05-15",
+          "is_leaf": false,
+          "date": "2026-05-15"
+        },
+        "dateMax": {
+          "text": "2026-05-15",
+          "is_leaf": false,
+          "date": "2026-05-15"
+        },
+        "timeline": {
+          "text": "2026-05-01 - 2026-05-20",
+          "is_leaf": false,
+          "from": "2026-05-01T00:00:00+00:00",
+          "to": "2026-05-20T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "id": "13374291642",
+      "name": "Subitem Level 2",
+      "depth": 3,
+      "parentId": "13374291640",
+      "manifestKey": null,
+      "isLeaf": true,
+      "values": {
+        "numSum": {
+          "text": "",
+          "is_leaf": true,
+          "number": null
+        },
+        "numMin": {
+          "text": "",
+          "is_leaf": true,
+          "number": null
+        },
+        "numMax": {
+          "text": "",
+          "is_leaf": true,
+          "number": null
+        },
+        "numNone": {
+          "text": "",
+          "is_leaf": true,
+          "number": null
+        },
+        "dateMin": {
+          "text": "",
+          "is_leaf": true,
+          "date": ""
+        },
+        "dateMax": {
+          "text": "",
+          "is_leaf": true,
+          "date": ""
+        },
+        "timeline": {
+          "text": "2025-12-16 - 2025-12-24",
+          "is_leaf": true,
+          "from": "2025-12-16T00:00:00+00:00",
+          "to": "2025-12-24T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "id": "13374291643",
+      "name": "Subitem Level 2",
+      "depth": 3,
+      "parentId": "13374291640",
+      "manifestKey": null,
+      "isLeaf": true,
+      "values": {
+        "numSum": {
+          "text": "",
+          "is_leaf": true,
+          "number": null
+        },
+        "numMin": {
+          "text": "",
+          "is_leaf": true,
+          "number": null
+        },
+        "numMax": {
+          "text": "",
+          "is_leaf": true,
+          "number": null
+        },
+        "numNone": {
+          "text": "",
+          "is_leaf": true,
+          "number": null
+        },
+        "dateMin": {
+          "text": "",
+          "is_leaf": true,
+          "date": ""
+        },
+        "dateMax": {
+          "text": "",
+          "is_leaf": true,
+          "date": ""
+        },
+        "timeline": {
+          "text": "2025-12-18 - 2025-12-26",
+          "is_leaf": true,
+          "from": "2025-12-18T00:00:00+00:00",
+          "to": "2025-12-26T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "id": "13374242116",
+      "name": "A2x (L4)",
+      "depth": 4,
+      "parentId": "13374259848",
+      "manifestKey": "A2x",
+      "isLeaf": false,
+      "values": {
+        "numSum": {
+          "text": "25",
+          "is_leaf": false,
+          "number": 25
+        },
+        "numMin": {
+          "text": "25",
+          "is_leaf": false,
+          "number": 25
+        },
+        "numMax": {
+          "text": "25",
+          "is_leaf": false,
+          "number": 25
+        },
+        "numNone": {
+          "text": "25",
+          "is_leaf": false,
+          "number": 25
+        },
+        "dateMin": {
+          "text": "2026-05-15",
+          "is_leaf": false,
+          "date": "2026-05-15"
+        },
+        "dateMax": {
+          "text": "2026-05-15",
+          "is_leaf": false,
+          "date": "2026-05-15"
+        },
+        "timeline": {
+          "text": "2026-05-01 - 2026-05-20",
+          "is_leaf": false,
+          "from": "2026-05-01T00:00:00+00:00",
+          "to": "2026-05-20T00:00:00+00:00"
+        }
+      }
+    },
+    {
+      "id": "13374259917",
+      "name": "A2y (L5 leaf)",
+      "depth": 5,
+      "parentId": "13374242116",
+      "manifestKey": "A2y",
+      "isLeaf": true,
+      "values": {
+        "numSum": {
+          "text": "25",
+          "is_leaf": true,
+          "number": 25
+        },
+        "numMin": {
+          "text": "25",
+          "is_leaf": true,
+          "number": 25
+        },
+        "numMax": {
+          "text": "25",
+          "is_leaf": true,
+          "number": 25
+        },
+        "numNone": {
+          "text": "25",
+          "is_leaf": true,
+          "number": 25
+        },
+        "dateMin": {
+          "text": "2026-05-15",
+          "is_leaf": true,
+          "date": "2026-05-15"
+        },
+        "dateMax": {
+          "text": "2026-05-15",
+          "is_leaf": true,
+          "date": "2026-05-15"
+        },
+        "timeline": {
+          "text": "2026-05-01 - 2026-05-20",
+          "is_leaf": true,
+          "from": "2026-05-01T00:00:00+00:00",
+          "to": "2026-05-20T00:00:00+00:00"
+        }
+      }
+    }
+  ],
+  "columns": [
+    {
+      "key": "numSum",
+      "id": "numeric_mm8er9xg",
+      "title": "Num SUM",
+      "type": "numbers",
+      "declaredFunction": "SUM"
+    },
+    {
+      "key": "numMin",
+      "id": "numeric_mm8esxg1",
+      "title": "Num MIN",
+      "type": "numbers",
+      "declaredFunction": "MIN"
+    },
+    {
+      "key": "numMax",
+      "id": "numeric_mm8e1qed",
+      "title": "Num MAX",
+      "type": "numbers",
+      "declaredFunction": "MAX"
+    },
+    {
+      "key": "numNone",
+      "id": "numeric_mm8e1myd",
+      "title": "Num NONE",
+      "type": "numbers",
+      "declaredFunction": "NONE"
+    },
+    {
+      "key": "dateMin",
+      "id": "date_mm8e937y",
+      "title": "Date MIN",
+      "type": "date",
+      "declaredFunction": "MIN"
+    },
+    {
+      "key": "dateMax",
+      "id": "date_mm8es1zd",
+      "title": "Date MAX",
+      "type": "date",
+      "declaredFunction": "MAX"
+    },
+    {
+      "key": "timeline",
+      "id": "timerange_mkyvnykb",
+      "title": "Timeline",
+      "type": "timeline",
+      "declaredFunction": "MIN_MAX"
+    }
+  ],
+  "columnMetadataByVersion": {
+    "2026-04": {
+      "file": "03-column-metadata-2026-04.json",
+      "columns": []
+    },
+    "2026-10": {
+      "file": "12-column-metadata-2026-10.json",
+      "columns": [
+        {
+          "id": "timerange_mkyvnykb",
+          "title": "Timeline",
+          "type": "timeline",
+          "capabilities": {
+            "calculated": {
+              "function": "MIN_MAX"
+            }
+          }
+        },
+        {
+          "id": "numeric_mm8er9xg",
+          "title": "Num SUM",
+          "type": "numbers",
+          "capabilities": {
+            "calculated": {
+              "function": "SUM"
+            }
+          }
+        },
+        {
+          "id": "numeric_mm8esxg1",
+          "title": "Num MIN",
+          "type": "numbers",
+          "capabilities": {
+            "calculated": {
+              "function": "MIN"
+            }
+          }
+        },
+        {
+          "id": "numeric_mm8e1qed",
+          "title": "Num MAX",
+          "type": "numbers",
+          "capabilities": {
+            "calculated": {
+              "function": "MAX"
+            }
+          }
+        },
+        {
+          "id": "numeric_mm8e1myd",
+          "title": "Num NONE",
+          "type": "numbers",
+          "capabilities": {
+            "calculated": {
+              "function": "NONE"
+            }
+          }
+        },
+        {
+          "id": "date_mm8es1zd",
+          "title": "Date MAX",
+          "type": "date",
+          "capabilities": {
+            "calculated": {
+              "function": "MAX"
+            }
+          }
+        },
+        {
+          "id": "date_mm8e937y",
+          "title": "Date MIN",
+          "type": "date",
+          "capabilities": {
+            "calculated": {
+              "function": "MIN"
+            }
+          }
+        }
+      ]
+    }
+  },
+  "hiddenValuesWritten": {
+    "R1": {
+      "itemId": "13374290733",
+      "values": {
+        "numSum": 5,
+        "numMin": 2,
+        "numMax": 500,
+        "numNone": 5,
+        "dateMin": {
+          "date": "2020-01-01"
+        },
+        "dateMax": {
+          "date": "2030-01-01"
+        },
+        "timeline": {
+          "from": "2020-01-01",
+          "to": "2030-01-01"
+        }
+      }
+    },
+    "A": {
+      "itemId": "13374271723",
+      "values": {
+        "numSum": 1000,
+        "numMin": 1,
+        "numMax": 999,
+        "numNone": 1000,
+        "dateMin": {
+          "date": "2019-01-01"
+        },
+        "dateMax": {
+          "date": "2031-01-01"
+        },
+        "timeline": {
+          "from": "2019-01-01",
+          "to": "2031-01-01"
+        }
+      }
+    }
+  },
+  "valuesNote": "values are read with capabilities: [CALCULATED] before any write (the ground-truth request of the first API version). Leaves hold static values; parents hold the API's rollup.",
+  "fixtureFile": "01-fixture-board-2026-04.json",
+  "groundTruthFiles": [
+    "02-ground-truth-2026-04.json",
+    "11-ground-truth-2026-10.json"
+  ],
+  "boardUi": {
+    "source": "Board screenshot taken by the reporter after the write, 2026-10-24",
+    "R1": {
+      "numSum": 136,
+      "numMin": 11,
+      "numMax": 100,
+      "numNone": null,
+      "dateMax": "May 15",
+      "dateMin": "Jan 10",
+      "timeline": "Jan 5 - May 20"
+    },
+    "A": {
+      "numSum": 36,
+      "numMin": 11,
+      "numMax": 25,
+      "numNone": null,
+      "dateMax": "May 15",
+      "dateMin": "Mar 2",
+      "timeline": "Mar 1 - May 20"
+    },
+    "groupFooterNumSum": 143,
+    "verdict": "The board ignores every parent's own stored value, at the parent's level and above."
+  }
+}

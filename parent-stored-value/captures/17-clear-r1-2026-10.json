@@ -1,0 +1,49 @@
+{
+  "file": "17-clear-r1-2026-10",
+  "case": "clear",
+  "description": "Clear R1's own rollup cells (null)",
+  "endpoint": "https://api.monday.com/v2",
+  "method": "POST",
+  "requestHeaders": {
+    "API-Version": "2026-10",
+    "Content-Type": "application/json"
+  },
+  "authorizationHeader": "sent; value not recorded",
+  "apiVersion": "2026-10",
+  "requestBody": "{\"query\":\"mutation ($b: ID!, $i: ID!, $v: JSON!) { change_multiple_column_values(board_id: $b, item_id: $i, column_values: $v) { id } }\",\"variables\":{\"b\":\"18436846804\",\"i\":\"13374290733\",\"v\":\"{\\\"numeric_mm8er9xg\\\":null,\\\"numeric_mm8esxg1\\\":null,\\\"numeric_mm8e1qed\\\":null,\\\"numeric_mm8e1myd\\\":null,\\\"date_mm8e937y\\\":null,\\\"date_mm8es1zd\\\":null,\\\"timerange_mkyvnykb\\\":null}\"}}",
+  "query": "mutation ($b: ID!, $i: ID!, $v: JSON!) { change_multiple_column_values(board_id: $b, item_id: $i, column_values: $v) { id } }",
+  "variables": {
+    "b": "18436846804",
+    "i": "13374290733",
+    "v": "{\"numeric_mm8er9xg\":null,\"numeric_mm8esxg1\":null,\"numeric_mm8e1qed\":null,\"numeric_mm8e1myd\":null,\"date_mm8e937y\":null,\"date_mm8es1zd\":null,\"timerange_mkyvnykb\":null}"
+  },
+  "startedAt": "2026-10-25T02:41:48.055Z",
+  "endedAt": "2026-10-25T02:41:49.101Z",
+  "durationMs": 1046,
+  "status": 200,
+  "xRequestId": "195de513-1d74-9301-b30d-a44b14b19a9d",
+  "rateLimitHeaders": {
+    "ratelimit": "\"minuteRate\";r=3328, \"concurrency\";r=199, \"complexityMinute\";r=9909441;t=46",
+    "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\""
+  },
+  "responseHeaders": {
+    "api-version": "2026-10",
+    "content-type": "application/json; charset=utf-8",
+    "date": "Sun, 25 Oct 2026 02:41:49 GMT",
+    "ratelimit": "\"minuteRate\";r=3328, \"concurrency\";r=199, \"complexityMinute\";r=9909441;t=46",
+    "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\"",
+    "x-request-id": "195de513-1d74-9301-b30d-a44b14b19a9d"
+  },
+  "extensionsRequestId": "195de513-1d74-9301-b30d-a44b14b19a9d",
+  "responseBodyRaw": "{\"data\":{\"change_multiple_column_values\":{\"id\":\"13374290733\"}},\"extensions\":{\"request_id\":\"195de513-1d74-9301-b30d-a44b14b19a9d\"}}",
+  "responseBody": {
+    "data": {
+      "change_multiple_column_values": {
+        "id": "13374290733"
+      }
+    },
+    "extensions": {
+      "request_id": "195de513-1d74-9301-b30d-a44b14b19a9d"
+    }
+  }
+}

@@ -1,0 +1,20 @@
+me: HTTP 200, request_id a3ef325a-ad64-9638-b717-ed40c601bccf, sent 2026-10-25T02:37:25.157Z
+create_board: HTTP 200, request_id 3c1875eb-ac01-9b21-bf38-8f4421403878, sent 2026-10-25T02:37:26.426Z
+create_column Num SUM: HTTP 200, request_id e760cfca-0505-9a7a-8666-de24139e08a6, sent 2026-10-25T02:37:33.305Z
+create_column Num MIN: HTTP 200, request_id 61c34ab1-3078-980a-a5f8-1b7a0b3dbe79, sent 2026-10-25T02:37:35.101Z
+create_column Num MAX: HTTP 200, request_id 0ade2175-2090-9f74-b551-155b2bbce367, sent 2026-10-25T02:37:36.636Z
+create_column Num NONE: HTTP 200, request_id 302b1ff9-468e-9af9-a8e4-7d214dfda7f3, sent 2026-10-25T02:37:38.279Z
+create_column Date MIN: HTTP 200, request_id c966bcb2-f837-913d-a149-0f875dd8516e, sent 2026-10-25T02:37:39.869Z
+create_column Date MAX: HTTP 200, request_id bd1a11eb-e74f-947c-add0-806ca2b80468, sent 2026-10-25T02:37:41.394Z
+create_column Date NONE: HTTP 200, request_id b875017b-16e3-9d87-bda6-648a0a75df7f, sent 2026-10-25T02:37:42.945Z ERROR [{"message":"Capabilities validation failed","locations":[{"line":1,"column":78}],"path":["create_column"],"extensions":{"code":"INVALID_INPUT","status_code":400,"errors":["Invalid capabilities: Invalid calculated function 'none' for column type 'date'. Valid functions: min, max"]}}]
+create_column Date default: HTTP 200, request_id 99597f11-5898-98fa-a466-38a429c6c1a7, sent 2026-10-25T02:37:44.098Z
+create_column Timeline MIN_MAX: HTTP 200, request_id a84b4ce2-38c7-94fd-a024-1ce02037bcad, sent 2026-10-25T02:37:45.740Z
+create_item P1 (L1 parent): HTTP 200, request_id 0ac7a363-5024-924b-9017-91239e82fd69, sent 2026-10-25T02:37:47.314Z
+create_subitem Q1 (L2 parent): HTTP 200, request_id 76fe5fd2-22b2-95a2-80f3-7b45521d8f89, sent 2026-10-25T02:37:49.411Z
+create_subitem Q1a (L3 leaf): HTTP 200, request_id f5d66871-67b5-94dc-98ed-0630c055313f, sent 2026-10-25T02:37:55.280Z
+create_subitem Q1b (L3 leaf): HTTP 200, request_id e716e022-0d2e-976f-9afa-65fa5eebaeae, sent 2026-10-25T02:37:57.946Z
+create_subitem P1c (L2 leaf): HTTP 200, request_id e46ae1c0-57ad-922d-a99b-8ea9f32ca857, sent 2026-10-25T02:38:00.204Z
+write leaf Q1a: HTTP 200, request_id 150265b3-0985-9d58-a748-023d60049a69, sent 2026-10-25T02:38:02.547Z
+write leaf Q1b: HTTP 200, request_id 80d87368-7488-907f-a532-98e22a407b5b, sent 2026-10-25T02:38:04.464Z
+write leaf P1c: HTTP 200, request_id a25da519-2363-9d2d-beb1-3ccc14352677, sent 2026-10-25T02:38:06.637Z
+waiting 10 s for rollup recalculation

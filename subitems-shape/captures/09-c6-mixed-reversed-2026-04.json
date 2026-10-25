@@ -1,0 +1,89 @@
+{
+  "file": "09-c6-mixed-reversed-2026-04",
+  "case": "C6",
+  "description": "mixed batch, reversed [A, R1]",
+  "endpoint": "https://api.monday.com/v2",
+  "method": "POST",
+  "requestHeaders": {
+    "API-Version": "2026-04",
+    "Content-Type": "application/json"
+  },
+  "authorizationHeader": "sent; value not recorded",
+  "apiVersion": "2026-04",
+  "requestBody": "{\"query\":\"query ($ids: [ID!]) { items(ids: $ids) { id name subitems { id name parent_item { id } } } }\",\"variables\":{\"ids\":[\"13374271723\",\"13374290733\"]}}",
+  "query": "query ($ids: [ID!]) { items(ids: $ids) { id name subitems { id name parent_item { id } } } }",
+  "variables": {
+    "ids": [
+      "13374271723",
+      "13374290733"
+    ]
+  },
+  "startedAt": "2026-10-25T02:29:36.389Z",
+  "endedAt": "2026-10-25T02:29:37.044Z",
+  "durationMs": 655,
+  "status": 200,
+  "xRequestId": "ba08275e-a4c6-9867-bbae-893f83b98fef",
+  "rateLimitHeaders": {
+    "ratelimit": "\"minuteRate\";r=3325, \"concurrency\";r=199, \"complexityMinute\";r=9996430;t=46",
+    "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\""
+  },
+  "responseHeaders": {
+    "api-version": "2026-04",
+    "content-type": "application/json; charset=utf-8",
+    "date": "Sun, 25 Oct 2026 02:29:37 GMT",
+    "ratelimit": "\"minuteRate\";r=3325, \"concurrency\";r=199, \"complexityMinute\";r=9996430;t=46",
+    "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\"",
+    "x-request-id": "ba08275e-a4c6-9867-bbae-893f83b98fef"
+  },
+  "extensionsRequestId": "ba08275e-a4c6-9867-bbae-893f83b98fef",
+  "responseBodyRaw": "{\"data\":{\"items\":[{\"id\":\"13374271723\",\"name\":\"A (L2)\",\"subitems\":[{\"id\":\"13374266669\",\"name\":\"A1 (L3 leaf)\",\"parent_item\":{\"id\":\"13374271723\"}},{\"id\":\"13374259848\",\"name\":\"A2 (L3)\",\"parent_item\":{\"id\":\"13374271723\"}}]},{\"id\":\"13374290733\",\"name\":\"R1 root\",\"subitems\":[{\"id\":\"13374271723\",\"name\":\"A (L2)\",\"parent_item\":{\"id\":\"13374290733\"}},{\"id\":\"13374223931\",\"name\":\"B (L2 leaf)\",\"parent_item\":{\"id\":\"13374290733\"}}]}]},\"extensions\":{\"request_id\":\"ba08275e-a4c6-9867-bbae-893f83b98fef\"}}",
+  "responseBody": {
+    "data": {
+      "items": [
+        {
+          "id": "13374271723",
+          "name": "A (L2)",
+          "subitems": [
+            {
+              "id": "13374266669",
+              "name": "A1 (L3 leaf)",
+              "parent_item": {
+                "id": "13374271723"
+              }
+            },
+            {
+              "id": "13374259848",
+              "name": "A2 (L3)",
+              "parent_item": {
+                "id": "13374271723"
+              }
+            }
+          ]
+        },
+        {
+          "id": "13374290733",
+          "name": "R1 root",
+          "subitems": [
+            {
+              "id": "13374271723",
+              "name": "A (L2)",
+              "parent_item": {
+                "id": "13374290733"
+              }
+            },
+            {
+              "id": "13374223931",
+              "name": "B (L2 leaf)",
+              "parent_item": {
+                "id": "13374290733"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "extensions": {
+      "request_id": "ba08275e-a4c6-9867-bbae-893f83b98fef"
+    }
+  }
+}

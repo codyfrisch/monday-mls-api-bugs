@@ -1,0 +1,5 @@
+{
+  "account": "sandbox-account",
+  "deletedBoard": "18436908272",
+  "name": "G1 rollup repro 2026-10-25T02:39:53.950Z"
+}

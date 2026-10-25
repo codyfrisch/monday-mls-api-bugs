@@ -1,0 +1,61 @@
+{
+  "file": "04-create-column-nummin-2026-10",
+  "case": "setup",
+  "description": "create_column Num MIN",
+  "endpoint": "https://api.monday.com/v2",
+  "method": "POST",
+  "requestHeaders": {
+    "API-Version": "2026-10",
+    "Content-Type": "application/json"
+  },
+  "authorizationHeader": "sent; value not recorded",
+  "apiVersion": "2026-10",
+  "requestBody": "{\"query\":\"mutation ($b: ID!, $t: String!, $ty: ColumnType!, $cap: ColumnCapabilitiesInput) { create_column(board_id: $b, title: $t, column_type: $ty, capabilities: $cap) { id title type capabilities { calculated { function } } } }\",\"variables\":{\"b\":\"18436908354\",\"t\":\"Num MIN\",\"ty\":\"numbers\",\"cap\":{\"calculated\":{\"function\":\"MIN\"}}}}",
+  "query": "mutation ($b: ID!, $t: String!, $ty: ColumnType!, $cap: ColumnCapabilitiesInput) { create_column(board_id: $b, title: $t, column_type: $ty, capabilities: $cap) { id title type capabilities { calculated { function } } } }",
+  "variables": {
+    "b": "18436908354",
+    "t": "Num MIN",
+    "ty": "numbers",
+    "cap": {
+      "calculated": {
+        "function": "MIN"
+      }
+    }
+  },
+  "startedAt": "2026-10-25T02:42:23.655Z",
+  "endedAt": "2026-10-25T02:42:24.331Z",
+  "durationMs": 676,
+  "status": 200,
+  "xRequestId": "ca18cd2b-e542-9de3-a3c0-c2e51ddb1ae0",
+  "rateLimitHeaders": {
+    "ratelimit": "\"minuteRate\";r=3321, \"concurrency\";r=199, \"complexityMinute\";r=9849361;t=11",
+    "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\""
+  },
+  "responseHeaders": {
+    "api-version": "2026-10",
+    "content-type": "application/json; charset=utf-8",
+    "date": "Sun, 25 Oct 2026 02:42:24 GMT",
+    "ratelimit": "\"minuteRate\";r=3321, \"concurrency\";r=199, \"complexityMinute\";r=9849361;t=11",
+    "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\"",
+    "x-request-id": "ca18cd2b-e542-9de3-a3c0-c2e51ddb1ae0"
+  },
+  "extensionsRequestId": "ca18cd2b-e542-9de3-a3c0-c2e51ddb1ae0",
+  "responseBodyRaw": "{\"data\":{\"create_column\":{\"id\":\"numeric_mm8f3jz3\",\"title\":\"Num MIN\",\"type\":\"numbers\",\"capabilities\":{\"calculated\":{\"function\":\"MIN\"}}}},\"extensions\":{\"request_id\":\"ca18cd2b-e542-9de3-a3c0-c2e51ddb1ae0\"}}",
+  "responseBody": {
+    "data": {
+      "create_column": {
+        "id": "numeric_mm8f3jz3",
+        "title": "Num MIN",
+        "type": "numbers",
+        "capabilities": {
+          "calculated": {
+            "function": "MIN"
+          }
+        }
+      }
+    },
+    "extensions": {
+      "request_id": "ca18cd2b-e542-9de3-a3c0-c2e51ddb1ae0"
+    }
+  }
+}

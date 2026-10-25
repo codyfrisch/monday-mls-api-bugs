@@ -1,0 +1,4524 @@
+{
+  "fixture": {
+    "account": "sandbox-account",
+    "apiVersion": "2026-10",
+    "createdAt": "2026-10-25T02:38:18.607Z",
+    "lastWriteAt": "2026-10-25T02:38:08.602Z",
+    "board": {
+      "id": "18436908247",
+      "name": "R4 rollup function repro 2026-10-25T02:37:26.426Z",
+      "hierarchy_type": "multi_level"
+    },
+    "columns": {
+      "numSum": {
+        "id": "numeric_mm8fjk4h",
+        "title": "Num SUM",
+        "type": "numbers",
+        "requestedFunction": "SUM",
+        "createdFunction": "SUM",
+        "requestId": "e760cfca-0505-9a7a-8666-de24139e08a6"
+      },
+      "numMin": {
+        "id": "numeric_mm8fnbbp",
+        "title": "Num MIN",
+        "type": "numbers",
+        "requestedFunction": "MIN",
+        "createdFunction": "MIN",
+        "requestId": "61c34ab1-3078-980a-a5f8-1b7a0b3dbe79"
+      },
+      "numMax": {
+        "id": "numeric_mm8fj6qc",
+        "title": "Num MAX",
+        "type": "numbers",
+        "requestedFunction": "MAX",
+        "createdFunction": "MAX",
+        "requestId": "0ade2175-2090-9f74-b551-155b2bbce367"
+      },
+      "numNone": {
+        "id": "numeric_mm8fpr03",
+        "title": "Num NONE",
+        "type": "numbers",
+        "requestedFunction": "NONE",
+        "createdFunction": "NONE",
+        "requestId": "302b1ff9-468e-9af9-a8e4-7d214dfda7f3"
+      },
+      "dateMin": {
+        "id": "date_mm8f45aw",
+        "title": "Date MIN",
+        "type": "date",
+        "requestedFunction": "MIN",
+        "createdFunction": "MIN",
+        "requestId": "c966bcb2-f837-913d-a149-0f875dd8516e"
+      },
+      "dateMax": {
+        "id": "date_mm8fb58z",
+        "title": "Date MAX",
+        "type": "date",
+        "requestedFunction": "MAX",
+        "createdFunction": "MAX",
+        "requestId": "bd1a11eb-e74f-947c-add0-806ca2b80468"
+      },
+      "dateNone": {
+        "id": null,
+        "title": "Date NONE",
+        "type": "date",
+        "requestedFunction": "NONE",
+        "error": [
+          {
+            "message": "Capabilities validation failed",
+            "locations": [
+              {
+                "line": 1,
+                "column": 78
+              }
+            ],
+            "path": [
+              "create_column"
+            ],
+            "extensions": {
+              "code": "INVALID_INPUT",
+              "status_code": 400,
+              "errors": [
+                "Invalid capabilities: Invalid calculated function 'none' for column type 'date'. Valid functions: min, max"
+              ]
+            }
+          }
+        ],
+        "requestId": "b875017b-16e3-9d87-bda6-648a0a75df7f"
+      },
+      "dateDefault": {
+        "id": "date_mm8f9546",
+        "title": "Date default",
+        "type": "date",
+        "requestedFunction": null,
+        "createdFunction": "MIN",
+        "requestId": "99597f11-5898-98fa-a466-38a429c6c1a7"
+      },
+      "timeline": {
+        "id": "timerange_mm8f4c2a",
+        "title": "Timeline MIN_MAX",
+        "type": "timeline",
+        "requestedFunction": "MIN_MAX",
+        "createdFunction": "MIN_MAX",
+        "requestId": "a84b4ce2-38c7-94fd-a024-1ce02037bcad"
+      }
+    },
+    "items": {
+      "P1": "13377353714",
+      "Q1": "13377370969",
+      "Q1a": "13377370993",
+      "Q1b": "13377423773",
+      "P1c": "13377370978"
+    },
+    "parents": {
+      "P1": [
+        "Q1",
+        "P1c"
+      ],
+      "Q1": [
+        "Q1a",
+        "Q1b"
+      ]
+    },
+    "leafValues": {
+      "Q1a": {
+        "number": 40,
+        "date": "2026-03-03",
+        "timeline": {
+          "from": "2026-03-01",
+          "to": "2026-03-20"
+        }
+      },
+      "Q1b": {
+        "number": 7,
+        "date": "2026-06-30",
+        "timeline": {
+          "from": "2026-05-01",
+          "to": "2026-07-15"
+        }
+      },
+      "P1c": {
+        "number": 200,
+        "date": "2026-01-20",
+        "timeline": {
+          "from": "2026-01-10",
+          "to": "2026-02-01"
+        }
+      }
+    }
+  },
+  "tables": [
+    {
+      "apiVersion": "2026-04",
+      "kind": "leaf-sanity",
+      "rows": [
+        {
+          "apiVersion": "2026-04",
+          "leaf": "Q1a",
+          "column": "Num SUM",
+          "written": 40,
+          "observed": 40,
+          "isLeaf": true,
+          "verdict": "PASS"
+        },
+        {
+          "apiVersion": "2026-04",
+          "leaf": "Q1a",
+          "column": "Num MIN",
+          "written": 40,
+          "observed": 40,
+          "isLeaf": true,
+          "verdict": "PASS"
+        },
+        {
+          "apiVersion": "2026-04",
+          "leaf": "Q1a",
+          "column": "Num MAX",
+          "written": 40,
+          "observed": 40,
+          "isLeaf": true,
+          "verdict": "PASS"
+        },
+        {
+          "apiVersion": "2026-04",
+          "leaf": "Q1a",
+          "column": "Num NONE",
+          "written": 40,
+          "observed": 40,
+          "isLeaf": true,
+          "verdict": "PASS"
+        },
+        {
+          "apiVersion": "2026-04",
+          "leaf": "Q1a",
+          "column": "Date MIN",
+          "written": "2026-03-03",
+          "observed": "2026-03-03",
+          "isLeaf": true,
+          "verdict": "PASS"
+        },
+        {
+          "apiVersion": "2026-04",
+          "leaf": "Q1a",
+          "column": "Date MAX",
+          "written": "2026-03-03",
+          "observed": "2026-03-03",
+          "isLeaf": true,
+          "verdict": "PASS"
+        },
+        {
+          "apiVersion": "2026-04",
+          "leaf": "Q1a",
+          "column": "Date default",
+          "written": "2026-03-03",
+          "observed": "2026-03-03",
+          "isLeaf": true,
+          "verdict": "PASS"
+        },
+        {
+          "apiVersion": "2026-04",
+          "leaf": "Q1a",
+          "column": "Timeline MIN_MAX",
+          "written": "2026-03-01..2026-03-20",
+          "observed": "2026-03-01..2026-03-20",
+          "isLeaf": true,
+          "verdict": "PASS"
+        },
+        {
+          "apiVersion": "2026-04",
+          "leaf": "Q1b",
+          "column": "Num SUM",
+          "written": 7,
+          "observed": 7,
+          "isLeaf": true,
+          "verdict": "PASS"
+        },
+        {
+          "apiVersion": "2026-04",
+          "leaf": "Q1b",
+          "column": "Num MIN",
+          "written": 7,
+          "observed": 7,
+          "isLeaf": true,
+          "verdict": "PASS"
+        },
+        {
+          "apiVersion": "2026-04",
+          "leaf": "Q1b",
+          "column": "Num MAX",
+          "written": 7,
+          "observed": 7,
+          "isLeaf": true,
+          "verdict": "PASS"
+        },
+        {
+          "apiVersion": "2026-04",
+          "leaf": "Q1b",
+          "column": "Num NONE",
+          "written": 7,
+          "observed": 7,
+          "isLeaf": true,
+          "verdict": "PASS"
+        },
+        {
+          "apiVersion": "2026-04",
+          "leaf": "Q1b",
+          "column": "Date MIN",
+          "written": "2026-06-30",
+          "observed": "2026-06-30",
+          "isLeaf": true,
+          "verdict": "PASS"
+        },
+        {
+          "apiVersion": "2026-04",
+          "leaf": "Q1b",
+          "column": "Date MAX",
+          "written": "2026-06-30",
+          "observed": "2026-06-30",
+          "isLeaf": true,
+          "verdict": "PASS"
+        },
+        {
+          "apiVersion": "2026-04",
+          "leaf": "Q1b",
+          "column": "Date default",
+          "written": "2026-06-30",
+          "observed": "2026-06-30",
+          "isLeaf": true,
+          "verdict": "PASS"
+        },
+        {
+          "apiVersion": "2026-04",
+          "leaf": "Q1b",
+          "column": "Timeline MIN_MAX",
+          "written": "2026-05-01..2026-07-15",
+          "observed": "2026-05-01..2026-07-15",
+          "isLeaf": true,
+          "verdict": "PASS"
+        },
+        {
+          "apiVersion": "2026-04",
+          "leaf": "P1c",
+          "column": "Num SUM",
+          "written": 200,
+          "observed": 200,
+          "isLeaf": true,
+          "verdict": "PASS"
+        },
+        {
+          "apiVersion": "2026-04",
+          "leaf": "P1c",
+          "column": "Num MIN",
+          "written": 200,
+          "observed": 200,
+          "isLeaf": true,
+          "verdict": "PASS"
+        },
+        {
+          "apiVersion": "2026-04",
+          "leaf": "P1c",
+          "column": "Num MAX",
+          "written": 200,
+          "observed": 200,
+          "isLeaf": true,
+          "verdict": "PASS"
+        },
+        {
+          "apiVersion": "2026-04",
+          "leaf": "P1c",
+          "column": "Num NONE",
+          "written": 200,
+          "observed": 200,
+          "isLeaf": true,
+          "verdict": "PASS"
+        },
+        {
+          "apiVersion": "2026-04",
+          "leaf": "P1c",
+          "column": "Date MIN",
+          "written": "2026-01-20",
+          "observed": "2026-01-20",
+          "isLeaf": true,
+          "verdict": "PASS"
+        },
+        {
+          "apiVersion": "2026-04",
+          "leaf": "P1c",
+          "column": "Date MAX",
+          "written": "2026-01-20",
+          "observed": "2026-01-20",
+          "isLeaf": true,
+          "verdict": "PASS"
+        },
+        {
+          "apiVersion": "2026-04",
+          "leaf": "P1c",
+          "column": "Date default",
+          "written": "2026-01-20",
+          "observed": "2026-01-20",
+          "isLeaf": true,
+          "verdict": "PASS"
+        },
+        {
+          "apiVersion": "2026-04",
+          "leaf": "P1c",
+          "column": "Timeline MIN_MAX",
+          "written": "2026-01-10..2026-02-01",
+          "observed": "2026-01-10..2026-02-01",
+          "isLeaf": true,
+          "verdict": "PASS"
+        }
+      ]
+    },
+    {
+      "apiVersion": "2026-04",
+      "kind": "parents",
+      "read": "first",
+      "rows": [
+        {
+          "apiVersion": "2026-04",
+          "read": "first",
+          "item": "P1 (L1 parent)",
+          "itemId": "13377353714",
+          "column": "Num SUM",
+          "columnId": "numeric_mm8fjk4h",
+          "configuredFunction": "SUM",
+          "leafValues": [
+            40,
+            7,
+            200
+          ],
+          "expected": 247,
+          "observed": 247,
+          "isLeaf": false,
+          "matches": [
+            "SUM"
+          ],
+          "verdict": "PASS",
+          "requestId": "30ea281a-311f-9280-9eb3-8e05650d6d8b"
+        },
+        {
+          "apiVersion": "2026-04",
+          "read": "first",
+          "item": "P1 (L1 parent)",
+          "itemId": "13377353714",
+          "column": "Num MIN",
+          "columnId": "numeric_mm8fnbbp",
+          "configuredFunction": "MIN",
+          "leafValues": [
+            40,
+            7,
+            200
+          ],
+          "expected": 7,
+          "observed": 247,
+          "isLeaf": false,
+          "matches": [
+            "SUM"
+          ],
+          "verdict": "DEVIATES",
+          "requestId": "30ea281a-311f-9280-9eb3-8e05650d6d8b"
+        },
+        {
+          "apiVersion": "2026-04",
+          "read": "first",
+          "item": "P1 (L1 parent)",
+          "itemId": "13377353714",
+          "column": "Num MAX",
+          "columnId": "numeric_mm8fj6qc",
+          "configuredFunction": "MAX",
+          "leafValues": [
+            40,
+            7,
+            200
+          ],
+          "expected": 200,
+          "observed": 247,
+          "isLeaf": false,
+          "matches": [
+            "SUM"
+          ],
+          "verdict": "DEVIATES",
+          "requestId": "30ea281a-311f-9280-9eb3-8e05650d6d8b"
+        },
+        {
+          "apiVersion": "2026-04",
+          "read": "first",
+          "item": "P1 (L1 parent)",
+          "itemId": "13377353714",
+          "column": "Num NONE",
+          "columnId": "numeric_mm8fpr03",
+          "configuredFunction": "NONE",
+          "leafValues": [
+            40,
+            7,
+            200
+          ],
+          "expected": null,
+          "observed": 247,
+          "isLeaf": false,
+          "matches": [
+            "SUM"
+          ],
+          "verdict": "DEVIATES",
+          "requestId": "30ea281a-311f-9280-9eb3-8e05650d6d8b"
+        },
+        {
+          "apiVersion": "2026-04",
+          "read": "first",
+          "item": "P1 (L1 parent)",
+          "itemId": "13377353714",
+          "column": "Date MIN",
+          "columnId": "date_mm8f45aw",
+          "configuredFunction": "MIN",
+          "leafValues": [
+            "2026-03-03",
+            "2026-06-30",
+            "2026-01-20"
+          ],
+          "expected": "2026-01-20",
+          "observed": "2026-01-20",
+          "isLeaf": false,
+          "matches": [
+            "MIN"
+          ],
+          "verdict": "PASS",
+          "requestId": "30ea281a-311f-9280-9eb3-8e05650d6d8b"
+        },
+        {
+          "apiVersion": "2026-04",
+          "read": "first",
+          "item": "P1 (L1 parent)",
+          "itemId": "13377353714",
+          "column": "Date MAX",
+          "columnId": "date_mm8fb58z",
+          "configuredFunction": "MAX",
+          "leafValues": [
+            "2026-03-03",
+            "2026-06-30",
+            "2026-01-20"
+          ],
+          "expected": "2026-06-30",
+          "observed": "2026-01-20",
+          "isLeaf": false,
+          "matches": [
+            "MIN"
+          ],
+          "verdict": "DEVIATES",
+          "requestId": "30ea281a-311f-9280-9eb3-8e05650d6d8b"
+        },
+        {
+          "apiVersion": "2026-04",
+          "read": "first",
+          "item": "P1 (L1 parent)",
+          "itemId": "13377353714",
+          "column": "Date default",
+          "columnId": "date_mm8f9546",
+          "configuredFunction": "MIN",
+          "leafValues": [
+            "2026-03-03",
+            "2026-06-30",
+            "2026-01-20"
+          ],
+          "expected": "2026-01-20",
+          "observed": "2026-01-20",
+          "isLeaf": false,
+          "matches": [
+            "MIN"
+          ],
+          "verdict": "PASS",
+          "requestId": "30ea281a-311f-9280-9eb3-8e05650d6d8b"
+        },
+        {
+          "apiVersion": "2026-04",
+          "read": "first",
+          "item": "P1 (L1 parent)",
+          "itemId": "13377353714",
+          "column": "Timeline MIN_MAX",
+          "columnId": "timerange_mm8f4c2a",
+          "configuredFunction": "MIN_MAX",
+          "leafValues": [
+            "2026-03-01..2026-03-20",
+            "2026-05-01..2026-07-15",
+            "2026-01-10..2026-02-01"
+          ],
+          "expected": "2026-01-10..2026-07-15",
+          "observed": "2026-01-10..2026-07-15",
+          "isLeaf": false,
+          "matches": [
+            "MIN_MAX"
+          ],
+          "verdict": "PASS",
+          "requestId": "30ea281a-311f-9280-9eb3-8e05650d6d8b"
+        },
+        {
+          "apiVersion": "2026-04",
+          "read": "first",
+          "item": "Q1 (L2 parent)",
+          "itemId": "13377370969",
+          "column": "Num SUM",
+          "columnId": "numeric_mm8fjk4h",
+          "configuredFunction": "SUM",
+          "leafValues": [
+            40,
+            7
+          ],
+          "expected": 47,
+          "observed": 47,
+          "isLeaf": false,
+          "matches": [
+            "SUM"
+          ],
+          "verdict": "PASS",
+          "requestId": "30ea281a-311f-9280-9eb3-8e05650d6d8b"
+        },
+        {
+          "apiVersion": "2026-04",
+          "read": "first",
+          "item": "Q1 (L2 parent)",
+          "itemId": "13377370969",
+          "column": "Num MIN",
+          "columnId": "numeric_mm8fnbbp",
+          "configuredFunction": "MIN",
+          "leafValues": [
+            40,
+            7
+          ],
+          "expected": 7,
+          "observed": 47,
+          "isLeaf": false,
+          "matches": [
+            "SUM"
+          ],
+          "verdict": "DEVIATES",
+          "requestId": "30ea281a-311f-9280-9eb3-8e05650d6d8b"
+        },
+        {
+          "apiVersion": "2026-04",
+          "read": "first",
+          "item": "Q1 (L2 parent)",
+          "itemId": "13377370969",
+          "column": "Num MAX",
+          "columnId": "numeric_mm8fj6qc",
+          "configuredFunction": "MAX",
+          "leafValues": [
+            40,
+            7
+          ],
+          "expected": 40,
+          "observed": 47,
+          "isLeaf": false,
+          "matches": [
+            "SUM"
+          ],
+          "verdict": "DEVIATES",
+          "requestId": "30ea281a-311f-9280-9eb3-8e05650d6d8b"
+        },
+        {
+          "apiVersion": "2026-04",
+          "read": "first",
+          "item": "Q1 (L2 parent)",
+          "itemId": "13377370969",
+          "column": "Num NONE",
+          "columnId": "numeric_mm8fpr03",
+          "configuredFunction": "NONE",
+          "leafValues": [
+            40,
+            7
+          ],
+          "expected": null,
+          "observed": 47,
+          "isLeaf": false,
+          "matches": [
+            "SUM"
+          ],
+          "verdict": "DEVIATES",
+          "requestId": "30ea281a-311f-9280-9eb3-8e05650d6d8b"
+        },
+        {
+          "apiVersion": "2026-04",
+          "read": "first",
+          "item": "Q1 (L2 parent)",
+          "itemId": "13377370969",
+          "column": "Date MIN",
+          "columnId": "date_mm8f45aw",
+          "configuredFunction": "MIN",
+          "leafValues": [
+            "2026-03-03",
+            "2026-06-30"
+          ],
+          "expected": "2026-03-03",
+          "observed": "2026-03-03",
+          "isLeaf": false,
+          "matches": [
+            "MIN"
+          ],
+          "verdict": "PASS",
+          "requestId": "30ea281a-311f-9280-9eb3-8e05650d6d8b"
+        },
+        {
+          "apiVersion": "2026-04",
+          "read": "first",
+          "item": "Q1 (L2 parent)",
+          "itemId": "13377370969",
+          "column": "Date MAX",
+          "columnId": "date_mm8fb58z",
+          "configuredFunction": "MAX",
+          "leafValues": [
+            "2026-03-03",
+            "2026-06-30"
+          ],
+          "expected": "2026-06-30",
+          "observed": "2026-03-03",
+          "isLeaf": false,
+          "matches": [
+            "MIN"
+          ],
+          "verdict": "DEVIATES",
+          "requestId": "30ea281a-311f-9280-9eb3-8e05650d6d8b"
+        },
+        {
+          "apiVersion": "2026-04",
+          "read": "first",
+          "item": "Q1 (L2 parent)",
+          "itemId": "13377370969",
+          "column": "Date default",
+          "columnId": "date_mm8f9546",
+          "configuredFunction": "MIN",
+          "leafValues": [
+            "2026-03-03",
+            "2026-06-30"
+          ],
+          "expected": "2026-03-03",
+          "observed": "2026-03-03",
+          "isLeaf": false,
+          "matches": [
+            "MIN"
+          ],
+          "verdict": "PASS",
+          "requestId": "30ea281a-311f-9280-9eb3-8e05650d6d8b"
+        },
+        {
+          "apiVersion": "2026-04",
+          "read": "first",
+          "item": "Q1 (L2 parent)",
+          "itemId": "13377370969",
+          "column": "Timeline MIN_MAX",
+          "columnId": "timerange_mm8f4c2a",
+          "configuredFunction": "MIN_MAX",
+          "leafValues": [
+            "2026-03-01..2026-03-20",
+            "2026-05-01..2026-07-15"
+          ],
+          "expected": "2026-03-01..2026-07-15",
+          "observed": "2026-03-01..2026-07-15",
+          "isLeaf": false,
+          "matches": [
+            "MIN_MAX"
+          ],
+          "verdict": "PASS",
+          "requestId": "30ea281a-311f-9280-9eb3-8e05650d6d8b"
+        }
+      ]
+    },
+    {
+      "apiVersion": "2026-10",
+      "kind": "leaf-sanity",
+      "rows": [
+        {
+          "apiVersion": "2026-10",
+          "leaf": "Q1a",
+          "column": "Num SUM",
+          "written": 40,
+          "observed": 40,
+          "isLeaf": true,
+          "verdict": "PASS"
+        },
+        {
+          "apiVersion": "2026-10",
+          "leaf": "Q1a",
+          "column": "Num MIN",
+          "written": 40,
+          "observed": 40,
+          "isLeaf": true,
+          "verdict": "PASS"
+        },
+        {
+          "apiVersion": "2026-10",
+          "leaf": "Q1a",
+          "column": "Num MAX",
+          "written": 40,
+          "observed": 40,
+          "isLeaf": true,
+          "verdict": "PASS"
+        },
+        {
+          "apiVersion": "2026-10",
+          "leaf": "Q1a",
+          "column": "Num NONE",
+          "written": 40,
+          "observed": 40,
+          "isLeaf": true,
+          "verdict": "PASS"
+        },
+        {
+          "apiVersion": "2026-10",
+          "leaf": "Q1a",
+          "column": "Date MIN",
+          "written": "2026-03-03",
+          "observed": "2026-03-03",
+          "isLeaf": true,
+          "verdict": "PASS"
+        },
+        {
+          "apiVersion": "2026-10",
+          "leaf": "Q1a",
+          "column": "Date MAX",
+          "written": "2026-03-03",
+          "observed": "2026-03-03",
+          "isLeaf": true,
+          "verdict": "PASS"
+        },
+        {
+          "apiVersion": "2026-10",
+          "leaf": "Q1a",
+          "column": "Date default",
+          "written": "2026-03-03",
+          "observed": "2026-03-03",
+          "isLeaf": true,
+          "verdict": "PASS"
+        },
+        {
+          "apiVersion": "2026-10",
+          "leaf": "Q1a",
+          "column": "Timeline MIN_MAX",
+          "written": "2026-03-01..2026-03-20",
+          "observed": "2026-03-01..2026-03-20",
+          "isLeaf": true,
+          "verdict": "PASS"
+        },
+        {
+          "apiVersion": "2026-10",
+          "leaf": "Q1b",
+          "column": "Num SUM",
+          "written": 7,
+          "observed": 7,
+          "isLeaf": true,
+          "verdict": "PASS"
+        },
+        {
+          "apiVersion": "2026-10",
+          "leaf": "Q1b",
+          "column": "Num MIN",
+          "written": 7,
+          "observed": 7,
+          "isLeaf": true,
+          "verdict": "PASS"
+        },
+        {
+          "apiVersion": "2026-10",
+          "leaf": "Q1b",
+          "column": "Num MAX",
+          "written": 7,
+          "observed": 7,
+          "isLeaf": true,
+          "verdict": "PASS"
+        },
+        {
+          "apiVersion": "2026-10",
+          "leaf": "Q1b",
+          "column": "Num NONE",
+          "written": 7,
+          "observed": 7,
+          "isLeaf": true,
+          "verdict": "PASS"
+        },
+        {
+          "apiVersion": "2026-10",
+          "leaf": "Q1b",
+          "column": "Date MIN",
+          "written": "2026-06-30",
+          "observed": "2026-06-30",
+          "isLeaf": true,
+          "verdict": "PASS"
+        },
+        {
+          "apiVersion": "2026-10",
+          "leaf": "Q1b",
+          "column": "Date MAX",
+          "written": "2026-06-30",
+          "observed": "2026-06-30",
+          "isLeaf": true,
+          "verdict": "PASS"
+        },
+        {
+          "apiVersion": "2026-10",
+          "leaf": "Q1b",
+          "column": "Date default",
+          "written": "2026-06-30",
+          "observed": "2026-06-30",
+          "isLeaf": true,
+          "verdict": "PASS"
+        },
+        {
+          "apiVersion": "2026-10",
+          "leaf": "Q1b",
+          "column": "Timeline MIN_MAX",
+          "written": "2026-05-01..2026-07-15",
+          "observed": "2026-05-01..2026-07-15",
+          "isLeaf": true,
+          "verdict": "PASS"
+        },
+        {
+          "apiVersion": "2026-10",
+          "leaf": "P1c",
+          "column": "Num SUM",
+          "written": 200,
+          "observed": 200,
+          "isLeaf": true,
+          "verdict": "PASS"
+        },
+        {
+          "apiVersion": "2026-10",
+          "leaf": "P1c",
+          "column": "Num MIN",
+          "written": 200,
+          "observed": 200,
+          "isLeaf": true,
+          "verdict": "PASS"
+        },
+        {
+          "apiVersion": "2026-10",
+          "leaf": "P1c",
+          "column": "Num MAX",
+          "written": 200,
+          "observed": 200,
+          "isLeaf": true,
+          "verdict": "PASS"
+        },
+        {
+          "apiVersion": "2026-10",
+          "leaf": "P1c",
+          "column": "Num NONE",
+          "written": 200,
+          "observed": 200,
+          "isLeaf": true,
+          "verdict": "PASS"
+        },
+        {
+          "apiVersion": "2026-10",
+          "leaf": "P1c",
+          "column": "Date MIN",
+          "written": "2026-01-20",
+          "observed": "2026-01-20",
+          "isLeaf": true,
+          "verdict": "PASS"
+        },
+        {
+          "apiVersion": "2026-10",
+          "leaf": "P1c",
+          "column": "Date MAX",
+          "written": "2026-01-20",
+          "observed": "2026-01-20",
+          "isLeaf": true,
+          "verdict": "PASS"
+        },
+        {
+          "apiVersion": "2026-10",
+          "leaf": "P1c",
+          "column": "Date default",
+          "written": "2026-01-20",
+          "observed": "2026-01-20",
+          "isLeaf": true,
+          "verdict": "PASS"
+        },
+        {
+          "apiVersion": "2026-10",
+          "leaf": "P1c",
+          "column": "Timeline MIN_MAX",
+          "written": "2026-01-10..2026-02-01",
+          "observed": "2026-01-10..2026-02-01",
+          "isLeaf": true,
+          "verdict": "PASS"
+        }
+      ]
+    },
+    {
+      "apiVersion": "2026-10",
+      "kind": "parents",
+      "read": "first",
+      "rows": [
+        {
+          "apiVersion": "2026-10",
+          "read": "first",
+          "item": "P1 (L1 parent)",
+          "itemId": "13377353714",
+          "column": "Num SUM",
+          "columnId": "numeric_mm8fjk4h",
+          "configuredFunction": "SUM",
+          "leafValues": [
+            40,
+            7,
+            200
+          ],
+          "expected": 247,
+          "observed": 247,
+          "isLeaf": false,
+          "matches": [
+            "SUM"
+          ],
+          "verdict": "PASS",
+          "requestId": "ab8c2c87-a992-94a6-96e9-54dec5fa668e"
+        },
+        {
+          "apiVersion": "2026-10",
+          "read": "first",
+          "item": "P1 (L1 parent)",
+          "itemId": "13377353714",
+          "column": "Num MIN",
+          "columnId": "numeric_mm8fnbbp",
+          "configuredFunction": "MIN",
+          "leafValues": [
+            40,
+            7,
+            200
+          ],
+          "expected": 7,
+          "observed": 247,
+          "isLeaf": false,
+          "matches": [
+            "SUM"
+          ],
+          "verdict": "DEVIATES",
+          "requestId": "ab8c2c87-a992-94a6-96e9-54dec5fa668e"
+        },
+        {
+          "apiVersion": "2026-10",
+          "read": "first",
+          "item": "P1 (L1 parent)",
+          "itemId": "13377353714",
+          "column": "Num MAX",
+          "columnId": "numeric_mm8fj6qc",
+          "configuredFunction": "MAX",
+          "leafValues": [
+            40,
+            7,
+            200
+          ],
+          "expected": 200,
+          "observed": 247,
+          "isLeaf": false,
+          "matches": [
+            "SUM"
+          ],
+          "verdict": "DEVIATES",
+          "requestId": "ab8c2c87-a992-94a6-96e9-54dec5fa668e"
+        },
+        {
+          "apiVersion": "2026-10",
+          "read": "first",
+          "item": "P1 (L1 parent)",
+          "itemId": "13377353714",
+          "column": "Num NONE",
+          "columnId": "numeric_mm8fpr03",
+          "configuredFunction": "NONE",
+          "leafValues": [
+            40,
+            7,
+            200
+          ],
+          "expected": null,
+          "observed": 247,
+          "isLeaf": false,
+          "matches": [
+            "SUM"
+          ],
+          "verdict": "DEVIATES",
+          "requestId": "ab8c2c87-a992-94a6-96e9-54dec5fa668e"
+        },
+        {
+          "apiVersion": "2026-10",
+          "read": "first",
+          "item": "P1 (L1 parent)",
+          "itemId": "13377353714",
+          "column": "Date MIN",
+          "columnId": "date_mm8f45aw",
+          "configuredFunction": "MIN",
+          "leafValues": [
+            "2026-03-03",
+            "2026-06-30",
+            "2026-01-20"
+          ],
+          "expected": "2026-01-20",
+          "observed": "2026-01-20",
+          "isLeaf": false,
+          "matches": [
+            "MIN"
+          ],
+          "verdict": "PASS",
+          "requestId": "ab8c2c87-a992-94a6-96e9-54dec5fa668e"
+        },
+        {
+          "apiVersion": "2026-10",
+          "read": "first",
+          "item": "P1 (L1 parent)",
+          "itemId": "13377353714",
+          "column": "Date MAX",
+          "columnId": "date_mm8fb58z",
+          "configuredFunction": "MAX",
+          "leafValues": [
+            "2026-03-03",
+            "2026-06-30",
+            "2026-01-20"
+          ],
+          "expected": "2026-06-30",
+          "observed": "2026-01-20",
+          "isLeaf": false,
+          "matches": [
+            "MIN"
+          ],
+          "verdict": "DEVIATES",
+          "requestId": "ab8c2c87-a992-94a6-96e9-54dec5fa668e"
+        },
+        {
+          "apiVersion": "2026-10",
+          "read": "first",
+          "item": "P1 (L1 parent)",
+          "itemId": "13377353714",
+          "column": "Date default",
+          "columnId": "date_mm8f9546",
+          "configuredFunction": "MIN",
+          "leafValues": [
+            "2026-03-03",
+            "2026-06-30",
+            "2026-01-20"
+          ],
+          "expected": "2026-01-20",
+          "observed": "2026-01-20",
+          "isLeaf": false,
+          "matches": [
+            "MIN"
+          ],
+          "verdict": "PASS",
+          "requestId": "ab8c2c87-a992-94a6-96e9-54dec5fa668e"
+        },
+        {
+          "apiVersion": "2026-10",
+          "read": "first",
+          "item": "P1 (L1 parent)",
+          "itemId": "13377353714",
+          "column": "Timeline MIN_MAX",
+          "columnId": "timerange_mm8f4c2a",
+          "configuredFunction": "MIN_MAX",
+          "leafValues": [
+            "2026-03-01..2026-03-20",
+            "2026-05-01..2026-07-15",
+            "2026-01-10..2026-02-01"
+          ],
+          "expected": "2026-01-10..2026-07-15",
+          "observed": "2026-01-10..2026-07-15",
+          "isLeaf": false,
+          "matches": [
+            "MIN_MAX"
+          ],
+          "verdict": "PASS",
+          "requestId": "ab8c2c87-a992-94a6-96e9-54dec5fa668e"
+        },
+        {
+          "apiVersion": "2026-10",
+          "read": "first",
+          "item": "Q1 (L2 parent)",
+          "itemId": "13377370969",
+          "column": "Num SUM",
+          "columnId": "numeric_mm8fjk4h",
+          "configuredFunction": "SUM",
+          "leafValues": [
+            40,
+            7
+          ],
+          "expected": 47,
+          "observed": 47,
+          "isLeaf": false,
+          "matches": [
+            "SUM"
+          ],
+          "verdict": "PASS",
+          "requestId": "ab8c2c87-a992-94a6-96e9-54dec5fa668e"
+        },
+        {
+          "apiVersion": "2026-10",
+          "read": "first",
+          "item": "Q1 (L2 parent)",
+          "itemId": "13377370969",
+          "column": "Num MIN",
+          "columnId": "numeric_mm8fnbbp",
+          "configuredFunction": "MIN",
+          "leafValues": [
+            40,
+            7
+          ],
+          "expected": 7,
+          "observed": 47,
+          "isLeaf": false,
+          "matches": [
+            "SUM"
+          ],
+          "verdict": "DEVIATES",
+          "requestId": "ab8c2c87-a992-94a6-96e9-54dec5fa668e"
+        },
+        {
+          "apiVersion": "2026-10",
+          "read": "first",
+          "item": "Q1 (L2 parent)",
+          "itemId": "13377370969",
+          "column": "Num MAX",
+          "columnId": "numeric_mm8fj6qc",
+          "configuredFunction": "MAX",
+          "leafValues": [
+            40,
+            7
+          ],
+          "expected": 40,
+          "observed": 47,
+          "isLeaf": false,
+          "matches": [
+            "SUM"
+          ],
+          "verdict": "DEVIATES",
+          "requestId": "ab8c2c87-a992-94a6-96e9-54dec5fa668e"
+        },
+        {
+          "apiVersion": "2026-10",
+          "read": "first",
+          "item": "Q1 (L2 parent)",
+          "itemId": "13377370969",
+          "column": "Num NONE",
+          "columnId": "numeric_mm8fpr03",
+          "configuredFunction": "NONE",
+          "leafValues": [
+            40,
+            7
+          ],
+          "expected": null,
+          "observed": 47,
+          "isLeaf": false,
+          "matches": [
+            "SUM"
+          ],
+          "verdict": "DEVIATES",
+          "requestId": "ab8c2c87-a992-94a6-96e9-54dec5fa668e"
+        },
+        {
+          "apiVersion": "2026-10",
+          "read": "first",
+          "item": "Q1 (L2 parent)",
+          "itemId": "13377370969",
+          "column": "Date MIN",
+          "columnId": "date_mm8f45aw",
+          "configuredFunction": "MIN",
+          "leafValues": [
+            "2026-03-03",
+            "2026-06-30"
+          ],
+          "expected": "2026-03-03",
+          "observed": "2026-03-03",
+          "isLeaf": false,
+          "matches": [
+            "MIN"
+          ],
+          "verdict": "PASS",
+          "requestId": "ab8c2c87-a992-94a6-96e9-54dec5fa668e"
+        },
+        {
+          "apiVersion": "2026-10",
+          "read": "first",
+          "item": "Q1 (L2 parent)",
+          "itemId": "13377370969",
+          "column": "Date MAX",
+          "columnId": "date_mm8fb58z",
+          "configuredFunction": "MAX",
+          "leafValues": [
+            "2026-03-03",
+            "2026-06-30"
+          ],
+          "expected": "2026-06-30",
+          "observed": "2026-03-03",
+          "isLeaf": false,
+          "matches": [
+            "MIN"
+          ],
+          "verdict": "DEVIATES",
+          "requestId": "ab8c2c87-a992-94a6-96e9-54dec5fa668e"
+        },
+        {
+          "apiVersion": "2026-10",
+          "read": "first",
+          "item": "Q1 (L2 parent)",
+          "itemId": "13377370969",
+          "column": "Date default",
+          "columnId": "date_mm8f9546",
+          "configuredFunction": "MIN",
+          "leafValues": [
+            "2026-03-03",
+            "2026-06-30"
+          ],
+          "expected": "2026-03-03",
+          "observed": "2026-03-03",
+          "isLeaf": false,
+          "matches": [
+            "MIN"
+          ],
+          "verdict": "PASS",
+          "requestId": "ab8c2c87-a992-94a6-96e9-54dec5fa668e"
+        },
+        {
+          "apiVersion": "2026-10",
+          "read": "first",
+          "item": "Q1 (L2 parent)",
+          "itemId": "13377370969",
+          "column": "Timeline MIN_MAX",
+          "columnId": "timerange_mm8f4c2a",
+          "configuredFunction": "MIN_MAX",
+          "leafValues": [
+            "2026-03-01..2026-03-20",
+            "2026-05-01..2026-07-15"
+          ],
+          "expected": "2026-03-01..2026-07-15",
+          "observed": "2026-03-01..2026-07-15",
+          "isLeaf": false,
+          "matches": [
+            "MIN_MAX"
+          ],
+          "verdict": "PASS",
+          "requestId": "ab8c2c87-a992-94a6-96e9-54dec5fa668e"
+        }
+      ]
+    },
+    {
+      "apiVersion": "2026-04",
+      "kind": "parents",
+      "read": "reread",
+      "rows": [
+        {
+          "apiVersion": "2026-04",
+          "read": "reread",
+          "item": "P1 (L1 parent)",
+          "itemId": "13377353714",
+          "column": "Num SUM",
+          "columnId": "numeric_mm8fjk4h",
+          "configuredFunction": "SUM",
+          "leafValues": [
+            40,
+            7,
+            200
+          ],
+          "expected": 247,
+          "observed": 247,
+          "isLeaf": false,
+          "matches": [
+            "SUM"
+          ],
+          "verdict": "PASS",
+          "requestId": "f5fde79d-90bb-9698-8bd9-6cc4f32f0c95"
+        },
+        {
+          "apiVersion": "2026-04",
+          "read": "reread",
+          "item": "P1 (L1 parent)",
+          "itemId": "13377353714",
+          "column": "Num MIN",
+          "columnId": "numeric_mm8fnbbp",
+          "configuredFunction": "MIN",
+          "leafValues": [
+            40,
+            7,
+            200
+          ],
+          "expected": 7,
+          "observed": 247,
+          "isLeaf": false,
+          "matches": [
+            "SUM"
+          ],
+          "verdict": "DEVIATES",
+          "requestId": "f5fde79d-90bb-9698-8bd9-6cc4f32f0c95"
+        },
+        {
+          "apiVersion": "2026-04",
+          "read": "reread",
+          "item": "P1 (L1 parent)",
+          "itemId": "13377353714",
+          "column": "Num MAX",
+          "columnId": "numeric_mm8fj6qc",
+          "configuredFunction": "MAX",
+          "leafValues": [
+            40,
+            7,
+            200
+          ],
+          "expected": 200,
+          "observed": 247,
+          "isLeaf": false,
+          "matches": [
+            "SUM"
+          ],
+          "verdict": "DEVIATES",
+          "requestId": "f5fde79d-90bb-9698-8bd9-6cc4f32f0c95"
+        },
+        {
+          "apiVersion": "2026-04",
+          "read": "reread",
+          "item": "P1 (L1 parent)",
+          "itemId": "13377353714",
+          "column": "Num NONE",
+          "columnId": "numeric_mm8fpr03",
+          "configuredFunction": "NONE",
+          "leafValues": [
+            40,
+            7,
+            200
+          ],
+          "expected": null,
+          "observed": 247,
+          "isLeaf": false,
+          "matches": [
+            "SUM"
+          ],
+          "verdict": "DEVIATES",
+          "requestId": "f5fde79d-90bb-9698-8bd9-6cc4f32f0c95"
+        },
+        {
+          "apiVersion": "2026-04",
+          "read": "reread",
+          "item": "P1 (L1 parent)",
+          "itemId": "13377353714",
+          "column": "Date MIN",
+          "columnId": "date_mm8f45aw",
+          "configuredFunction": "MIN",
+          "leafValues": [
+            "2026-03-03",
+            "2026-06-30",
+            "2026-01-20"
+          ],
+          "expected": "2026-01-20",
+          "observed": "2026-01-20",
+          "isLeaf": false,
+          "matches": [
+            "MIN"
+          ],
+          "verdict": "PASS",
+          "requestId": "f5fde79d-90bb-9698-8bd9-6cc4f32f0c95"
+        },
+        {
+          "apiVersion": "2026-04",
+          "read": "reread",
+          "item": "P1 (L1 parent)",
+          "itemId": "13377353714",
+          "column": "Date MAX",
+          "columnId": "date_mm8fb58z",
+          "configuredFunction": "MAX",
+          "leafValues": [
+            "2026-03-03",
+            "2026-06-30",
+            "2026-01-20"
+          ],
+          "expected": "2026-06-30",
+          "observed": "2026-01-20",
+          "isLeaf": false,
+          "matches": [
+            "MIN"
+          ],
+          "verdict": "DEVIATES",
+          "requestId": "f5fde79d-90bb-9698-8bd9-6cc4f32f0c95"
+        },
+        {
+          "apiVersion": "2026-04",
+          "read": "reread",
+          "item": "P1 (L1 parent)",
+          "itemId": "13377353714",
+          "column": "Date default",
+          "columnId": "date_mm8f9546",
+          "configuredFunction": "MIN",
+          "leafValues": [
+            "2026-03-03",
+            "2026-06-30",
+            "2026-01-20"
+          ],
+          "expected": "2026-01-20",
+          "observed": "2026-01-20",
+          "isLeaf": false,
+          "matches": [
+            "MIN"
+          ],
+          "verdict": "PASS",
+          "requestId": "f5fde79d-90bb-9698-8bd9-6cc4f32f0c95"
+        },
+        {
+          "apiVersion": "2026-04",
+          "read": "reread",
+          "item": "P1 (L1 parent)",
+          "itemId": "13377353714",
+          "column": "Timeline MIN_MAX",
+          "columnId": "timerange_mm8f4c2a",
+          "configuredFunction": "MIN_MAX",
+          "leafValues": [
+            "2026-03-01..2026-03-20",
+            "2026-05-01..2026-07-15",
+            "2026-01-10..2026-02-01"
+          ],
+          "expected": "2026-01-10..2026-07-15",
+          "observed": "2026-01-10..2026-07-15",
+          "isLeaf": false,
+          "matches": [
+            "MIN_MAX"
+          ],
+          "verdict": "PASS",
+          "requestId": "f5fde79d-90bb-9698-8bd9-6cc4f32f0c95"
+        },
+        {
+          "apiVersion": "2026-04",
+          "read": "reread",
+          "item": "Q1 (L2 parent)",
+          "itemId": "13377370969",
+          "column": "Num SUM",
+          "columnId": "numeric_mm8fjk4h",
+          "configuredFunction": "SUM",
+          "leafValues": [
+            40,
+            7
+          ],
+          "expected": 47,
+          "observed": 47,
+          "isLeaf": false,
+          "matches": [
+            "SUM"
+          ],
+          "verdict": "PASS",
+          "requestId": "f5fde79d-90bb-9698-8bd9-6cc4f32f0c95"
+        },
+        {
+          "apiVersion": "2026-04",
+          "read": "reread",
+          "item": "Q1 (L2 parent)",
+          "itemId": "13377370969",
+          "column": "Num MIN",
+          "columnId": "numeric_mm8fnbbp",
+          "configuredFunction": "MIN",
+          "leafValues": [
+            40,
+            7
+          ],
+          "expected": 7,
+          "observed": 47,
+          "isLeaf": false,
+          "matches": [
+            "SUM"
+          ],
+          "verdict": "DEVIATES",
+          "requestId": "f5fde79d-90bb-9698-8bd9-6cc4f32f0c95"
+        },
+        {
+          "apiVersion": "2026-04",
+          "read": "reread",
+          "item": "Q1 (L2 parent)",
+          "itemId": "13377370969",
+          "column": "Num MAX",
+          "columnId": "numeric_mm8fj6qc",
+          "configuredFunction": "MAX",
+          "leafValues": [
+            40,
+            7
+          ],
+          "expected": 40,
+          "observed": 47,
+          "isLeaf": false,
+          "matches": [
+            "SUM"
+          ],
+          "verdict": "DEVIATES",
+          "requestId": "f5fde79d-90bb-9698-8bd9-6cc4f32f0c95"
+        },
+        {
+          "apiVersion": "2026-04",
+          "read": "reread",
+          "item": "Q1 (L2 parent)",
+          "itemId": "13377370969",
+          "column": "Num NONE",
+          "columnId": "numeric_mm8fpr03",
+          "configuredFunction": "NONE",
+          "leafValues": [
+            40,
+            7
+          ],
+          "expected": null,
+          "observed": 47,
+          "isLeaf": false,
+          "matches": [
+            "SUM"
+          ],
+          "verdict": "DEVIATES",
+          "requestId": "f5fde79d-90bb-9698-8bd9-6cc4f32f0c95"
+        },
+        {
+          "apiVersion": "2026-04",
+          "read": "reread",
+          "item": "Q1 (L2 parent)",
+          "itemId": "13377370969",
+          "column": "Date MIN",
+          "columnId": "date_mm8f45aw",
+          "configuredFunction": "MIN",
+          "leafValues": [
+            "2026-03-03",
+            "2026-06-30"
+          ],
+          "expected": "2026-03-03",
+          "observed": "2026-03-03",
+          "isLeaf": false,
+          "matches": [
+            "MIN"
+          ],
+          "verdict": "PASS",
+          "requestId": "f5fde79d-90bb-9698-8bd9-6cc4f32f0c95"
+        },
+        {
+          "apiVersion": "2026-04",
+          "read": "reread",
+          "item": "Q1 (L2 parent)",
+          "itemId": "13377370969",
+          "column": "Date MAX",
+          "columnId": "date_mm8fb58z",
+          "configuredFunction": "MAX",
+          "leafValues": [
+            "2026-03-03",
+            "2026-06-30"
+          ],
+          "expected": "2026-06-30",
+          "observed": "2026-03-03",
+          "isLeaf": false,
+          "matches": [
+            "MIN"
+          ],
+          "verdict": "DEVIATES",
+          "requestId": "f5fde79d-90bb-9698-8bd9-6cc4f32f0c95"
+        },
+        {
+          "apiVersion": "2026-04",
+          "read": "reread",
+          "item": "Q1 (L2 parent)",
+          "itemId": "13377370969",
+          "column": "Date default",
+          "columnId": "date_mm8f9546",
+          "configuredFunction": "MIN",
+          "leafValues": [
+            "2026-03-03",
+            "2026-06-30"
+          ],
+          "expected": "2026-03-03",
+          "observed": "2026-03-03",
+          "isLeaf": false,
+          "matches": [
+            "MIN"
+          ],
+          "verdict": "PASS",
+          "requestId": "f5fde79d-90bb-9698-8bd9-6cc4f32f0c95"
+        },
+        {
+          "apiVersion": "2026-04",
+          "read": "reread",
+          "item": "Q1 (L2 parent)",
+          "itemId": "13377370969",
+          "column": "Timeline MIN_MAX",
+          "columnId": "timerange_mm8f4c2a",
+          "configuredFunction": "MIN_MAX",
+          "leafValues": [
+            "2026-03-01..2026-03-20",
+            "2026-05-01..2026-07-15"
+          ],
+          "expected": "2026-03-01..2026-07-15",
+          "observed": "2026-03-01..2026-07-15",
+          "isLeaf": false,
+          "matches": [
+            "MIN_MAX"
+          ],
+          "verdict": "PASS",
+          "requestId": "f5fde79d-90bb-9698-8bd9-6cc4f32f0c95"
+        }
+      ]
+    },
+    {
+      "apiVersion": "2026-10",
+      "kind": "parents",
+      "read": "reread",
+      "rows": [
+        {
+          "apiVersion": "2026-10",
+          "read": "reread",
+          "item": "P1 (L1 parent)",
+          "itemId": "13377353714",
+          "column": "Num SUM",
+          "columnId": "numeric_mm8fjk4h",
+          "configuredFunction": "SUM",
+          "leafValues": [
+            40,
+            7,
+            200
+          ],
+          "expected": 247,
+          "observed": 247,
+          "isLeaf": false,
+          "matches": [
+            "SUM"
+          ],
+          "verdict": "PASS",
+          "requestId": "d5f2820f-6d98-96da-abeb-d5eff1124b4a"
+        },
+        {
+          "apiVersion": "2026-10",
+          "read": "reread",
+          "item": "P1 (L1 parent)",
+          "itemId": "13377353714",
+          "column": "Num MIN",
+          "columnId": "numeric_mm8fnbbp",
+          "configuredFunction": "MIN",
+          "leafValues": [
+            40,
+            7,
+            200
+          ],
+          "expected": 7,
+          "observed": 247,
+          "isLeaf": false,
+          "matches": [
+            "SUM"
+          ],
+          "verdict": "DEVIATES",
+          "requestId": "d5f2820f-6d98-96da-abeb-d5eff1124b4a"
+        },
+        {
+          "apiVersion": "2026-10",
+          "read": "reread",
+          "item": "P1 (L1 parent)",
+          "itemId": "13377353714",
+          "column": "Num MAX",
+          "columnId": "numeric_mm8fj6qc",
+          "configuredFunction": "MAX",
+          "leafValues": [
+            40,
+            7,
+            200
+          ],
+          "expected": 200,
+          "observed": 247,
+          "isLeaf": false,
+          "matches": [
+            "SUM"
+          ],
+          "verdict": "DEVIATES",
+          "requestId": "d5f2820f-6d98-96da-abeb-d5eff1124b4a"
+        },
+        {
+          "apiVersion": "2026-10",
+          "read": "reread",
+          "item": "P1 (L1 parent)",
+          "itemId": "13377353714",
+          "column": "Num NONE",
+          "columnId": "numeric_mm8fpr03",
+          "configuredFunction": "NONE",
+          "leafValues": [
+            40,
+            7,
+            200
+          ],
+          "expected": null,
+          "observed": 247,
+          "isLeaf": false,
+          "matches": [
+            "SUM"
+          ],
+          "verdict": "DEVIATES",
+          "requestId": "d5f2820f-6d98-96da-abeb-d5eff1124b4a"
+        },
+        {
+          "apiVersion": "2026-10",
+          "read": "reread",
+          "item": "P1 (L1 parent)",
+          "itemId": "13377353714",
+          "column": "Date MIN",
+          "columnId": "date_mm8f45aw",
+          "configuredFunction": "MIN",
+          "leafValues": [
+            "2026-03-03",
+            "2026-06-30",
+            "2026-01-20"
+          ],
+          "expected": "2026-01-20",
+          "observed": "2026-01-20",
+          "isLeaf": false,
+          "matches": [
+            "MIN"
+          ],
+          "verdict": "PASS",
+          "requestId": "d5f2820f-6d98-96da-abeb-d5eff1124b4a"
+        },
+        {
+          "apiVersion": "2026-10",
+          "read": "reread",
+          "item": "P1 (L1 parent)",
+          "itemId": "13377353714",
+          "column": "Date MAX",
+          "columnId": "date_mm8fb58z",
+          "configuredFunction": "MAX",
+          "leafValues": [
+            "2026-03-03",
+            "2026-06-30",
+            "2026-01-20"
+          ],
+          "expected": "2026-06-30",
+          "observed": "2026-01-20",
+          "isLeaf": false,
+          "matches": [
+            "MIN"
+          ],
+          "verdict": "DEVIATES",
+          "requestId": "d5f2820f-6d98-96da-abeb-d5eff1124b4a"
+        },
+        {
+          "apiVersion": "2026-10",
+          "read": "reread",
+          "item": "P1 (L1 parent)",
+          "itemId": "13377353714",
+          "column": "Date default",
+          "columnId": "date_mm8f9546",
+          "configuredFunction": "MIN",
+          "leafValues": [
+            "2026-03-03",
+            "2026-06-30",
+            "2026-01-20"
+          ],
+          "expected": "2026-01-20",
+          "observed": "2026-01-20",
+          "isLeaf": false,
+          "matches": [
+            "MIN"
+          ],
+          "verdict": "PASS",
+          "requestId": "d5f2820f-6d98-96da-abeb-d5eff1124b4a"
+        },
+        {
+          "apiVersion": "2026-10",
+          "read": "reread",
+          "item": "P1 (L1 parent)",
+          "itemId": "13377353714",
+          "column": "Timeline MIN_MAX",
+          "columnId": "timerange_mm8f4c2a",
+          "configuredFunction": "MIN_MAX",
+          "leafValues": [
+            "2026-03-01..2026-03-20",
+            "2026-05-01..2026-07-15",
+            "2026-01-10..2026-02-01"
+          ],
+          "expected": "2026-01-10..2026-07-15",
+          "observed": "2026-01-10..2026-07-15",
+          "isLeaf": false,
+          "matches": [
+            "MIN_MAX"
+          ],
+          "verdict": "PASS",
+          "requestId": "d5f2820f-6d98-96da-abeb-d5eff1124b4a"
+        },
+        {
+          "apiVersion": "2026-10",
+          "read": "reread",
+          "item": "Q1 (L2 parent)",
+          "itemId": "13377370969",
+          "column": "Num SUM",
+          "columnId": "numeric_mm8fjk4h",
+          "configuredFunction": "SUM",
+          "leafValues": [
+            40,
+            7
+          ],
+          "expected": 47,
+          "observed": 47,
+          "isLeaf": false,
+          "matches": [
+            "SUM"
+          ],
+          "verdict": "PASS",
+          "requestId": "d5f2820f-6d98-96da-abeb-d5eff1124b4a"
+        },
+        {
+          "apiVersion": "2026-10",
+          "read": "reread",
+          "item": "Q1 (L2 parent)",
+          "itemId": "13377370969",
+          "column": "Num MIN",
+          "columnId": "numeric_mm8fnbbp",
+          "configuredFunction": "MIN",
+          "leafValues": [
+            40,
+            7
+          ],
+          "expected": 7,
+          "observed": 47,
+          "isLeaf": false,
+          "matches": [
+            "SUM"
+          ],
+          "verdict": "DEVIATES",
+          "requestId": "d5f2820f-6d98-96da-abeb-d5eff1124b4a"
+        },
+        {
+          "apiVersion": "2026-10",
+          "read": "reread",
+          "item": "Q1 (L2 parent)",
+          "itemId": "13377370969",
+          "column": "Num MAX",
+          "columnId": "numeric_mm8fj6qc",
+          "configuredFunction": "MAX",
+          "leafValues": [
+            40,
+            7
+          ],
+          "expected": 40,
+          "observed": 47,
+          "isLeaf": false,
+          "matches": [
+            "SUM"
+          ],
+          "verdict": "DEVIATES",
+          "requestId": "d5f2820f-6d98-96da-abeb-d5eff1124b4a"
+        },
+        {
+          "apiVersion": "2026-10",
+          "read": "reread",
+          "item": "Q1 (L2 parent)",
+          "itemId": "13377370969",
+          "column": "Num NONE",
+          "columnId": "numeric_mm8fpr03",
+          "configuredFunction": "NONE",
+          "leafValues": [
+            40,
+            7
+          ],
+          "expected": null,
+          "observed": 47,
+          "isLeaf": false,
+          "matches": [
+            "SUM"
+          ],
+          "verdict": "DEVIATES",
+          "requestId": "d5f2820f-6d98-96da-abeb-d5eff1124b4a"
+        },
+        {
+          "apiVersion": "2026-10",
+          "read": "reread",
+          "item": "Q1 (L2 parent)",
+          "itemId": "13377370969",
+          "column": "Date MIN",
+          "columnId": "date_mm8f45aw",
+          "configuredFunction": "MIN",
+          "leafValues": [
+            "2026-03-03",
+            "2026-06-30"
+          ],
+          "expected": "2026-03-03",
+          "observed": "2026-03-03",
+          "isLeaf": false,
+          "matches": [
+            "MIN"
+          ],
+          "verdict": "PASS",
+          "requestId": "d5f2820f-6d98-96da-abeb-d5eff1124b4a"
+        },
+        {
+          "apiVersion": "2026-10",
+          "read": "reread",
+          "item": "Q1 (L2 parent)",
+          "itemId": "13377370969",
+          "column": "Date MAX",
+          "columnId": "date_mm8fb58z",
+          "configuredFunction": "MAX",
+          "leafValues": [
+            "2026-03-03",
+            "2026-06-30"
+          ],
+          "expected": "2026-06-30",
+          "observed": "2026-03-03",
+          "isLeaf": false,
+          "matches": [
+            "MIN"
+          ],
+          "verdict": "DEVIATES",
+          "requestId": "d5f2820f-6d98-96da-abeb-d5eff1124b4a"
+        },
+        {
+          "apiVersion": "2026-10",
+          "read": "reread",
+          "item": "Q1 (L2 parent)",
+          "itemId": "13377370969",
+          "column": "Date default",
+          "columnId": "date_mm8f9546",
+          "configuredFunction": "MIN",
+          "leafValues": [
+            "2026-03-03",
+            "2026-06-30"
+          ],
+          "expected": "2026-03-03",
+          "observed": "2026-03-03",
+          "isLeaf": false,
+          "matches": [
+            "MIN"
+          ],
+          "verdict": "PASS",
+          "requestId": "d5f2820f-6d98-96da-abeb-d5eff1124b4a"
+        },
+        {
+          "apiVersion": "2026-10",
+          "read": "reread",
+          "item": "Q1 (L2 parent)",
+          "itemId": "13377370969",
+          "column": "Timeline MIN_MAX",
+          "columnId": "timerange_mm8f4c2a",
+          "configuredFunction": "MIN_MAX",
+          "leafValues": [
+            "2026-03-01..2026-03-20",
+            "2026-05-01..2026-07-15"
+          ],
+          "expected": "2026-03-01..2026-07-15",
+          "observed": "2026-03-01..2026-07-15",
+          "isLeaf": false,
+          "matches": [
+            "MIN_MAX"
+          ],
+          "verdict": "PASS",
+          "requestId": "d5f2820f-6d98-96da-abeb-d5eff1124b4a"
+        }
+      ]
+    }
+  ],
+  "results": [
+    {
+      "step": "metadata",
+      "endpoint": "https://api.monday.com/v2",
+      "apiVersion": "2026-04",
+      "requestHeaders": {
+        "API-Version": "2026-04",
+        "Content-Type": "application/json"
+      },
+      "authorizationHeader": "sent; value not recorded",
+      "requestBody": "{\"query\":\"query ($b: [ID!]) { boards(ids: $b) { id name hierarchy_type columns(capabilities: [CALCULATED]) { id title type settings settings_str capabilities { calculated { function } } } } }\",\"variables\":{\"b\":[\"18436908247\"]}}",
+      "startedAt": "2026-10-25T02:39:13.012Z",
+      "endedAt": "2026-10-25T02:39:13.366Z",
+      "status": 200,
+      "xRequestId": "287bff7b-2905-9904-857b-e61858f881df",
+      "extensionsRequestId": "287bff7b-2905-9904-857b-e61858f881df",
+      "rateLimitHeaders": {
+        "ratelimit": "\"minuteRate\";r=3326, \"concurrency\";r=199, \"complexityMinute\";r=9999959;t=13",
+        "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\""
+      },
+      "responseHeaders": {
+        "api-version": "2026-04",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Sun, 25 Oct 2026 02:39:13 GMT",
+        "ratelimit": "\"minuteRate\";r=3326, \"concurrency\";r=199, \"complexityMinute\";r=9999959;t=13",
+        "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\"",
+        "x-request-id": "287bff7b-2905-9904-857b-e61858f881df"
+      },
+      "responseBodyRaw": "{\"data\":{\"boards\":[{\"id\":\"18436908247\",\"name\":\"R4 rollup function repro 2026-10-25T02:37:26.426Z\",\"hierarchy_type\":\"multi_level\",\"columns\":[{\"id\":\"color_mkv6tatz\",\"title\":\"Status\",\"type\":\"status\",\"settings\":{\"labels\":[{\"id\":0,\"color\":0,\"label\":\"Working on it\",\"index\":0,\"is_done\":false,\"is_deactivated\":false,\"hex\":\"#fdab3d\"},{\"id\":1,\"color\":1,\"label\":\"Done\",\"index\":1,\"is_done\":false,\"is_deactivated\":false,\"hex\":\"#00c875\"},{\"id\":2,\"color\":2,\"label\":\"Stuck\",\"index\":2,\"is_done\":false,\"is_deactivated\":false,\"hex\":\"#df2f4a\"}]},\"settings_str\":\"{\\\"labels\\\":{\\\"0\\\":\\\"Working on it\\\",\\\"1\\\":\\\"Done\\\",\\\"2\\\":\\\"Stuck\\\"},\\\"labels_colors\\\":{\\\"0\\\":{\\\"color\\\":\\\"#fdab3d\\\",\\\"border\\\":\\\"#e99729\\\",\\\"var_name\\\":\\\"orange\\\"},\\\"1\\\":{\\\"color\\\":\\\"#00c875\\\",\\\"border\\\":\\\"#00b461\\\",\\\"var_name\\\":\\\"green-shadow\\\"},\\\"2\\\":{\\\"color\\\":\\\"#df2f4a\\\",\\\"border\\\":\\\"#ce3048\\\",\\\"var_name\\\":\\\"red-shadow\\\"}}}\",\"capabilities\":{\"calculated\":{\"function\":\"COUNT_KEYS\"}}},{\"id\":\"timerange_mkyvnykb\",\"title\":\"Timeline\",\"type\":\"timeline\",\"settings\":{},\"settings_str\":\"{}\",\"capabilities\":{\"calculated\":{\"function\":\"MIN_MAX\"}}},{\"id\":\"numeric_mm8fjk4h\",\"title\":\"Num SUM\",\"type\":\"numbers\",\"settings\":{},\"settings_str\":\"{}\",\"capabilities\":{\"calculated\":{\"function\":\"SUM\"}}},{\"id\":\"numeric_mm8fnbbp\",\"title\":\"Num MIN\",\"type\":\"numbers\",\"settings\":{},\"settings_str\":\"{}\",\"capabilities\":{\"calculated\":{\"function\":\"MIN\"}}},{\"id\":\"numeric_mm8fj6qc\",\"title\":\"Num MAX\",\"type\":\"numbers\",\"settings\":{},\"settings_str\":\"{}\",\"capabilities\":{\"calculated\":{\"function\":\"MAX\"}}},{\"id\":\"numeric_mm8fpr03\",\"title\":\"Num NONE\",\"type\":\"numbers\",\"settings\":{},\"settings_str\":\"{}\",\"capabilities\":{\"calculated\":{\"function\":\"NONE\"}}},{\"id\":\"date_mm8f45aw\",\"title\":\"Date MIN\",\"type\":\"date\",\"settings\":{},\"settings_str\":\"{}\",\"capabilities\":{\"calculated\":{\"function\":\"MIN\"}}},{\"id\":\"date_mm8fb58z\",\"title\":\"Date MAX\",\"type\":\"date\",\"settings\":{},\"settings_str\":\"{}\",\"capabilities\":{\"calculated\":{\"function\":\"MAX\"}}},{\"id\":\"date_mm8f9546\",\"title\":\"Date default\",\"type\":\"date\",\"settings\":{},\"settings_str\":\"{}\",\"capabilities\":{\"calculated\":{\"function\":\"MIN\"}}},{\"id\":\"timerange_mm8f4c2a\",\"title\":\"Timeline MIN_MAX\",\"type\":\"timeline\",\"settings\":{},\"settings_str\":\"{}\",\"capabilities\":{\"calculated\":{\"function\":\"MIN_MAX\"}}}]}]},\"extensions\":{\"request_id\":\"287bff7b-2905-9904-857b-e61858f881df\"}}",
+      "responseBody": {
+        "data": {
+          "boards": [
+            {
+              "id": "18436908247",
+              "name": "R4 rollup function repro 2026-10-25T02:37:26.426Z",
+              "hierarchy_type": "multi_level",
+              "columns": [
+                {
+                  "id": "color_mkv6tatz",
+                  "title": "Status",
+                  "type": "status",
+                  "settings": {
+                    "labels": [
+                      {
+                        "id": 0,
+                        "color": 0,
+                        "label": "Working on it",
+                        "index": 0,
+                        "is_done": false,
+                        "is_deactivated": false,
+                        "hex": "#fdab3d"
+                      },
+                      {
+                        "id": 1,
+                        "color": 1,
+                        "label": "Done",
+                        "index": 1,
+                        "is_done": false,
+                        "is_deactivated": false,
+                        "hex": "#00c875"
+                      },
+                      {
+                        "id": 2,
+                        "color": 2,
+                        "label": "Stuck",
+                        "index": 2,
+                        "is_done": false,
+                        "is_deactivated": false,
+                        "hex": "#df2f4a"
+                      }
+                    ]
+                  },
+                  "settings_str": "{\"labels\":{\"0\":\"Working on it\",\"1\":\"Done\",\"2\":\"Stuck\"},\"labels_colors\":{\"0\":{\"color\":\"#fdab3d\",\"border\":\"#e99729\",\"var_name\":\"orange\"},\"1\":{\"color\":\"#00c875\",\"border\":\"#00b461\",\"var_name\":\"green-shadow\"},\"2\":{\"color\":\"#df2f4a\",\"border\":\"#ce3048\",\"var_name\":\"red-shadow\"}}}",
+                  "capabilities": {
+                    "calculated": {
+                      "function": "COUNT_KEYS"
+                    }
+                  }
+                },
+                {
+                  "id": "timerange_mkyvnykb",
+                  "title": "Timeline",
+                  "type": "timeline",
+                  "settings": {},
+                  "settings_str": "{}",
+                  "capabilities": {
+                    "calculated": {
+                      "function": "MIN_MAX"
+                    }
+                  }
+                },
+                {
+                  "id": "numeric_mm8fjk4h",
+                  "title": "Num SUM",
+                  "type": "numbers",
+                  "settings": {},
+                  "settings_str": "{}",
+                  "capabilities": {
+                    "calculated": {
+                      "function": "SUM"
+                    }
+                  }
+                },
+                {
+                  "id": "numeric_mm8fnbbp",
+                  "title": "Num MIN",
+                  "type": "numbers",
+                  "settings": {},
+                  "settings_str": "{}",
+                  "capabilities": {
+                    "calculated": {
+                      "function": "MIN"
+                    }
+                  }
+                },
+                {
+                  "id": "numeric_mm8fj6qc",
+                  "title": "Num MAX",
+                  "type": "numbers",
+                  "settings": {},
+                  "settings_str": "{}",
+                  "capabilities": {
+                    "calculated": {
+                      "function": "MAX"
+                    }
+                  }
+                },
+                {
+                  "id": "numeric_mm8fpr03",
+                  "title": "Num NONE",
+                  "type": "numbers",
+                  "settings": {},
+                  "settings_str": "{}",
+                  "capabilities": {
+                    "calculated": {
+                      "function": "NONE"
+                    }
+                  }
+                },
+                {
+                  "id": "date_mm8f45aw",
+                  "title": "Date MIN",
+                  "type": "date",
+                  "settings": {},
+                  "settings_str": "{}",
+                  "capabilities": {
+                    "calculated": {
+                      "function": "MIN"
+                    }
+                  }
+                },
+                {
+                  "id": "date_mm8fb58z",
+                  "title": "Date MAX",
+                  "type": "date",
+                  "settings": {},
+                  "settings_str": "{}",
+                  "capabilities": {
+                    "calculated": {
+                      "function": "MAX"
+                    }
+                  }
+                },
+                {
+                  "id": "date_mm8f9546",
+                  "title": "Date default",
+                  "type": "date",
+                  "settings": {},
+                  "settings_str": "{}",
+                  "capabilities": {
+                    "calculated": {
+                      "function": "MIN"
+                    }
+                  }
+                },
+                {
+                  "id": "timerange_mm8f4c2a",
+                  "title": "Timeline MIN_MAX",
+                  "type": "timeline",
+                  "settings": {},
+                  "settings_str": "{}",
+                  "capabilities": {
+                    "calculated": {
+                      "function": "MIN_MAX"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "extensions": {
+          "request_id": "287bff7b-2905-9904-857b-e61858f881df"
+        }
+      }
+    },
+    {
+      "step": "ground-truth",
+      "endpoint": "https://api.monday.com/v2",
+      "apiVersion": "2026-04",
+      "requestHeaders": {
+        "API-Version": "2026-04",
+        "Content-Type": "application/json"
+      },
+      "authorizationHeader": "sent; value not recorded",
+      "requestBody": "{\"query\":\"query ($b: [ID!], $c: [String!]) { boards(ids: $b) { items_page(limit: 100, hierarchy_scope_config: \\\"allItems\\\") { items { id name parent_item { id } column_values(ids: $c, capabilities: [CALCULATED]) { id type text value is_leaf ... on NumbersValue { number } ... on DateValue { date } ... on TimelineValue { from to } } } } } }\",\"variables\":{\"b\":[\"18436908247\"],\"c\":[\"numeric_mm8fjk4h\",\"numeric_mm8fnbbp\",\"numeric_mm8fj6qc\",\"numeric_mm8fpr03\",\"date_mm8f45aw\",\"date_mm8fb58z\",\"date_mm8f9546\",\"timerange_mm8f4c2a\"]}}",
+      "startedAt": "2026-10-25T02:39:14.569Z",
+      "endedAt": "2026-10-25T02:39:15.655Z",
+      "status": 200,
+      "xRequestId": "bcf6b199-0654-96ae-ab53-917d550b264c",
+      "extensionsRequestId": "bcf6b199-0654-96ae-ab53-917d550b264c",
+      "rateLimitHeaders": {
+        "ratelimit": "\"minuteRate\";r=3325, \"concurrency\";r=199, \"complexityMinute\";r=9999728;t=11",
+        "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\""
+      },
+      "responseHeaders": {
+        "api-version": "2026-04",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Sun, 25 Oct 2026 02:39:15 GMT",
+        "ratelimit": "\"minuteRate\";r=3325, \"concurrency\";r=199, \"complexityMinute\";r=9999728;t=11",
+        "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\"",
+        "x-request-id": "bcf6b199-0654-96ae-ab53-917d550b264c"
+      },
+      "responseBodyRaw": "{\"data\":{\"boards\":[{\"items_page\":{\"items\":[{\"id\":\"13377349057\",\"name\":\"Item 1\",\"parent_item\":null,\"column_values\":[{\"id\":\"numeric_mm8fjk4h\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"number\":null},{\"id\":\"numeric_mm8fnbbp\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"number\":null},{\"id\":\"numeric_mm8fj6qc\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"number\":null},{\"id\":\"numeric_mm8fpr03\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"number\":null},{\"id\":\"date_mm8f45aw\",\"type\":\"date\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"date\":\"\"},{\"id\":\"date_mm8fb58z\",\"type\":\"date\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"date\":\"\"},{\"id\":\"date_mm8f9546\",\"type\":\"date\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"date\":\"\"},{\"id\":\"timerange_mm8f4c2a\",\"type\":\"timeline\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"from\":null,\"to\":null}]},{\"id\":\"13377353714\",\"name\":\"P1 (L1 parent)\",\"parent_item\":null,\"column_values\":[{\"id\":\"numeric_mm8fjk4h\",\"type\":\"numbers\",\"text\":\"247\",\"value\":\"\\\"247\\\"\",\"is_leaf\":false,\"number\":247},{\"id\":\"numeric_mm8fnbbp\",\"type\":\"numbers\",\"text\":\"247\",\"value\":\"\\\"247\\\"\",\"is_leaf\":false,\"number\":247},{\"id\":\"numeric_mm8fj6qc\",\"type\":\"numbers\",\"text\":\"247\",\"value\":\"\\\"247\\\"\",\"is_leaf\":false,\"number\":247},{\"id\":\"numeric_mm8fpr03\",\"type\":\"numbers\",\"text\":\"247\",\"value\":\"\\\"247\\\"\",\"is_leaf\":false,\"number\":247},{\"id\":\"date_mm8f45aw\",\"type\":\"date\",\"text\":\"2026-01-20\",\"value\":\"{\\\"date\\\":\\\"2026-01-20\\\"}\",\"is_leaf\":false,\"date\":\"2026-01-20\"},{\"id\":\"date_mm8fb58z\",\"type\":\"date\",\"text\":\"2026-01-20\",\"value\":\"{\\\"date\\\":\\\"2026-01-20\\\"}\",\"is_leaf\":false,\"date\":\"2026-01-20\"},{\"id\":\"date_mm8f9546\",\"type\":\"date\",\"text\":\"2026-01-20\",\"value\":\"{\\\"date\\\":\\\"2026-01-20\\\"}\",\"is_leaf\":false,\"date\":\"2026-01-20\"},{\"id\":\"timerange_mm8f4c2a\",\"type\":\"timeline\",\"text\":\"2026-01-10 - 2026-07-15\",\"value\":\"{\\\"to\\\":\\\"2026-07-15\\\",\\\"from\\\":\\\"2026-01-10\\\"}\",\"is_leaf\":false,\"from\":\"2026-01-10T00:00:00+00:00\",\"to\":\"2026-07-15T00:00:00+00:00\"}]},{\"id\":\"13377349056\",\"name\":\"Subitem Level 1\",\"parent_item\":{\"id\":\"13377349057\"},\"column_values\":[{\"id\":\"numeric_mm8fjk4h\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"number\":null},{\"id\":\"numeric_mm8fnbbp\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"number\":null},{\"id\":\"numeric_mm8fj6qc\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"number\":null},{\"id\":\"numeric_mm8fpr03\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"number\":null},{\"id\":\"date_mm8f45aw\",\"type\":\"date\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"date\":\"\"},{\"id\":\"date_mm8fb58z\",\"type\":\"date\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"date\":\"\"},{\"id\":\"date_mm8f9546\",\"type\":\"date\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"date\":\"\"},{\"id\":\"timerange_mm8f4c2a\",\"type\":\"timeline\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"from\":null,\"to\":null}]},{\"id\":\"13377349058\",\"name\":\"Subitem Level 2\",\"parent_item\":{\"id\":\"13377349056\"},\"column_values\":[{\"id\":\"numeric_mm8fjk4h\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"number\":null},{\"id\":\"numeric_mm8fnbbp\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"number\":null},{\"id\":\"numeric_mm8fj6qc\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"number\":null},{\"id\":\"numeric_mm8fpr03\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"number\":null},{\"id\":\"date_mm8f45aw\",\"type\":\"date\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"date\":\"\"},{\"id\":\"date_mm8fb58z\",\"type\":\"date\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"date\":\"\"},{\"id\":\"date_mm8f9546\",\"type\":\"date\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"date\":\"\"},{\"id\":\"timerange_mm8f4c2a\",\"type\":\"timeline\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"from\":null,\"to\":null}]},{\"id\":\"13377349059\",\"name\":\"Subitem Level 2\",\"parent_item\":{\"id\":\"13377349056\"},\"column_values\":[{\"id\":\"numeric_mm8fjk4h\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"number\":null},{\"id\":\"numeric_mm8fnbbp\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"number\":null},{\"id\":\"numeric_mm8fj6qc\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"number\":null},{\"id\":\"numeric_mm8fpr03\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"number\":null},{\"id\":\"date_mm8f45aw\",\"type\":\"date\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"date\":\"\"},{\"id\":\"date_mm8fb58z\",\"type\":\"date\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"date\":\"\"},{\"id\":\"date_mm8f9546\",\"type\":\"date\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"date\":\"\"},{\"id\":\"timerange_mm8f4c2a\",\"type\":\"timeline\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"from\":null,\"to\":null}]},{\"id\":\"13377370969\",\"name\":\"Q1 (L2 parent)\",\"parent_item\":{\"id\":\"13377353714\"},\"column_values\":[{\"id\":\"numeric_mm8fjk4h\",\"type\":\"numbers\",\"text\":\"47\",\"value\":\"\\\"47\\\"\",\"is_leaf\":false,\"number\":47},{\"id\":\"numeric_mm8fnbbp\",\"type\":\"numbers\",\"text\":\"47\",\"value\":\"\\\"47\\\"\",\"is_leaf\":false,\"number\":47},{\"id\":\"numeric_mm8fj6qc\",\"type\":\"numbers\",\"text\":\"47\",\"value\":\"\\\"47\\\"\",\"is_leaf\":false,\"number\":47},{\"id\":\"numeric_mm8fpr03\",\"type\":\"numbers\",\"text\":\"47\",\"value\":\"\\\"47\\\"\",\"is_leaf\":false,\"number\":47},{\"id\":\"date_mm8f45aw\",\"type\":\"date\",\"text\":\"2026-03-03\",\"value\":\"{\\\"date\\\":\\\"2026-03-03\\\"}\",\"is_leaf\":false,\"date\":\"2026-03-03\"},{\"id\":\"date_mm8fb58z\",\"type\":\"date\",\"text\":\"2026-03-03\",\"value\":\"{\\\"date\\\":\\\"2026-03-03\\\"}\",\"is_leaf\":false,\"date\":\"2026-03-03\"},{\"id\":\"date_mm8f9546\",\"type\":\"date\",\"text\":\"2026-03-03\",\"value\":\"{\\\"date\\\":\\\"2026-03-03\\\"}\",\"is_leaf\":false,\"date\":\"2026-03-03\"},{\"id\":\"timerange_mm8f4c2a\",\"type\":\"timeline\",\"text\":\"2026-03-01 - 2026-07-15\",\"value\":\"{\\\"to\\\":\\\"2026-07-15\\\",\\\"from\\\":\\\"2026-03-01\\\"}\",\"is_leaf\":false,\"from\":\"2026-03-01T00:00:00+00:00\",\"to\":\"2026-07-15T00:00:00+00:00\"}]},{\"id\":\"13377370993\",\"name\":\"Q1a (L3 leaf)\",\"parent_item\":{\"id\":\"13377370969\"},\"column_values\":[{\"id\":\"numeric_mm8fjk4h\",\"type\":\"numbers\",\"text\":\"40\",\"value\":\"\\\"40\\\"\",\"is_leaf\":true,\"number\":40},{\"id\":\"numeric_mm8fnbbp\",\"type\":\"numbers\",\"text\":\"40\",\"value\":\"\\\"40\\\"\",\"is_leaf\":true,\"number\":40},{\"id\":\"numeric_mm8fj6qc\",\"type\":\"numbers\",\"text\":\"40\",\"value\":\"\\\"40\\\"\",\"is_leaf\":true,\"number\":40},{\"id\":\"numeric_mm8fpr03\",\"type\":\"numbers\",\"text\":\"40\",\"value\":\"\\\"40\\\"\",\"is_leaf\":true,\"number\":40},{\"id\":\"date_mm8f45aw\",\"type\":\"date\",\"text\":\"2026-03-03\",\"value\":\"{\\\"date\\\":\\\"2026-03-03\\\",\\\"changed_at\\\":\\\"2026-10-25T02:38:02.804Z\\\"}\",\"is_leaf\":true,\"date\":\"2026-03-03\"},{\"id\":\"date_mm8fb58z\",\"type\":\"date\",\"text\":\"2026-03-03\",\"value\":\"{\\\"date\\\":\\\"2026-03-03\\\",\\\"changed_at\\\":\\\"2026-10-25T02:38:02.805Z\\\"}\",\"is_leaf\":true,\"date\":\"2026-03-03\"},{\"id\":\"date_mm8f9546\",\"type\":\"date\",\"text\":\"2026-03-03\",\"value\":\"{\\\"date\\\":\\\"2026-03-03\\\",\\\"changed_at\\\":\\\"2026-10-25T02:38:02.806Z\\\"}\",\"is_leaf\":true,\"date\":\"2026-03-03\"},{\"id\":\"timerange_mm8f4c2a\",\"type\":\"timeline\",\"text\":\"2026-03-01 - 2026-03-20\",\"value\":\"{\\\"to\\\":\\\"2026-03-20\\\",\\\"from\\\":\\\"2026-03-01\\\",\\\"changed_at\\\":\\\"2026-10-25T02:38:02.807Z\\\"}\",\"is_leaf\":true,\"from\":\"2026-03-01T00:00:00+00:00\",\"to\":\"2026-03-20T00:00:00+00:00\"}]},{\"id\":\"13377423773\",\"name\":\"Q1b (L3 leaf)\",\"parent_item\":{\"id\":\"13377370969\"},\"column_values\":[{\"id\":\"numeric_mm8fjk4h\",\"type\":\"numbers\",\"text\":\"7\",\"value\":\"\\\"7\\\"\",\"is_leaf\":true,\"number\":7},{\"id\":\"numeric_mm8fnbbp\",\"type\":\"numbers\",\"text\":\"7\",\"value\":\"\\\"7\\\"\",\"is_leaf\":true,\"number\":7},{\"id\":\"numeric_mm8fj6qc\",\"type\":\"numbers\",\"text\":\"7\",\"value\":\"\\\"7\\\"\",\"is_leaf\":true,\"number\":7},{\"id\":\"numeric_mm8fpr03\",\"type\":\"numbers\",\"text\":\"7\",\"value\":\"\\\"7\\\"\",\"is_leaf\":true,\"number\":7},{\"id\":\"date_mm8f45aw\",\"type\":\"date\",\"text\":\"2026-06-30\",\"value\":\"{\\\"date\\\":\\\"2026-06-30\\\",\\\"changed_at\\\":\\\"2026-10-25T02:38:04.752Z\\\"}\",\"is_leaf\":true,\"date\":\"2026-06-30\"},{\"id\":\"date_mm8fb58z\",\"type\":\"date\",\"text\":\"2026-06-30\",\"value\":\"{\\\"date\\\":\\\"2026-06-30\\\",\\\"changed_at\\\":\\\"2026-10-25T02:38:04.754Z\\\"}\",\"is_leaf\":true,\"date\":\"2026-06-30\"},{\"id\":\"date_mm8f9546\",\"type\":\"date\",\"text\":\"2026-06-30\",\"value\":\"{\\\"date\\\":\\\"2026-06-30\\\",\\\"changed_at\\\":\\\"2026-10-25T02:38:04.755Z\\\"}\",\"is_leaf\":true,\"date\":\"2026-06-30\"},{\"id\":\"timerange_mm8f4c2a\",\"type\":\"timeline\",\"text\":\"2026-05-01 - 2026-07-15\",\"value\":\"{\\\"to\\\":\\\"2026-07-15\\\",\\\"from\\\":\\\"2026-05-01\\\",\\\"changed_at\\\":\\\"2026-10-25T02:38:04.756Z\\\"}\",\"is_leaf\":true,\"from\":\"2026-05-01T00:00:00+00:00\",\"to\":\"2026-07-15T00:00:00+00:00\"}]},{\"id\":\"13377370978\",\"name\":\"P1c (L2 leaf)\",\"parent_item\":{\"id\":\"13377353714\"},\"column_values\":[{\"id\":\"numeric_mm8fjk4h\",\"type\":\"numbers\",\"text\":\"200\",\"value\":\"\\\"200\\\"\",\"is_leaf\":true,\"number\":200},{\"id\":\"numeric_mm8fnbbp\",\"type\":\"numbers\",\"text\":\"200\",\"value\":\"\\\"200\\\"\",\"is_leaf\":true,\"number\":200},{\"id\":\"numeric_mm8fj6qc\",\"type\":\"numbers\",\"text\":\"200\",\"value\":\"\\\"200\\\"\",\"is_leaf\":true,\"number\":200},{\"id\":\"numeric_mm8fpr03\",\"type\":\"numbers\",\"text\":\"200\",\"value\":\"\\\"200\\\"\",\"is_leaf\":true,\"number\":200},{\"id\":\"date_mm8f45aw\",\"type\":\"date\",\"text\":\"2026-01-20\",\"value\":\"{\\\"date\\\":\\\"2026-01-20\\\",\\\"changed_at\\\":\\\"2026-10-25T02:38:06.870Z\\\"}\",\"is_leaf\":true,\"date\":\"2026-01-20\"},{\"id\":\"date_mm8fb58z\",\"type\":\"date\",\"text\":\"2026-01-20\",\"value\":\"{\\\"date\\\":\\\"2026-01-20\\\",\\\"changed_at\\\":\\\"2026-10-25T02:38:06.871Z\\\"}\",\"is_leaf\":true,\"date\":\"2026-01-20\"},{\"id\":\"date_mm8f9546\",\"type\":\"date\",\"text\":\"2026-01-20\",\"value\":\"{\\\"date\\\":\\\"2026-01-20\\\",\\\"changed_at\\\":\\\"2026-10-25T02:38:06.873Z\\\"}\",\"is_leaf\":true,\"date\":\"2026-01-20\"},{\"id\":\"timerange_mm8f4c2a\",\"type\":\"timeline\",\"text\":\"2026-01-10 - 2026-02-01\",\"value\":\"{\\\"to\\\":\\\"2026-02-01\\\",\\\"from\\\":\\\"2026-01-10\\\",\\\"changed_at\\\":\\\"2026-10-25T02:38:06.874Z\\\"}\",\"is_leaf\":true,\"from\":\"2026-01-10T00:00:00+00:00\",\"to\":\"2026-02-01T00:00:00+00:00\"}]}]}}]},\"extensions\":{\"request_id\":\"bcf6b199-0654-96ae-ab53-917d550b264c\"}}",
+      "responseBody": {
+        "data": {
+          "boards": [
+            {
+              "items_page": {
+                "items": [
+                  {
+                    "id": "13377349057",
+                    "name": "Item 1",
+                    "parent_item": null,
+                    "column_values": [
+                      {
+                        "id": "numeric_mm8fjk4h",
+                        "type": "numbers",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": false,
+                        "number": null
+                      },
+                      {
+                        "id": "numeric_mm8fnbbp",
+                        "type": "numbers",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": false,
+                        "number": null
+                      },
+                      {
+                        "id": "numeric_mm8fj6qc",
+                        "type": "numbers",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": false,
+                        "number": null
+                      },
+                      {
+                        "id": "numeric_mm8fpr03",
+                        "type": "numbers",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": false,
+                        "number": null
+                      },
+                      {
+                        "id": "date_mm8f45aw",
+                        "type": "date",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": false,
+                        "date": ""
+                      },
+                      {
+                        "id": "date_mm8fb58z",
+                        "type": "date",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": false,
+                        "date": ""
+                      },
+                      {
+                        "id": "date_mm8f9546",
+                        "type": "date",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": false,
+                        "date": ""
+                      },
+                      {
+                        "id": "timerange_mm8f4c2a",
+                        "type": "timeline",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": false,
+                        "from": null,
+                        "to": null
+                      }
+                    ]
+                  },
+                  {
+                    "id": "13377353714",
+                    "name": "P1 (L1 parent)",
+                    "parent_item": null,
+                    "column_values": [
+                      {
+                        "id": "numeric_mm8fjk4h",
+                        "type": "numbers",
+                        "text": "247",
+                        "value": "\"247\"",
+                        "is_leaf": false,
+                        "number": 247
+                      },
+                      {
+                        "id": "numeric_mm8fnbbp",
+                        "type": "numbers",
+                        "text": "247",
+                        "value": "\"247\"",
+                        "is_leaf": false,
+                        "number": 247
+                      },
+                      {
+                        "id": "numeric_mm8fj6qc",
+                        "type": "numbers",
+                        "text": "247",
+                        "value": "\"247\"",
+                        "is_leaf": false,
+                        "number": 247
+                      },
+                      {
+                        "id": "numeric_mm8fpr03",
+                        "type": "numbers",
+                        "text": "247",
+                        "value": "\"247\"",
+                        "is_leaf": false,
+                        "number": 247
+                      },
+                      {
+                        "id": "date_mm8f45aw",
+                        "type": "date",
+                        "text": "2026-01-20",
+                        "value": "{\"date\":\"2026-01-20\"}",
+                        "is_leaf": false,
+                        "date": "2026-01-20"
+                      },
+                      {
+                        "id": "date_mm8fb58z",
+                        "type": "date",
+                        "text": "2026-01-20",
+                        "value": "{\"date\":\"2026-01-20\"}",
+                        "is_leaf": false,
+                        "date": "2026-01-20"
+                      },
+                      {
+                        "id": "date_mm8f9546",
+                        "type": "date",
+                        "text": "2026-01-20",
+                        "value": "{\"date\":\"2026-01-20\"}",
+                        "is_leaf": false,
+                        "date": "2026-01-20"
+                      },
+                      {
+                        "id": "timerange_mm8f4c2a",
+                        "type": "timeline",
+                        "text": "2026-01-10 - 2026-07-15",
+                        "value": "{\"to\":\"2026-07-15\",\"from\":\"2026-01-10\"}",
+                        "is_leaf": false,
+                        "from": "2026-01-10T00:00:00+00:00",
+                        "to": "2026-07-15T00:00:00+00:00"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "13377349056",
+                    "name": "Subitem Level 1",
+                    "parent_item": {
+                      "id": "13377349057"
+                    },
+                    "column_values": [
+                      {
+                        "id": "numeric_mm8fjk4h",
+                        "type": "numbers",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": false,
+                        "number": null
+                      },
+                      {
+                        "id": "numeric_mm8fnbbp",
+                        "type": "numbers",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": false,
+                        "number": null
+                      },
+                      {
+                        "id": "numeric_mm8fj6qc",
+                        "type": "numbers",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": false,
+                        "number": null
+                      },
+                      {
+                        "id": "numeric_mm8fpr03",
+                        "type": "numbers",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": false,
+                        "number": null
+                      },
+                      {
+                        "id": "date_mm8f45aw",
+                        "type": "date",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": false,
+                        "date": ""
+                      },
+                      {
+                        "id": "date_mm8fb58z",
+                        "type": "date",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": false,
+                        "date": ""
+                      },
+                      {
+                        "id": "date_mm8f9546",
+                        "type": "date",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": false,
+                        "date": ""
+                      },
+                      {
+                        "id": "timerange_mm8f4c2a",
+                        "type": "timeline",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": false,
+                        "from": null,
+                        "to": null
+                      }
+                    ]
+                  },
+                  {
+                    "id": "13377349058",
+                    "name": "Subitem Level 2",
+                    "parent_item": {
+                      "id": "13377349056"
+                    },
+                    "column_values": [
+                      {
+                        "id": "numeric_mm8fjk4h",
+                        "type": "numbers",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": true,
+                        "number": null
+                      },
+                      {
+                        "id": "numeric_mm8fnbbp",
+                        "type": "numbers",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": true,
+                        "number": null
+                      },
+                      {
+                        "id": "numeric_mm8fj6qc",
+                        "type": "numbers",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": true,
+                        "number": null
+                      },
+                      {
+                        "id": "numeric_mm8fpr03",
+                        "type": "numbers",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": true,
+                        "number": null
+                      },
+                      {
+                        "id": "date_mm8f45aw",
+                        "type": "date",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": true,
+                        "date": ""
+                      },
+                      {
+                        "id": "date_mm8fb58z",
+                        "type": "date",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": true,
+                        "date": ""
+                      },
+                      {
+                        "id": "date_mm8f9546",
+                        "type": "date",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": true,
+                        "date": ""
+                      },
+                      {
+                        "id": "timerange_mm8f4c2a",
+                        "type": "timeline",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": true,
+                        "from": null,
+                        "to": null
+                      }
+                    ]
+                  },
+                  {
+                    "id": "13377349059",
+                    "name": "Subitem Level 2",
+                    "parent_item": {
+                      "id": "13377349056"
+                    },
+                    "column_values": [
+                      {
+                        "id": "numeric_mm8fjk4h",
+                        "type": "numbers",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": true,
+                        "number": null
+                      },
+                      {
+                        "id": "numeric_mm8fnbbp",
+                        "type": "numbers",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": true,
+                        "number": null
+                      },
+                      {
+                        "id": "numeric_mm8fj6qc",
+                        "type": "numbers",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": true,
+                        "number": null
+                      },
+                      {
+                        "id": "numeric_mm8fpr03",
+                        "type": "numbers",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": true,
+                        "number": null
+                      },
+                      {
+                        "id": "date_mm8f45aw",
+                        "type": "date",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": true,
+                        "date": ""
+                      },
+                      {
+                        "id": "date_mm8fb58z",
+                        "type": "date",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": true,
+                        "date": ""
+                      },
+                      {
+                        "id": "date_mm8f9546",
+                        "type": "date",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": true,
+                        "date": ""
+                      },
+                      {
+                        "id": "timerange_mm8f4c2a",
+                        "type": "timeline",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": true,
+                        "from": null,
+                        "to": null
+                      }
+                    ]
+                  },
+                  {
+                    "id": "13377370969",
+                    "name": "Q1 (L2 parent)",
+                    "parent_item": {
+                      "id": "13377353714"
+                    },
+                    "column_values": [
+                      {
+                        "id": "numeric_mm8fjk4h",
+                        "type": "numbers",
+                        "text": "47",
+                        "value": "\"47\"",
+                        "is_leaf": false,
+                        "number": 47
+                      },
+                      {
+                        "id": "numeric_mm8fnbbp",
+                        "type": "numbers",
+                        "text": "47",
+                        "value": "\"47\"",
+                        "is_leaf": false,
+                        "number": 47
+                      },
+                      {
+                        "id": "numeric_mm8fj6qc",
+                        "type": "numbers",
+                        "text": "47",
+                        "value": "\"47\"",
+                        "is_leaf": false,
+                        "number": 47
+                      },
+                      {
+                        "id": "numeric_mm8fpr03",
+                        "type": "numbers",
+                        "text": "47",
+                        "value": "\"47\"",
+                        "is_leaf": false,
+                        "number": 47
+                      },
+                      {
+                        "id": "date_mm8f45aw",
+                        "type": "date",
+                        "text": "2026-03-03",
+                        "value": "{\"date\":\"2026-03-03\"}",
+                        "is_leaf": false,
+                        "date": "2026-03-03"
+                      },
+                      {
+                        "id": "date_mm8fb58z",
+                        "type": "date",
+                        "text": "2026-03-03",
+                        "value": "{\"date\":\"2026-03-03\"}",
+                        "is_leaf": false,
+                        "date": "2026-03-03"
+                      },
+                      {
+                        "id": "date_mm8f9546",
+                        "type": "date",
+                        "text": "2026-03-03",
+                        "value": "{\"date\":\"2026-03-03\"}",
+                        "is_leaf": false,
+                        "date": "2026-03-03"
+                      },
+                      {
+                        "id": "timerange_mm8f4c2a",
+                        "type": "timeline",
+                        "text": "2026-03-01 - 2026-07-15",
+                        "value": "{\"to\":\"2026-07-15\",\"from\":\"2026-03-01\"}",
+                        "is_leaf": false,
+                        "from": "2026-03-01T00:00:00+00:00",
+                        "to": "2026-07-15T00:00:00+00:00"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "13377370993",
+                    "name": "Q1a (L3 leaf)",
+                    "parent_item": {
+                      "id": "13377370969"
+                    },
+                    "column_values": [
+                      {
+                        "id": "numeric_mm8fjk4h",
+                        "type": "numbers",
+                        "text": "40",
+                        "value": "\"40\"",
+                        "is_leaf": true,
+                        "number": 40
+                      },
+                      {
+                        "id": "numeric_mm8fnbbp",
+                        "type": "numbers",
+                        "text": "40",
+                        "value": "\"40\"",
+                        "is_leaf": true,
+                        "number": 40
+                      },
+                      {
+                        "id": "numeric_mm8fj6qc",
+                        "type": "numbers",
+                        "text": "40",
+                        "value": "\"40\"",
+                        "is_leaf": true,
+                        "number": 40
+                      },
+                      {
+                        "id": "numeric_mm8fpr03",
+                        "type": "numbers",
+                        "text": "40",
+                        "value": "\"40\"",
+                        "is_leaf": true,
+                        "number": 40
+                      },
+                      {
+                        "id": "date_mm8f45aw",
+                        "type": "date",
+                        "text": "2026-03-03",
+                        "value": "{\"date\":\"2026-03-03\",\"changed_at\":\"2026-10-25T02:38:02.804Z\"}",
+                        "is_leaf": true,
+                        "date": "2026-03-03"
+                      },
+                      {
+                        "id": "date_mm8fb58z",
+                        "type": "date",
+                        "text": "2026-03-03",
+                        "value": "{\"date\":\"2026-03-03\",\"changed_at\":\"2026-10-25T02:38:02.805Z\"}",
+                        "is_leaf": true,
+                        "date": "2026-03-03"
+                      },
+                      {
+                        "id": "date_mm8f9546",
+                        "type": "date",
+                        "text": "2026-03-03",
+                        "value": "{\"date\":\"2026-03-03\",\"changed_at\":\"2026-10-25T02:38:02.806Z\"}",
+                        "is_leaf": true,
+                        "date": "2026-03-03"
+                      },
+                      {
+                        "id": "timerange_mm8f4c2a",
+                        "type": "timeline",
+                        "text": "2026-03-01 - 2026-03-20",
+                        "value": "{\"to\":\"2026-03-20\",\"from\":\"2026-03-01\",\"changed_at\":\"2026-10-25T02:38:02.807Z\"}",
+                        "is_leaf": true,
+                        "from": "2026-03-01T00:00:00+00:00",
+                        "to": "2026-03-20T00:00:00+00:00"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "13377423773",
+                    "name": "Q1b (L3 leaf)",
+                    "parent_item": {
+                      "id": "13377370969"
+                    },
+                    "column_values": [
+                      {
+                        "id": "numeric_mm8fjk4h",
+                        "type": "numbers",
+                        "text": "7",
+                        "value": "\"7\"",
+                        "is_leaf": true,
+                        "number": 7
+                      },
+                      {
+                        "id": "numeric_mm8fnbbp",
+                        "type": "numbers",
+                        "text": "7",
+                        "value": "\"7\"",
+                        "is_leaf": true,
+                        "number": 7
+                      },
+                      {
+                        "id": "numeric_mm8fj6qc",
+                        "type": "numbers",
+                        "text": "7",
+                        "value": "\"7\"",
+                        "is_leaf": true,
+                        "number": 7
+                      },
+                      {
+                        "id": "numeric_mm8fpr03",
+                        "type": "numbers",
+                        "text": "7",
+                        "value": "\"7\"",
+                        "is_leaf": true,
+                        "number": 7
+                      },
+                      {
+                        "id": "date_mm8f45aw",
+                        "type": "date",
+                        "text": "2026-06-30",
+                        "value": "{\"date\":\"2026-06-30\",\"changed_at\":\"2026-10-25T02:38:04.752Z\"}",
+                        "is_leaf": true,
+                        "date": "2026-06-30"
+                      },
+                      {
+                        "id": "date_mm8fb58z",
+                        "type": "date",
+                        "text": "2026-06-30",
+                        "value": "{\"date\":\"2026-06-30\",\"changed_at\":\"2026-10-25T02:38:04.754Z\"}",
+                        "is_leaf": true,
+                        "date": "2026-06-30"
+                      },
+                      {
+                        "id": "date_mm8f9546",
+                        "type": "date",
+                        "text": "2026-06-30",
+                        "value": "{\"date\":\"2026-06-30\",\"changed_at\":\"2026-10-25T02:38:04.755Z\"}",
+                        "is_leaf": true,
+                        "date": "2026-06-30"
+                      },
+                      {
+                        "id": "timerange_mm8f4c2a",
+                        "type": "timeline",
+                        "text": "2026-05-01 - 2026-07-15",
+                        "value": "{\"to\":\"2026-07-15\",\"from\":\"2026-05-01\",\"changed_at\":\"2026-10-25T02:38:04.756Z\"}",
+                        "is_leaf": true,
+                        "from": "2026-05-01T00:00:00+00:00",
+                        "to": "2026-07-15T00:00:00+00:00"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "13377370978",
+                    "name": "P1c (L2 leaf)",
+                    "parent_item": {
+                      "id": "13377353714"
+                    },
+                    "column_values": [
+                      {
+                        "id": "numeric_mm8fjk4h",
+                        "type": "numbers",
+                        "text": "200",
+                        "value": "\"200\"",
+                        "is_leaf": true,
+                        "number": 200
+                      },
+                      {
+                        "id": "numeric_mm8fnbbp",
+                        "type": "numbers",
+                        "text": "200",
+                        "value": "\"200\"",
+                        "is_leaf": true,
+                        "number": 200
+                      },
+                      {
+                        "id": "numeric_mm8fj6qc",
+                        "type": "numbers",
+                        "text": "200",
+                        "value": "\"200\"",
+                        "is_leaf": true,
+                        "number": 200
+                      },
+                      {
+                        "id": "numeric_mm8fpr03",
+                        "type": "numbers",
+                        "text": "200",
+                        "value": "\"200\"",
+                        "is_leaf": true,
+                        "number": 200
+                      },
+                      {
+                        "id": "date_mm8f45aw",
+                        "type": "date",
+                        "text": "2026-01-20",
+                        "value": "{\"date\":\"2026-01-20\",\"changed_at\":\"2026-10-25T02:38:06.870Z\"}",
+                        "is_leaf": true,
+                        "date": "2026-01-20"
+                      },
+                      {
+                        "id": "date_mm8fb58z",
+                        "type": "date",
+                        "text": "2026-01-20",
+                        "value": "{\"date\":\"2026-01-20\",\"changed_at\":\"2026-10-25T02:38:06.871Z\"}",
+                        "is_leaf": true,
+                        "date": "2026-01-20"
+                      },
+                      {
+                        "id": "date_mm8f9546",
+                        "type": "date",
+                        "text": "2026-01-20",
+                        "value": "{\"date\":\"2026-01-20\",\"changed_at\":\"2026-10-25T02:38:06.873Z\"}",
+                        "is_leaf": true,
+                        "date": "2026-01-20"
+                      },
+                      {
+                        "id": "timerange_mm8f4c2a",
+                        "type": "timeline",
+                        "text": "2026-01-10 - 2026-02-01",
+                        "value": "{\"to\":\"2026-02-01\",\"from\":\"2026-01-10\",\"changed_at\":\"2026-10-25T02:38:06.874Z\"}",
+                        "is_leaf": true,
+                        "from": "2026-01-10T00:00:00+00:00",
+                        "to": "2026-02-01T00:00:00+00:00"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "extensions": {
+          "request_id": "bcf6b199-0654-96ae-ab53-917d550b264c"
+        }
+      }
+    },
+    {
+      "step": "parents",
+      "endpoint": "https://api.monday.com/v2",
+      "apiVersion": "2026-04",
+      "requestHeaders": {
+        "API-Version": "2026-04",
+        "Content-Type": "application/json"
+      },
+      "authorizationHeader": "sent; value not recorded",
+      "requestBody": "{\"query\":\"query ($i: [ID!], $c: [String!]) { items(ids: $i) { id name column_values(ids: $c, capabilities: [CALCULATED]) { id type text value is_leaf ... on NumbersValue { number } ... on DateValue { date } ... on TimelineValue { from to } } } }\",\"variables\":{\"i\":[\"13377353714\",\"13377370969\"],\"c\":[\"numeric_mm8fjk4h\",\"numeric_mm8fnbbp\",\"numeric_mm8fj6qc\",\"numeric_mm8fpr03\",\"date_mm8f45aw\",\"date_mm8fb58z\",\"date_mm8f9546\",\"timerange_mm8f4c2a\"]}}",
+      "startedAt": "2026-10-25T02:39:16.857Z",
+      "endedAt": "2026-10-25T02:39:17.494Z",
+      "status": 200,
+      "xRequestId": "30ea281a-311f-9280-9eb3-8e05650d6d8b",
+      "extensionsRequestId": "30ea281a-311f-9280-9eb3-8e05650d6d8b",
+      "rateLimitHeaders": {
+        "ratelimit": "\"minuteRate\";r=3324, \"concurrency\";r=199, \"complexityMinute\";r=9999964;t=9",
+        "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\""
+      },
+      "responseHeaders": {
+        "api-version": "2026-04",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Sun, 25 Oct 2026 02:39:17 GMT",
+        "ratelimit": "\"minuteRate\";r=3324, \"concurrency\";r=199, \"complexityMinute\";r=9999964;t=9",
+        "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\"",
+        "x-request-id": "30ea281a-311f-9280-9eb3-8e05650d6d8b"
+      },
+      "responseBodyRaw": "{\"data\":{\"items\":[{\"id\":\"13377353714\",\"name\":\"P1 (L1 parent)\",\"column_values\":[{\"id\":\"numeric_mm8fjk4h\",\"type\":\"numbers\",\"text\":\"247\",\"value\":\"\\\"247\\\"\",\"is_leaf\":false,\"number\":247},{\"id\":\"numeric_mm8fnbbp\",\"type\":\"numbers\",\"text\":\"247\",\"value\":\"\\\"247\\\"\",\"is_leaf\":false,\"number\":247},{\"id\":\"numeric_mm8fj6qc\",\"type\":\"numbers\",\"text\":\"247\",\"value\":\"\\\"247\\\"\",\"is_leaf\":false,\"number\":247},{\"id\":\"numeric_mm8fpr03\",\"type\":\"numbers\",\"text\":\"247\",\"value\":\"\\\"247\\\"\",\"is_leaf\":false,\"number\":247},{\"id\":\"date_mm8f45aw\",\"type\":\"date\",\"text\":\"2026-01-20\",\"value\":\"{\\\"date\\\":\\\"2026-01-20\\\"}\",\"is_leaf\":false,\"date\":\"2026-01-20\"},{\"id\":\"date_mm8fb58z\",\"type\":\"date\",\"text\":\"2026-01-20\",\"value\":\"{\\\"date\\\":\\\"2026-01-20\\\"}\",\"is_leaf\":false,\"date\":\"2026-01-20\"},{\"id\":\"date_mm8f9546\",\"type\":\"date\",\"text\":\"2026-01-20\",\"value\":\"{\\\"date\\\":\\\"2026-01-20\\\"}\",\"is_leaf\":false,\"date\":\"2026-01-20\"},{\"id\":\"timerange_mm8f4c2a\",\"type\":\"timeline\",\"text\":\"2026-01-10 - 2026-07-15\",\"value\":\"{\\\"to\\\":\\\"2026-07-15\\\",\\\"from\\\":\\\"2026-01-10\\\"}\",\"is_leaf\":false,\"from\":\"2026-01-10T00:00:00+00:00\",\"to\":\"2026-07-15T00:00:00+00:00\"}]},{\"id\":\"13377370969\",\"name\":\"Q1 (L2 parent)\",\"column_values\":[{\"id\":\"numeric_mm8fjk4h\",\"type\":\"numbers\",\"text\":\"47\",\"value\":\"\\\"47\\\"\",\"is_leaf\":false,\"number\":47},{\"id\":\"numeric_mm8fnbbp\",\"type\":\"numbers\",\"text\":\"47\",\"value\":\"\\\"47\\\"\",\"is_leaf\":false,\"number\":47},{\"id\":\"numeric_mm8fj6qc\",\"type\":\"numbers\",\"text\":\"47\",\"value\":\"\\\"47\\\"\",\"is_leaf\":false,\"number\":47},{\"id\":\"numeric_mm8fpr03\",\"type\":\"numbers\",\"text\":\"47\",\"value\":\"\\\"47\\\"\",\"is_leaf\":false,\"number\":47},{\"id\":\"date_mm8f45aw\",\"type\":\"date\",\"text\":\"2026-03-03\",\"value\":\"{\\\"date\\\":\\\"2026-03-03\\\"}\",\"is_leaf\":false,\"date\":\"2026-03-03\"},{\"id\":\"date_mm8fb58z\",\"type\":\"date\",\"text\":\"2026-03-03\",\"value\":\"{\\\"date\\\":\\\"2026-03-03\\\"}\",\"is_leaf\":false,\"date\":\"2026-03-03\"},{\"id\":\"date_mm8f9546\",\"type\":\"date\",\"text\":\"2026-03-03\",\"value\":\"{\\\"date\\\":\\\"2026-03-03\\\"}\",\"is_leaf\":false,\"date\":\"2026-03-03\"},{\"id\":\"timerange_mm8f4c2a\",\"type\":\"timeline\",\"text\":\"2026-03-01 - 2026-07-15\",\"value\":\"{\\\"to\\\":\\\"2026-07-15\\\",\\\"from\\\":\\\"2026-03-01\\\"}\",\"is_leaf\":false,\"from\":\"2026-03-01T00:00:00+00:00\",\"to\":\"2026-07-15T00:00:00+00:00\"}]}]},\"extensions\":{\"request_id\":\"30ea281a-311f-9280-9eb3-8e05650d6d8b\"}}",
+      "responseBody": {
+        "data": {
+          "items": [
+            {
+              "id": "13377353714",
+              "name": "P1 (L1 parent)",
+              "column_values": [
+                {
+                  "id": "numeric_mm8fjk4h",
+                  "type": "numbers",
+                  "text": "247",
+                  "value": "\"247\"",
+                  "is_leaf": false,
+                  "number": 247
+                },
+                {
+                  "id": "numeric_mm8fnbbp",
+                  "type": "numbers",
+                  "text": "247",
+                  "value": "\"247\"",
+                  "is_leaf": false,
+                  "number": 247
+                },
+                {
+                  "id": "numeric_mm8fj6qc",
+                  "type": "numbers",
+                  "text": "247",
+                  "value": "\"247\"",
+                  "is_leaf": false,
+                  "number": 247
+                },
+                {
+                  "id": "numeric_mm8fpr03",
+                  "type": "numbers",
+                  "text": "247",
+                  "value": "\"247\"",
+                  "is_leaf": false,
+                  "number": 247
+                },
+                {
+                  "id": "date_mm8f45aw",
+                  "type": "date",
+                  "text": "2026-01-20",
+                  "value": "{\"date\":\"2026-01-20\"}",
+                  "is_leaf": false,
+                  "date": "2026-01-20"
+                },
+                {
+                  "id": "date_mm8fb58z",
+                  "type": "date",
+                  "text": "2026-01-20",
+                  "value": "{\"date\":\"2026-01-20\"}",
+                  "is_leaf": false,
+                  "date": "2026-01-20"
+                },
+                {
+                  "id": "date_mm8f9546",
+                  "type": "date",
+                  "text": "2026-01-20",
+                  "value": "{\"date\":\"2026-01-20\"}",
+                  "is_leaf": false,
+                  "date": "2026-01-20"
+                },
+                {
+                  "id": "timerange_mm8f4c2a",
+                  "type": "timeline",
+                  "text": "2026-01-10 - 2026-07-15",
+                  "value": "{\"to\":\"2026-07-15\",\"from\":\"2026-01-10\"}",
+                  "is_leaf": false,
+                  "from": "2026-01-10T00:00:00+00:00",
+                  "to": "2026-07-15T00:00:00+00:00"
+                }
+              ]
+            },
+            {
+              "id": "13377370969",
+              "name": "Q1 (L2 parent)",
+              "column_values": [
+                {
+                  "id": "numeric_mm8fjk4h",
+                  "type": "numbers",
+                  "text": "47",
+                  "value": "\"47\"",
+                  "is_leaf": false,
+                  "number": 47
+                },
+                {
+                  "id": "numeric_mm8fnbbp",
+                  "type": "numbers",
+                  "text": "47",
+                  "value": "\"47\"",
+                  "is_leaf": false,
+                  "number": 47
+                },
+                {
+                  "id": "numeric_mm8fj6qc",
+                  "type": "numbers",
+                  "text": "47",
+                  "value": "\"47\"",
+                  "is_leaf": false,
+                  "number": 47
+                },
+                {
+                  "id": "numeric_mm8fpr03",
+                  "type": "numbers",
+                  "text": "47",
+                  "value": "\"47\"",
+                  "is_leaf": false,
+                  "number": 47
+                },
+                {
+                  "id": "date_mm8f45aw",
+                  "type": "date",
+                  "text": "2026-03-03",
+                  "value": "{\"date\":\"2026-03-03\"}",
+                  "is_leaf": false,
+                  "date": "2026-03-03"
+                },
+                {
+                  "id": "date_mm8fb58z",
+                  "type": "date",
+                  "text": "2026-03-03",
+                  "value": "{\"date\":\"2026-03-03\"}",
+                  "is_leaf": false,
+                  "date": "2026-03-03"
+                },
+                {
+                  "id": "date_mm8f9546",
+                  "type": "date",
+                  "text": "2026-03-03",
+                  "value": "{\"date\":\"2026-03-03\"}",
+                  "is_leaf": false,
+                  "date": "2026-03-03"
+                },
+                {
+                  "id": "timerange_mm8f4c2a",
+                  "type": "timeline",
+                  "text": "2026-03-01 - 2026-07-15",
+                  "value": "{\"to\":\"2026-07-15\",\"from\":\"2026-03-01\"}",
+                  "is_leaf": false,
+                  "from": "2026-03-01T00:00:00+00:00",
+                  "to": "2026-07-15T00:00:00+00:00"
+                }
+              ]
+            }
+          ]
+        },
+        "extensions": {
+          "request_id": "30ea281a-311f-9280-9eb3-8e05650d6d8b"
+        }
+      }
+    },
+    {
+      "step": "metadata",
+      "endpoint": "https://api.monday.com/v2",
+      "apiVersion": "2026-10",
+      "requestHeaders": {
+        "API-Version": "2026-10",
+        "Content-Type": "application/json"
+      },
+      "authorizationHeader": "sent; value not recorded",
+      "requestBody": "{\"query\":\"query ($b: [ID!]) { boards(ids: $b) { id name hierarchy_type columns(capabilities: [CALCULATED]) { id title type settings settings_str capabilities { calculated { function } } } } }\",\"variables\":{\"b\":[\"18436908247\"]}}",
+      "startedAt": "2026-10-25T02:39:18.695Z",
+      "endedAt": "2026-10-25T02:39:18.965Z",
+      "status": 200,
+      "xRequestId": "314930f1-5f01-942e-8d85-94b6c2ef8e21",
+      "extensionsRequestId": "314930f1-5f01-942e-8d85-94b6c2ef8e21",
+      "rateLimitHeaders": {
+        "ratelimit": "\"minuteRate\";r=3323, \"concurrency\";r=199, \"complexityMinute\";r=9999959;t=7",
+        "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\""
+      },
+      "responseHeaders": {
+        "api-version": "2026-10",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Sun, 25 Oct 2026 02:39:18 GMT",
+        "ratelimit": "\"minuteRate\";r=3323, \"concurrency\";r=199, \"complexityMinute\";r=9999959;t=7",
+        "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\"",
+        "x-request-id": "314930f1-5f01-942e-8d85-94b6c2ef8e21"
+      },
+      "responseBodyRaw": "{\"data\":{\"boards\":[{\"id\":\"18436908247\",\"name\":\"R4 rollup function repro 2026-10-25T02:37:26.426Z\",\"hierarchy_type\":\"multi_level\",\"columns\":[{\"id\":\"color_mkv6tatz\",\"title\":\"Status\",\"type\":\"status\",\"settings\":{\"labels\":[{\"id\":0,\"color\":0,\"label\":\"Working on it\",\"index\":0,\"is_done\":false,\"is_deactivated\":false,\"hex\":\"#fdab3d\"},{\"id\":1,\"color\":1,\"label\":\"Done\",\"index\":1,\"is_done\":false,\"is_deactivated\":false,\"hex\":\"#00c875\"},{\"id\":2,\"color\":2,\"label\":\"Stuck\",\"index\":2,\"is_done\":false,\"is_deactivated\":false,\"hex\":\"#df2f4a\"}]},\"settings_str\":\"{\\\"labels\\\":{\\\"0\\\":\\\"Working on it\\\",\\\"1\\\":\\\"Done\\\",\\\"2\\\":\\\"Stuck\\\"},\\\"labels_colors\\\":{\\\"0\\\":{\\\"color\\\":\\\"#fdab3d\\\",\\\"border\\\":\\\"#e99729\\\",\\\"var_name\\\":\\\"orange\\\"},\\\"1\\\":{\\\"color\\\":\\\"#00c875\\\",\\\"border\\\":\\\"#00b461\\\",\\\"var_name\\\":\\\"green-shadow\\\"},\\\"2\\\":{\\\"color\\\":\\\"#df2f4a\\\",\\\"border\\\":\\\"#ce3048\\\",\\\"var_name\\\":\\\"red-shadow\\\"}}}\",\"capabilities\":{\"calculated\":{\"function\":\"COUNT_KEYS\"}}},{\"id\":\"timerange_mkyvnykb\",\"title\":\"Timeline\",\"type\":\"timeline\",\"settings\":{},\"settings_str\":\"{}\",\"capabilities\":{\"calculated\":{\"function\":\"MIN_MAX\"}}},{\"id\":\"numeric_mm8fjk4h\",\"title\":\"Num SUM\",\"type\":\"numbers\",\"settings\":{},\"settings_str\":\"{}\",\"capabilities\":{\"calculated\":{\"function\":\"SUM\"}}},{\"id\":\"numeric_mm8fnbbp\",\"title\":\"Num MIN\",\"type\":\"numbers\",\"settings\":{},\"settings_str\":\"{}\",\"capabilities\":{\"calculated\":{\"function\":\"MIN\"}}},{\"id\":\"numeric_mm8fj6qc\",\"title\":\"Num MAX\",\"type\":\"numbers\",\"settings\":{},\"settings_str\":\"{}\",\"capabilities\":{\"calculated\":{\"function\":\"MAX\"}}},{\"id\":\"numeric_mm8fpr03\",\"title\":\"Num NONE\",\"type\":\"numbers\",\"settings\":{},\"settings_str\":\"{}\",\"capabilities\":{\"calculated\":{\"function\":\"NONE\"}}},{\"id\":\"date_mm8f45aw\",\"title\":\"Date MIN\",\"type\":\"date\",\"settings\":{},\"settings_str\":\"{}\",\"capabilities\":{\"calculated\":{\"function\":\"MIN\"}}},{\"id\":\"date_mm8fb58z\",\"title\":\"Date MAX\",\"type\":\"date\",\"settings\":{},\"settings_str\":\"{}\",\"capabilities\":{\"calculated\":{\"function\":\"MAX\"}}},{\"id\":\"date_mm8f9546\",\"title\":\"Date default\",\"type\":\"date\",\"settings\":{},\"settings_str\":\"{}\",\"capabilities\":{\"calculated\":{\"function\":\"MIN\"}}},{\"id\":\"timerange_mm8f4c2a\",\"title\":\"Timeline MIN_MAX\",\"type\":\"timeline\",\"settings\":{},\"settings_str\":\"{}\",\"capabilities\":{\"calculated\":{\"function\":\"MIN_MAX\"}}}]}]},\"extensions\":{\"request_id\":\"314930f1-5f01-942e-8d85-94b6c2ef8e21\"}}",
+      "responseBody": {
+        "data": {
+          "boards": [
+            {
+              "id": "18436908247",
+              "name": "R4 rollup function repro 2026-10-25T02:37:26.426Z",
+              "hierarchy_type": "multi_level",
+              "columns": [
+                {
+                  "id": "color_mkv6tatz",
+                  "title": "Status",
+                  "type": "status",
+                  "settings": {
+                    "labels": [
+                      {
+                        "id": 0,
+                        "color": 0,
+                        "label": "Working on it",
+                        "index": 0,
+                        "is_done": false,
+                        "is_deactivated": false,
+                        "hex": "#fdab3d"
+                      },
+                      {
+                        "id": 1,
+                        "color": 1,
+                        "label": "Done",
+                        "index": 1,
+                        "is_done": false,
+                        "is_deactivated": false,
+                        "hex": "#00c875"
+                      },
+                      {
+                        "id": 2,
+                        "color": 2,
+                        "label": "Stuck",
+                        "index": 2,
+                        "is_done": false,
+                        "is_deactivated": false,
+                        "hex": "#df2f4a"
+                      }
+                    ]
+                  },
+                  "settings_str": "{\"labels\":{\"0\":\"Working on it\",\"1\":\"Done\",\"2\":\"Stuck\"},\"labels_colors\":{\"0\":{\"color\":\"#fdab3d\",\"border\":\"#e99729\",\"var_name\":\"orange\"},\"1\":{\"color\":\"#00c875\",\"border\":\"#00b461\",\"var_name\":\"green-shadow\"},\"2\":{\"color\":\"#df2f4a\",\"border\":\"#ce3048\",\"var_name\":\"red-shadow\"}}}",
+                  "capabilities": {
+                    "calculated": {
+                      "function": "COUNT_KEYS"
+                    }
+                  }
+                },
+                {
+                  "id": "timerange_mkyvnykb",
+                  "title": "Timeline",
+                  "type": "timeline",
+                  "settings": {},
+                  "settings_str": "{}",
+                  "capabilities": {
+                    "calculated": {
+                      "function": "MIN_MAX"
+                    }
+                  }
+                },
+                {
+                  "id": "numeric_mm8fjk4h",
+                  "title": "Num SUM",
+                  "type": "numbers",
+                  "settings": {},
+                  "settings_str": "{}",
+                  "capabilities": {
+                    "calculated": {
+                      "function": "SUM"
+                    }
+                  }
+                },
+                {
+                  "id": "numeric_mm8fnbbp",
+                  "title": "Num MIN",
+                  "type": "numbers",
+                  "settings": {},
+                  "settings_str": "{}",
+                  "capabilities": {
+                    "calculated": {
+                      "function": "MIN"
+                    }
+                  }
+                },
+                {
+                  "id": "numeric_mm8fj6qc",
+                  "title": "Num MAX",
+                  "type": "numbers",
+                  "settings": {},
+                  "settings_str": "{}",
+                  "capabilities": {
+                    "calculated": {
+                      "function": "MAX"
+                    }
+                  }
+                },
+                {
+                  "id": "numeric_mm8fpr03",
+                  "title": "Num NONE",
+                  "type": "numbers",
+                  "settings": {},
+                  "settings_str": "{}",
+                  "capabilities": {
+                    "calculated": {
+                      "function": "NONE"
+                    }
+                  }
+                },
+                {
+                  "id": "date_mm8f45aw",
+                  "title": "Date MIN",
+                  "type": "date",
+                  "settings": {},
+                  "settings_str": "{}",
+                  "capabilities": {
+                    "calculated": {
+                      "function": "MIN"
+                    }
+                  }
+                },
+                {
+                  "id": "date_mm8fb58z",
+                  "title": "Date MAX",
+                  "type": "date",
+                  "settings": {},
+                  "settings_str": "{}",
+                  "capabilities": {
+                    "calculated": {
+                      "function": "MAX"
+                    }
+                  }
+                },
+                {
+                  "id": "date_mm8f9546",
+                  "title": "Date default",
+                  "type": "date",
+                  "settings": {},
+                  "settings_str": "{}",
+                  "capabilities": {
+                    "calculated": {
+                      "function": "MIN"
+                    }
+                  }
+                },
+                {
+                  "id": "timerange_mm8f4c2a",
+                  "title": "Timeline MIN_MAX",
+                  "type": "timeline",
+                  "settings": {},
+                  "settings_str": "{}",
+                  "capabilities": {
+                    "calculated": {
+                      "function": "MIN_MAX"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "extensions": {
+          "request_id": "314930f1-5f01-942e-8d85-94b6c2ef8e21"
+        }
+      }
+    },
+    {
+      "step": "ground-truth",
+      "endpoint": "https://api.monday.com/v2",
+      "apiVersion": "2026-10",
+      "requestHeaders": {
+        "API-Version": "2026-10",
+        "Content-Type": "application/json"
+      },
+      "authorizationHeader": "sent; value not recorded",
+      "requestBody": "{\"query\":\"query ($b: [ID!], $c: [String!]) { boards(ids: $b) { items_page(limit: 100, hierarchy_scope_config: \\\"allItems\\\") { items { id name parent_item { id } column_values(ids: $c, capabilities: [CALCULATED]) { id type text value is_leaf ... on NumbersValue { number } ... on DateValue { date } ... on TimelineValue { from to } } } } } }\",\"variables\":{\"b\":[\"18436908247\"],\"c\":[\"numeric_mm8fjk4h\",\"numeric_mm8fnbbp\",\"numeric_mm8fj6qc\",\"numeric_mm8fpr03\",\"date_mm8f45aw\",\"date_mm8fb58z\",\"date_mm8f9546\",\"timerange_mm8f4c2a\"]}}",
+      "startedAt": "2026-10-25T02:39:20.166Z",
+      "endedAt": "2026-10-25T02:39:21.328Z",
+      "status": 200,
+      "xRequestId": "7e629ce3-17d1-9771-8e10-03f225395fdb",
+      "extensionsRequestId": "7e629ce3-17d1-9771-8e10-03f225395fdb",
+      "rateLimitHeaders": {
+        "ratelimit": "\"minuteRate\";r=3322, \"concurrency\";r=199, \"complexityMinute\";r=9999728;t=6",
+        "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\""
+      },
+      "responseHeaders": {
+        "api-version": "2026-10",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Sun, 25 Oct 2026 02:39:21 GMT",
+        "ratelimit": "\"minuteRate\";r=3322, \"concurrency\";r=199, \"complexityMinute\";r=9999728;t=6",
+        "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\"",
+        "x-request-id": "7e629ce3-17d1-9771-8e10-03f225395fdb"
+      },
+      "responseBodyRaw": "{\"data\":{\"boards\":[{\"items_page\":{\"items\":[{\"id\":\"13377349057\",\"name\":\"Item 1\",\"parent_item\":null,\"column_values\":[{\"id\":\"numeric_mm8fjk4h\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"number\":null},{\"id\":\"numeric_mm8fnbbp\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"number\":null},{\"id\":\"numeric_mm8fj6qc\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"number\":null},{\"id\":\"numeric_mm8fpr03\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"number\":null},{\"id\":\"date_mm8f45aw\",\"type\":\"date\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"date\":\"\"},{\"id\":\"date_mm8fb58z\",\"type\":\"date\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"date\":\"\"},{\"id\":\"date_mm8f9546\",\"type\":\"date\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"date\":\"\"},{\"id\":\"timerange_mm8f4c2a\",\"type\":\"timeline\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"from\":null,\"to\":null}]},{\"id\":\"13377353714\",\"name\":\"P1 (L1 parent)\",\"parent_item\":null,\"column_values\":[{\"id\":\"numeric_mm8fjk4h\",\"type\":\"numbers\",\"text\":\"247\",\"value\":\"\\\"247\\\"\",\"is_leaf\":false,\"number\":247},{\"id\":\"numeric_mm8fnbbp\",\"type\":\"numbers\",\"text\":\"247\",\"value\":\"\\\"247\\\"\",\"is_leaf\":false,\"number\":247},{\"id\":\"numeric_mm8fj6qc\",\"type\":\"numbers\",\"text\":\"247\",\"value\":\"\\\"247\\\"\",\"is_leaf\":false,\"number\":247},{\"id\":\"numeric_mm8fpr03\",\"type\":\"numbers\",\"text\":\"247\",\"value\":\"\\\"247\\\"\",\"is_leaf\":false,\"number\":247},{\"id\":\"date_mm8f45aw\",\"type\":\"date\",\"text\":\"2026-01-20\",\"value\":\"{\\\"date\\\":\\\"2026-01-20\\\"}\",\"is_leaf\":false,\"date\":\"2026-01-20\"},{\"id\":\"date_mm8fb58z\",\"type\":\"date\",\"text\":\"2026-01-20\",\"value\":\"{\\\"date\\\":\\\"2026-01-20\\\"}\",\"is_leaf\":false,\"date\":\"2026-01-20\"},{\"id\":\"date_mm8f9546\",\"type\":\"date\",\"text\":\"2026-01-20\",\"value\":\"{\\\"date\\\":\\\"2026-01-20\\\"}\",\"is_leaf\":false,\"date\":\"2026-01-20\"},{\"id\":\"timerange_mm8f4c2a\",\"type\":\"timeline\",\"text\":\"2026-01-10 - 2026-07-15\",\"value\":\"{\\\"to\\\":\\\"2026-07-15\\\",\\\"from\\\":\\\"2026-01-10\\\"}\",\"is_leaf\":false,\"from\":\"2026-01-10T00:00:00+00:00\",\"to\":\"2026-07-15T00:00:00+00:00\"}]},{\"id\":\"13377349056\",\"name\":\"Subitem Level 1\",\"parent_item\":{\"id\":\"13377349057\"},\"column_values\":[{\"id\":\"numeric_mm8fjk4h\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"number\":null},{\"id\":\"numeric_mm8fnbbp\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"number\":null},{\"id\":\"numeric_mm8fj6qc\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"number\":null},{\"id\":\"numeric_mm8fpr03\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"number\":null},{\"id\":\"date_mm8f45aw\",\"type\":\"date\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"date\":\"\"},{\"id\":\"date_mm8fb58z\",\"type\":\"date\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"date\":\"\"},{\"id\":\"date_mm8f9546\",\"type\":\"date\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"date\":\"\"},{\"id\":\"timerange_mm8f4c2a\",\"type\":\"timeline\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"from\":null,\"to\":null}]},{\"id\":\"13377349058\",\"name\":\"Subitem Level 2\",\"parent_item\":{\"id\":\"13377349056\"},\"column_values\":[{\"id\":\"numeric_mm8fjk4h\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"number\":null},{\"id\":\"numeric_mm8fnbbp\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"number\":null},{\"id\":\"numeric_mm8fj6qc\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"number\":null},{\"id\":\"numeric_mm8fpr03\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"number\":null},{\"id\":\"date_mm8f45aw\",\"type\":\"date\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"date\":\"\"},{\"id\":\"date_mm8fb58z\",\"type\":\"date\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"date\":\"\"},{\"id\":\"date_mm8f9546\",\"type\":\"date\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"date\":\"\"},{\"id\":\"timerange_mm8f4c2a\",\"type\":\"timeline\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"from\":null,\"to\":null}]},{\"id\":\"13377349059\",\"name\":\"Subitem Level 2\",\"parent_item\":{\"id\":\"13377349056\"},\"column_values\":[{\"id\":\"numeric_mm8fjk4h\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"number\":null},{\"id\":\"numeric_mm8fnbbp\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"number\":null},{\"id\":\"numeric_mm8fj6qc\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"number\":null},{\"id\":\"numeric_mm8fpr03\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"number\":null},{\"id\":\"date_mm8f45aw\",\"type\":\"date\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"date\":\"\"},{\"id\":\"date_mm8fb58z\",\"type\":\"date\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"date\":\"\"},{\"id\":\"date_mm8f9546\",\"type\":\"date\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"date\":\"\"},{\"id\":\"timerange_mm8f4c2a\",\"type\":\"timeline\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"from\":null,\"to\":null}]},{\"id\":\"13377370969\",\"name\":\"Q1 (L2 parent)\",\"parent_item\":{\"id\":\"13377353714\"},\"column_values\":[{\"id\":\"numeric_mm8fjk4h\",\"type\":\"numbers\",\"text\":\"47\",\"value\":\"\\\"47\\\"\",\"is_leaf\":false,\"number\":47},{\"id\":\"numeric_mm8fnbbp\",\"type\":\"numbers\",\"text\":\"47\",\"value\":\"\\\"47\\\"\",\"is_leaf\":false,\"number\":47},{\"id\":\"numeric_mm8fj6qc\",\"type\":\"numbers\",\"text\":\"47\",\"value\":\"\\\"47\\\"\",\"is_leaf\":false,\"number\":47},{\"id\":\"numeric_mm8fpr03\",\"type\":\"numbers\",\"text\":\"47\",\"value\":\"\\\"47\\\"\",\"is_leaf\":false,\"number\":47},{\"id\":\"date_mm8f45aw\",\"type\":\"date\",\"text\":\"2026-03-03\",\"value\":\"{\\\"date\\\":\\\"2026-03-03\\\"}\",\"is_leaf\":false,\"date\":\"2026-03-03\"},{\"id\":\"date_mm8fb58z\",\"type\":\"date\",\"text\":\"2026-03-03\",\"value\":\"{\\\"date\\\":\\\"2026-03-03\\\"}\",\"is_leaf\":false,\"date\":\"2026-03-03\"},{\"id\":\"date_mm8f9546\",\"type\":\"date\",\"text\":\"2026-03-03\",\"value\":\"{\\\"date\\\":\\\"2026-03-03\\\"}\",\"is_leaf\":false,\"date\":\"2026-03-03\"},{\"id\":\"timerange_mm8f4c2a\",\"type\":\"timeline\",\"text\":\"2026-03-01 - 2026-07-15\",\"value\":\"{\\\"to\\\":\\\"2026-07-15\\\",\\\"from\\\":\\\"2026-03-01\\\"}\",\"is_leaf\":false,\"from\":\"2026-03-01T00:00:00+00:00\",\"to\":\"2026-07-15T00:00:00+00:00\"}]},{\"id\":\"13377370993\",\"name\":\"Q1a (L3 leaf)\",\"parent_item\":{\"id\":\"13377370969\"},\"column_values\":[{\"id\":\"numeric_mm8fjk4h\",\"type\":\"numbers\",\"text\":\"40\",\"value\":\"\\\"40\\\"\",\"is_leaf\":true,\"number\":40},{\"id\":\"numeric_mm8fnbbp\",\"type\":\"numbers\",\"text\":\"40\",\"value\":\"\\\"40\\\"\",\"is_leaf\":true,\"number\":40},{\"id\":\"numeric_mm8fj6qc\",\"type\":\"numbers\",\"text\":\"40\",\"value\":\"\\\"40\\\"\",\"is_leaf\":true,\"number\":40},{\"id\":\"numeric_mm8fpr03\",\"type\":\"numbers\",\"text\":\"40\",\"value\":\"\\\"40\\\"\",\"is_leaf\":true,\"number\":40},{\"id\":\"date_mm8f45aw\",\"type\":\"date\",\"text\":\"2026-03-03\",\"value\":\"{\\\"date\\\":\\\"2026-03-03\\\",\\\"changed_at\\\":\\\"2026-10-25T02:38:02.804Z\\\"}\",\"is_leaf\":true,\"date\":\"2026-03-03\"},{\"id\":\"date_mm8fb58z\",\"type\":\"date\",\"text\":\"2026-03-03\",\"value\":\"{\\\"date\\\":\\\"2026-03-03\\\",\\\"changed_at\\\":\\\"2026-10-25T02:38:02.805Z\\\"}\",\"is_leaf\":true,\"date\":\"2026-03-03\"},{\"id\":\"date_mm8f9546\",\"type\":\"date\",\"text\":\"2026-03-03\",\"value\":\"{\\\"date\\\":\\\"2026-03-03\\\",\\\"changed_at\\\":\\\"2026-10-25T02:38:02.806Z\\\"}\",\"is_leaf\":true,\"date\":\"2026-03-03\"},{\"id\":\"timerange_mm8f4c2a\",\"type\":\"timeline\",\"text\":\"2026-03-01 - 2026-03-20\",\"value\":\"{\\\"to\\\":\\\"2026-03-20\\\",\\\"from\\\":\\\"2026-03-01\\\",\\\"changed_at\\\":\\\"2026-10-25T02:38:02.807Z\\\"}\",\"is_leaf\":true,\"from\":\"2026-03-01T00:00:00+00:00\",\"to\":\"2026-03-20T00:00:00+00:00\"}]},{\"id\":\"13377423773\",\"name\":\"Q1b (L3 leaf)\",\"parent_item\":{\"id\":\"13377370969\"},\"column_values\":[{\"id\":\"numeric_mm8fjk4h\",\"type\":\"numbers\",\"text\":\"7\",\"value\":\"\\\"7\\\"\",\"is_leaf\":true,\"number\":7},{\"id\":\"numeric_mm8fnbbp\",\"type\":\"numbers\",\"text\":\"7\",\"value\":\"\\\"7\\\"\",\"is_leaf\":true,\"number\":7},{\"id\":\"numeric_mm8fj6qc\",\"type\":\"numbers\",\"text\":\"7\",\"value\":\"\\\"7\\\"\",\"is_leaf\":true,\"number\":7},{\"id\":\"numeric_mm8fpr03\",\"type\":\"numbers\",\"text\":\"7\",\"value\":\"\\\"7\\\"\",\"is_leaf\":true,\"number\":7},{\"id\":\"date_mm8f45aw\",\"type\":\"date\",\"text\":\"2026-06-30\",\"value\":\"{\\\"date\\\":\\\"2026-06-30\\\",\\\"changed_at\\\":\\\"2026-10-25T02:38:04.752Z\\\"}\",\"is_leaf\":true,\"date\":\"2026-06-30\"},{\"id\":\"date_mm8fb58z\",\"type\":\"date\",\"text\":\"2026-06-30\",\"value\":\"{\\\"date\\\":\\\"2026-06-30\\\",\\\"changed_at\\\":\\\"2026-10-25T02:38:04.754Z\\\"}\",\"is_leaf\":true,\"date\":\"2026-06-30\"},{\"id\":\"date_mm8f9546\",\"type\":\"date\",\"text\":\"2026-06-30\",\"value\":\"{\\\"date\\\":\\\"2026-06-30\\\",\\\"changed_at\\\":\\\"2026-10-25T02:38:04.755Z\\\"}\",\"is_leaf\":true,\"date\":\"2026-06-30\"},{\"id\":\"timerange_mm8f4c2a\",\"type\":\"timeline\",\"text\":\"2026-05-01 - 2026-07-15\",\"value\":\"{\\\"to\\\":\\\"2026-07-15\\\",\\\"from\\\":\\\"2026-05-01\\\",\\\"changed_at\\\":\\\"2026-10-25T02:38:04.756Z\\\"}\",\"is_leaf\":true,\"from\":\"2026-05-01T00:00:00+00:00\",\"to\":\"2026-07-15T00:00:00+00:00\"}]},{\"id\":\"13377370978\",\"name\":\"P1c (L2 leaf)\",\"parent_item\":{\"id\":\"13377353714\"},\"column_values\":[{\"id\":\"numeric_mm8fjk4h\",\"type\":\"numbers\",\"text\":\"200\",\"value\":\"\\\"200\\\"\",\"is_leaf\":true,\"number\":200},{\"id\":\"numeric_mm8fnbbp\",\"type\":\"numbers\",\"text\":\"200\",\"value\":\"\\\"200\\\"\",\"is_leaf\":true,\"number\":200},{\"id\":\"numeric_mm8fj6qc\",\"type\":\"numbers\",\"text\":\"200\",\"value\":\"\\\"200\\\"\",\"is_leaf\":true,\"number\":200},{\"id\":\"numeric_mm8fpr03\",\"type\":\"numbers\",\"text\":\"200\",\"value\":\"\\\"200\\\"\",\"is_leaf\":true,\"number\":200},{\"id\":\"date_mm8f45aw\",\"type\":\"date\",\"text\":\"2026-01-20\",\"value\":\"{\\\"date\\\":\\\"2026-01-20\\\",\\\"changed_at\\\":\\\"2026-10-25T02:38:06.870Z\\\"}\",\"is_leaf\":true,\"date\":\"2026-01-20\"},{\"id\":\"date_mm8fb58z\",\"type\":\"date\",\"text\":\"2026-01-20\",\"value\":\"{\\\"date\\\":\\\"2026-01-20\\\",\\\"changed_at\\\":\\\"2026-10-25T02:38:06.871Z\\\"}\",\"is_leaf\":true,\"date\":\"2026-01-20\"},{\"id\":\"date_mm8f9546\",\"type\":\"date\",\"text\":\"2026-01-20\",\"value\":\"{\\\"date\\\":\\\"2026-01-20\\\",\\\"changed_at\\\":\\\"2026-10-25T02:38:06.873Z\\\"}\",\"is_leaf\":true,\"date\":\"2026-01-20\"},{\"id\":\"timerange_mm8f4c2a\",\"type\":\"timeline\",\"text\":\"2026-01-10 - 2026-02-01\",\"value\":\"{\\\"to\\\":\\\"2026-02-01\\\",\\\"from\\\":\\\"2026-01-10\\\",\\\"changed_at\\\":\\\"2026-10-25T02:38:06.874Z\\\"}\",\"is_leaf\":true,\"from\":\"2026-01-10T00:00:00+00:00\",\"to\":\"2026-02-01T00:00:00+00:00\"}]}]}}]},\"extensions\":{\"request_id\":\"7e629ce3-17d1-9771-8e10-03f225395fdb\"}}",
+      "responseBody": {
+        "data": {
+          "boards": [
+            {
+              "items_page": {
+                "items": [
+                  {
+                    "id": "13377349057",
+                    "name": "Item 1",
+                    "parent_item": null,
+                    "column_values": [
+                      {
+                        "id": "numeric_mm8fjk4h",
+                        "type": "numbers",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": false,
+                        "number": null
+                      },
+                      {
+                        "id": "numeric_mm8fnbbp",
+                        "type": "numbers",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": false,
+                        "number": null
+                      },
+                      {
+                        "id": "numeric_mm8fj6qc",
+                        "type": "numbers",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": false,
+                        "number": null
+                      },
+                      {
+                        "id": "numeric_mm8fpr03",
+                        "type": "numbers",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": false,
+                        "number": null
+                      },
+                      {
+                        "id": "date_mm8f45aw",
+                        "type": "date",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": false,
+                        "date": ""
+                      },
+                      {
+                        "id": "date_mm8fb58z",
+                        "type": "date",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": false,
+                        "date": ""
+                      },
+                      {
+                        "id": "date_mm8f9546",
+                        "type": "date",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": false,
+                        "date": ""
+                      },
+                      {
+                        "id": "timerange_mm8f4c2a",
+                        "type": "timeline",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": false,
+                        "from": null,
+                        "to": null
+                      }
+                    ]
+                  },
+                  {
+                    "id": "13377353714",
+                    "name": "P1 (L1 parent)",
+                    "parent_item": null,
+                    "column_values": [
+                      {
+                        "id": "numeric_mm8fjk4h",
+                        "type": "numbers",
+                        "text": "247",
+                        "value": "\"247\"",
+                        "is_leaf": false,
+                        "number": 247
+                      },
+                      {
+                        "id": "numeric_mm8fnbbp",
+                        "type": "numbers",
+                        "text": "247",
+                        "value": "\"247\"",
+                        "is_leaf": false,
+                        "number": 247
+                      },
+                      {
+                        "id": "numeric_mm8fj6qc",
+                        "type": "numbers",
+                        "text": "247",
+                        "value": "\"247\"",
+                        "is_leaf": false,
+                        "number": 247
+                      },
+                      {
+                        "id": "numeric_mm8fpr03",
+                        "type": "numbers",
+                        "text": "247",
+                        "value": "\"247\"",
+                        "is_leaf": false,
+                        "number": 247
+                      },
+                      {
+                        "id": "date_mm8f45aw",
+                        "type": "date",
+                        "text": "2026-01-20",
+                        "value": "{\"date\":\"2026-01-20\"}",
+                        "is_leaf": false,
+                        "date": "2026-01-20"
+                      },
+                      {
+                        "id": "date_mm8fb58z",
+                        "type": "date",
+                        "text": "2026-01-20",
+                        "value": "{\"date\":\"2026-01-20\"}",
+                        "is_leaf": false,
+                        "date": "2026-01-20"
+                      },
+                      {
+                        "id": "date_mm8f9546",
+                        "type": "date",
+                        "text": "2026-01-20",
+                        "value": "{\"date\":\"2026-01-20\"}",
+                        "is_leaf": false,
+                        "date": "2026-01-20"
+                      },
+                      {
+                        "id": "timerange_mm8f4c2a",
+                        "type": "timeline",
+                        "text": "2026-01-10 - 2026-07-15",
+                        "value": "{\"to\":\"2026-07-15\",\"from\":\"2026-01-10\"}",
+                        "is_leaf": false,
+                        "from": "2026-01-10T00:00:00+00:00",
+                        "to": "2026-07-15T00:00:00+00:00"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "13377349056",
+                    "name": "Subitem Level 1",
+                    "parent_item": {
+                      "id": "13377349057"
+                    },
+                    "column_values": [
+                      {
+                        "id": "numeric_mm8fjk4h",
+                        "type": "numbers",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": false,
+                        "number": null
+                      },
+                      {
+                        "id": "numeric_mm8fnbbp",
+                        "type": "numbers",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": false,
+                        "number": null
+                      },
+                      {
+                        "id": "numeric_mm8fj6qc",
+                        "type": "numbers",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": false,
+                        "number": null
+                      },
+                      {
+                        "id": "numeric_mm8fpr03",
+                        "type": "numbers",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": false,
+                        "number": null
+                      },
+                      {
+                        "id": "date_mm8f45aw",
+                        "type": "date",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": false,
+                        "date": ""
+                      },
+                      {
+                        "id": "date_mm8fb58z",
+                        "type": "date",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": false,
+                        "date": ""
+                      },
+                      {
+                        "id": "date_mm8f9546",
+                        "type": "date",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": false,
+                        "date": ""
+                      },
+                      {
+                        "id": "timerange_mm8f4c2a",
+                        "type": "timeline",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": false,
+                        "from": null,
+                        "to": null
+                      }
+                    ]
+                  },
+                  {
+                    "id": "13377349058",
+                    "name": "Subitem Level 2",
+                    "parent_item": {
+                      "id": "13377349056"
+                    },
+                    "column_values": [
+                      {
+                        "id": "numeric_mm8fjk4h",
+                        "type": "numbers",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": true,
+                        "number": null
+                      },
+                      {
+                        "id": "numeric_mm8fnbbp",
+                        "type": "numbers",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": true,
+                        "number": null
+                      },
+                      {
+                        "id": "numeric_mm8fj6qc",
+                        "type": "numbers",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": true,
+                        "number": null
+                      },
+                      {
+                        "id": "numeric_mm8fpr03",
+                        "type": "numbers",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": true,
+                        "number": null
+                      },
+                      {
+                        "id": "date_mm8f45aw",
+                        "type": "date",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": true,
+                        "date": ""
+                      },
+                      {
+                        "id": "date_mm8fb58z",
+                        "type": "date",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": true,
+                        "date": ""
+                      },
+                      {
+                        "id": "date_mm8f9546",
+                        "type": "date",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": true,
+                        "date": ""
+                      },
+                      {
+                        "id": "timerange_mm8f4c2a",
+                        "type": "timeline",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": true,
+                        "from": null,
+                        "to": null
+                      }
+                    ]
+                  },
+                  {
+                    "id": "13377349059",
+                    "name": "Subitem Level 2",
+                    "parent_item": {
+                      "id": "13377349056"
+                    },
+                    "column_values": [
+                      {
+                        "id": "numeric_mm8fjk4h",
+                        "type": "numbers",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": true,
+                        "number": null
+                      },
+                      {
+                        "id": "numeric_mm8fnbbp",
+                        "type": "numbers",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": true,
+                        "number": null
+                      },
+                      {
+                        "id": "numeric_mm8fj6qc",
+                        "type": "numbers",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": true,
+                        "number": null
+                      },
+                      {
+                        "id": "numeric_mm8fpr03",
+                        "type": "numbers",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": true,
+                        "number": null
+                      },
+                      {
+                        "id": "date_mm8f45aw",
+                        "type": "date",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": true,
+                        "date": ""
+                      },
+                      {
+                        "id": "date_mm8fb58z",
+                        "type": "date",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": true,
+                        "date": ""
+                      },
+                      {
+                        "id": "date_mm8f9546",
+                        "type": "date",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": true,
+                        "date": ""
+                      },
+                      {
+                        "id": "timerange_mm8f4c2a",
+                        "type": "timeline",
+                        "text": "",
+                        "value": null,
+                        "is_leaf": true,
+                        "from": null,
+                        "to": null
+                      }
+                    ]
+                  },
+                  {
+                    "id": "13377370969",
+                    "name": "Q1 (L2 parent)",
+                    "parent_item": {
+                      "id": "13377353714"
+                    },
+                    "column_values": [
+                      {
+                        "id": "numeric_mm8fjk4h",
+                        "type": "numbers",
+                        "text": "47",
+                        "value": "\"47\"",
+                        "is_leaf": false,
+                        "number": 47
+                      },
+                      {
+                        "id": "numeric_mm8fnbbp",
+                        "type": "numbers",
+                        "text": "47",
+                        "value": "\"47\"",
+                        "is_leaf": false,
+                        "number": 47
+                      },
+                      {
+                        "id": "numeric_mm8fj6qc",
+                        "type": "numbers",
+                        "text": "47",
+                        "value": "\"47\"",
+                        "is_leaf": false,
+                        "number": 47
+                      },
+                      {
+                        "id": "numeric_mm8fpr03",
+                        "type": "numbers",
+                        "text": "47",
+                        "value": "\"47\"",
+                        "is_leaf": false,
+                        "number": 47
+                      },
+                      {
+                        "id": "date_mm8f45aw",
+                        "type": "date",
+                        "text": "2026-03-03",
+                        "value": "{\"date\":\"2026-03-03\"}",
+                        "is_leaf": false,
+                        "date": "2026-03-03"
+                      },
+                      {
+                        "id": "date_mm8fb58z",
+                        "type": "date",
+                        "text": "2026-03-03",
+                        "value": "{\"date\":\"2026-03-03\"}",
+                        "is_leaf": false,
+                        "date": "2026-03-03"
+                      },
+                      {
+                        "id": "date_mm8f9546",
+                        "type": "date",
+                        "text": "2026-03-03",
+                        "value": "{\"date\":\"2026-03-03\"}",
+                        "is_leaf": false,
+                        "date": "2026-03-03"
+                      },
+                      {
+                        "id": "timerange_mm8f4c2a",
+                        "type": "timeline",
+                        "text": "2026-03-01 - 2026-07-15",
+                        "value": "{\"to\":\"2026-07-15\",\"from\":\"2026-03-01\"}",
+                        "is_leaf": false,
+                        "from": "2026-03-01T00:00:00+00:00",
+                        "to": "2026-07-15T00:00:00+00:00"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "13377370993",
+                    "name": "Q1a (L3 leaf)",
+                    "parent_item": {
+                      "id": "13377370969"
+                    },
+                    "column_values": [
+                      {
+                        "id": "numeric_mm8fjk4h",
+                        "type": "numbers",
+                        "text": "40",
+                        "value": "\"40\"",
+                        "is_leaf": true,
+                        "number": 40
+                      },
+                      {
+                        "id": "numeric_mm8fnbbp",
+                        "type": "numbers",
+                        "text": "40",
+                        "value": "\"40\"",
+                        "is_leaf": true,
+                        "number": 40
+                      },
+                      {
+                        "id": "numeric_mm8fj6qc",
+                        "type": "numbers",
+                        "text": "40",
+                        "value": "\"40\"",
+                        "is_leaf": true,
+                        "number": 40
+                      },
+                      {
+                        "id": "numeric_mm8fpr03",
+                        "type": "numbers",
+                        "text": "40",
+                        "value": "\"40\"",
+                        "is_leaf": true,
+                        "number": 40
+                      },
+                      {
+                        "id": "date_mm8f45aw",
+                        "type": "date",
+                        "text": "2026-03-03",
+                        "value": "{\"date\":\"2026-03-03\",\"changed_at\":\"2026-10-25T02:38:02.804Z\"}",
+                        "is_leaf": true,
+                        "date": "2026-03-03"
+                      },
+                      {
+                        "id": "date_mm8fb58z",
+                        "type": "date",
+                        "text": "2026-03-03",
+                        "value": "{\"date\":\"2026-03-03\",\"changed_at\":\"2026-10-25T02:38:02.805Z\"}",
+                        "is_leaf": true,
+                        "date": "2026-03-03"
+                      },
+                      {
+                        "id": "date_mm8f9546",
+                        "type": "date",
+                        "text": "2026-03-03",
+                        "value": "{\"date\":\"2026-03-03\",\"changed_at\":\"2026-10-25T02:38:02.806Z\"}",
+                        "is_leaf": true,
+                        "date": "2026-03-03"
+                      },
+                      {
+                        "id": "timerange_mm8f4c2a",
+                        "type": "timeline",
+                        "text": "2026-03-01 - 2026-03-20",
+                        "value": "{\"to\":\"2026-03-20\",\"from\":\"2026-03-01\",\"changed_at\":\"2026-10-25T02:38:02.807Z\"}",
+                        "is_leaf": true,
+                        "from": "2026-03-01T00:00:00+00:00",
+                        "to": "2026-03-20T00:00:00+00:00"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "13377423773",
+                    "name": "Q1b (L3 leaf)",
+                    "parent_item": {
+                      "id": "13377370969"
+                    },
+                    "column_values": [
+                      {
+                        "id": "numeric_mm8fjk4h",
+                        "type": "numbers",
+                        "text": "7",
+                        "value": "\"7\"",
+                        "is_leaf": true,
+                        "number": 7
+                      },
+                      {
+                        "id": "numeric_mm8fnbbp",
+                        "type": "numbers",
+                        "text": "7",
+                        "value": "\"7\"",
+                        "is_leaf": true,
+                        "number": 7
+                      },
+                      {
+                        "id": "numeric_mm8fj6qc",
+                        "type": "numbers",
+                        "text": "7",
+                        "value": "\"7\"",
+                        "is_leaf": true,
+                        "number": 7
+                      },
+                      {
+                        "id": "numeric_mm8fpr03",
+                        "type": "numbers",
+                        "text": "7",
+                        "value": "\"7\"",
+                        "is_leaf": true,
+                        "number": 7
+                      },
+                      {
+                        "id": "date_mm8f45aw",
+                        "type": "date",
+                        "text": "2026-06-30",
+                        "value": "{\"date\":\"2026-06-30\",\"changed_at\":\"2026-10-25T02:38:04.752Z\"}",
+                        "is_leaf": true,
+                        "date": "2026-06-30"
+                      },
+                      {
+                        "id": "date_mm8fb58z",
+                        "type": "date",
+                        "text": "2026-06-30",
+                        "value": "{\"date\":\"2026-06-30\",\"changed_at\":\"2026-10-25T02:38:04.754Z\"}",
+                        "is_leaf": true,
+                        "date": "2026-06-30"
+                      },
+                      {
+                        "id": "date_mm8f9546",
+                        "type": "date",
+                        "text": "2026-06-30",
+                        "value": "{\"date\":\"2026-06-30\",\"changed_at\":\"2026-10-25T02:38:04.755Z\"}",
+                        "is_leaf": true,
+                        "date": "2026-06-30"
+                      },
+                      {
+                        "id": "timerange_mm8f4c2a",
+                        "type": "timeline",
+                        "text": "2026-05-01 - 2026-07-15",
+                        "value": "{\"to\":\"2026-07-15\",\"from\":\"2026-05-01\",\"changed_at\":\"2026-10-25T02:38:04.756Z\"}",
+                        "is_leaf": true,
+                        "from": "2026-05-01T00:00:00+00:00",
+                        "to": "2026-07-15T00:00:00+00:00"
+                      }
+                    ]
+                  },
+                  {
+                    "id": "13377370978",
+                    "name": "P1c (L2 leaf)",
+                    "parent_item": {
+                      "id": "13377353714"
+                    },
+                    "column_values": [
+                      {
+                        "id": "numeric_mm8fjk4h",
+                        "type": "numbers",
+                        "text": "200",
+                        "value": "\"200\"",
+                        "is_leaf": true,
+                        "number": 200
+                      },
+                      {
+                        "id": "numeric_mm8fnbbp",
+                        "type": "numbers",
+                        "text": "200",
+                        "value": "\"200\"",
+                        "is_leaf": true,
+                        "number": 200
+                      },
+                      {
+                        "id": "numeric_mm8fj6qc",
+                        "type": "numbers",
+                        "text": "200",
+                        "value": "\"200\"",
+                        "is_leaf": true,
+                        "number": 200
+                      },
+                      {
+                        "id": "numeric_mm8fpr03",
+                        "type": "numbers",
+                        "text": "200",
+                        "value": "\"200\"",
+                        "is_leaf": true,
+                        "number": 200
+                      },
+                      {
+                        "id": "date_mm8f45aw",
+                        "type": "date",
+                        "text": "2026-01-20",
+                        "value": "{\"date\":\"2026-01-20\",\"changed_at\":\"2026-10-25T02:38:06.870Z\"}",
+                        "is_leaf": true,
+                        "date": "2026-01-20"
+                      },
+                      {
+                        "id": "date_mm8fb58z",
+                        "type": "date",
+                        "text": "2026-01-20",
+                        "value": "{\"date\":\"2026-01-20\",\"changed_at\":\"2026-10-25T02:38:06.871Z\"}",
+                        "is_leaf": true,
+                        "date": "2026-01-20"
+                      },
+                      {
+                        "id": "date_mm8f9546",
+                        "type": "date",
+                        "text": "2026-01-20",
+                        "value": "{\"date\":\"2026-01-20\",\"changed_at\":\"2026-10-25T02:38:06.873Z\"}",
+                        "is_leaf": true,
+                        "date": "2026-01-20"
+                      },
+                      {
+                        "id": "timerange_mm8f4c2a",
+                        "type": "timeline",
+                        "text": "2026-01-10 - 2026-02-01",
+                        "value": "{\"to\":\"2026-02-01\",\"from\":\"2026-01-10\",\"changed_at\":\"2026-10-25T02:38:06.874Z\"}",
+                        "is_leaf": true,
+                        "from": "2026-01-10T00:00:00+00:00",
+                        "to": "2026-02-01T00:00:00+00:00"
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "extensions": {
+          "request_id": "7e629ce3-17d1-9771-8e10-03f225395fdb"
+        }
+      }
+    },
+    {
+      "step": "parents",
+      "endpoint": "https://api.monday.com/v2",
+      "apiVersion": "2026-10",
+      "requestHeaders": {
+        "API-Version": "2026-10",
+        "Content-Type": "application/json"
+      },
+      "authorizationHeader": "sent; value not recorded",
+      "requestBody": "{\"query\":\"query ($i: [ID!], $c: [String!]) { items(ids: $i) { id name column_values(ids: $c, capabilities: [CALCULATED]) { id type text value is_leaf ... on NumbersValue { number } ... on DateValue { date } ... on TimelineValue { from to } } } }\",\"variables\":{\"i\":[\"13377353714\",\"13377370969\"],\"c\":[\"numeric_mm8fjk4h\",\"numeric_mm8fnbbp\",\"numeric_mm8fj6qc\",\"numeric_mm8fpr03\",\"date_mm8f45aw\",\"date_mm8fb58z\",\"date_mm8f9546\",\"timerange_mm8f4c2a\"]}}",
+      "startedAt": "2026-10-25T02:39:22.529Z",
+      "endedAt": "2026-10-25T02:39:23.168Z",
+      "status": 200,
+      "xRequestId": "ab8c2c87-a992-94a6-96e9-54dec5fa668e",
+      "extensionsRequestId": "ab8c2c87-a992-94a6-96e9-54dec5fa668e",
+      "rateLimitHeaders": {
+        "ratelimit": "\"minuteRate\";r=3321, \"concurrency\";r=199, \"complexityMinute\";r=9999964;t=3",
+        "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\""
+      },
+      "responseHeaders": {
+        "api-version": "2026-10",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Sun, 25 Oct 2026 02:39:23 GMT",
+        "ratelimit": "\"minuteRate\";r=3321, \"concurrency\";r=199, \"complexityMinute\";r=9999964;t=3",
+        "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\"",
+        "x-request-id": "ab8c2c87-a992-94a6-96e9-54dec5fa668e"
+      },
+      "responseBodyRaw": "{\"data\":{\"items\":[{\"id\":\"13377353714\",\"name\":\"P1 (L1 parent)\",\"column_values\":[{\"id\":\"numeric_mm8fjk4h\",\"type\":\"numbers\",\"text\":\"247\",\"value\":\"\\\"247\\\"\",\"is_leaf\":false,\"number\":247},{\"id\":\"numeric_mm8fnbbp\",\"type\":\"numbers\",\"text\":\"247\",\"value\":\"\\\"247\\\"\",\"is_leaf\":false,\"number\":247},{\"id\":\"numeric_mm8fj6qc\",\"type\":\"numbers\",\"text\":\"247\",\"value\":\"\\\"247\\\"\",\"is_leaf\":false,\"number\":247},{\"id\":\"numeric_mm8fpr03\",\"type\":\"numbers\",\"text\":\"247\",\"value\":\"\\\"247\\\"\",\"is_leaf\":false,\"number\":247},{\"id\":\"date_mm8f45aw\",\"type\":\"date\",\"text\":\"2026-01-20\",\"value\":\"{\\\"date\\\":\\\"2026-01-20\\\"}\",\"is_leaf\":false,\"date\":\"2026-01-20\"},{\"id\":\"date_mm8fb58z\",\"type\":\"date\",\"text\":\"2026-01-20\",\"value\":\"{\\\"date\\\":\\\"2026-01-20\\\"}\",\"is_leaf\":false,\"date\":\"2026-01-20\"},{\"id\":\"date_mm8f9546\",\"type\":\"date\",\"text\":\"2026-01-20\",\"value\":\"{\\\"date\\\":\\\"2026-01-20\\\"}\",\"is_leaf\":false,\"date\":\"2026-01-20\"},{\"id\":\"timerange_mm8f4c2a\",\"type\":\"timeline\",\"text\":\"2026-01-10 - 2026-07-15\",\"value\":\"{\\\"to\\\":\\\"2026-07-15\\\",\\\"from\\\":\\\"2026-01-10\\\"}\",\"is_leaf\":false,\"from\":\"2026-01-10T00:00:00+00:00\",\"to\":\"2026-07-15T00:00:00+00:00\"}]},{\"id\":\"13377370969\",\"name\":\"Q1 (L2 parent)\",\"column_values\":[{\"id\":\"numeric_mm8fjk4h\",\"type\":\"numbers\",\"text\":\"47\",\"value\":\"\\\"47\\\"\",\"is_leaf\":false,\"number\":47},{\"id\":\"numeric_mm8fnbbp\",\"type\":\"numbers\",\"text\":\"47\",\"value\":\"\\\"47\\\"\",\"is_leaf\":false,\"number\":47},{\"id\":\"numeric_mm8fj6qc\",\"type\":\"numbers\",\"text\":\"47\",\"value\":\"\\\"47\\\"\",\"is_leaf\":false,\"number\":47},{\"id\":\"numeric_mm8fpr03\",\"type\":\"numbers\",\"text\":\"47\",\"value\":\"\\\"47\\\"\",\"is_leaf\":false,\"number\":47},{\"id\":\"date_mm8f45aw\",\"type\":\"date\",\"text\":\"2026-03-03\",\"value\":\"{\\\"date\\\":\\\"2026-03-03\\\"}\",\"is_leaf\":false,\"date\":\"2026-03-03\"},{\"id\":\"date_mm8fb58z\",\"type\":\"date\",\"text\":\"2026-03-03\",\"value\":\"{\\\"date\\\":\\\"2026-03-03\\\"}\",\"is_leaf\":false,\"date\":\"2026-03-03\"},{\"id\":\"date_mm8f9546\",\"type\":\"date\",\"text\":\"2026-03-03\",\"value\":\"{\\\"date\\\":\\\"2026-03-03\\\"}\",\"is_leaf\":false,\"date\":\"2026-03-03\"},{\"id\":\"timerange_mm8f4c2a\",\"type\":\"timeline\",\"text\":\"2026-03-01 - 2026-07-15\",\"value\":\"{\\\"to\\\":\\\"2026-07-15\\\",\\\"from\\\":\\\"2026-03-01\\\"}\",\"is_leaf\":false,\"from\":\"2026-03-01T00:00:00+00:00\",\"to\":\"2026-07-15T00:00:00+00:00\"}]}]},\"extensions\":{\"request_id\":\"ab8c2c87-a992-94a6-96e9-54dec5fa668e\"}}",
+      "responseBody": {
+        "data": {
+          "items": [
+            {
+              "id": "13377353714",
+              "name": "P1 (L1 parent)",
+              "column_values": [
+                {
+                  "id": "numeric_mm8fjk4h",
+                  "type": "numbers",
+                  "text": "247",
+                  "value": "\"247\"",
+                  "is_leaf": false,
+                  "number": 247
+                },
+                {
+                  "id": "numeric_mm8fnbbp",
+                  "type": "numbers",
+                  "text": "247",
+                  "value": "\"247\"",
+                  "is_leaf": false,
+                  "number": 247
+                },
+                {
+                  "id": "numeric_mm8fj6qc",
+                  "type": "numbers",
+                  "text": "247",
+                  "value": "\"247\"",
+                  "is_leaf": false,
+                  "number": 247
+                },
+                {
+                  "id": "numeric_mm8fpr03",
+                  "type": "numbers",
+                  "text": "247",
+                  "value": "\"247\"",
+                  "is_leaf": false,
+                  "number": 247
+                },
+                {
+                  "id": "date_mm8f45aw",
+                  "type": "date",
+                  "text": "2026-01-20",
+                  "value": "{\"date\":\"2026-01-20\"}",
+                  "is_leaf": false,
+                  "date": "2026-01-20"
+                },
+                {
+                  "id": "date_mm8fb58z",
+                  "type": "date",
+                  "text": "2026-01-20",
+                  "value": "{\"date\":\"2026-01-20\"}",
+                  "is_leaf": false,
+                  "date": "2026-01-20"
+                },
+                {
+                  "id": "date_mm8f9546",
+                  "type": "date",
+                  "text": "2026-01-20",
+                  "value": "{\"date\":\"2026-01-20\"}",
+                  "is_leaf": false,
+                  "date": "2026-01-20"
+                },
+                {
+                  "id": "timerange_mm8f4c2a",
+                  "type": "timeline",
+                  "text": "2026-01-10 - 2026-07-15",
+                  "value": "{\"to\":\"2026-07-15\",\"from\":\"2026-01-10\"}",
+                  "is_leaf": false,
+                  "from": "2026-01-10T00:00:00+00:00",
+                  "to": "2026-07-15T00:00:00+00:00"
+                }
+              ]
+            },
+            {
+              "id": "13377370969",
+              "name": "Q1 (L2 parent)",
+              "column_values": [
+                {
+                  "id": "numeric_mm8fjk4h",
+                  "type": "numbers",
+                  "text": "47",
+                  "value": "\"47\"",
+                  "is_leaf": false,
+                  "number": 47
+                },
+                {
+                  "id": "numeric_mm8fnbbp",
+                  "type": "numbers",
+                  "text": "47",
+                  "value": "\"47\"",
+                  "is_leaf": false,
+                  "number": 47
+                },
+                {
+                  "id": "numeric_mm8fj6qc",
+                  "type": "numbers",
+                  "text": "47",
+                  "value": "\"47\"",
+                  "is_leaf": false,
+                  "number": 47
+                },
+                {
+                  "id": "numeric_mm8fpr03",
+                  "type": "numbers",
+                  "text": "47",
+                  "value": "\"47\"",
+                  "is_leaf": false,
+                  "number": 47
+                },
+                {
+                  "id": "date_mm8f45aw",
+                  "type": "date",
+                  "text": "2026-03-03",
+                  "value": "{\"date\":\"2026-03-03\"}",
+                  "is_leaf": false,
+                  "date": "2026-03-03"
+                },
+                {
+                  "id": "date_mm8fb58z",
+                  "type": "date",
+                  "text": "2026-03-03",
+                  "value": "{\"date\":\"2026-03-03\"}",
+                  "is_leaf": false,
+                  "date": "2026-03-03"
+                },
+                {
+                  "id": "date_mm8f9546",
+                  "type": "date",
+                  "text": "2026-03-03",
+                  "value": "{\"date\":\"2026-03-03\"}",
+                  "is_leaf": false,
+                  "date": "2026-03-03"
+                },
+                {
+                  "id": "timerange_mm8f4c2a",
+                  "type": "timeline",
+                  "text": "2026-03-01 - 2026-07-15",
+                  "value": "{\"to\":\"2026-07-15\",\"from\":\"2026-03-01\"}",
+                  "is_leaf": false,
+                  "from": "2026-03-01T00:00:00+00:00",
+                  "to": "2026-07-15T00:00:00+00:00"
+                }
+              ]
+            }
+          ]
+        },
+        "extensions": {
+          "request_id": "ab8c2c87-a992-94a6-96e9-54dec5fa668e"
+        }
+      }
+    },
+    {
+      "step": "parents-reread",
+      "endpoint": "https://api.monday.com/v2",
+      "apiVersion": "2026-04",
+      "requestHeaders": {
+        "API-Version": "2026-04",
+        "Content-Type": "application/json"
+      },
+      "authorizationHeader": "sent; value not recorded",
+      "requestBody": "{\"query\":\"query ($i: [ID!], $c: [String!]) { items(ids: $i) { id name column_values(ids: $c, capabilities: [CALCULATED]) { id type text value is_leaf ... on NumbersValue { number } ... on DateValue { date } ... on TimelineValue { from to } } } }\",\"variables\":{\"i\":[\"13377353714\",\"13377370969\"],\"c\":[\"numeric_mm8fjk4h\",\"numeric_mm8fnbbp\",\"numeric_mm8fj6qc\",\"numeric_mm8fpr03\",\"date_mm8f45aw\",\"date_mm8fb58z\",\"date_mm8f9546\",\"timerange_mm8f4c2a\"]}}",
+      "startedAt": "2026-10-25T02:39:33.173Z",
+      "endedAt": "2026-10-25T02:39:33.857Z",
+      "status": 200,
+      "xRequestId": "f5fde79d-90bb-9698-8bd9-6cc4f32f0c95",
+      "extensionsRequestId": "f5fde79d-90bb-9698-8bd9-6cc4f32f0c95",
+      "rateLimitHeaders": {
+        "ratelimit": "\"minuteRate\";r=3334, \"concurrency\";r=199, \"complexityMinute\";r=9999964;t=60",
+        "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\""
+      },
+      "responseHeaders": {
+        "api-version": "2026-04",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Sun, 25 Oct 2026 02:39:33 GMT",
+        "ratelimit": "\"minuteRate\";r=3334, \"concurrency\";r=199, \"complexityMinute\";r=9999964;t=60",
+        "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\"",
+        "x-request-id": "f5fde79d-90bb-9698-8bd9-6cc4f32f0c95"
+      },
+      "responseBodyRaw": "{\"data\":{\"items\":[{\"id\":\"13377353714\",\"name\":\"P1 (L1 parent)\",\"column_values\":[{\"id\":\"numeric_mm8fjk4h\",\"type\":\"numbers\",\"text\":\"247\",\"value\":\"\\\"247\\\"\",\"is_leaf\":false,\"number\":247},{\"id\":\"numeric_mm8fnbbp\",\"type\":\"numbers\",\"text\":\"247\",\"value\":\"\\\"247\\\"\",\"is_leaf\":false,\"number\":247},{\"id\":\"numeric_mm8fj6qc\",\"type\":\"numbers\",\"text\":\"247\",\"value\":\"\\\"247\\\"\",\"is_leaf\":false,\"number\":247},{\"id\":\"numeric_mm8fpr03\",\"type\":\"numbers\",\"text\":\"247\",\"value\":\"\\\"247\\\"\",\"is_leaf\":false,\"number\":247},{\"id\":\"date_mm8f45aw\",\"type\":\"date\",\"text\":\"2026-01-20\",\"value\":\"{\\\"date\\\":\\\"2026-01-20\\\"}\",\"is_leaf\":false,\"date\":\"2026-01-20\"},{\"id\":\"date_mm8fb58z\",\"type\":\"date\",\"text\":\"2026-01-20\",\"value\":\"{\\\"date\\\":\\\"2026-01-20\\\"}\",\"is_leaf\":false,\"date\":\"2026-01-20\"},{\"id\":\"date_mm8f9546\",\"type\":\"date\",\"text\":\"2026-01-20\",\"value\":\"{\\\"date\\\":\\\"2026-01-20\\\"}\",\"is_leaf\":false,\"date\":\"2026-01-20\"},{\"id\":\"timerange_mm8f4c2a\",\"type\":\"timeline\",\"text\":\"2026-01-10 - 2026-07-15\",\"value\":\"{\\\"to\\\":\\\"2026-07-15\\\",\\\"from\\\":\\\"2026-01-10\\\"}\",\"is_leaf\":false,\"from\":\"2026-01-10T00:00:00+00:00\",\"to\":\"2026-07-15T00:00:00+00:00\"}]},{\"id\":\"13377370969\",\"name\":\"Q1 (L2 parent)\",\"column_values\":[{\"id\":\"numeric_mm8fjk4h\",\"type\":\"numbers\",\"text\":\"47\",\"value\":\"\\\"47\\\"\",\"is_leaf\":false,\"number\":47},{\"id\":\"numeric_mm8fnbbp\",\"type\":\"numbers\",\"text\":\"47\",\"value\":\"\\\"47\\\"\",\"is_leaf\":false,\"number\":47},{\"id\":\"numeric_mm8fj6qc\",\"type\":\"numbers\",\"text\":\"47\",\"value\":\"\\\"47\\\"\",\"is_leaf\":false,\"number\":47},{\"id\":\"numeric_mm8fpr03\",\"type\":\"numbers\",\"text\":\"47\",\"value\":\"\\\"47\\\"\",\"is_leaf\":false,\"number\":47},{\"id\":\"date_mm8f45aw\",\"type\":\"date\",\"text\":\"2026-03-03\",\"value\":\"{\\\"date\\\":\\\"2026-03-03\\\"}\",\"is_leaf\":false,\"date\":\"2026-03-03\"},{\"id\":\"date_mm8fb58z\",\"type\":\"date\",\"text\":\"2026-03-03\",\"value\":\"{\\\"date\\\":\\\"2026-03-03\\\"}\",\"is_leaf\":false,\"date\":\"2026-03-03\"},{\"id\":\"date_mm8f9546\",\"type\":\"date\",\"text\":\"2026-03-03\",\"value\":\"{\\\"date\\\":\\\"2026-03-03\\\"}\",\"is_leaf\":false,\"date\":\"2026-03-03\"},{\"id\":\"timerange_mm8f4c2a\",\"type\":\"timeline\",\"text\":\"2026-03-01 - 2026-07-15\",\"value\":\"{\\\"to\\\":\\\"2026-07-15\\\",\\\"from\\\":\\\"2026-03-01\\\"}\",\"is_leaf\":false,\"from\":\"2026-03-01T00:00:00+00:00\",\"to\":\"2026-07-15T00:00:00+00:00\"}]}]},\"extensions\":{\"request_id\":\"f5fde79d-90bb-9698-8bd9-6cc4f32f0c95\"}}",
+      "responseBody": {
+        "data": {
+          "items": [
+            {
+              "id": "13377353714",
+              "name": "P1 (L1 parent)",
+              "column_values": [
+                {
+                  "id": "numeric_mm8fjk4h",
+                  "type": "numbers",
+                  "text": "247",
+                  "value": "\"247\"",
+                  "is_leaf": false,
+                  "number": 247
+                },
+                {
+                  "id": "numeric_mm8fnbbp",
+                  "type": "numbers",
+                  "text": "247",
+                  "value": "\"247\"",
+                  "is_leaf": false,
+                  "number": 247
+                },
+                {
+                  "id": "numeric_mm8fj6qc",
+                  "type": "numbers",
+                  "text": "247",
+                  "value": "\"247\"",
+                  "is_leaf": false,
+                  "number": 247
+                },
+                {
+                  "id": "numeric_mm8fpr03",
+                  "type": "numbers",
+                  "text": "247",
+                  "value": "\"247\"",
+                  "is_leaf": false,
+                  "number": 247
+                },
+                {
+                  "id": "date_mm8f45aw",
+                  "type": "date",
+                  "text": "2026-01-20",
+                  "value": "{\"date\":\"2026-01-20\"}",
+                  "is_leaf": false,
+                  "date": "2026-01-20"
+                },
+                {
+                  "id": "date_mm8fb58z",
+                  "type": "date",
+                  "text": "2026-01-20",
+                  "value": "{\"date\":\"2026-01-20\"}",
+                  "is_leaf": false,
+                  "date": "2026-01-20"
+                },
+                {
+                  "id": "date_mm8f9546",
+                  "type": "date",
+                  "text": "2026-01-20",
+                  "value": "{\"date\":\"2026-01-20\"}",
+                  "is_leaf": false,
+                  "date": "2026-01-20"
+                },
+                {
+                  "id": "timerange_mm8f4c2a",
+                  "type": "timeline",
+                  "text": "2026-01-10 - 2026-07-15",
+                  "value": "{\"to\":\"2026-07-15\",\"from\":\"2026-01-10\"}",
+                  "is_leaf": false,
+                  "from": "2026-01-10T00:00:00+00:00",
+                  "to": "2026-07-15T00:00:00+00:00"
+                }
+              ]
+            },
+            {
+              "id": "13377370969",
+              "name": "Q1 (L2 parent)",
+              "column_values": [
+                {
+                  "id": "numeric_mm8fjk4h",
+                  "type": "numbers",
+                  "text": "47",
+                  "value": "\"47\"",
+                  "is_leaf": false,
+                  "number": 47
+                },
+                {
+                  "id": "numeric_mm8fnbbp",
+                  "type": "numbers",
+                  "text": "47",
+                  "value": "\"47\"",
+                  "is_leaf": false,
+                  "number": 47
+                },
+                {
+                  "id": "numeric_mm8fj6qc",
+                  "type": "numbers",
+                  "text": "47",
+                  "value": "\"47\"",
+                  "is_leaf": false,
+                  "number": 47
+                },
+                {
+                  "id": "numeric_mm8fpr03",
+                  "type": "numbers",
+                  "text": "47",
+                  "value": "\"47\"",
+                  "is_leaf": false,
+                  "number": 47
+                },
+                {
+                  "id": "date_mm8f45aw",
+                  "type": "date",
+                  "text": "2026-03-03",
+                  "value": "{\"date\":\"2026-03-03\"}",
+                  "is_leaf": false,
+                  "date": "2026-03-03"
+                },
+                {
+                  "id": "date_mm8fb58z",
+                  "type": "date",
+                  "text": "2026-03-03",
+                  "value": "{\"date\":\"2026-03-03\"}",
+                  "is_leaf": false,
+                  "date": "2026-03-03"
+                },
+                {
+                  "id": "date_mm8f9546",
+                  "type": "date",
+                  "text": "2026-03-03",
+                  "value": "{\"date\":\"2026-03-03\"}",
+                  "is_leaf": false,
+                  "date": "2026-03-03"
+                },
+                {
+                  "id": "timerange_mm8f4c2a",
+                  "type": "timeline",
+                  "text": "2026-03-01 - 2026-07-15",
+                  "value": "{\"to\":\"2026-07-15\",\"from\":\"2026-03-01\"}",
+                  "is_leaf": false,
+                  "from": "2026-03-01T00:00:00+00:00",
+                  "to": "2026-07-15T00:00:00+00:00"
+                }
+              ]
+            }
+          ]
+        },
+        "extensions": {
+          "request_id": "f5fde79d-90bb-9698-8bd9-6cc4f32f0c95"
+        }
+      }
+    },
+    {
+      "step": "parents-reread",
+      "endpoint": "https://api.monday.com/v2",
+      "apiVersion": "2026-10",
+      "requestHeaders": {
+        "API-Version": "2026-10",
+        "Content-Type": "application/json"
+      },
+      "authorizationHeader": "sent; value not recorded",
+      "requestBody": "{\"query\":\"query ($i: [ID!], $c: [String!]) { items(ids: $i) { id name column_values(ids: $c, capabilities: [CALCULATED]) { id type text value is_leaf ... on NumbersValue { number } ... on DateValue { date } ... on TimelineValue { from to } } } }\",\"variables\":{\"i\":[\"13377353714\",\"13377370969\"],\"c\":[\"numeric_mm8fjk4h\",\"numeric_mm8fnbbp\",\"numeric_mm8fj6qc\",\"numeric_mm8fpr03\",\"date_mm8f45aw\",\"date_mm8fb58z\",\"date_mm8f9546\",\"timerange_mm8f4c2a\"]}}",
+      "startedAt": "2026-10-25T02:39:35.058Z",
+      "endedAt": "2026-10-25T02:39:35.705Z",
+      "status": 200,
+      "xRequestId": "d5f2820f-6d98-96da-abeb-d5eff1124b4a",
+      "extensionsRequestId": "d5f2820f-6d98-96da-abeb-d5eff1124b4a",
+      "rateLimitHeaders": {
+        "ratelimit": "\"minuteRate\";r=3333, \"concurrency\";r=199, \"complexityMinute\";r=9999928;t=58",
+        "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\""
+      },
+      "responseHeaders": {
+        "api-version": "2026-10",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Sun, 25 Oct 2026 02:39:35 GMT",
+        "ratelimit": "\"minuteRate\";r=3333, \"concurrency\";r=199, \"complexityMinute\";r=9999928;t=58",
+        "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\"",
+        "x-request-id": "d5f2820f-6d98-96da-abeb-d5eff1124b4a"
+      },
+      "responseBodyRaw": "{\"data\":{\"items\":[{\"id\":\"13377353714\",\"name\":\"P1 (L1 parent)\",\"column_values\":[{\"id\":\"numeric_mm8fjk4h\",\"type\":\"numbers\",\"text\":\"247\",\"value\":\"\\\"247\\\"\",\"is_leaf\":false,\"number\":247},{\"id\":\"numeric_mm8fnbbp\",\"type\":\"numbers\",\"text\":\"247\",\"value\":\"\\\"247\\\"\",\"is_leaf\":false,\"number\":247},{\"id\":\"numeric_mm8fj6qc\",\"type\":\"numbers\",\"text\":\"247\",\"value\":\"\\\"247\\\"\",\"is_leaf\":false,\"number\":247},{\"id\":\"numeric_mm8fpr03\",\"type\":\"numbers\",\"text\":\"247\",\"value\":\"\\\"247\\\"\",\"is_leaf\":false,\"number\":247},{\"id\":\"date_mm8f45aw\",\"type\":\"date\",\"text\":\"2026-01-20\",\"value\":\"{\\\"date\\\":\\\"2026-01-20\\\"}\",\"is_leaf\":false,\"date\":\"2026-01-20\"},{\"id\":\"date_mm8fb58z\",\"type\":\"date\",\"text\":\"2026-01-20\",\"value\":\"{\\\"date\\\":\\\"2026-01-20\\\"}\",\"is_leaf\":false,\"date\":\"2026-01-20\"},{\"id\":\"date_mm8f9546\",\"type\":\"date\",\"text\":\"2026-01-20\",\"value\":\"{\\\"date\\\":\\\"2026-01-20\\\"}\",\"is_leaf\":false,\"date\":\"2026-01-20\"},{\"id\":\"timerange_mm8f4c2a\",\"type\":\"timeline\",\"text\":\"2026-01-10 - 2026-07-15\",\"value\":\"{\\\"to\\\":\\\"2026-07-15\\\",\\\"from\\\":\\\"2026-01-10\\\"}\",\"is_leaf\":false,\"from\":\"2026-01-10T00:00:00+00:00\",\"to\":\"2026-07-15T00:00:00+00:00\"}]},{\"id\":\"13377370969\",\"name\":\"Q1 (L2 parent)\",\"column_values\":[{\"id\":\"numeric_mm8fjk4h\",\"type\":\"numbers\",\"text\":\"47\",\"value\":\"\\\"47\\\"\",\"is_leaf\":false,\"number\":47},{\"id\":\"numeric_mm8fnbbp\",\"type\":\"numbers\",\"text\":\"47\",\"value\":\"\\\"47\\\"\",\"is_leaf\":false,\"number\":47},{\"id\":\"numeric_mm8fj6qc\",\"type\":\"numbers\",\"text\":\"47\",\"value\":\"\\\"47\\\"\",\"is_leaf\":false,\"number\":47},{\"id\":\"numeric_mm8fpr03\",\"type\":\"numbers\",\"text\":\"47\",\"value\":\"\\\"47\\\"\",\"is_leaf\":false,\"number\":47},{\"id\":\"date_mm8f45aw\",\"type\":\"date\",\"text\":\"2026-03-03\",\"value\":\"{\\\"date\\\":\\\"2026-03-03\\\"}\",\"is_leaf\":false,\"date\":\"2026-03-03\"},{\"id\":\"date_mm8fb58z\",\"type\":\"date\",\"text\":\"2026-03-03\",\"value\":\"{\\\"date\\\":\\\"2026-03-03\\\"}\",\"is_leaf\":false,\"date\":\"2026-03-03\"},{\"id\":\"date_mm8f9546\",\"type\":\"date\",\"text\":\"2026-03-03\",\"value\":\"{\\\"date\\\":\\\"2026-03-03\\\"}\",\"is_leaf\":false,\"date\":\"2026-03-03\"},{\"id\":\"timerange_mm8f4c2a\",\"type\":\"timeline\",\"text\":\"2026-03-01 - 2026-07-15\",\"value\":\"{\\\"to\\\":\\\"2026-07-15\\\",\\\"from\\\":\\\"2026-03-01\\\"}\",\"is_leaf\":false,\"from\":\"2026-03-01T00:00:00+00:00\",\"to\":\"2026-07-15T00:00:00+00:00\"}]}]},\"extensions\":{\"request_id\":\"d5f2820f-6d98-96da-abeb-d5eff1124b4a\"}}",
+      "responseBody": {
+        "data": {
+          "items": [
+            {
+              "id": "13377353714",
+              "name": "P1 (L1 parent)",
+              "column_values": [
+                {
+                  "id": "numeric_mm8fjk4h",
+                  "type": "numbers",
+                  "text": "247",
+                  "value": "\"247\"",
+                  "is_leaf": false,
+                  "number": 247
+                },
+                {
+                  "id": "numeric_mm8fnbbp",
+                  "type": "numbers",
+                  "text": "247",
+                  "value": "\"247\"",
+                  "is_leaf": false,
+                  "number": 247
+                },
+                {
+                  "id": "numeric_mm8fj6qc",
+                  "type": "numbers",
+                  "text": "247",
+                  "value": "\"247\"",
+                  "is_leaf": false,
+                  "number": 247
+                },
+                {
+                  "id": "numeric_mm8fpr03",
+                  "type": "numbers",
+                  "text": "247",
+                  "value": "\"247\"",
+                  "is_leaf": false,
+                  "number": 247
+                },
+                {
+                  "id": "date_mm8f45aw",
+                  "type": "date",
+                  "text": "2026-01-20",
+                  "value": "{\"date\":\"2026-01-20\"}",
+                  "is_leaf": false,
+                  "date": "2026-01-20"
+                },
+                {
+                  "id": "date_mm8fb58z",
+                  "type": "date",
+                  "text": "2026-01-20",
+                  "value": "{\"date\":\"2026-01-20\"}",
+                  "is_leaf": false,
+                  "date": "2026-01-20"
+                },
+                {
+                  "id": "date_mm8f9546",
+                  "type": "date",
+                  "text": "2026-01-20",
+                  "value": "{\"date\":\"2026-01-20\"}",
+                  "is_leaf": false,
+                  "date": "2026-01-20"
+                },
+                {
+                  "id": "timerange_mm8f4c2a",
+                  "type": "timeline",
+                  "text": "2026-01-10 - 2026-07-15",
+                  "value": "{\"to\":\"2026-07-15\",\"from\":\"2026-01-10\"}",
+                  "is_leaf": false,
+                  "from": "2026-01-10T00:00:00+00:00",
+                  "to": "2026-07-15T00:00:00+00:00"
+                }
+              ]
+            },
+            {
+              "id": "13377370969",
+              "name": "Q1 (L2 parent)",
+              "column_values": [
+                {
+                  "id": "numeric_mm8fjk4h",
+                  "type": "numbers",
+                  "text": "47",
+                  "value": "\"47\"",
+                  "is_leaf": false,
+                  "number": 47
+                },
+                {
+                  "id": "numeric_mm8fnbbp",
+                  "type": "numbers",
+                  "text": "47",
+                  "value": "\"47\"",
+                  "is_leaf": false,
+                  "number": 47
+                },
+                {
+                  "id": "numeric_mm8fj6qc",
+                  "type": "numbers",
+                  "text": "47",
+                  "value": "\"47\"",
+                  "is_leaf": false,
+                  "number": 47
+                },
+                {
+                  "id": "numeric_mm8fpr03",
+                  "type": "numbers",
+                  "text": "47",
+                  "value": "\"47\"",
+                  "is_leaf": false,
+                  "number": 47
+                },
+                {
+                  "id": "date_mm8f45aw",
+                  "type": "date",
+                  "text": "2026-03-03",
+                  "value": "{\"date\":\"2026-03-03\"}",
+                  "is_leaf": false,
+                  "date": "2026-03-03"
+                },
+                {
+                  "id": "date_mm8fb58z",
+                  "type": "date",
+                  "text": "2026-03-03",
+                  "value": "{\"date\":\"2026-03-03\"}",
+                  "is_leaf": false,
+                  "date": "2026-03-03"
+                },
+                {
+                  "id": "date_mm8f9546",
+                  "type": "date",
+                  "text": "2026-03-03",
+                  "value": "{\"date\":\"2026-03-03\"}",
+                  "is_leaf": false,
+                  "date": "2026-03-03"
+                },
+                {
+                  "id": "timerange_mm8f4c2a",
+                  "type": "timeline",
+                  "text": "2026-03-01 - 2026-07-15",
+                  "value": "{\"to\":\"2026-07-15\",\"from\":\"2026-03-01\"}",
+                  "is_leaf": false,
+                  "from": "2026-03-01T00:00:00+00:00",
+                  "to": "2026-07-15T00:00:00+00:00"
+                }
+              ]
+            }
+          ]
+        },
+        "extensions": {
+          "request_id": "d5f2820f-6d98-96da-abeb-d5eff1124b4a"
+        }
+      }
+    }
+  ]
+}

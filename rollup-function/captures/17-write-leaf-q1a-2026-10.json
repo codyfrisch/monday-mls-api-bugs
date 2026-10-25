@@ -1,0 +1,49 @@
+{
+  "file": "17-write-leaf-q1a-2026-10",
+  "case": "setup",
+  "description": "write leaf Q1a",
+  "endpoint": "https://api.monday.com/v2",
+  "method": "POST",
+  "requestHeaders": {
+    "API-Version": "2026-10",
+    "Content-Type": "application/json"
+  },
+  "authorizationHeader": "sent; value not recorded",
+  "apiVersion": "2026-10",
+  "requestBody": "{\"query\":\"mutation ($b: ID!, $i: ID!, $v: JSON!) { change_multiple_column_values(board_id: $b, item_id: $i, column_values: $v) { id } }\",\"variables\":{\"b\":\"18436908354\",\"i\":\"13377361219\",\"v\":\"{\\\"numeric_mm8fkv6k\\\":\\\"40\\\",\\\"numeric_mm8f3jz3\\\":\\\"40\\\",\\\"numeric_mm8f56kg\\\":\\\"40\\\",\\\"numeric_mm8fbpj2\\\":\\\"40\\\",\\\"date_mm8fftdz\\\":{\\\"date\\\":\\\"2026-03-03\\\"},\\\"date_mm8fswrb\\\":{\\\"date\\\":\\\"2026-03-03\\\"},\\\"date_mm8f2n8y\\\":{\\\"date\\\":\\\"2026-03-03\\\"},\\\"timerange_mm8fcct0\\\":{\\\"from\\\":\\\"2026-03-01\\\",\\\"to\\\":\\\"2026-03-20\\\"}}\"}}",
+  "query": "mutation ($b: ID!, $i: ID!, $v: JSON!) { change_multiple_column_values(board_id: $b, item_id: $i, column_values: $v) { id } }",
+  "variables": {
+    "b": "18436908354",
+    "i": "13377361219",
+    "v": "{\"numeric_mm8fkv6k\":\"40\",\"numeric_mm8f3jz3\":\"40\",\"numeric_mm8f56kg\":\"40\",\"numeric_mm8fbpj2\":\"40\",\"date_mm8fftdz\":{\"date\":\"2026-03-03\"},\"date_mm8fswrb\":{\"date\":\"2026-03-03\"},\"date_mm8f2n8y\":{\"date\":\"2026-03-03\"},\"timerange_mm8fcct0\":{\"from\":\"2026-03-01\",\"to\":\"2026-03-20\"}}"
+  },
+  "startedAt": "2026-10-25T02:42:54.256Z",
+  "endedAt": "2026-10-25T02:42:55.172Z",
+  "durationMs": 916,
+  "status": 200,
+  "xRequestId": "b3a11a98-a57e-91fd-b5f5-c24bbca27ae3",
+  "rateLimitHeaders": {
+    "ratelimit": "\"minuteRate\";r=3329, \"concurrency\";r=199, \"complexityMinute\";r=9819997;t=42",
+    "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\""
+  },
+  "responseHeaders": {
+    "api-version": "2026-10",
+    "content-type": "application/json; charset=utf-8",
+    "date": "Sun, 25 Oct 2026 02:42:55 GMT",
+    "ratelimit": "\"minuteRate\";r=3329, \"concurrency\";r=199, \"complexityMinute\";r=9819997;t=42",
+    "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\"",
+    "x-request-id": "b3a11a98-a57e-91fd-b5f5-c24bbca27ae3"
+  },
+  "extensionsRequestId": "b3a11a98-a57e-91fd-b5f5-c24bbca27ae3",
+  "responseBodyRaw": "{\"data\":{\"change_multiple_column_values\":{\"id\":\"13377361219\"}},\"extensions\":{\"request_id\":\"b3a11a98-a57e-91fd-b5f5-c24bbca27ae3\"}}",
+  "responseBody": {
+    "data": {
+      "change_multiple_column_values": {
+        "id": "13377361219"
+      }
+    },
+    "extensions": {
+      "request_id": "b3a11a98-a57e-91fd-b5f5-c24bbca27ae3"
+    }
+  }
+}

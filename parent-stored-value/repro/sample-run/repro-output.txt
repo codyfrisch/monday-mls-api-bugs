@@ -1,0 +1,58 @@
+
+=== API-Version 2026-04 ===
+  ground truth: HTTP 200, request_id 3dd2c2bc-f5ac-9164-967a-d61959652b40, x-request-id 3dd2c2bc-f5ac-9164-967a-d61959652b40, 2026-10-25T02:40:28.712Z → 2026-10-25T02:40:29.993Z
+  column metadata: HTTP 200, request_id 1a430d2a-926e-9214-b91f-f55b8fc276a9, x-request-id 1a430d2a-926e-9214-b91f-f55b8fc276a9, 2026-10-25T02:40:31.194Z → 2026-10-25T02:40:31.451Z
+  columns returned: none
+  before: HTTP 200, request_id 8345fc62-7e5a-95a5-a9ce-0ea3d8f56756, x-request-id 8345fc62-7e5a-95a5-a9ce-0ea3d8f56756, 2026-10-25T02:40:32.652Z → 2026-10-25T02:40:33.453Z
+  write R1: HTTP 200, request_id e75e82f2-a868-94c7-9e55-1a56c8ee5ad0, x-request-id e75e82f2-a868-94c7-9e55-1a56c8ee5ad0, 2026-10-25T02:40:34.654Z → 2026-10-25T02:40:35.462Z
+  write A: HTTP 200, request_id 9b84df5e-1e99-91aa-bb5c-3e88d20007f9, x-request-id 9b84df5e-1e99-91aa-bb5c-3e88d20007f9, 2026-10-25T02:40:36.663Z → 2026-10-25T02:40:37.813Z
+  after: HTTP 200, request_id 26675988-d51e-9b2e-8116-4004565b7bd9, x-request-id 26675988-d51e-9b2e-8116-4004565b7bd9, 2026-10-25T02:40:39.014Z → 2026-10-25T02:40:39.782Z
+  clear R1: HTTP 200, request_id ab143e40-4b1f-9901-a822-ce01f48343de, x-request-id ab143e40-4b1f-9901-a822-ce01f48343de, 2026-10-25T02:40:40.983Z → 2026-10-25T02:40:41.849Z
+  clear A: HTTP 200, request_id c535050a-6f31-95c6-a833-cdf195d4df8a, x-request-id c535050a-6f31-95c6-a833-cdf195d4df8a, 2026-10-25T02:40:43.050Z → 2026-10-25T02:40:43.835Z
+  restore: HTTP 200, request_id 16ae5b2b-f6b0-9f33-9473-8f14d4c0e864, x-request-id 16ae5b2b-f6b0-9f33-9473-8f14d4c0e864, 2026-10-25T02:40:45.035Z → 2026-10-25T02:40:45.623Z
+
+  parent | column | expected per docs | API before | own values | API after | model with own values | after clear | verdict
+  R1 | Num SUM | 136 | 136 | 5, 1000 | 1141 | 1141 | 136 | DEVIATES: own values counted
+  R1 | Num MIN | 11 | 136 | 2, 1 | 139 | 139 | 136 | DEVIATES: own values counted
+  R1 | Num MAX | 100 | 136 | 500, 999 | 1635 | 1635 | 136 | DEVIATES: own values counted
+  R1 | Num NONE | empty | 136 | 5, 1000 | 1141 | 1141 | 136 | DEVIATES: own values counted
+  R1 | Date MIN | 2026-01-10 | 2026-01-10 | 2020-01-01, 2019-01-01 | 2019-01-01 | 2019-01-01 | 2026-01-10 | DEVIATES: own values counted
+  R1 | Date MAX | 2026-05-15 | 2026-01-10 | 2030-01-01, 2031-01-01 | 2026-01-10 | 2026-01-10 | 2026-01-10 | unchanged by write
+  R1 | Timeline | 2026-01-05 - 2026-05-20 | 2026-01-05 - 2026-05-20 | 2020-01-01 - 2030-01-01, 2019-01-01 - 2031-01-01 | 2019-01-01 - 2031-01-01 | 2019-01-01 - 2031-01-01 | 2026-01-05 - 2026-05-20 | DEVIATES: own values counted
+  A | Num SUM | 36 | 36 | 1000 | 1036 | 1036 | 36 | DEVIATES: own values counted
+  A | Num MIN | 11 | 36 | 1 | 37 | 37 | 36 | DEVIATES: own values counted
+  A | Num MAX | 25 | 36 | 999 | 1035 | 1035 | 36 | DEVIATES: own values counted
+  A | Num NONE | empty | 36 | 1000 | 1036 | 1036 | 36 | DEVIATES: own values counted
+  A | Date MIN | 2026-03-02 | 2026-03-02 | 2019-01-01 | 2019-01-01 | 2019-01-01 | 2026-03-02 | DEVIATES: own values counted
+  A | Date MAX | 2026-05-15 | 2026-03-02 | 2031-01-01 | 2026-03-02 | 2026-03-02 | 2026-03-02 | unchanged by write
+  A | Timeline | 2026-03-01 - 2026-05-20 | 2026-03-01 - 2026-05-20 | 2019-01-01 - 2031-01-01 | 2019-01-01 - 2031-01-01 | 2019-01-01 - 2031-01-01 | 2026-03-01 - 2026-05-20 | DEVIATES: own values counted
+
+=== API-Version 2026-10 ===
+  ground truth: HTTP 200, request_id ff0b7323-e118-9ff7-9081-81486ba6f891, x-request-id ff0b7323-e118-9ff7-9081-81486ba6f891, 2026-10-25T02:40:46.824Z → 2026-10-25T02:40:48.027Z
+  column metadata: HTTP 200, request_id d233c39f-b6c0-9ecc-abbd-3546e106c2ed, x-request-id d233c39f-b6c0-9ecc-abbd-3546e106c2ed, 2026-10-25T02:40:49.228Z → 2026-10-25T02:40:49.491Z
+  columns returned: Num SUM=SUM, Num MIN=MIN, Num MAX=MAX, Num NONE=NONE, Date MIN=MIN, Date MAX=MAX, Timeline=MIN_MAX
+  before: HTTP 200, request_id 544a110f-bf9b-9d20-b7ce-7e0ed715bf50, x-request-id 544a110f-bf9b-9d20-b7ce-7e0ed715bf50, 2026-10-25T02:40:50.692Z → 2026-10-25T02:40:51.344Z
+  write R1: HTTP 200, request_id fd903191-ae38-96b7-812b-f57d6fc539b9, x-request-id fd903191-ae38-96b7-812b-f57d6fc539b9, 2026-10-25T02:40:52.545Z → 2026-10-25T02:40:53.335Z
+  write A: HTTP 200, request_id 98540436-5561-9c73-8b71-387352cee725, x-request-id 98540436-5561-9c73-8b71-387352cee725, 2026-10-25T02:40:54.536Z → 2026-10-25T02:40:55.731Z
+  after: HTTP 200, request_id 08aad4fe-98dd-90d2-ad12-ba5394a742ec, x-request-id 08aad4fe-98dd-90d2-ad12-ba5394a742ec, 2026-10-25T02:40:56.932Z → 2026-10-25T02:40:57.633Z
+  clear R1: HTTP 200, request_id 5bbd9f1b-42da-9c5e-a282-e6c68454a59e, x-request-id 5bbd9f1b-42da-9c5e-a282-e6c68454a59e, 2026-10-25T02:40:58.834Z → 2026-10-25T02:40:59.871Z
+  clear A: HTTP 200, request_id 5e969a8b-cc57-9bb0-b1d5-25666c82a935, x-request-id 5e969a8b-cc57-9bb0-b1d5-25666c82a935, 2026-10-25T02:41:01.072Z → 2026-10-25T02:41:02.012Z
+  restore: HTTP 200, request_id 7cd036c9-4e6b-9faf-9abc-63ceab20b949, x-request-id 7cd036c9-4e6b-9faf-9abc-63ceab20b949, 2026-10-25T02:41:03.213Z → 2026-10-25T02:41:03.909Z
+
+  parent | column | expected per docs | API before | own values | API after | model with own values | after clear | verdict
+  R1 | Num SUM | 136 | 136 | 5, 1000 | 1141 | 1141 | 136 | DEVIATES: own values counted
+  R1 | Num MIN | 11 | 136 | 2, 1 | 139 | 139 | 136 | DEVIATES: own values counted
+  R1 | Num MAX | 100 | 136 | 500, 999 | 1635 | 1635 | 136 | DEVIATES: own values counted
+  R1 | Num NONE | empty | 136 | 5, 1000 | 1141 | 1141 | 136 | DEVIATES: own values counted
+  R1 | Date MIN | 2026-01-10 | 2026-01-10 | 2020-01-01, 2019-01-01 | 2019-01-01 | 2019-01-01 | 2026-01-10 | DEVIATES: own values counted
+  R1 | Date MAX | 2026-05-15 | 2026-01-10 | 2030-01-01, 2031-01-01 | 2026-01-10 | 2026-01-10 | 2026-01-10 | unchanged by write
+  R1 | Timeline | 2026-01-05 - 2026-05-20 | 2026-01-05 - 2026-05-20 | 2020-01-01 - 2030-01-01, 2019-01-01 - 2031-01-01 | 2019-01-01 - 2031-01-01 | 2019-01-01 - 2031-01-01 | 2026-01-05 - 2026-05-20 | DEVIATES: own values counted
+  A | Num SUM | 36 | 36 | 1000 | 1036 | 1036 | 36 | DEVIATES: own values counted
+  A | Num MIN | 11 | 36 | 1 | 37 | 37 | 36 | DEVIATES: own values counted
+  A | Num MAX | 25 | 36 | 999 | 1035 | 1035 | 36 | DEVIATES: own values counted
+  A | Num NONE | empty | 36 | 1000 | 1036 | 1036 | 36 | DEVIATES: own values counted
+  A | Date MIN | 2026-03-02 | 2026-03-02 | 2019-01-01 | 2019-01-01 | 2019-01-01 | 2026-03-02 | DEVIATES: own values counted
+  A | Date MAX | 2026-05-15 | 2026-03-02 | 2031-01-01 | 2026-03-02 | 2026-03-02 | 2026-03-02 | unchanged by write
+  A | Timeline | 2026-03-01 - 2026-05-20 | 2026-03-01 - 2026-05-20 | 2019-01-01 - 2031-01-01 | 2019-01-01 - 2031-01-01 | 2019-01-01 - 2031-01-01 | 2026-03-01 - 2026-05-20 | DEVIATES: own values counted
+
+Wrote repro-results.json

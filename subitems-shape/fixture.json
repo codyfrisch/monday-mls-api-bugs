@@ -1,0 +1,127 @@
+{
+  "account": {
+    "slug": "sandbox-account",
+    "name": "sandbox-account"
+  },
+  "board": {
+    "id": "18436846804",
+    "name": "MLS Source",
+    "hierarchy_type": "multi_level"
+  },
+  "items": [
+    {
+      "id": "13377169129",
+      "name": "DC deep-chain source",
+      "depth": 1,
+      "parentId": null,
+      "manifestKey": "DC"
+    },
+    {
+      "id": "13374291641",
+      "name": "Item 1",
+      "depth": 1,
+      "parentId": null,
+      "manifestKey": null
+    },
+    {
+      "id": "13374290733",
+      "name": "R1 root",
+      "depth": 1,
+      "parentId": null,
+      "manifestKey": "R1"
+    },
+    {
+      "id": "13374276846",
+      "name": "R2 leaf root",
+      "depth": 1,
+      "parentId": null,
+      "manifestKey": "R2"
+    },
+    {
+      "id": "13374267172",
+      "name": "R3 empty-child root",
+      "depth": 1,
+      "parentId": null,
+      "manifestKey": "R3"
+    },
+    {
+      "id": "13374271723",
+      "name": "A (L2)",
+      "depth": 2,
+      "parentId": "13374290733",
+      "manifestKey": "A"
+    },
+    {
+      "id": "13374223931",
+      "name": "B (L2 leaf)",
+      "depth": 2,
+      "parentId": "13374290733",
+      "manifestKey": "B"
+    },
+    {
+      "id": "13374224094",
+      "name": "R3c (empty leaf)",
+      "depth": 2,
+      "parentId": "13374267172",
+      "manifestKey": "R3c"
+    },
+    {
+      "id": "13374291640",
+      "name": "Subitem Level 1",
+      "depth": 2,
+      "parentId": "13374291641",
+      "manifestKey": null
+    },
+    {
+      "id": "13374266669",
+      "name": "A1 (L3 leaf)",
+      "depth": 3,
+      "parentId": "13374271723",
+      "manifestKey": "A1"
+    },
+    {
+      "id": "13374259848",
+      "name": "A2 (L3)",
+      "depth": 3,
+      "parentId": "13374271723",
+      "manifestKey": "A2"
+    },
+    {
+      "id": "13374291642",
+      "name": "Subitem Level 2",
+      "depth": 3,
+      "parentId": "13374291640",
+      "manifestKey": null
+    },
+    {
+      "id": "13374291643",
+      "name": "Subitem Level 2",
+      "depth": 3,
+      "parentId": "13374291640",
+      "manifestKey": null
+    },
+    {
+      "id": "13374242116",
+      "name": "A2x (L4)",
+      "depth": 4,
+      "parentId": "13374259848",
+      "manifestKey": "A2x"
+    },
+    {
+      "id": "13374259917",
+      "name": "A2y (L5 leaf)",
+      "depth": 5,
+      "parentId": "13374242116",
+      "manifestKey": "A2y"
+    }
+  ],
+  "columnsTouched": [],
+  "columnsNote": "No column is read or written: every query selects only id, name, parent_item and subitems.",
+  "groundTruthFiles": [
+    "02-ground-truth-items-2026-04.json",
+    "03-ground-truth-all-items-2026-04.json",
+    "12-ground-truth-items-2026-10.json",
+    "13-ground-truth-all-items-2026-10.json"
+  ],
+  "fixtureFile": "01-fixture-board-2026-04.json"
+}

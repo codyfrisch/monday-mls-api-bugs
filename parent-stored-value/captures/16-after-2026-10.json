@@ -1,0 +1,184 @@
+{
+  "file": "16-after-2026-10",
+  "case": "read",
+  "description": "R1 and A rollups after the write",
+  "endpoint": "https://api.monday.com/v2",
+  "method": "POST",
+  "requestHeaders": {
+    "API-Version": "2026-10",
+    "Content-Type": "application/json"
+  },
+  "authorizationHeader": "sent; value not recorded",
+  "apiVersion": "2026-10",
+  "requestBody": "{\"query\":\"query ($i: [ID!], $c: [String!]) { items(ids: $i) { id name column_values(ids: $c, capabilities: [CALCULATED]) { id type text value is_leaf ... on NumbersValue { number } ... on DateValue { date } ... on TimelineValue { from to } } } }\",\"variables\":{\"i\":[\"13374290733\",\"13374271723\"],\"c\":[\"numeric_mm8er9xg\",\"numeric_mm8esxg1\",\"numeric_mm8e1qed\",\"numeric_mm8e1myd\",\"date_mm8e937y\",\"date_mm8es1zd\",\"timerange_mkyvnykb\"]}}",
+  "query": "query ($i: [ID!], $c: [String!]) { items(ids: $i) { id name column_values(ids: $c, capabilities: [CALCULATED]) { id type text value is_leaf ... on NumbersValue { number } ... on DateValue { date } ... on TimelineValue { from to } } } }",
+  "variables": {
+    "i": [
+      "13374290733",
+      "13374271723"
+    ],
+    "c": [
+      "numeric_mm8er9xg",
+      "numeric_mm8esxg1",
+      "numeric_mm8e1qed",
+      "numeric_mm8e1myd",
+      "date_mm8e937y",
+      "date_mm8es1zd",
+      "timerange_mkyvnykb"
+    ]
+  },
+  "startedAt": "2026-10-25T02:41:46.196Z",
+  "endedAt": "2026-10-25T02:41:46.854Z",
+  "durationMs": 658,
+  "status": 200,
+  "xRequestId": "544c4d8f-2753-94bf-9de0-1493bb0e411a",
+  "rateLimitHeaders": {
+    "ratelimit": "\"minuteRate\";r=3329, \"concurrency\";r=199, \"complexityMinute\";r=9939441;t=48",
+    "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\""
+  },
+  "responseHeaders": {
+    "api-version": "2026-10",
+    "content-type": "application/json; charset=utf-8",
+    "date": "Sun, 25 Oct 2026 02:41:46 GMT",
+    "ratelimit": "\"minuteRate\";r=3329, \"concurrency\";r=199, \"complexityMinute\";r=9939441;t=48",
+    "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\"",
+    "x-request-id": "544c4d8f-2753-94bf-9de0-1493bb0e411a"
+  },
+  "extensionsRequestId": "544c4d8f-2753-94bf-9de0-1493bb0e411a",
+  "responseBodyRaw": "{\"data\":{\"items\":[{\"id\":\"13374271723\",\"name\":\"A (L2)\",\"column_values\":[{\"id\":\"timerange_mkyvnykb\",\"type\":\"timeline\",\"text\":\"2019-01-01 - 2031-01-01\",\"value\":\"{\\\"to\\\":\\\"2031-01-01\\\",\\\"from\\\":\\\"2019-01-01\\\"}\",\"is_leaf\":false,\"from\":\"2019-01-01T00:00:00+00:00\",\"to\":\"2031-01-01T00:00:00+00:00\"},{\"id\":\"numeric_mm8er9xg\",\"type\":\"numbers\",\"text\":\"1036\",\"value\":\"\\\"1036\\\"\",\"is_leaf\":false,\"number\":1036},{\"id\":\"numeric_mm8esxg1\",\"type\":\"numbers\",\"text\":\"37\",\"value\":\"\\\"37\\\"\",\"is_leaf\":false,\"number\":37},{\"id\":\"numeric_mm8e1qed\",\"type\":\"numbers\",\"text\":\"1035\",\"value\":\"\\\"1035\\\"\",\"is_leaf\":false,\"number\":1035},{\"id\":\"numeric_mm8e1myd\",\"type\":\"numbers\",\"text\":\"1036\",\"value\":\"\\\"1036\\\"\",\"is_leaf\":false,\"number\":1036},{\"id\":\"date_mm8es1zd\",\"type\":\"date\",\"text\":\"2026-03-02\",\"value\":\"{\\\"date\\\":\\\"2026-03-02\\\"}\",\"is_leaf\":false,\"date\":\"2026-03-02\"},{\"id\":\"date_mm8e937y\",\"type\":\"date\",\"text\":\"2019-01-01\",\"value\":\"{\\\"date\\\":\\\"2019-01-01\\\"}\",\"is_leaf\":false,\"date\":\"2019-01-01\"}]},{\"id\":\"13374290733\",\"name\":\"R1 root\",\"column_values\":[{\"id\":\"timerange_mkyvnykb\",\"type\":\"timeline\",\"text\":\"2019-01-01 - 2031-01-01\",\"value\":\"{\\\"to\\\":\\\"2031-01-01\\\",\\\"from\\\":\\\"2019-01-01\\\"}\",\"is_leaf\":false,\"from\":\"2019-01-01T00:00:00+00:00\",\"to\":\"2031-01-01T00:00:00+00:00\"},{\"id\":\"numeric_mm8er9xg\",\"type\":\"numbers\",\"text\":\"1141\",\"value\":\"\\\"1141\\\"\",\"is_leaf\":false,\"number\":1141},{\"id\":\"numeric_mm8esxg1\",\"type\":\"numbers\",\"text\":\"139\",\"value\":\"\\\"139\\\"\",\"is_leaf\":false,\"number\":139},{\"id\":\"numeric_mm8e1qed\",\"type\":\"numbers\",\"text\":\"1635\",\"value\":\"\\\"1635\\\"\",\"is_leaf\":false,\"number\":1635},{\"id\":\"numeric_mm8e1myd\",\"type\":\"numbers\",\"text\":\"1141\",\"value\":\"\\\"1141\\\"\",\"is_leaf\":false,\"number\":1141},{\"id\":\"date_mm8es1zd\",\"type\":\"date\",\"text\":\"2026-01-10\",\"value\":\"{\\\"date\\\":\\\"2026-01-10\\\"}\",\"is_leaf\":false,\"date\":\"2026-01-10\"},{\"id\":\"date_mm8e937y\",\"type\":\"date\",\"text\":\"2019-01-01\",\"value\":\"{\\\"date\\\":\\\"2019-01-01\\\"}\",\"is_leaf\":false,\"date\":\"2019-01-01\"}]}]},\"extensions\":{\"request_id\":\"544c4d8f-2753-94bf-9de0-1493bb0e411a\"}}",
+  "responseBody": {
+    "data": {
+      "items": [
+        {
+          "id": "13374271723",
+          "name": "A (L2)",
+          "column_values": [
+            {
+              "id": "timerange_mkyvnykb",
+              "type": "timeline",
+              "text": "2019-01-01 - 2031-01-01",
+              "value": "{\"to\":\"2031-01-01\",\"from\":\"2019-01-01\"}",
+              "is_leaf": false,
+              "from": "2019-01-01T00:00:00+00:00",
+              "to": "2031-01-01T00:00:00+00:00"
+            },
+            {
+              "id": "numeric_mm8er9xg",
+              "type": "numbers",
+              "text": "1036",
+              "value": "\"1036\"",
+              "is_leaf": false,
+              "number": 1036
+            },
+            {
+              "id": "numeric_mm8esxg1",
+              "type": "numbers",
+              "text": "37",
+              "value": "\"37\"",
+              "is_leaf": false,
+              "number": 37
+            },
+            {
+              "id": "numeric_mm8e1qed",
+              "type": "numbers",
+              "text": "1035",
+              "value": "\"1035\"",
+              "is_leaf": false,
+              "number": 1035
+            },
+            {
+              "id": "numeric_mm8e1myd",
+              "type": "numbers",
+              "text": "1036",
+              "value": "\"1036\"",
+              "is_leaf": false,
+              "number": 1036
+            },
+            {
+              "id": "date_mm8es1zd",
+              "type": "date",
+              "text": "2026-03-02",
+              "value": "{\"date\":\"2026-03-02\"}",
+              "is_leaf": false,
+              "date": "2026-03-02"
+            },
+            {
+              "id": "date_mm8e937y",
+              "type": "date",
+              "text": "2019-01-01",
+              "value": "{\"date\":\"2019-01-01\"}",
+              "is_leaf": false,
+              "date": "2019-01-01"
+            }
+          ]
+        },
+        {
+          "id": "13374290733",
+          "name": "R1 root",
+          "column_values": [
+            {
+              "id": "timerange_mkyvnykb",
+              "type": "timeline",
+              "text": "2019-01-01 - 2031-01-01",
+              "value": "{\"to\":\"2031-01-01\",\"from\":\"2019-01-01\"}",
+              "is_leaf": false,
+              "from": "2019-01-01T00:00:00+00:00",
+              "to": "2031-01-01T00:00:00+00:00"
+            },
+            {
+              "id": "numeric_mm8er9xg",
+              "type": "numbers",
+              "text": "1141",
+              "value": "\"1141\"",
+              "is_leaf": false,
+              "number": 1141
+            },
+            {
+              "id": "numeric_mm8esxg1",
+              "type": "numbers",
+              "text": "139",
+              "value": "\"139\"",
+              "is_leaf": false,
+              "number": 139
+            },
+            {
+              "id": "numeric_mm8e1qed",
+              "type": "numbers",
+              "text": "1635",
+              "value": "\"1635\"",
+              "is_leaf": false,
+              "number": 1635
+            },
+            {
+              "id": "numeric_mm8e1myd",
+              "type": "numbers",
+              "text": "1141",
+              "value": "\"1141\"",
+              "is_leaf": false,
+              "number": 1141
+            },
+            {
+              "id": "date_mm8es1zd",
+              "type": "date",
+              "text": "2026-01-10",
+              "value": "{\"date\":\"2026-01-10\"}",
+              "is_leaf": false,
+              "date": "2026-01-10"
+            },
+            {
+              "id": "date_mm8e937y",
+              "type": "date",
+              "text": "2019-01-01",
+              "value": "{\"date\":\"2019-01-01\"}",
+              "is_leaf": false,
+              "date": "2019-01-01"
+            }
+          ]
+        }
+      ]
+    },
+    "extensions": {
+      "request_id": "544c4d8f-2753-94bf-9de0-1493bb0e411a"
+    }
+  }
+}

@@ -1,0 +1,152 @@
+{
+  "file": "10-c7-items-page-2026-04",
+  "case": "C7",
+  "description": "items_page on the board",
+  "endpoint": "https://api.monday.com/v2",
+  "method": "POST",
+  "requestHeaders": {
+    "API-Version": "2026-04",
+    "Content-Type": "application/json"
+  },
+  "authorizationHeader": "sent; value not recorded",
+  "apiVersion": "2026-04",
+  "requestBody": "{\"query\":\"query ($b: [ID!]) { boards(ids: $b) { items_page(limit: 50) { items { id name subitems { id name parent_item { id } } } } } }\",\"variables\":{\"b\":[\"18436846804\"]}}",
+  "query": "query ($b: [ID!]) { boards(ids: $b) { items_page(limit: 50) { items { id name subitems { id name parent_item { id } } } } } }",
+  "variables": {
+    "b": [
+      "18436846804"
+    ]
+  },
+  "startedAt": "2026-10-25T02:29:38.245Z",
+  "endedAt": "2026-10-25T02:29:38.848Z",
+  "durationMs": 603,
+  "status": 200,
+  "xRequestId": "6ab177ee-3cd7-9f58-a12b-ccc55a401e21",
+  "rateLimitHeaders": {
+    "ratelimit": "\"minuteRate\";r=3324, \"concurrency\";r=199, \"complexityMinute\";r=9995260;t=45",
+    "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\""
+  },
+  "responseHeaders": {
+    "api-version": "2026-04",
+    "content-type": "application/json; charset=utf-8",
+    "date": "Sun, 25 Oct 2026 02:29:38 GMT",
+    "ratelimit": "\"minuteRate\";r=3324, \"concurrency\";r=199, \"complexityMinute\";r=9995260;t=45",
+    "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\"",
+    "x-request-id": "6ab177ee-3cd7-9f58-a12b-ccc55a401e21"
+  },
+  "extensionsRequestId": "6ab177ee-3cd7-9f58-a12b-ccc55a401e21",
+  "responseBodyRaw": "{\"data\":{\"boards\":[{\"items_page\":{\"items\":[{\"id\":\"13374291641\",\"name\":\"Item 1\",\"subitems\":[{\"id\":\"13374291640\",\"name\":\"Subitem Level 1\",\"parent_item\":{\"id\":\"13374291641\"}},{\"id\":\"13374291642\",\"name\":\"Subitem Level 2\",\"parent_item\":{\"id\":\"13374291640\"}},{\"id\":\"13374291643\",\"name\":\"Subitem Level 2\",\"parent_item\":{\"id\":\"13374291640\"}}]},{\"id\":\"13374290733\",\"name\":\"R1 root\",\"subitems\":[{\"id\":\"13374271723\",\"name\":\"A (L2)\",\"parent_item\":{\"id\":\"13374290733\"}},{\"id\":\"13374266669\",\"name\":\"A1 (L3 leaf)\",\"parent_item\":{\"id\":\"13374271723\"}},{\"id\":\"13374259848\",\"name\":\"A2 (L3)\",\"parent_item\":{\"id\":\"13374271723\"}},{\"id\":\"13374242116\",\"name\":\"A2x (L4)\",\"parent_item\":{\"id\":\"13374259848\"}},{\"id\":\"13374259917\",\"name\":\"A2y (L5 leaf)\",\"parent_item\":{\"id\":\"13374242116\"}},{\"id\":\"13374223931\",\"name\":\"B (L2 leaf)\",\"parent_item\":{\"id\":\"13374290733\"}}]},{\"id\":\"13374276846\",\"name\":\"R2 leaf root\",\"subitems\":[]},{\"id\":\"13374267172\",\"name\":\"R3 empty-child root\",\"subitems\":[{\"id\":\"13374224094\",\"name\":\"R3c (empty leaf)\",\"parent_item\":{\"id\":\"13374267172\"}}]},{\"id\":\"13377169129\",\"name\":\"DC deep-chain source\",\"subitems\":[]}]}}]},\"extensions\":{\"request_id\":\"6ab177ee-3cd7-9f58-a12b-ccc55a401e21\"}}",
+  "responseBody": {
+    "data": {
+      "boards": [
+        {
+          "items_page": {
+            "items": [
+              {
+                "id": "13374291641",
+                "name": "Item 1",
+                "subitems": [
+                  {
+                    "id": "13374291640",
+                    "name": "Subitem Level 1",
+                    "parent_item": {
+                      "id": "13374291641"
+                    }
+                  },
+                  {
+                    "id": "13374291642",
+                    "name": "Subitem Level 2",
+                    "parent_item": {
+                      "id": "13374291640"
+                    }
+                  },
+                  {
+                    "id": "13374291643",
+                    "name": "Subitem Level 2",
+                    "parent_item": {
+                      "id": "13374291640"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "13374290733",
+                "name": "R1 root",
+                "subitems": [
+                  {
+                    "id": "13374271723",
+                    "name": "A (L2)",
+                    "parent_item": {
+                      "id": "13374290733"
+                    }
+                  },
+                  {
+                    "id": "13374266669",
+                    "name": "A1 (L3 leaf)",
+                    "parent_item": {
+                      "id": "13374271723"
+                    }
+                  },
+                  {
+                    "id": "13374259848",
+                    "name": "A2 (L3)",
+                    "parent_item": {
+                      "id": "13374271723"
+                    }
+                  },
+                  {
+                    "id": "13374242116",
+                    "name": "A2x (L4)",
+                    "parent_item": {
+                      "id": "13374259848"
+                    }
+                  },
+                  {
+                    "id": "13374259917",
+                    "name": "A2y (L5 leaf)",
+                    "parent_item": {
+                      "id": "13374242116"
+                    }
+                  },
+                  {
+                    "id": "13374223931",
+                    "name": "B (L2 leaf)",
+                    "parent_item": {
+                      "id": "13374290733"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "13374276846",
+                "name": "R2 leaf root",
+                "subitems": []
+              },
+              {
+                "id": "13374267172",
+                "name": "R3 empty-child root",
+                "subitems": [
+                  {
+                    "id": "13374224094",
+                    "name": "R3c (empty leaf)",
+                    "parent_item": {
+                      "id": "13374267172"
+                    }
+                  }
+                ]
+              },
+              {
+                "id": "13377169129",
+                "name": "DC deep-chain source",
+                "subitems": []
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "extensions": {
+      "request_id": "6ab177ee-3cd7-9f58-a12b-ccc55a401e21"
+    }
+  }
+}

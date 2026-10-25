@@ -1,0 +1,619 @@
+{
+  "account": {
+    "slug": "sandbox-account",
+    "name": "sandbox-account"
+  },
+  "freshBoard": {
+    "id": "18436908354",
+    "name": "R4 rollup function evidence 2026-10-25T02:42:12.568Z",
+    "hierarchy_type": "multi_level",
+    "kept": true,
+    "items": [
+      {
+        "id": "13377336277",
+        "name": "Item 1",
+        "depth": 1,
+        "parentId": null,
+        "key": "template-seeded"
+      },
+      {
+        "id": "13377371463",
+        "name": "P1 (L1 parent)",
+        "depth": 1,
+        "parentId": null,
+        "key": "P1"
+      },
+      {
+        "id": "13377361160",
+        "name": "P1c (L2 leaf)",
+        "depth": 2,
+        "parentId": "13377371463",
+        "key": "P1c"
+      },
+      {
+        "id": "13377349365",
+        "name": "Q1 (L2 parent)",
+        "depth": 2,
+        "parentId": "13377371463",
+        "key": "Q1"
+      },
+      {
+        "id": "13377345834",
+        "name": "Subitem Level 1",
+        "depth": 2,
+        "parentId": "13377336277",
+        "key": "template-seeded"
+      },
+      {
+        "id": "13377361219",
+        "name": "Q1a (L3 leaf)",
+        "depth": 3,
+        "parentId": "13377349365",
+        "key": "Q1a"
+      },
+      {
+        "id": "13377349418",
+        "name": "Q1b (L3 leaf)",
+        "depth": 3,
+        "parentId": "13377349365",
+        "key": "Q1b"
+      },
+      {
+        "id": "13377336278",
+        "name": "Subitem Level 2",
+        "depth": 3,
+        "parentId": "13377345834",
+        "key": "template-seeded"
+      },
+      {
+        "id": "13377336279",
+        "name": "Subitem Level 2",
+        "depth": 3,
+        "parentId": "13377345834",
+        "key": "template-seeded"
+      }
+    ],
+    "columnsCreated": [
+      {
+        "key": "numSum",
+        "title": "Num SUM",
+        "type": "numbers",
+        "requestedFunction": "SUM",
+        "id": "numeric_mm8fkv6k",
+        "file": "03-create-column-numsum-2026-10.json"
+      },
+      {
+        "key": "numMin",
+        "title": "Num MIN",
+        "type": "numbers",
+        "requestedFunction": "MIN",
+        "id": "numeric_mm8f3jz3",
+        "file": "04-create-column-nummin-2026-10.json"
+      },
+      {
+        "key": "numMax",
+        "title": "Num MAX",
+        "type": "numbers",
+        "requestedFunction": "MAX",
+        "id": "numeric_mm8f56kg",
+        "file": "05-create-column-nummax-2026-10.json"
+      },
+      {
+        "key": "numNone",
+        "title": "Num NONE",
+        "type": "numbers",
+        "requestedFunction": "NONE",
+        "id": "numeric_mm8fbpj2",
+        "file": "06-create-column-numnone-2026-10.json"
+      },
+      {
+        "key": "dateMin",
+        "title": "Date MIN",
+        "type": "date",
+        "requestedFunction": "MIN",
+        "id": "date_mm8fftdz",
+        "file": "07-create-column-datemin-2026-10.json"
+      },
+      {
+        "key": "dateMax",
+        "title": "Date MAX",
+        "type": "date",
+        "requestedFunction": "MAX",
+        "id": "date_mm8fswrb",
+        "file": "08-create-column-datemax-2026-10.json"
+      },
+      {
+        "key": "dateNone",
+        "title": "Date NONE",
+        "type": "date",
+        "requestedFunction": "NONE",
+        "id": null,
+        "file": "09-create-column-datenone-2026-10.json"
+      },
+      {
+        "key": "dateDefault",
+        "title": "Date default",
+        "type": "date",
+        "requestedFunction": null,
+        "id": "date_mm8f2n8y",
+        "file": "10-create-column-datedefault-2026-10.json"
+      },
+      {
+        "key": "timeline",
+        "title": "Timeline MIN_MAX",
+        "type": "timeline",
+        "requestedFunction": "MIN_MAX",
+        "id": "timerange_mm8fcct0",
+        "file": "11-create-column-timeline-2026-10.json"
+      }
+    ],
+    "columnsByApiVersion": {
+      "2026-04": [
+        {
+          "id": "numeric_mm8fkv6k",
+          "title": "Num SUM",
+          "type": "numbers",
+          "settings": {},
+          "settings_str": "{}",
+          "capabilities": {
+            "calculated": {
+              "function": "SUM"
+            }
+          }
+        },
+        {
+          "id": "numeric_mm8f3jz3",
+          "title": "Num MIN",
+          "type": "numbers",
+          "settings": {},
+          "settings_str": "{}",
+          "capabilities": {
+            "calculated": {
+              "function": "MIN"
+            }
+          }
+        },
+        {
+          "id": "numeric_mm8f56kg",
+          "title": "Num MAX",
+          "type": "numbers",
+          "settings": {},
+          "settings_str": "{}",
+          "capabilities": {
+            "calculated": {
+              "function": "MAX"
+            }
+          }
+        },
+        {
+          "id": "numeric_mm8fbpj2",
+          "title": "Num NONE",
+          "type": "numbers",
+          "settings": {},
+          "settings_str": "{}",
+          "capabilities": {
+            "calculated": {
+              "function": "NONE"
+            }
+          }
+        },
+        {
+          "id": "date_mm8fftdz",
+          "title": "Date MIN",
+          "type": "date",
+          "settings": {},
+          "settings_str": "{}",
+          "capabilities": {
+            "calculated": {
+              "function": "MIN"
+            }
+          }
+        },
+        {
+          "id": "date_mm8fswrb",
+          "title": "Date MAX",
+          "type": "date",
+          "settings": {},
+          "settings_str": "{}",
+          "capabilities": {
+            "calculated": {
+              "function": "MAX"
+            }
+          }
+        },
+        {
+          "id": "date_mm8f2n8y",
+          "title": "Date default",
+          "type": "date",
+          "settings": {},
+          "settings_str": "{}",
+          "capabilities": {
+            "calculated": {
+              "function": "MIN"
+            }
+          }
+        },
+        {
+          "id": "timerange_mm8fcct0",
+          "title": "Timeline MIN_MAX",
+          "type": "timeline",
+          "settings": {},
+          "settings_str": "{}",
+          "capabilities": {
+            "calculated": {
+              "function": "MIN_MAX"
+            }
+          }
+        }
+      ],
+      "2026-10": [
+        {
+          "id": "numeric_mm8fkv6k",
+          "title": "Num SUM",
+          "type": "numbers",
+          "settings": {},
+          "settings_str": "{}",
+          "capabilities": {
+            "calculated": {
+              "function": "SUM"
+            }
+          }
+        },
+        {
+          "id": "numeric_mm8f3jz3",
+          "title": "Num MIN",
+          "type": "numbers",
+          "settings": {},
+          "settings_str": "{}",
+          "capabilities": {
+            "calculated": {
+              "function": "MIN"
+            }
+          }
+        },
+        {
+          "id": "numeric_mm8f56kg",
+          "title": "Num MAX",
+          "type": "numbers",
+          "settings": {},
+          "settings_str": "{}",
+          "capabilities": {
+            "calculated": {
+              "function": "MAX"
+            }
+          }
+        },
+        {
+          "id": "numeric_mm8fbpj2",
+          "title": "Num NONE",
+          "type": "numbers",
+          "settings": {},
+          "settings_str": "{}",
+          "capabilities": {
+            "calculated": {
+              "function": "NONE"
+            }
+          }
+        },
+        {
+          "id": "date_mm8fftdz",
+          "title": "Date MIN",
+          "type": "date",
+          "settings": {},
+          "settings_str": "{}",
+          "capabilities": {
+            "calculated": {
+              "function": "MIN"
+            }
+          }
+        },
+        {
+          "id": "date_mm8fswrb",
+          "title": "Date MAX",
+          "type": "date",
+          "settings": {},
+          "settings_str": "{}",
+          "capabilities": {
+            "calculated": {
+              "function": "MAX"
+            }
+          }
+        },
+        {
+          "id": "date_mm8f2n8y",
+          "title": "Date default",
+          "type": "date",
+          "settings": {},
+          "settings_str": "{}",
+          "capabilities": {
+            "calculated": {
+              "function": "MIN"
+            }
+          }
+        },
+        {
+          "id": "timerange_mm8fcct0",
+          "title": "Timeline MIN_MAX",
+          "type": "timeline",
+          "settings": {},
+          "settings_str": "{}",
+          "capabilities": {
+            "calculated": {
+              "function": "MIN_MAX"
+            }
+          }
+        }
+      ]
+    },
+    "leafValuesWritten": {
+      "Q1a": {
+        "number": 40,
+        "date": "2026-03-03",
+        "timeline": {
+          "from": "2026-03-01",
+          "to": "2026-03-20"
+        }
+      },
+      "Q1b": {
+        "number": 7,
+        "date": "2026-06-30",
+        "timeline": {
+          "from": "2026-05-01",
+          "to": "2026-07-15"
+        }
+      },
+      "P1c": {
+        "number": 200,
+        "date": "2026-01-20",
+        "timeline": {
+          "from": "2026-01-10",
+          "to": "2026-02-01"
+        }
+      }
+    },
+    "parentsWritten": "none"
+  },
+  "sandboxBoard": {
+    "id": "18436846804",
+    "clean": true,
+    "items": [
+      {
+        "key": "R1",
+        "id": "13374290733",
+        "name": "R1 root",
+        "depth": 1,
+        "parentId": null
+      },
+      {
+        "key": "A",
+        "id": "13374271723",
+        "name": "A (L2)",
+        "depth": 2,
+        "parentId": "13374290733"
+      },
+      {
+        "key": "A1",
+        "id": "13374266669",
+        "name": "A1 (L3 leaf)",
+        "depth": 3,
+        "parentId": "13374271723"
+      },
+      {
+        "key": "A2",
+        "id": "13374259848",
+        "name": "A2 (L3)",
+        "depth": 3,
+        "parentId": "13374271723"
+      },
+      {
+        "key": "A2x",
+        "id": "13374242116",
+        "name": "A2x (L4)",
+        "depth": 4,
+        "parentId": "13374259848"
+      },
+      {
+        "key": "A2y",
+        "id": "13374259917",
+        "name": "A2y (L5 leaf)",
+        "depth": 5,
+        "parentId": "13374242116"
+      },
+      {
+        "key": "B",
+        "id": "13374223931",
+        "name": "B (L2 leaf)",
+        "depth": 2,
+        "parentId": "13374290733"
+      },
+      {
+        "key": "R3",
+        "id": "13374267172",
+        "name": "R3 empty-child root",
+        "depth": 1,
+        "parentId": null
+      },
+      {
+        "key": "R3c",
+        "id": "13374224094",
+        "name": "R3c (empty leaf)",
+        "depth": 2,
+        "parentId": "13374267172"
+      }
+    ],
+    "columnsByApiVersion": {
+      "2026-04": [
+        {
+          "id": "timerange_mkyvnykb",
+          "title": "Timeline",
+          "type": "timeline",
+          "settings": {},
+          "settings_str": "{}",
+          "capabilities": {
+            "calculated": {
+              "function": "MIN_MAX"
+            }
+          }
+        },
+        {
+          "id": "numeric_mm8er9xg",
+          "title": "Num SUM",
+          "type": "numbers",
+          "settings": {},
+          "settings_str": "{}",
+          "capabilities": {
+            "calculated": {
+              "function": "SUM"
+            }
+          }
+        },
+        {
+          "id": "numeric_mm8esxg1",
+          "title": "Num MIN",
+          "type": "numbers",
+          "settings": {},
+          "settings_str": "{}",
+          "capabilities": {
+            "calculated": {
+              "function": "MIN"
+            }
+          }
+        },
+        {
+          "id": "numeric_mm8e1qed",
+          "title": "Num MAX",
+          "type": "numbers",
+          "settings": {},
+          "settings_str": "{}",
+          "capabilities": {
+            "calculated": {
+              "function": "MAX"
+            }
+          }
+        },
+        {
+          "id": "numeric_mm8e1myd",
+          "title": "Num NONE",
+          "type": "numbers",
+          "settings": {},
+          "settings_str": "{}",
+          "capabilities": {
+            "calculated": {
+              "function": "NONE"
+            }
+          }
+        },
+        {
+          "id": "date_mm8es1zd",
+          "title": "Date MAX",
+          "type": "date",
+          "settings": {},
+          "settings_str": "{}",
+          "capabilities": {
+            "calculated": {
+              "function": "MAX"
+            }
+          }
+        },
+        {
+          "id": "date_mm8e937y",
+          "title": "Date MIN",
+          "type": "date",
+          "settings": {},
+          "settings_str": "{}",
+          "capabilities": {
+            "calculated": {
+              "function": "MIN"
+            }
+          }
+        }
+      ],
+      "2026-10": [
+        {
+          "id": "timerange_mkyvnykb",
+          "title": "Timeline",
+          "type": "timeline",
+          "settings": {},
+          "settings_str": "{}",
+          "capabilities": {
+            "calculated": {
+              "function": "MIN_MAX"
+            }
+          }
+        },
+        {
+          "id": "numeric_mm8er9xg",
+          "title": "Num SUM",
+          "type": "numbers",
+          "settings": {},
+          "settings_str": "{}",
+          "capabilities": {
+            "calculated": {
+              "function": "SUM"
+            }
+          }
+        },
+        {
+          "id": "numeric_mm8esxg1",
+          "title": "Num MIN",
+          "type": "numbers",
+          "settings": {},
+          "settings_str": "{}",
+          "capabilities": {
+            "calculated": {
+              "function": "MIN"
+            }
+          }
+        },
+        {
+          "id": "numeric_mm8e1qed",
+          "title": "Num MAX",
+          "type": "numbers",
+          "settings": {},
+          "settings_str": "{}",
+          "capabilities": {
+            "calculated": {
+              "function": "MAX"
+            }
+          }
+        },
+        {
+          "id": "numeric_mm8e1myd",
+          "title": "Num NONE",
+          "type": "numbers",
+          "settings": {},
+          "settings_str": "{}",
+          "capabilities": {
+            "calculated": {
+              "function": "NONE"
+            }
+          }
+        },
+        {
+          "id": "date_mm8es1zd",
+          "title": "Date MAX",
+          "type": "date",
+          "settings": {},
+          "settings_str": "{}",
+          "capabilities": {
+            "calculated": {
+              "function": "MAX"
+            }
+          }
+        },
+        {
+          "id": "date_mm8e937y",
+          "title": "Date MIN",
+          "type": "date",
+          "settings": {},
+          "settings_str": "{}",
+          "capabilities": {
+            "calculated": {
+              "function": "MIN"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

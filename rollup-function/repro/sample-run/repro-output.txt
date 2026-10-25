@@ -1,0 +1,174 @@
+
+=== API-Version 2026-04 ===
+
+metadata @ 2026-04: HTTP 200
+  request body: {"query":"query ($b: [ID!]) { boards(ids: $b) { id name hierarchy_type columns(capabilities: [CALCULATED]) { id title type settings settings_str capabilities { calculated { function } } } } }","variables":{"b":["18436908247"]}}
+  x-request-id 287bff7b-2905-9904-857b-e61858f881df, extensions.request_id 287bff7b-2905-9904-857b-e61858f881df, started 2026-10-25T02:39:13.012Z, ended 2026-10-25T02:39:13.366Z
+  column color_mkv6tatz "Status" (status): function COUNT_KEYS, settings {"labels":[{"id":0,"color":0,"label":"Working on it","index":0,"is_done":false,"is_deactivated":false,"hex":"#fdab3d"},{"id":1,"color":1,"label":"Done","index":1,"is_done":false,"is_deactivated":false,"hex":"#00c875"},{"id":2,"color":2,"label":"Stuck","index":2,"is_done":false,"is_deactivated":false,"hex":"#df2f4a"}]}, settings_str {"labels":{"0":"Working on it","1":"Done","2":"Stuck"},"labels_colors":{"0":{"color":"#fdab3d","border":"#e99729","var_name":"orange"},"1":{"color":"#00c875","border":"#00b461","var_name":"green-shadow"},"2":{"color":"#df2f4a","border":"#ce3048","var_name":"red-shadow"}}}
+  column timerange_mkyvnykb "Timeline" (timeline): function MIN_MAX, settings {}, settings_str {}
+  column numeric_mm8fjk4h "Num SUM" (numbers): function SUM, settings {}, settings_str {}
+  column numeric_mm8fnbbp "Num MIN" (numbers): function MIN, settings {}, settings_str {}
+  column numeric_mm8fj6qc "Num MAX" (numbers): function MAX, settings {}, settings_str {}
+  column numeric_mm8fpr03 "Num NONE" (numbers): function NONE, settings {}, settings_str {}
+  column date_mm8f45aw "Date MIN" (date): function MIN, calcType (absent), settings {}, settings_str {}
+  column date_mm8fb58z "Date MAX" (date): function MAX, calcType (absent), settings {}, settings_str {}
+  column date_mm8f9546 "Date default" (date): function MIN, calcType (absent), settings {}, settings_str {}
+  column timerange_mm8f4c2a "Timeline MIN_MAX" (timeline): function MIN_MAX, settings {}, settings_str {}
+
+ground-truth @ 2026-04: HTTP 200
+  request body: {"query":"query ($b: [ID!], $c: [String!]) { boards(ids: $b) { items_page(limit: 100, hierarchy_scope_config: \"allItems\") { items { id name parent_item { id } column_values(ids: $c, capabilities: [CALCULATED]) { id type text value is_leaf ... on NumbersValue { number } ... on DateValue { date } ... on TimelineValue { from to } } } } } }","variables":{"b":["18436908247"],"c":["numeric_mm8fjk4h","numeric_mm8fnbbp","numeric_mm8fj6qc","numeric_mm8fpr03","date_mm8f45aw","date_mm8fb58z","date_mm8f9546","timerange_mm8f4c2a"]}}
+  x-request-id bcf6b199-0654-96ae-ab53-917d550b264c, extensions.request_id bcf6b199-0654-96ae-ab53-917d550b264c, started 2026-10-25T02:39:14.569Z, ended 2026-10-25T02:39:15.655Z
+  leaf sanity (written vs read, is_leaf):
+    PASS Q1a | Num SUM | written 40 | observed 40 | is_leaf true
+    PASS Q1a | Num MIN | written 40 | observed 40 | is_leaf true
+    PASS Q1a | Num MAX | written 40 | observed 40 | is_leaf true
+    PASS Q1a | Num NONE | written 40 | observed 40 | is_leaf true
+    PASS Q1a | Date MIN | written "2026-03-03" | observed "2026-03-03" | is_leaf true
+    PASS Q1a | Date MAX | written "2026-03-03" | observed "2026-03-03" | is_leaf true
+    PASS Q1a | Date default | written "2026-03-03" | observed "2026-03-03" | is_leaf true
+    PASS Q1a | Timeline MIN_MAX | written "2026-03-01..2026-03-20" | observed "2026-03-01..2026-03-20" | is_leaf true
+    PASS Q1b | Num SUM | written 7 | observed 7 | is_leaf true
+    PASS Q1b | Num MIN | written 7 | observed 7 | is_leaf true
+    PASS Q1b | Num MAX | written 7 | observed 7 | is_leaf true
+    PASS Q1b | Num NONE | written 7 | observed 7 | is_leaf true
+    PASS Q1b | Date MIN | written "2026-06-30" | observed "2026-06-30" | is_leaf true
+    PASS Q1b | Date MAX | written "2026-06-30" | observed "2026-06-30" | is_leaf true
+    PASS Q1b | Date default | written "2026-06-30" | observed "2026-06-30" | is_leaf true
+    PASS Q1b | Timeline MIN_MAX | written "2026-05-01..2026-07-15" | observed "2026-05-01..2026-07-15" | is_leaf true
+    PASS P1c | Num SUM | written 200 | observed 200 | is_leaf true
+    PASS P1c | Num MIN | written 200 | observed 200 | is_leaf true
+    PASS P1c | Num MAX | written 200 | observed 200 | is_leaf true
+    PASS P1c | Num NONE | written 200 | observed 200 | is_leaf true
+    PASS P1c | Date MIN | written "2026-01-20" | observed "2026-01-20" | is_leaf true
+    PASS P1c | Date MAX | written "2026-01-20" | observed "2026-01-20" | is_leaf true
+    PASS P1c | Date default | written "2026-01-20" | observed "2026-01-20" | is_leaf true
+    PASS P1c | Timeline MIN_MAX | written "2026-01-10..2026-02-01" | observed "2026-01-10..2026-02-01" | is_leaf true
+
+parents @ 2026-04: HTTP 200
+  request body: {"query":"query ($i: [ID!], $c: [String!]) { items(ids: $i) { id name column_values(ids: $c, capabilities: [CALCULATED]) { id type text value is_leaf ... on NumbersValue { number } ... on DateValue { date } ... on TimelineValue { from to } } } }","variables":{"i":["13377353714","13377370969"],"c":["numeric_mm8fjk4h","numeric_mm8fnbbp","numeric_mm8fj6qc","numeric_mm8fpr03","date_mm8f45aw","date_mm8fb58z","date_mm8f9546","timerange_mm8f4c2a"]}}
+  x-request-id 30ea281a-311f-9280-9eb3-8e05650d6d8b, extensions.request_id 30ea281a-311f-9280-9eb3-8e05650d6d8b, started 2026-10-25T02:39:16.857Z, ended 2026-10-25T02:39:17.494Z
+  PASS P1 (L1 parent) | Num SUM | configured SUM | leaves [40, 7, 200] | expected 247 | observed 247 (is_leaf false) | matches SUM
+  DEVIATES P1 (L1 parent) | Num MIN | configured MIN | leaves [40, 7, 200] | expected 7 | observed 247 (is_leaf false) | matches SUM
+  DEVIATES P1 (L1 parent) | Num MAX | configured MAX | leaves [40, 7, 200] | expected 200 | observed 247 (is_leaf false) | matches SUM
+  DEVIATES P1 (L1 parent) | Num NONE | configured NONE | leaves [40, 7, 200] | expected null | observed 247 (is_leaf false) | matches SUM
+  PASS P1 (L1 parent) | Date MIN | configured MIN | leaves [2026-03-03, 2026-06-30, 2026-01-20] | expected "2026-01-20" | observed "2026-01-20" (is_leaf false) | matches MIN
+  DEVIATES P1 (L1 parent) | Date MAX | configured MAX | leaves [2026-03-03, 2026-06-30, 2026-01-20] | expected "2026-06-30" | observed "2026-01-20" (is_leaf false) | matches MIN
+  PASS P1 (L1 parent) | Date default | configured MIN | leaves [2026-03-03, 2026-06-30, 2026-01-20] | expected "2026-01-20" | observed "2026-01-20" (is_leaf false) | matches MIN
+  PASS P1 (L1 parent) | Timeline MIN_MAX | configured MIN_MAX | leaves [2026-03-01..2026-03-20, 2026-05-01..2026-07-15, 2026-01-10..2026-02-01] | expected "2026-01-10..2026-07-15" | observed "2026-01-10..2026-07-15" (is_leaf false) | matches MIN_MAX
+  PASS Q1 (L2 parent) | Num SUM | configured SUM | leaves [40, 7] | expected 47 | observed 47 (is_leaf false) | matches SUM
+  DEVIATES Q1 (L2 parent) | Num MIN | configured MIN | leaves [40, 7] | expected 7 | observed 47 (is_leaf false) | matches SUM
+  DEVIATES Q1 (L2 parent) | Num MAX | configured MAX | leaves [40, 7] | expected 40 | observed 47 (is_leaf false) | matches SUM
+  DEVIATES Q1 (L2 parent) | Num NONE | configured NONE | leaves [40, 7] | expected null | observed 47 (is_leaf false) | matches SUM
+  PASS Q1 (L2 parent) | Date MIN | configured MIN | leaves [2026-03-03, 2026-06-30] | expected "2026-03-03" | observed "2026-03-03" (is_leaf false) | matches MIN
+  DEVIATES Q1 (L2 parent) | Date MAX | configured MAX | leaves [2026-03-03, 2026-06-30] | expected "2026-06-30" | observed "2026-03-03" (is_leaf false) | matches MIN
+  PASS Q1 (L2 parent) | Date default | configured MIN | leaves [2026-03-03, 2026-06-30] | expected "2026-03-03" | observed "2026-03-03" (is_leaf false) | matches MIN
+  PASS Q1 (L2 parent) | Timeline MIN_MAX | configured MIN_MAX | leaves [2026-03-01..2026-03-20, 2026-05-01..2026-07-15] | expected "2026-03-01..2026-07-15" | observed "2026-03-01..2026-07-15" (is_leaf false) | matches MIN_MAX
+
+=== API-Version 2026-10 ===
+
+metadata @ 2026-10: HTTP 200
+  request body: {"query":"query ($b: [ID!]) { boards(ids: $b) { id name hierarchy_type columns(capabilities: [CALCULATED]) { id title type settings settings_str capabilities { calculated { function } } } } }","variables":{"b":["18436908247"]}}
+  x-request-id 314930f1-5f01-942e-8d85-94b6c2ef8e21, extensions.request_id 314930f1-5f01-942e-8d85-94b6c2ef8e21, started 2026-10-25T02:39:18.695Z, ended 2026-10-25T02:39:18.965Z
+  column color_mkv6tatz "Status" (status): function COUNT_KEYS, settings {"labels":[{"id":0,"color":0,"label":"Working on it","index":0,"is_done":false,"is_deactivated":false,"hex":"#fdab3d"},{"id":1,"color":1,"label":"Done","index":1,"is_done":false,"is_deactivated":false,"hex":"#00c875"},{"id":2,"color":2,"label":"Stuck","index":2,"is_done":false,"is_deactivated":false,"hex":"#df2f4a"}]}, settings_str {"labels":{"0":"Working on it","1":"Done","2":"Stuck"},"labels_colors":{"0":{"color":"#fdab3d","border":"#e99729","var_name":"orange"},"1":{"color":"#00c875","border":"#00b461","var_name":"green-shadow"},"2":{"color":"#df2f4a","border":"#ce3048","var_name":"red-shadow"}}}
+  column timerange_mkyvnykb "Timeline" (timeline): function MIN_MAX, settings {}, settings_str {}
+  column numeric_mm8fjk4h "Num SUM" (numbers): function SUM, settings {}, settings_str {}
+  column numeric_mm8fnbbp "Num MIN" (numbers): function MIN, settings {}, settings_str {}
+  column numeric_mm8fj6qc "Num MAX" (numbers): function MAX, settings {}, settings_str {}
+  column numeric_mm8fpr03 "Num NONE" (numbers): function NONE, settings {}, settings_str {}
+  column date_mm8f45aw "Date MIN" (date): function MIN, calcType (absent), settings {}, settings_str {}
+  column date_mm8fb58z "Date MAX" (date): function MAX, calcType (absent), settings {}, settings_str {}
+  column date_mm8f9546 "Date default" (date): function MIN, calcType (absent), settings {}, settings_str {}
+  column timerange_mm8f4c2a "Timeline MIN_MAX" (timeline): function MIN_MAX, settings {}, settings_str {}
+
+ground-truth @ 2026-10: HTTP 200
+  request body: {"query":"query ($b: [ID!], $c: [String!]) { boards(ids: $b) { items_page(limit: 100, hierarchy_scope_config: \"allItems\") { items { id name parent_item { id } column_values(ids: $c, capabilities: [CALCULATED]) { id type text value is_leaf ... on NumbersValue { number } ... on DateValue { date } ... on TimelineValue { from to } } } } } }","variables":{"b":["18436908247"],"c":["numeric_mm8fjk4h","numeric_mm8fnbbp","numeric_mm8fj6qc","numeric_mm8fpr03","date_mm8f45aw","date_mm8fb58z","date_mm8f9546","timerange_mm8f4c2a"]}}
+  x-request-id 7e629ce3-17d1-9771-8e10-03f225395fdb, extensions.request_id 7e629ce3-17d1-9771-8e10-03f225395fdb, started 2026-10-25T02:39:20.166Z, ended 2026-10-25T02:39:21.328Z
+  leaf sanity (written vs read, is_leaf):
+    PASS Q1a | Num SUM | written 40 | observed 40 | is_leaf true
+    PASS Q1a | Num MIN | written 40 | observed 40 | is_leaf true
+    PASS Q1a | Num MAX | written 40 | observed 40 | is_leaf true
+    PASS Q1a | Num NONE | written 40 | observed 40 | is_leaf true
+    PASS Q1a | Date MIN | written "2026-03-03" | observed "2026-03-03" | is_leaf true
+    PASS Q1a | Date MAX | written "2026-03-03" | observed "2026-03-03" | is_leaf true
+    PASS Q1a | Date default | written "2026-03-03" | observed "2026-03-03" | is_leaf true
+    PASS Q1a | Timeline MIN_MAX | written "2026-03-01..2026-03-20" | observed "2026-03-01..2026-03-20" | is_leaf true
+    PASS Q1b | Num SUM | written 7 | observed 7 | is_leaf true
+    PASS Q1b | Num MIN | written 7 | observed 7 | is_leaf true
+    PASS Q1b | Num MAX | written 7 | observed 7 | is_leaf true
+    PASS Q1b | Num NONE | written 7 | observed 7 | is_leaf true
+    PASS Q1b | Date MIN | written "2026-06-30" | observed "2026-06-30" | is_leaf true
+    PASS Q1b | Date MAX | written "2026-06-30" | observed "2026-06-30" | is_leaf true
+    PASS Q1b | Date default | written "2026-06-30" | observed "2026-06-30" | is_leaf true
+    PASS Q1b | Timeline MIN_MAX | written "2026-05-01..2026-07-15" | observed "2026-05-01..2026-07-15" | is_leaf true
+    PASS P1c | Num SUM | written 200 | observed 200 | is_leaf true
+    PASS P1c | Num MIN | written 200 | observed 200 | is_leaf true
+    PASS P1c | Num MAX | written 200 | observed 200 | is_leaf true
+    PASS P1c | Num NONE | written 200 | observed 200 | is_leaf true
+    PASS P1c | Date MIN | written "2026-01-20" | observed "2026-01-20" | is_leaf true
+    PASS P1c | Date MAX | written "2026-01-20" | observed "2026-01-20" | is_leaf true
+    PASS P1c | Date default | written "2026-01-20" | observed "2026-01-20" | is_leaf true
+    PASS P1c | Timeline MIN_MAX | written "2026-01-10..2026-02-01" | observed "2026-01-10..2026-02-01" | is_leaf true
+
+parents @ 2026-10: HTTP 200
+  request body: {"query":"query ($i: [ID!], $c: [String!]) { items(ids: $i) { id name column_values(ids: $c, capabilities: [CALCULATED]) { id type text value is_leaf ... on NumbersValue { number } ... on DateValue { date } ... on TimelineValue { from to } } } }","variables":{"i":["13377353714","13377370969"],"c":["numeric_mm8fjk4h","numeric_mm8fnbbp","numeric_mm8fj6qc","numeric_mm8fpr03","date_mm8f45aw","date_mm8fb58z","date_mm8f9546","timerange_mm8f4c2a"]}}
+  x-request-id ab8c2c87-a992-94a6-96e9-54dec5fa668e, extensions.request_id ab8c2c87-a992-94a6-96e9-54dec5fa668e, started 2026-10-25T02:39:22.529Z, ended 2026-10-25T02:39:23.168Z
+  PASS P1 (L1 parent) | Num SUM | configured SUM | leaves [40, 7, 200] | expected 247 | observed 247 (is_leaf false) | matches SUM
+  DEVIATES P1 (L1 parent) | Num MIN | configured MIN | leaves [40, 7, 200] | expected 7 | observed 247 (is_leaf false) | matches SUM
+  DEVIATES P1 (L1 parent) | Num MAX | configured MAX | leaves [40, 7, 200] | expected 200 | observed 247 (is_leaf false) | matches SUM
+  DEVIATES P1 (L1 parent) | Num NONE | configured NONE | leaves [40, 7, 200] | expected null | observed 247 (is_leaf false) | matches SUM
+  PASS P1 (L1 parent) | Date MIN | configured MIN | leaves [2026-03-03, 2026-06-30, 2026-01-20] | expected "2026-01-20" | observed "2026-01-20" (is_leaf false) | matches MIN
+  DEVIATES P1 (L1 parent) | Date MAX | configured MAX | leaves [2026-03-03, 2026-06-30, 2026-01-20] | expected "2026-06-30" | observed "2026-01-20" (is_leaf false) | matches MIN
+  PASS P1 (L1 parent) | Date default | configured MIN | leaves [2026-03-03, 2026-06-30, 2026-01-20] | expected "2026-01-20" | observed "2026-01-20" (is_leaf false) | matches MIN
+  PASS P1 (L1 parent) | Timeline MIN_MAX | configured MIN_MAX | leaves [2026-03-01..2026-03-20, 2026-05-01..2026-07-15, 2026-01-10..2026-02-01] | expected "2026-01-10..2026-07-15" | observed "2026-01-10..2026-07-15" (is_leaf false) | matches MIN_MAX
+  PASS Q1 (L2 parent) | Num SUM | configured SUM | leaves [40, 7] | expected 47 | observed 47 (is_leaf false) | matches SUM
+  DEVIATES Q1 (L2 parent) | Num MIN | configured MIN | leaves [40, 7] | expected 7 | observed 47 (is_leaf false) | matches SUM
+  DEVIATES Q1 (L2 parent) | Num MAX | configured MAX | leaves [40, 7] | expected 40 | observed 47 (is_leaf false) | matches SUM
+  DEVIATES Q1 (L2 parent) | Num NONE | configured NONE | leaves [40, 7] | expected null | observed 47 (is_leaf false) | matches SUM
+  PASS Q1 (L2 parent) | Date MIN | configured MIN | leaves [2026-03-03, 2026-06-30] | expected "2026-03-03" | observed "2026-03-03" (is_leaf false) | matches MIN
+  DEVIATES Q1 (L2 parent) | Date MAX | configured MAX | leaves [2026-03-03, 2026-06-30] | expected "2026-06-30" | observed "2026-03-03" (is_leaf false) | matches MIN
+  PASS Q1 (L2 parent) | Date default | configured MIN | leaves [2026-03-03, 2026-06-30] | expected "2026-03-03" | observed "2026-03-03" (is_leaf false) | matches MIN
+  PASS Q1 (L2 parent) | Timeline MIN_MAX | configured MIN_MAX | leaves [2026-03-01..2026-03-20, 2026-05-01..2026-07-15] | expected "2026-03-01..2026-07-15" | observed "2026-03-01..2026-07-15" (is_leaf false) | matches MIN_MAX
+
+waiting 10 s, then reading the parents again
+
+parents-reread @ 2026-04: HTTP 200
+  request body: {"query":"query ($i: [ID!], $c: [String!]) { items(ids: $i) { id name column_values(ids: $c, capabilities: [CALCULATED]) { id type text value is_leaf ... on NumbersValue { number } ... on DateValue { date } ... on TimelineValue { from to } } } }","variables":{"i":["13377353714","13377370969"],"c":["numeric_mm8fjk4h","numeric_mm8fnbbp","numeric_mm8fj6qc","numeric_mm8fpr03","date_mm8f45aw","date_mm8fb58z","date_mm8f9546","timerange_mm8f4c2a"]}}
+  x-request-id f5fde79d-90bb-9698-8bd9-6cc4f32f0c95, extensions.request_id f5fde79d-90bb-9698-8bd9-6cc4f32f0c95, started 2026-10-25T02:39:33.173Z, ended 2026-10-25T02:39:33.857Z
+  PASS P1 (L1 parent) | Num SUM | configured SUM | leaves [40, 7, 200] | expected 247 | observed 247 (is_leaf false) | matches SUM
+  DEVIATES P1 (L1 parent) | Num MIN | configured MIN | leaves [40, 7, 200] | expected 7 | observed 247 (is_leaf false) | matches SUM
+  DEVIATES P1 (L1 parent) | Num MAX | configured MAX | leaves [40, 7, 200] | expected 200 | observed 247 (is_leaf false) | matches SUM
+  DEVIATES P1 (L1 parent) | Num NONE | configured NONE | leaves [40, 7, 200] | expected null | observed 247 (is_leaf false) | matches SUM
+  PASS P1 (L1 parent) | Date MIN | configured MIN | leaves [2026-03-03, 2026-06-30, 2026-01-20] | expected "2026-01-20" | observed "2026-01-20" (is_leaf false) | matches MIN
+  DEVIATES P1 (L1 parent) | Date MAX | configured MAX | leaves [2026-03-03, 2026-06-30, 2026-01-20] | expected "2026-06-30" | observed "2026-01-20" (is_leaf false) | matches MIN
+  PASS P1 (L1 parent) | Date default | configured MIN | leaves [2026-03-03, 2026-06-30, 2026-01-20] | expected "2026-01-20" | observed "2026-01-20" (is_leaf false) | matches MIN
+  PASS P1 (L1 parent) | Timeline MIN_MAX | configured MIN_MAX | leaves [2026-03-01..2026-03-20, 2026-05-01..2026-07-15, 2026-01-10..2026-02-01] | expected "2026-01-10..2026-07-15" | observed "2026-01-10..2026-07-15" (is_leaf false) | matches MIN_MAX
+  PASS Q1 (L2 parent) | Num SUM | configured SUM | leaves [40, 7] | expected 47 | observed 47 (is_leaf false) | matches SUM
+  DEVIATES Q1 (L2 parent) | Num MIN | configured MIN | leaves [40, 7] | expected 7 | observed 47 (is_leaf false) | matches SUM
+  DEVIATES Q1 (L2 parent) | Num MAX | configured MAX | leaves [40, 7] | expected 40 | observed 47 (is_leaf false) | matches SUM
+  DEVIATES Q1 (L2 parent) | Num NONE | configured NONE | leaves [40, 7] | expected null | observed 47 (is_leaf false) | matches SUM
+  PASS Q1 (L2 parent) | Date MIN | configured MIN | leaves [2026-03-03, 2026-06-30] | expected "2026-03-03" | observed "2026-03-03" (is_leaf false) | matches MIN
+  DEVIATES Q1 (L2 parent) | Date MAX | configured MAX | leaves [2026-03-03, 2026-06-30] | expected "2026-06-30" | observed "2026-03-03" (is_leaf false) | matches MIN
+  PASS Q1 (L2 parent) | Date default | configured MIN | leaves [2026-03-03, 2026-06-30] | expected "2026-03-03" | observed "2026-03-03" (is_leaf false) | matches MIN
+  PASS Q1 (L2 parent) | Timeline MIN_MAX | configured MIN_MAX | leaves [2026-03-01..2026-03-20, 2026-05-01..2026-07-15] | expected "2026-03-01..2026-07-15" | observed "2026-03-01..2026-07-15" (is_leaf false) | matches MIN_MAX
+
+parents-reread @ 2026-10: HTTP 200
+  request body: {"query":"query ($i: [ID!], $c: [String!]) { items(ids: $i) { id name column_values(ids: $c, capabilities: [CALCULATED]) { id type text value is_leaf ... on NumbersValue { number } ... on DateValue { date } ... on TimelineValue { from to } } } }","variables":{"i":["13377353714","13377370969"],"c":["numeric_mm8fjk4h","numeric_mm8fnbbp","numeric_mm8fj6qc","numeric_mm8fpr03","date_mm8f45aw","date_mm8fb58z","date_mm8f9546","timerange_mm8f4c2a"]}}
+  x-request-id d5f2820f-6d98-96da-abeb-d5eff1124b4a, extensions.request_id d5f2820f-6d98-96da-abeb-d5eff1124b4a, started 2026-10-25T02:39:35.058Z, ended 2026-10-25T02:39:35.705Z
+  PASS P1 (L1 parent) | Num SUM | configured SUM | leaves [40, 7, 200] | expected 247 | observed 247 (is_leaf false) | matches SUM
+  DEVIATES P1 (L1 parent) | Num MIN | configured MIN | leaves [40, 7, 200] | expected 7 | observed 247 (is_leaf false) | matches SUM
+  DEVIATES P1 (L1 parent) | Num MAX | configured MAX | leaves [40, 7, 200] | expected 200 | observed 247 (is_leaf false) | matches SUM
+  DEVIATES P1 (L1 parent) | Num NONE | configured NONE | leaves [40, 7, 200] | expected null | observed 247 (is_leaf false) | matches SUM
+  PASS P1 (L1 parent) | Date MIN | configured MIN | leaves [2026-03-03, 2026-06-30, 2026-01-20] | expected "2026-01-20" | observed "2026-01-20" (is_leaf false) | matches MIN
+  DEVIATES P1 (L1 parent) | Date MAX | configured MAX | leaves [2026-03-03, 2026-06-30, 2026-01-20] | expected "2026-06-30" | observed "2026-01-20" (is_leaf false) | matches MIN
+  PASS P1 (L1 parent) | Date default | configured MIN | leaves [2026-03-03, 2026-06-30, 2026-01-20] | expected "2026-01-20" | observed "2026-01-20" (is_leaf false) | matches MIN
+  PASS P1 (L1 parent) | Timeline MIN_MAX | configured MIN_MAX | leaves [2026-03-01..2026-03-20, 2026-05-01..2026-07-15, 2026-01-10..2026-02-01] | expected "2026-01-10..2026-07-15" | observed "2026-01-10..2026-07-15" (is_leaf false) | matches MIN_MAX
+  PASS Q1 (L2 parent) | Num SUM | configured SUM | leaves [40, 7] | expected 47 | observed 47 (is_leaf false) | matches SUM
+  DEVIATES Q1 (L2 parent) | Num MIN | configured MIN | leaves [40, 7] | expected 7 | observed 47 (is_leaf false) | matches SUM
+  DEVIATES Q1 (L2 parent) | Num MAX | configured MAX | leaves [40, 7] | expected 40 | observed 47 (is_leaf false) | matches SUM
+  DEVIATES Q1 (L2 parent) | Num NONE | configured NONE | leaves [40, 7] | expected null | observed 47 (is_leaf false) | matches SUM
+  PASS Q1 (L2 parent) | Date MIN | configured MIN | leaves [2026-03-03, 2026-06-30] | expected "2026-03-03" | observed "2026-03-03" (is_leaf false) | matches MIN
+  DEVIATES Q1 (L2 parent) | Date MAX | configured MAX | leaves [2026-03-03, 2026-06-30] | expected "2026-06-30" | observed "2026-03-03" (is_leaf false) | matches MIN
+  PASS Q1 (L2 parent) | Date default | configured MIN | leaves [2026-03-03, 2026-06-30] | expected "2026-03-03" | observed "2026-03-03" (is_leaf false) | matches MIN
+  PASS Q1 (L2 parent) | Timeline MIN_MAX | configured MIN_MAX | leaves [2026-03-01..2026-03-20, 2026-05-01..2026-07-15] | expected "2026-03-01..2026-07-15" | observed "2026-03-01..2026-07-15" (is_leaf false) | matches MIN_MAX
+
+Wrote repro-results.json

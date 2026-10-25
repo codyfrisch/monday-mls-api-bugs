@@ -1,0 +1,61 @@
+{
+  "file": "07-create-column-datemin-2026-10",
+  "case": "setup",
+  "description": "create_column Date MIN",
+  "endpoint": "https://api.monday.com/v2",
+  "method": "POST",
+  "requestHeaders": {
+    "API-Version": "2026-10",
+    "Content-Type": "application/json"
+  },
+  "authorizationHeader": "sent; value not recorded",
+  "apiVersion": "2026-10",
+  "requestBody": "{\"query\":\"mutation ($b: ID!, $t: String!, $ty: ColumnType!, $cap: ColumnCapabilitiesInput) { create_column(board_id: $b, title: $t, column_type: $ty, capabilities: $cap) { id title type capabilities { calculated { function } } } }\",\"variables\":{\"b\":\"18436908354\",\"t\":\"Date MIN\",\"ty\":\"date\",\"cap\":{\"calculated\":{\"function\":\"MIN\"}}}}",
+  "query": "mutation ($b: ID!, $t: String!, $ty: ColumnType!, $cap: ColumnCapabilitiesInput) { create_column(board_id: $b, title: $t, column_type: $ty, capabilities: $cap) { id title type capabilities { calculated { function } } } }",
+  "variables": {
+    "b": "18436908354",
+    "t": "Date MIN",
+    "ty": "date",
+    "cap": {
+      "calculated": {
+        "function": "MIN"
+      }
+    }
+  },
+  "startedAt": "2026-10-25T02:42:29.195Z",
+  "endedAt": "2026-10-25T02:42:29.759Z",
+  "durationMs": 564,
+  "status": 200,
+  "xRequestId": "427167a4-52a1-9496-8e37-f769bf6f9f37",
+  "rateLimitHeaders": {
+    "ratelimit": "\"minuteRate\";r=3318, \"concurrency\";r=199, \"complexityMinute\";r=9849352;t=5",
+    "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\""
+  },
+  "responseHeaders": {
+    "api-version": "2026-10",
+    "content-type": "application/json; charset=utf-8",
+    "date": "Sun, 25 Oct 2026 02:42:29 GMT",
+    "ratelimit": "\"minuteRate\";r=3318, \"concurrency\";r=199, \"complexityMinute\";r=9849352;t=5",
+    "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\"",
+    "x-request-id": "427167a4-52a1-9496-8e37-f769bf6f9f37"
+  },
+  "extensionsRequestId": "427167a4-52a1-9496-8e37-f769bf6f9f37",
+  "responseBodyRaw": "{\"data\":{\"create_column\":{\"id\":\"date_mm8fftdz\",\"title\":\"Date MIN\",\"type\":\"date\",\"capabilities\":{\"calculated\":{\"function\":\"MIN\"}}}},\"extensions\":{\"request_id\":\"427167a4-52a1-9496-8e37-f769bf6f9f37\"}}",
+  "responseBody": {
+    "data": {
+      "create_column": {
+        "id": "date_mm8fftdz",
+        "title": "Date MIN",
+        "type": "date",
+        "capabilities": {
+          "calculated": {
+            "function": "MIN"
+          }
+        }
+      }
+    },
+    "extensions": {
+      "request_id": "427167a4-52a1-9496-8e37-f769bf6f9f37"
+    }
+  }
+}

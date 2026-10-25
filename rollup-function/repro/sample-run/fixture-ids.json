@@ -1,0 +1,148 @@
+{
+  "account": "sandbox-account",
+  "apiVersion": "2026-10",
+  "createdAt": "2026-10-25T02:38:18.607Z",
+  "lastWriteAt": "2026-10-25T02:38:08.602Z",
+  "board": {
+    "id": "18436908247",
+    "name": "R4 rollup function repro 2026-10-25T02:37:26.426Z",
+    "hierarchy_type": "multi_level"
+  },
+  "columns": {
+    "numSum": {
+      "id": "numeric_mm8fjk4h",
+      "title": "Num SUM",
+      "type": "numbers",
+      "requestedFunction": "SUM",
+      "createdFunction": "SUM",
+      "requestId": "e760cfca-0505-9a7a-8666-de24139e08a6"
+    },
+    "numMin": {
+      "id": "numeric_mm8fnbbp",
+      "title": "Num MIN",
+      "type": "numbers",
+      "requestedFunction": "MIN",
+      "createdFunction": "MIN",
+      "requestId": "61c34ab1-3078-980a-a5f8-1b7a0b3dbe79"
+    },
+    "numMax": {
+      "id": "numeric_mm8fj6qc",
+      "title": "Num MAX",
+      "type": "numbers",
+      "requestedFunction": "MAX",
+      "createdFunction": "MAX",
+      "requestId": "0ade2175-2090-9f74-b551-155b2bbce367"
+    },
+    "numNone": {
+      "id": "numeric_mm8fpr03",
+      "title": "Num NONE",
+      "type": "numbers",
+      "requestedFunction": "NONE",
+      "createdFunction": "NONE",
+      "requestId": "302b1ff9-468e-9af9-a8e4-7d214dfda7f3"
+    },
+    "dateMin": {
+      "id": "date_mm8f45aw",
+      "title": "Date MIN",
+      "type": "date",
+      "requestedFunction": "MIN",
+      "createdFunction": "MIN",
+      "requestId": "c966bcb2-f837-913d-a149-0f875dd8516e"
+    },
+    "dateMax": {
+      "id": "date_mm8fb58z",
+      "title": "Date MAX",
+      "type": "date",
+      "requestedFunction": "MAX",
+      "createdFunction": "MAX",
+      "requestId": "bd1a11eb-e74f-947c-add0-806ca2b80468"
+    },
+    "dateNone": {
+      "id": null,
+      "title": "Date NONE",
+      "type": "date",
+      "requestedFunction": "NONE",
+      "error": [
+        {
+          "message": "Capabilities validation failed",
+          "locations": [
+            {
+              "line": 1,
+              "column": 78
+            }
+          ],
+          "path": [
+            "create_column"
+          ],
+          "extensions": {
+            "code": "INVALID_INPUT",
+            "status_code": 400,
+            "errors": [
+              "Invalid capabilities: Invalid calculated function 'none' for column type 'date'. Valid functions: min, max"
+            ]
+          }
+        }
+      ],
+      "requestId": "b875017b-16e3-9d87-bda6-648a0a75df7f"
+    },
+    "dateDefault": {
+      "id": "date_mm8f9546",
+      "title": "Date default",
+      "type": "date",
+      "requestedFunction": null,
+      "createdFunction": "MIN",
+      "requestId": "99597f11-5898-98fa-a466-38a429c6c1a7"
+    },
+    "timeline": {
+      "id": "timerange_mm8f4c2a",
+      "title": "Timeline MIN_MAX",
+      "type": "timeline",
+      "requestedFunction": "MIN_MAX",
+      "createdFunction": "MIN_MAX",
+      "requestId": "a84b4ce2-38c7-94fd-a024-1ce02037bcad"
+    }
+  },
+  "items": {
+    "P1": "13377353714",
+    "Q1": "13377370969",
+    "Q1a": "13377370993",
+    "Q1b": "13377423773",
+    "P1c": "13377370978"
+  },
+  "parents": {
+    "P1": [
+      "Q1",
+      "P1c"
+    ],
+    "Q1": [
+      "Q1a",
+      "Q1b"
+    ]
+  },
+  "leafValues": {
+    "Q1a": {
+      "number": 40,
+      "date": "2026-03-03",
+      "timeline": {
+        "from": "2026-03-01",
+        "to": "2026-03-20"
+      }
+    },
+    "Q1b": {
+      "number": 7,
+      "date": "2026-06-30",
+      "timeline": {
+        "from": "2026-05-01",
+        "to": "2026-07-15"
+      }
+    },
+    "P1c": {
+      "number": 200,
+      "date": "2026-01-20",
+      "timeline": {
+        "from": "2026-01-10",
+        "to": "2026-02-01"
+      }
+    }
+  }
+}

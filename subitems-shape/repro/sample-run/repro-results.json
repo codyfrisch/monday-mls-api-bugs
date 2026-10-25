@@ -1,0 +1,2303 @@
+{
+  "fixture": {
+    "account": "sandbox-account",
+    "apiVersion": "2026-10",
+    "createdAt": "2026-10-25T02:25:57.663Z",
+    "board": {
+      "id": "18436907623",
+      "name": "R7 subitems repro 2026-10-25T02:25:25.071Z",
+      "hierarchy_type": "multi_level"
+    },
+    "items": {
+      "R1": "13377423073",
+      "A": "13377422958",
+      "A1": "13377328406",
+      "A2": "13377325909",
+      "A2x": "13377337767",
+      "A2y": "13377337504",
+      "B": "13377328359",
+      "R3": "13377337505",
+      "R3c": "13377422908"
+    }
+  },
+  "results": [
+    {
+      "case": "ground-truth",
+      "endpoint": "https://api.monday.com/v2",
+      "apiVersion": "2026-04",
+      "requestBody": "{\"query\":\"query ($ids: [ID!]) { items(ids: $ids) { id name parent_item { id parent_item { id parent_item { id parent_item { id parent_item { id } } } } } } }\",\"variables\":{\"ids\":[\"13377423073\",\"13377422958\",\"13377328406\",\"13377325909\",\"13377337767\",\"13377337504\",\"13377328359\",\"13377337505\",\"13377422908\"]}}",
+      "startedAt": "2026-10-25T02:27:43.520Z",
+      "endedAt": "2026-10-25T02:27:43.860Z",
+      "status": 200,
+      "xRequestId": "ce280a89-7df6-9f8e-b6e7-c4152e19b964",
+      "extensionsRequestId": "ce280a89-7df6-9f8e-b6e7-c4152e19b964",
+      "responseHeaders": {
+        "api-version": "2026-04",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Sun, 25 Oct 2026 02:27:43 GMT",
+        "ratelimit": "\"minuteRate\";r=3330, \"concurrency\";r=199, \"complexityMinute\";r=9997170;t=33",
+        "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\"",
+        "x-request-id": "ce280a89-7df6-9f8e-b6e7-c4152e19b964"
+      },
+      "responseBodyRaw": "{\"data\":{\"items\":[{\"id\":\"13377325909\",\"name\":\"A2 (L3)\",\"parent_item\":{\"id\":\"13377422958\",\"parent_item\":{\"id\":\"13377423073\",\"parent_item\":null}}},{\"id\":\"13377328359\",\"name\":\"B (L2 leaf)\",\"parent_item\":{\"id\":\"13377423073\",\"parent_item\":null}},{\"id\":\"13377328406\",\"name\":\"A1 (L3 leaf)\",\"parent_item\":{\"id\":\"13377422958\",\"parent_item\":{\"id\":\"13377423073\",\"parent_item\":null}}},{\"id\":\"13377337504\",\"name\":\"A2y (L5 leaf)\",\"parent_item\":{\"id\":\"13377337767\",\"parent_item\":{\"id\":\"13377325909\",\"parent_item\":{\"id\":\"13377422958\",\"parent_item\":{\"id\":\"13377423073\",\"parent_item\":null}}}}},{\"id\":\"13377337505\",\"name\":\"R3 empty-child root\",\"parent_item\":null},{\"id\":\"13377337767\",\"name\":\"A2x (L4)\",\"parent_item\":{\"id\":\"13377325909\",\"parent_item\":{\"id\":\"13377422958\",\"parent_item\":{\"id\":\"13377423073\",\"parent_item\":null}}}},{\"id\":\"13377422908\",\"name\":\"R3c (empty leaf)\",\"parent_item\":{\"id\":\"13377337505\",\"parent_item\":null}},{\"id\":\"13377422958\",\"name\":\"A (L2)\",\"parent_item\":{\"id\":\"13377423073\",\"parent_item\":null}},{\"id\":\"13377423073\",\"name\":\"R1 root\",\"parent_item\":null}]},\"extensions\":{\"request_id\":\"ce280a89-7df6-9f8e-b6e7-c4152e19b964\"}}",
+      "responseBody": {
+        "data": {
+          "items": [
+            {
+              "id": "13377325909",
+              "name": "A2 (L3)",
+              "parent_item": {
+                "id": "13377422958",
+                "parent_item": {
+                  "id": "13377423073",
+                  "parent_item": null
+                }
+              }
+            },
+            {
+              "id": "13377328359",
+              "name": "B (L2 leaf)",
+              "parent_item": {
+                "id": "13377423073",
+                "parent_item": null
+              }
+            },
+            {
+              "id": "13377328406",
+              "name": "A1 (L3 leaf)",
+              "parent_item": {
+                "id": "13377422958",
+                "parent_item": {
+                  "id": "13377423073",
+                  "parent_item": null
+                }
+              }
+            },
+            {
+              "id": "13377337504",
+              "name": "A2y (L5 leaf)",
+              "parent_item": {
+                "id": "13377337767",
+                "parent_item": {
+                  "id": "13377325909",
+                  "parent_item": {
+                    "id": "13377422958",
+                    "parent_item": {
+                      "id": "13377423073",
+                      "parent_item": null
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "id": "13377337505",
+              "name": "R3 empty-child root",
+              "parent_item": null
+            },
+            {
+              "id": "13377337767",
+              "name": "A2x (L4)",
+              "parent_item": {
+                "id": "13377325909",
+                "parent_item": {
+                  "id": "13377422958",
+                  "parent_item": {
+                    "id": "13377423073",
+                    "parent_item": null
+                  }
+                }
+              }
+            },
+            {
+              "id": "13377422908",
+              "name": "R3c (empty leaf)",
+              "parent_item": {
+                "id": "13377337505",
+                "parent_item": null
+              }
+            },
+            {
+              "id": "13377422958",
+              "name": "A (L2)",
+              "parent_item": {
+                "id": "13377423073",
+                "parent_item": null
+              }
+            },
+            {
+              "id": "13377423073",
+              "name": "R1 root",
+              "parent_item": null
+            }
+          ]
+        },
+        "extensions": {
+          "request_id": "ce280a89-7df6-9f8e-b6e7-c4152e19b964"
+        }
+      }
+    },
+    {
+      "case": "ground-truth-all-items",
+      "endpoint": "https://api.monday.com/v2",
+      "apiVersion": "2026-04",
+      "requestBody": "{\"query\":\"query ($b: [ID!]) { boards(ids: $b) { items_page(limit: 500, hierarchy_scope_config: \\\"allItems\\\") { cursor items { id name parent_item { id } } } } }\",\"variables\":{\"b\":[\"18436907623\"]}}",
+      "startedAt": "2026-10-25T02:27:45.060Z",
+      "endedAt": "2026-10-25T02:27:45.665Z",
+      "status": 200,
+      "xRequestId": "08f8442f-9833-943a-bd6f-7821b33d4f17",
+      "extensionsRequestId": "08f8442f-9833-943a-bd6f-7821b33d4f17",
+      "responseHeaders": {
+        "api-version": "2026-04",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Sun, 25 Oct 2026 02:27:45 GMT",
+        "ratelimit": "\"minuteRate\";r=3329, \"concurrency\";r=199, \"complexityMinute\";r=9996890;t=31",
+        "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\"",
+        "x-request-id": "08f8442f-9833-943a-bd6f-7821b33d4f17"
+      },
+      "responseBodyRaw": "{\"data\":{\"boards\":[{\"items_page\":{\"cursor\":null,\"items\":[{\"id\":\"13377308217\",\"name\":\"Item 1\",\"parent_item\":null},{\"id\":\"13377423073\",\"name\":\"R1 root\",\"parent_item\":null},{\"id\":\"13377337505\",\"name\":\"R3 empty-child root\",\"parent_item\":null},{\"id\":\"13377332709\",\"name\":\"Subitem Level 1\",\"parent_item\":{\"id\":\"13377308217\"}},{\"id\":\"13377308218\",\"name\":\"Subitem Level 2\",\"parent_item\":{\"id\":\"13377332709\"}},{\"id\":\"13377308219\",\"name\":\"Subitem Level 2\",\"parent_item\":{\"id\":\"13377332709\"}},{\"id\":\"13377422958\",\"name\":\"A (L2)\",\"parent_item\":{\"id\":\"13377423073\"}},{\"id\":\"13377328406\",\"name\":\"A1 (L3 leaf)\",\"parent_item\":{\"id\":\"13377422958\"}},{\"id\":\"13377325909\",\"name\":\"A2 (L3)\",\"parent_item\":{\"id\":\"13377422958\"}},{\"id\":\"13377337767\",\"name\":\"A2x (L4)\",\"parent_item\":{\"id\":\"13377325909\"}},{\"id\":\"13377337504\",\"name\":\"A2y (L5 leaf)\",\"parent_item\":{\"id\":\"13377337767\"}},{\"id\":\"13377328359\",\"name\":\"B (L2 leaf)\",\"parent_item\":{\"id\":\"13377423073\"}},{\"id\":\"13377422908\",\"name\":\"R3c (empty leaf)\",\"parent_item\":{\"id\":\"13377337505\"}}]}}]},\"extensions\":{\"request_id\":\"08f8442f-9833-943a-bd6f-7821b33d4f17\"}}",
+      "responseBody": {
+        "data": {
+          "boards": [
+            {
+              "items_page": {
+                "cursor": null,
+                "items": [
+                  {
+                    "id": "13377308217",
+                    "name": "Item 1",
+                    "parent_item": null
+                  },
+                  {
+                    "id": "13377423073",
+                    "name": "R1 root",
+                    "parent_item": null
+                  },
+                  {
+                    "id": "13377337505",
+                    "name": "R3 empty-child root",
+                    "parent_item": null
+                  },
+                  {
+                    "id": "13377332709",
+                    "name": "Subitem Level 1",
+                    "parent_item": {
+                      "id": "13377308217"
+                    }
+                  },
+                  {
+                    "id": "13377308218",
+                    "name": "Subitem Level 2",
+                    "parent_item": {
+                      "id": "13377332709"
+                    }
+                  },
+                  {
+                    "id": "13377308219",
+                    "name": "Subitem Level 2",
+                    "parent_item": {
+                      "id": "13377332709"
+                    }
+                  },
+                  {
+                    "id": "13377422958",
+                    "name": "A (L2)",
+                    "parent_item": {
+                      "id": "13377423073"
+                    }
+                  },
+                  {
+                    "id": "13377328406",
+                    "name": "A1 (L3 leaf)",
+                    "parent_item": {
+                      "id": "13377422958"
+                    }
+                  },
+                  {
+                    "id": "13377325909",
+                    "name": "A2 (L3)",
+                    "parent_item": {
+                      "id": "13377422958"
+                    }
+                  },
+                  {
+                    "id": "13377337767",
+                    "name": "A2x (L4)",
+                    "parent_item": {
+                      "id": "13377325909"
+                    }
+                  },
+                  {
+                    "id": "13377337504",
+                    "name": "A2y (L5 leaf)",
+                    "parent_item": {
+                      "id": "13377337767"
+                    }
+                  },
+                  {
+                    "id": "13377328359",
+                    "name": "B (L2 leaf)",
+                    "parent_item": {
+                      "id": "13377423073"
+                    }
+                  },
+                  {
+                    "id": "13377422908",
+                    "name": "R3c (empty leaf)",
+                    "parent_item": {
+                      "id": "13377337505"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "extensions": {
+          "request_id": "08f8442f-9833-943a-bd6f-7821b33d4f17"
+        }
+      }
+    },
+    {
+      "case": "C1",
+      "endpoint": "https://api.monday.com/v2",
+      "apiVersion": "2026-04",
+      "requestBody": "{\"query\":\"query ($ids: [ID!]) { items(ids: $ids) { id name subitems { id name parent_item { id } } } }\",\"variables\":{\"ids\":[\"13377423073\"]}}",
+      "startedAt": "2026-10-25T02:27:46.866Z",
+      "endedAt": "2026-10-25T02:27:47.404Z",
+      "status": 200,
+      "xRequestId": "c46d45bf-8427-91e8-9395-7310f005ac80",
+      "extensionsRequestId": "c46d45bf-8427-91e8-9395-7310f005ac80",
+      "responseHeaders": {
+        "api-version": "2026-04",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Sun, 25 Oct 2026 02:27:47 GMT",
+        "ratelimit": "\"minuteRate\";r=3328, \"concurrency\";r=199, \"complexityMinute\";r=9996220;t=30",
+        "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\"",
+        "x-request-id": "c46d45bf-8427-91e8-9395-7310f005ac80"
+      },
+      "responseBodyRaw": "{\"data\":{\"items\":[{\"id\":\"13377423073\",\"name\":\"R1 root\",\"subitems\":[{\"id\":\"13377422958\",\"name\":\"A (L2)\",\"parent_item\":{\"id\":\"13377423073\"}},{\"id\":\"13377328406\",\"name\":\"A1 (L3 leaf)\",\"parent_item\":{\"id\":\"13377422958\"}},{\"id\":\"13377325909\",\"name\":\"A2 (L3)\",\"parent_item\":{\"id\":\"13377422958\"}},{\"id\":\"13377337767\",\"name\":\"A2x (L4)\",\"parent_item\":{\"id\":\"13377325909\"}},{\"id\":\"13377337504\",\"name\":\"A2y (L5 leaf)\",\"parent_item\":{\"id\":\"13377337767\"}},{\"id\":\"13377328359\",\"name\":\"B (L2 leaf)\",\"parent_item\":{\"id\":\"13377423073\"}}]}]},\"extensions\":{\"request_id\":\"c46d45bf-8427-91e8-9395-7310f005ac80\"}}",
+      "responseBody": {
+        "data": {
+          "items": [
+            {
+              "id": "13377423073",
+              "name": "R1 root",
+              "subitems": [
+                {
+                  "id": "13377422958",
+                  "name": "A (L2)",
+                  "parent_item": {
+                    "id": "13377423073"
+                  }
+                },
+                {
+                  "id": "13377328406",
+                  "name": "A1 (L3 leaf)",
+                  "parent_item": {
+                    "id": "13377422958"
+                  }
+                },
+                {
+                  "id": "13377325909",
+                  "name": "A2 (L3)",
+                  "parent_item": {
+                    "id": "13377422958"
+                  }
+                },
+                {
+                  "id": "13377337767",
+                  "name": "A2x (L4)",
+                  "parent_item": {
+                    "id": "13377325909"
+                  }
+                },
+                {
+                  "id": "13377337504",
+                  "name": "A2y (L5 leaf)",
+                  "parent_item": {
+                    "id": "13377337767"
+                  }
+                },
+                {
+                  "id": "13377328359",
+                  "name": "B (L2 leaf)",
+                  "parent_item": {
+                    "id": "13377423073"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "extensions": {
+          "request_id": "c46d45bf-8427-91e8-9395-7310f005ac80"
+        }
+      },
+      "observations": [
+        {
+          "path": "R1 root",
+          "id": "13377423073",
+          "expected": [
+            "13377325909",
+            "13377328359",
+            "13377328406",
+            "13377337504",
+            "13377337767",
+            "13377422958"
+          ],
+          "observed": [
+            "13377325909",
+            "13377328359",
+            "13377328406",
+            "13377337504",
+            "13377337767",
+            "13377422958"
+          ],
+          "missing": [],
+          "unexpected": [],
+          "verdict": "PASS"
+        }
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "case": "C2",
+      "endpoint": "https://api.monday.com/v2",
+      "apiVersion": "2026-04",
+      "requestBody": "{\"query\":\"query ($ids: [ID!]) { items(ids: $ids) { id name subitems { id name parent_item { id } } } }\",\"variables\":{\"ids\":[\"13377423073\",\"13377337505\"]}}",
+      "startedAt": "2026-10-25T02:27:48.605Z",
+      "endedAt": "2026-10-25T02:27:49.157Z",
+      "status": 200,
+      "xRequestId": "e2b236f2-1acc-9297-bc33-886705cc3b80",
+      "extensionsRequestId": "e2b236f2-1acc-9297-bc33-886705cc3b80",
+      "responseHeaders": {
+        "api-version": "2026-04",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Sun, 25 Oct 2026 02:27:49 GMT",
+        "ratelimit": "\"minuteRate\";r=3327, \"concurrency\";r=199, \"complexityMinute\";r=9995430;t=28",
+        "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\"",
+        "x-request-id": "e2b236f2-1acc-9297-bc33-886705cc3b80"
+      },
+      "responseBodyRaw": "{\"data\":{\"items\":[{\"id\":\"13377337505\",\"name\":\"R3 empty-child root\",\"subitems\":[{\"id\":\"13377422908\",\"name\":\"R3c (empty leaf)\",\"parent_item\":{\"id\":\"13377337505\"}}]},{\"id\":\"13377423073\",\"name\":\"R1 root\",\"subitems\":[{\"id\":\"13377422958\",\"name\":\"A (L2)\",\"parent_item\":{\"id\":\"13377423073\"}},{\"id\":\"13377328406\",\"name\":\"A1 (L3 leaf)\",\"parent_item\":{\"id\":\"13377422958\"}},{\"id\":\"13377325909\",\"name\":\"A2 (L3)\",\"parent_item\":{\"id\":\"13377422958\"}},{\"id\":\"13377337767\",\"name\":\"A2x (L4)\",\"parent_item\":{\"id\":\"13377325909\"}},{\"id\":\"13377337504\",\"name\":\"A2y (L5 leaf)\",\"parent_item\":{\"id\":\"13377337767\"}},{\"id\":\"13377328359\",\"name\":\"B (L2 leaf)\",\"parent_item\":{\"id\":\"13377423073\"}}]}]},\"extensions\":{\"request_id\":\"e2b236f2-1acc-9297-bc33-886705cc3b80\"}}",
+      "responseBody": {
+        "data": {
+          "items": [
+            {
+              "id": "13377337505",
+              "name": "R3 empty-child root",
+              "subitems": [
+                {
+                  "id": "13377422908",
+                  "name": "R3c (empty leaf)",
+                  "parent_item": {
+                    "id": "13377337505"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "13377423073",
+              "name": "R1 root",
+              "subitems": [
+                {
+                  "id": "13377422958",
+                  "name": "A (L2)",
+                  "parent_item": {
+                    "id": "13377423073"
+                  }
+                },
+                {
+                  "id": "13377328406",
+                  "name": "A1 (L3 leaf)",
+                  "parent_item": {
+                    "id": "13377422958"
+                  }
+                },
+                {
+                  "id": "13377325909",
+                  "name": "A2 (L3)",
+                  "parent_item": {
+                    "id": "13377422958"
+                  }
+                },
+                {
+                  "id": "13377337767",
+                  "name": "A2x (L4)",
+                  "parent_item": {
+                    "id": "13377325909"
+                  }
+                },
+                {
+                  "id": "13377337504",
+                  "name": "A2y (L5 leaf)",
+                  "parent_item": {
+                    "id": "13377337767"
+                  }
+                },
+                {
+                  "id": "13377328359",
+                  "name": "B (L2 leaf)",
+                  "parent_item": {
+                    "id": "13377423073"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "extensions": {
+          "request_id": "e2b236f2-1acc-9297-bc33-886705cc3b80"
+        }
+      },
+      "observations": [
+        {
+          "path": "R3 empty-child root",
+          "id": "13377337505",
+          "expected": [
+            "13377422908"
+          ],
+          "observed": [
+            "13377422908"
+          ],
+          "missing": [],
+          "unexpected": [],
+          "verdict": "PASS"
+        },
+        {
+          "path": "R1 root",
+          "id": "13377423073",
+          "expected": [
+            "13377325909",
+            "13377328359",
+            "13377328406",
+            "13377337504",
+            "13377337767",
+            "13377422958"
+          ],
+          "observed": [
+            "13377325909",
+            "13377328359",
+            "13377328406",
+            "13377337504",
+            "13377337767",
+            "13377422958"
+          ],
+          "missing": [],
+          "unexpected": [],
+          "verdict": "PASS"
+        }
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "case": "C3",
+      "endpoint": "https://api.monday.com/v2",
+      "apiVersion": "2026-04",
+      "requestBody": "{\"query\":\"query ($ids: [ID!]) { items(ids: $ids) { id name subitems { id name parent_item { id } } } }\",\"variables\":{\"ids\":[\"13377422958\"]}}",
+      "startedAt": "2026-10-25T02:27:50.358Z",
+      "endedAt": "2026-10-25T02:27:50.921Z",
+      "status": 200,
+      "xRequestId": "1ea0017d-6b4a-9cd2-a3e6-81625b127089",
+      "extensionsRequestId": "1ea0017d-6b4a-9cd2-a3e6-81625b127089",
+      "responseHeaders": {
+        "api-version": "2026-04",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Sun, 25 Oct 2026 02:27:50 GMT",
+        "ratelimit": "\"minuteRate\";r=3326, \"concurrency\";r=199, \"complexityMinute\";r=9995200;t=26",
+        "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\"",
+        "x-request-id": "1ea0017d-6b4a-9cd2-a3e6-81625b127089"
+      },
+      "responseBodyRaw": "{\"data\":{\"items\":[{\"id\":\"13377422958\",\"name\":\"A (L2)\",\"subitems\":[{\"id\":\"13377328406\",\"name\":\"A1 (L3 leaf)\",\"parent_item\":{\"id\":\"13377422958\"}},{\"id\":\"13377325909\",\"name\":\"A2 (L3)\",\"parent_item\":{\"id\":\"13377422958\"}}]}]},\"extensions\":{\"request_id\":\"1ea0017d-6b4a-9cd2-a3e6-81625b127089\"}}",
+      "responseBody": {
+        "data": {
+          "items": [
+            {
+              "id": "13377422958",
+              "name": "A (L2)",
+              "subitems": [
+                {
+                  "id": "13377328406",
+                  "name": "A1 (L3 leaf)",
+                  "parent_item": {
+                    "id": "13377422958"
+                  }
+                },
+                {
+                  "id": "13377325909",
+                  "name": "A2 (L3)",
+                  "parent_item": {
+                    "id": "13377422958"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "extensions": {
+          "request_id": "1ea0017d-6b4a-9cd2-a3e6-81625b127089"
+        }
+      },
+      "observations": [
+        {
+          "path": "A (L2)",
+          "id": "13377422958",
+          "expected": [
+            "13377325909",
+            "13377328406",
+            "13377337504",
+            "13377337767"
+          ],
+          "observed": [
+            "13377325909",
+            "13377328406"
+          ],
+          "missing": [
+            "13377337504",
+            "13377337767"
+          ],
+          "unexpected": [],
+          "verdict": "DEVIATES"
+        }
+      ],
+      "verdict": "DEVIATES"
+    },
+    {
+      "case": "C4",
+      "endpoint": "https://api.monday.com/v2",
+      "apiVersion": "2026-04",
+      "requestBody": "{\"query\":\"query ($ids: [ID!]) { items(ids: $ids) { id name subitems { id name parent_item { id } } } }\",\"variables\":{\"ids\":[\"13377325909\"]}}",
+      "startedAt": "2026-10-25T02:27:52.121Z",
+      "endedAt": "2026-10-25T02:27:52.678Z",
+      "status": 200,
+      "xRequestId": "319a37af-2880-945c-927d-776188c7218b",
+      "extensionsRequestId": "319a37af-2880-945c-927d-776188c7218b",
+      "responseHeaders": {
+        "api-version": "2026-04",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Sun, 25 Oct 2026 02:27:52 GMT",
+        "ratelimit": "\"minuteRate\";r=3325, \"concurrency\";r=199, \"complexityMinute\";r=9995080;t=24",
+        "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\"",
+        "x-request-id": "319a37af-2880-945c-927d-776188c7218b"
+      },
+      "responseBodyRaw": "{\"data\":{\"items\":[{\"id\":\"13377325909\",\"name\":\"A2 (L3)\",\"subitems\":[{\"id\":\"13377337767\",\"name\":\"A2x (L4)\",\"parent_item\":{\"id\":\"13377325909\"}}]}]},\"extensions\":{\"request_id\":\"319a37af-2880-945c-927d-776188c7218b\"}}",
+      "responseBody": {
+        "data": {
+          "items": [
+            {
+              "id": "13377325909",
+              "name": "A2 (L3)",
+              "subitems": [
+                {
+                  "id": "13377337767",
+                  "name": "A2x (L4)",
+                  "parent_item": {
+                    "id": "13377325909"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "extensions": {
+          "request_id": "319a37af-2880-945c-927d-776188c7218b"
+        }
+      },
+      "observations": [
+        {
+          "path": "A2 (L3)",
+          "id": "13377325909",
+          "expected": [
+            "13377337504",
+            "13377337767"
+          ],
+          "observed": [
+            "13377337767"
+          ],
+          "missing": [
+            "13377337504"
+          ],
+          "unexpected": [],
+          "verdict": "DEVIATES"
+        }
+      ],
+      "verdict": "DEVIATES"
+    },
+    {
+      "case": "C5",
+      "endpoint": "https://api.monday.com/v2",
+      "apiVersion": "2026-04",
+      "requestBody": "{\"query\":\"query ($ids: [ID!]) { items(ids: $ids) { id name subitems { id name parent_item { id } } } }\",\"variables\":{\"ids\":[\"13377423073\",\"13377422958\"]}}",
+      "startedAt": "2026-10-25T02:27:53.878Z",
+      "endedAt": "2026-10-25T02:27:54.527Z",
+      "status": 200,
+      "xRequestId": "b349fd10-56ad-909f-bd16-2694a492b1e1",
+      "extensionsRequestId": "b349fd10-56ad-909f-bd16-2694a492b1e1",
+      "responseHeaders": {
+        "api-version": "2026-04",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Sun, 25 Oct 2026 02:27:54 GMT",
+        "ratelimit": "\"minuteRate\";r=3324, \"concurrency\";r=199, \"complexityMinute\";r=9994620;t=23",
+        "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\"",
+        "x-request-id": "b349fd10-56ad-909f-bd16-2694a492b1e1"
+      },
+      "responseBodyRaw": "{\"data\":{\"items\":[{\"id\":\"13377422958\",\"name\":\"A (L2)\",\"subitems\":[{\"id\":\"13377328406\",\"name\":\"A1 (L3 leaf)\",\"parent_item\":{\"id\":\"13377422958\"}},{\"id\":\"13377325909\",\"name\":\"A2 (L3)\",\"parent_item\":{\"id\":\"13377422958\"}}]},{\"id\":\"13377423073\",\"name\":\"R1 root\",\"subitems\":[{\"id\":\"13377422958\",\"name\":\"A (L2)\",\"parent_item\":{\"id\":\"13377423073\"}},{\"id\":\"13377328359\",\"name\":\"B (L2 leaf)\",\"parent_item\":{\"id\":\"13377423073\"}}]}]},\"extensions\":{\"request_id\":\"b349fd10-56ad-909f-bd16-2694a492b1e1\"}}",
+      "responseBody": {
+        "data": {
+          "items": [
+            {
+              "id": "13377422958",
+              "name": "A (L2)",
+              "subitems": [
+                {
+                  "id": "13377328406",
+                  "name": "A1 (L3 leaf)",
+                  "parent_item": {
+                    "id": "13377422958"
+                  }
+                },
+                {
+                  "id": "13377325909",
+                  "name": "A2 (L3)",
+                  "parent_item": {
+                    "id": "13377422958"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "13377423073",
+              "name": "R1 root",
+              "subitems": [
+                {
+                  "id": "13377422958",
+                  "name": "A (L2)",
+                  "parent_item": {
+                    "id": "13377423073"
+                  }
+                },
+                {
+                  "id": "13377328359",
+                  "name": "B (L2 leaf)",
+                  "parent_item": {
+                    "id": "13377423073"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "extensions": {
+          "request_id": "b349fd10-56ad-909f-bd16-2694a492b1e1"
+        }
+      },
+      "observations": [
+        {
+          "path": "A (L2)",
+          "id": "13377422958",
+          "expected": [
+            "13377325909",
+            "13377328406",
+            "13377337504",
+            "13377337767"
+          ],
+          "observed": [
+            "13377325909",
+            "13377328406"
+          ],
+          "missing": [
+            "13377337504",
+            "13377337767"
+          ],
+          "unexpected": [],
+          "verdict": "DEVIATES"
+        },
+        {
+          "path": "R1 root",
+          "id": "13377423073",
+          "expected": [
+            "13377325909",
+            "13377328359",
+            "13377328406",
+            "13377337504",
+            "13377337767",
+            "13377422958"
+          ],
+          "observed": [
+            "13377328359",
+            "13377422958"
+          ],
+          "missing": [
+            "13377325909",
+            "13377328406",
+            "13377337504",
+            "13377337767"
+          ],
+          "unexpected": [],
+          "verdict": "DEVIATES"
+        }
+      ],
+      "verdict": "DEVIATES"
+    },
+    {
+      "case": "C6",
+      "endpoint": "https://api.monday.com/v2",
+      "apiVersion": "2026-04",
+      "requestBody": "{\"query\":\"query ($ids: [ID!]) { items(ids: $ids) { id name subitems { id name parent_item { id } } } }\",\"variables\":{\"ids\":[\"13377422958\",\"13377423073\"]}}",
+      "startedAt": "2026-10-25T02:27:55.727Z",
+      "endedAt": "2026-10-25T02:27:56.354Z",
+      "status": 200,
+      "xRequestId": "eda4d81c-3084-9241-a92e-b6b75000c5fb",
+      "extensionsRequestId": "eda4d81c-3084-9241-a92e-b6b75000c5fb",
+      "responseHeaders": {
+        "api-version": "2026-04",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Sun, 25 Oct 2026 02:27:56 GMT",
+        "ratelimit": "\"minuteRate\";r=3323, \"concurrency\";r=199, \"complexityMinute\";r=9994160;t=21",
+        "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\"",
+        "x-request-id": "eda4d81c-3084-9241-a92e-b6b75000c5fb"
+      },
+      "responseBodyRaw": "{\"data\":{\"items\":[{\"id\":\"13377422958\",\"name\":\"A (L2)\",\"subitems\":[{\"id\":\"13377328406\",\"name\":\"A1 (L3 leaf)\",\"parent_item\":{\"id\":\"13377422958\"}},{\"id\":\"13377325909\",\"name\":\"A2 (L3)\",\"parent_item\":{\"id\":\"13377422958\"}}]},{\"id\":\"13377423073\",\"name\":\"R1 root\",\"subitems\":[{\"id\":\"13377422958\",\"name\":\"A (L2)\",\"parent_item\":{\"id\":\"13377423073\"}},{\"id\":\"13377328359\",\"name\":\"B (L2 leaf)\",\"parent_item\":{\"id\":\"13377423073\"}}]}]},\"extensions\":{\"request_id\":\"eda4d81c-3084-9241-a92e-b6b75000c5fb\"}}",
+      "responseBody": {
+        "data": {
+          "items": [
+            {
+              "id": "13377422958",
+              "name": "A (L2)",
+              "subitems": [
+                {
+                  "id": "13377328406",
+                  "name": "A1 (L3 leaf)",
+                  "parent_item": {
+                    "id": "13377422958"
+                  }
+                },
+                {
+                  "id": "13377325909",
+                  "name": "A2 (L3)",
+                  "parent_item": {
+                    "id": "13377422958"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "13377423073",
+              "name": "R1 root",
+              "subitems": [
+                {
+                  "id": "13377422958",
+                  "name": "A (L2)",
+                  "parent_item": {
+                    "id": "13377423073"
+                  }
+                },
+                {
+                  "id": "13377328359",
+                  "name": "B (L2 leaf)",
+                  "parent_item": {
+                    "id": "13377423073"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "extensions": {
+          "request_id": "eda4d81c-3084-9241-a92e-b6b75000c5fb"
+        }
+      },
+      "observations": [
+        {
+          "path": "A (L2)",
+          "id": "13377422958",
+          "expected": [
+            "13377325909",
+            "13377328406",
+            "13377337504",
+            "13377337767"
+          ],
+          "observed": [
+            "13377325909",
+            "13377328406"
+          ],
+          "missing": [
+            "13377337504",
+            "13377337767"
+          ],
+          "unexpected": [],
+          "verdict": "DEVIATES"
+        },
+        {
+          "path": "R1 root",
+          "id": "13377423073",
+          "expected": [
+            "13377325909",
+            "13377328359",
+            "13377328406",
+            "13377337504",
+            "13377337767",
+            "13377422958"
+          ],
+          "observed": [
+            "13377328359",
+            "13377422958"
+          ],
+          "missing": [
+            "13377325909",
+            "13377328406",
+            "13377337504",
+            "13377337767"
+          ],
+          "unexpected": [],
+          "verdict": "DEVIATES"
+        }
+      ],
+      "verdict": "DEVIATES"
+    },
+    {
+      "case": "C7",
+      "endpoint": "https://api.monday.com/v2",
+      "apiVersion": "2026-04",
+      "requestBody": "{\"query\":\"query ($b: [ID!]) { boards(ids: $b) { items_page(limit: 50) { items { id name subitems { id name parent_item { id } } } } } }\",\"variables\":{\"b\":[\"18436907623\"]}}",
+      "startedAt": "2026-10-25T02:27:57.555Z",
+      "endedAt": "2026-10-25T02:27:58.401Z",
+      "status": 200,
+      "xRequestId": "52f84248-ba59-9ad1-98fd-75faf45d46d5",
+      "extensionsRequestId": "52f84248-ba59-9ad1-98fd-75faf45d46d5",
+      "responseHeaders": {
+        "api-version": "2026-04",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Sun, 25 Oct 2026 02:27:58 GMT",
+        "ratelimit": "\"minuteRate\";r=3322, \"concurrency\";r=199, \"complexityMinute\";r=9993010;t=19",
+        "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\"",
+        "x-request-id": "52f84248-ba59-9ad1-98fd-75faf45d46d5"
+      },
+      "responseBodyRaw": "{\"data\":{\"boards\":[{\"items_page\":{\"items\":[{\"id\":\"13377308217\",\"name\":\"Item 1\",\"subitems\":[{\"id\":\"13377332709\",\"name\":\"Subitem Level 1\",\"parent_item\":{\"id\":\"13377308217\"}},{\"id\":\"13377308218\",\"name\":\"Subitem Level 2\",\"parent_item\":{\"id\":\"13377332709\"}},{\"id\":\"13377308219\",\"name\":\"Subitem Level 2\",\"parent_item\":{\"id\":\"13377332709\"}}]},{\"id\":\"13377423073\",\"name\":\"R1 root\",\"subitems\":[{\"id\":\"13377422958\",\"name\":\"A (L2)\",\"parent_item\":{\"id\":\"13377423073\"}},{\"id\":\"13377328406\",\"name\":\"A1 (L3 leaf)\",\"parent_item\":{\"id\":\"13377422958\"}},{\"id\":\"13377325909\",\"name\":\"A2 (L3)\",\"parent_item\":{\"id\":\"13377422958\"}},{\"id\":\"13377337767\",\"name\":\"A2x (L4)\",\"parent_item\":{\"id\":\"13377325909\"}},{\"id\":\"13377337504\",\"name\":\"A2y (L5 leaf)\",\"parent_item\":{\"id\":\"13377337767\"}},{\"id\":\"13377328359\",\"name\":\"B (L2 leaf)\",\"parent_item\":{\"id\":\"13377423073\"}}]},{\"id\":\"13377337505\",\"name\":\"R3 empty-child root\",\"subitems\":[{\"id\":\"13377422908\",\"name\":\"R3c (empty leaf)\",\"parent_item\":{\"id\":\"13377337505\"}}]}]}}]},\"extensions\":{\"request_id\":\"52f84248-ba59-9ad1-98fd-75faf45d46d5\"}}",
+      "responseBody": {
+        "data": {
+          "boards": [
+            {
+              "items_page": {
+                "items": [
+                  {
+                    "id": "13377308217",
+                    "name": "Item 1",
+                    "subitems": [
+                      {
+                        "id": "13377332709",
+                        "name": "Subitem Level 1",
+                        "parent_item": {
+                          "id": "13377308217"
+                        }
+                      },
+                      {
+                        "id": "13377308218",
+                        "name": "Subitem Level 2",
+                        "parent_item": {
+                          "id": "13377332709"
+                        }
+                      },
+                      {
+                        "id": "13377308219",
+                        "name": "Subitem Level 2",
+                        "parent_item": {
+                          "id": "13377332709"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "13377423073",
+                    "name": "R1 root",
+                    "subitems": [
+                      {
+                        "id": "13377422958",
+                        "name": "A (L2)",
+                        "parent_item": {
+                          "id": "13377423073"
+                        }
+                      },
+                      {
+                        "id": "13377328406",
+                        "name": "A1 (L3 leaf)",
+                        "parent_item": {
+                          "id": "13377422958"
+                        }
+                      },
+                      {
+                        "id": "13377325909",
+                        "name": "A2 (L3)",
+                        "parent_item": {
+                          "id": "13377422958"
+                        }
+                      },
+                      {
+                        "id": "13377337767",
+                        "name": "A2x (L4)",
+                        "parent_item": {
+                          "id": "13377325909"
+                        }
+                      },
+                      {
+                        "id": "13377337504",
+                        "name": "A2y (L5 leaf)",
+                        "parent_item": {
+                          "id": "13377337767"
+                        }
+                      },
+                      {
+                        "id": "13377328359",
+                        "name": "B (L2 leaf)",
+                        "parent_item": {
+                          "id": "13377423073"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "13377337505",
+                    "name": "R3 empty-child root",
+                    "subitems": [
+                      {
+                        "id": "13377422908",
+                        "name": "R3c (empty leaf)",
+                        "parent_item": {
+                          "id": "13377337505"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "extensions": {
+          "request_id": "52f84248-ba59-9ad1-98fd-75faf45d46d5"
+        }
+      },
+      "observations": [
+        {
+          "path": "Item 1",
+          "id": "13377308217",
+          "expected": [
+            "13377308218",
+            "13377308219",
+            "13377332709"
+          ],
+          "observed": [
+            "13377308218",
+            "13377308219",
+            "13377332709"
+          ],
+          "missing": [],
+          "unexpected": [],
+          "verdict": "PASS"
+        },
+        {
+          "path": "R1 root",
+          "id": "13377423073",
+          "expected": [
+            "13377325909",
+            "13377328359",
+            "13377328406",
+            "13377337504",
+            "13377337767",
+            "13377422958"
+          ],
+          "observed": [
+            "13377325909",
+            "13377328359",
+            "13377328406",
+            "13377337504",
+            "13377337767",
+            "13377422958"
+          ],
+          "missing": [],
+          "unexpected": [],
+          "verdict": "PASS"
+        },
+        {
+          "path": "R3 empty-child root",
+          "id": "13377337505",
+          "expected": [
+            "13377422908"
+          ],
+          "observed": [
+            "13377422908"
+          ],
+          "missing": [],
+          "unexpected": [],
+          "verdict": "PASS"
+        }
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "case": "C8",
+      "endpoint": "https://api.monday.com/v2",
+      "apiVersion": "2026-04",
+      "requestBody": "{\"query\":\"query ($ids: [ID!]) { items(ids: $ids) { id name subitems { id name parent_item { id } subitems { id name parent_item { id } subitems { id name } } } } }\",\"variables\":{\"ids\":[\"13377422958\"]}}",
+      "startedAt": "2026-10-25T02:27:59.601Z",
+      "endedAt": "2026-10-25T02:28:00.504Z",
+      "status": 200,
+      "xRequestId": "f90c615b-71ea-909c-99c9-d296bf601a3f",
+      "extensionsRequestId": "f90c615b-71ea-909c-99c9-d296bf601a3f",
+      "responseHeaders": {
+        "api-version": "2026-04",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Sun, 25 Oct 2026 02:28:00 GMT",
+        "ratelimit": "\"minuteRate\";r=3321, \"concurrency\";r=199, \"complexityMinute\";r=9992570;t=17",
+        "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\"",
+        "x-request-id": "f90c615b-71ea-909c-99c9-d296bf601a3f"
+      },
+      "responseBodyRaw": "{\"data\":{\"items\":[{\"id\":\"13377422958\",\"name\":\"A (L2)\",\"subitems\":[{\"id\":\"13377328406\",\"name\":\"A1 (L3 leaf)\",\"parent_item\":{\"id\":\"13377422958\"},\"subitems\":[]},{\"id\":\"13377325909\",\"name\":\"A2 (L3)\",\"parent_item\":{\"id\":\"13377422958\"},\"subitems\":[{\"id\":\"13377337767\",\"name\":\"A2x (L4)\",\"parent_item\":{\"id\":\"13377325909\"},\"subitems\":[{\"id\":\"13377337504\",\"name\":\"A2y (L5 leaf)\"}]}]}]}]},\"extensions\":{\"request_id\":\"f90c615b-71ea-909c-99c9-d296bf601a3f\"}}",
+      "responseBody": {
+        "data": {
+          "items": [
+            {
+              "id": "13377422958",
+              "name": "A (L2)",
+              "subitems": [
+                {
+                  "id": "13377328406",
+                  "name": "A1 (L3 leaf)",
+                  "parent_item": {
+                    "id": "13377422958"
+                  },
+                  "subitems": []
+                },
+                {
+                  "id": "13377325909",
+                  "name": "A2 (L3)",
+                  "parent_item": {
+                    "id": "13377422958"
+                  },
+                  "subitems": [
+                    {
+                      "id": "13377337767",
+                      "name": "A2x (L4)",
+                      "parent_item": {
+                        "id": "13377325909"
+                      },
+                      "subitems": [
+                        {
+                          "id": "13377337504",
+                          "name": "A2y (L5 leaf)"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "extensions": {
+          "request_id": "f90c615b-71ea-909c-99c9-d296bf601a3f"
+        }
+      },
+      "observations": [
+        {
+          "path": "A (L2)",
+          "id": "13377422958",
+          "expected": [
+            "13377325909",
+            "13377328406",
+            "13377337504",
+            "13377337767"
+          ],
+          "observed": [
+            "13377325909",
+            "13377328406"
+          ],
+          "missing": [
+            "13377337504",
+            "13377337767"
+          ],
+          "unexpected": [],
+          "verdict": "DEVIATES"
+        },
+        {
+          "path": "A (L2) > A1 (L3 leaf)",
+          "id": "13377328406",
+          "expected": [],
+          "observed": [],
+          "missing": [],
+          "unexpected": [],
+          "verdict": "PASS"
+        },
+        {
+          "path": "A (L2) > A2 (L3)",
+          "id": "13377325909",
+          "expected": [
+            "13377337504",
+            "13377337767"
+          ],
+          "observed": [
+            "13377337767"
+          ],
+          "missing": [
+            "13377337504"
+          ],
+          "unexpected": [],
+          "verdict": "DEVIATES"
+        },
+        {
+          "path": "A (L2) > A2 (L3) > A2x (L4)",
+          "id": "13377337767",
+          "expected": [
+            "13377337504"
+          ],
+          "observed": [
+            "13377337504"
+          ],
+          "missing": [],
+          "unexpected": [],
+          "verdict": "PASS"
+        }
+      ],
+      "verdict": "DEVIATES"
+    },
+    {
+      "case": "ground-truth",
+      "endpoint": "https://api.monday.com/v2",
+      "apiVersion": "2026-10",
+      "requestBody": "{\"query\":\"query ($ids: [ID!]) { items(ids: $ids) { id name parent_item { id parent_item { id parent_item { id parent_item { id parent_item { id } } } } } } }\",\"variables\":{\"ids\":[\"13377423073\",\"13377422958\",\"13377328406\",\"13377325909\",\"13377337767\",\"13377337504\",\"13377328359\",\"13377337505\",\"13377422908\"]}}",
+      "startedAt": "2026-10-25T02:28:01.705Z",
+      "endedAt": "2026-10-25T02:28:01.940Z",
+      "status": 200,
+      "xRequestId": "12e12836-f527-991e-96d2-8b88b5d10968",
+      "extensionsRequestId": "12e12836-f527-991e-96d2-8b88b5d10968",
+      "responseHeaders": {
+        "api-version": "2026-10",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Sun, 25 Oct 2026 02:28:01 GMT",
+        "ratelimit": "\"minuteRate\";r=3320, \"concurrency\";r=199, \"complexityMinute\";r=9992250;t=15",
+        "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\"",
+        "x-request-id": "12e12836-f527-991e-96d2-8b88b5d10968"
+      },
+      "responseBodyRaw": "{\"data\":{\"items\":[{\"id\":\"13377325909\",\"name\":\"A2 (L3)\",\"parent_item\":{\"id\":\"13377422958\",\"parent_item\":{\"id\":\"13377423073\",\"parent_item\":null}}},{\"id\":\"13377328359\",\"name\":\"B (L2 leaf)\",\"parent_item\":{\"id\":\"13377423073\",\"parent_item\":null}},{\"id\":\"13377328406\",\"name\":\"A1 (L3 leaf)\",\"parent_item\":{\"id\":\"13377422958\",\"parent_item\":{\"id\":\"13377423073\",\"parent_item\":null}}},{\"id\":\"13377337504\",\"name\":\"A2y (L5 leaf)\",\"parent_item\":{\"id\":\"13377337767\",\"parent_item\":{\"id\":\"13377325909\",\"parent_item\":{\"id\":\"13377422958\",\"parent_item\":{\"id\":\"13377423073\",\"parent_item\":null}}}}},{\"id\":\"13377337505\",\"name\":\"R3 empty-child root\",\"parent_item\":null},{\"id\":\"13377337767\",\"name\":\"A2x (L4)\",\"parent_item\":{\"id\":\"13377325909\",\"parent_item\":{\"id\":\"13377422958\",\"parent_item\":{\"id\":\"13377423073\",\"parent_item\":null}}}},{\"id\":\"13377422908\",\"name\":\"R3c (empty leaf)\",\"parent_item\":{\"id\":\"13377337505\",\"parent_item\":null}},{\"id\":\"13377422958\",\"name\":\"A (L2)\",\"parent_item\":{\"id\":\"13377423073\",\"parent_item\":null}},{\"id\":\"13377423073\",\"name\":\"R1 root\",\"parent_item\":null}]},\"extensions\":{\"request_id\":\"12e12836-f527-991e-96d2-8b88b5d10968\"}}",
+      "responseBody": {
+        "data": {
+          "items": [
+            {
+              "id": "13377325909",
+              "name": "A2 (L3)",
+              "parent_item": {
+                "id": "13377422958",
+                "parent_item": {
+                  "id": "13377423073",
+                  "parent_item": null
+                }
+              }
+            },
+            {
+              "id": "13377328359",
+              "name": "B (L2 leaf)",
+              "parent_item": {
+                "id": "13377423073",
+                "parent_item": null
+              }
+            },
+            {
+              "id": "13377328406",
+              "name": "A1 (L3 leaf)",
+              "parent_item": {
+                "id": "13377422958",
+                "parent_item": {
+                  "id": "13377423073",
+                  "parent_item": null
+                }
+              }
+            },
+            {
+              "id": "13377337504",
+              "name": "A2y (L5 leaf)",
+              "parent_item": {
+                "id": "13377337767",
+                "parent_item": {
+                  "id": "13377325909",
+                  "parent_item": {
+                    "id": "13377422958",
+                    "parent_item": {
+                      "id": "13377423073",
+                      "parent_item": null
+                    }
+                  }
+                }
+              }
+            },
+            {
+              "id": "13377337505",
+              "name": "R3 empty-child root",
+              "parent_item": null
+            },
+            {
+              "id": "13377337767",
+              "name": "A2x (L4)",
+              "parent_item": {
+                "id": "13377325909",
+                "parent_item": {
+                  "id": "13377422958",
+                  "parent_item": {
+                    "id": "13377423073",
+                    "parent_item": null
+                  }
+                }
+              }
+            },
+            {
+              "id": "13377422908",
+              "name": "R3c (empty leaf)",
+              "parent_item": {
+                "id": "13377337505",
+                "parent_item": null
+              }
+            },
+            {
+              "id": "13377422958",
+              "name": "A (L2)",
+              "parent_item": {
+                "id": "13377423073",
+                "parent_item": null
+              }
+            },
+            {
+              "id": "13377423073",
+              "name": "R1 root",
+              "parent_item": null
+            }
+          ]
+        },
+        "extensions": {
+          "request_id": "12e12836-f527-991e-96d2-8b88b5d10968"
+        }
+      }
+    },
+    {
+      "case": "ground-truth-all-items",
+      "endpoint": "https://api.monday.com/v2",
+      "apiVersion": "2026-10",
+      "requestBody": "{\"query\":\"query ($b: [ID!]) { boards(ids: $b) { items_page(limit: 500, hierarchy_scope_config: \\\"allItems\\\") { cursor items { id name parent_item { id } } } } }\",\"variables\":{\"b\":[\"18436907623\"]}}",
+      "startedAt": "2026-10-25T02:28:03.141Z",
+      "endedAt": "2026-10-25T02:28:03.708Z",
+      "status": 200,
+      "xRequestId": "559ba753-87fa-980e-bcc0-ca27c3f4c60f",
+      "extensionsRequestId": "559ba753-87fa-980e-bcc0-ca27c3f4c60f",
+      "responseHeaders": {
+        "api-version": "2026-10",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Sun, 25 Oct 2026 02:28:03 GMT",
+        "ratelimit": "\"minuteRate\";r=3319, \"concurrency\";r=199, \"complexityMinute\";r=9991970;t=13",
+        "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\"",
+        "x-request-id": "559ba753-87fa-980e-bcc0-ca27c3f4c60f"
+      },
+      "responseBodyRaw": "{\"data\":{\"boards\":[{\"items_page\":{\"cursor\":null,\"items\":[{\"id\":\"13377308217\",\"name\":\"Item 1\",\"parent_item\":null},{\"id\":\"13377423073\",\"name\":\"R1 root\",\"parent_item\":null},{\"id\":\"13377337505\",\"name\":\"R3 empty-child root\",\"parent_item\":null},{\"id\":\"13377332709\",\"name\":\"Subitem Level 1\",\"parent_item\":{\"id\":\"13377308217\"}},{\"id\":\"13377308218\",\"name\":\"Subitem Level 2\",\"parent_item\":{\"id\":\"13377332709\"}},{\"id\":\"13377308219\",\"name\":\"Subitem Level 2\",\"parent_item\":{\"id\":\"13377332709\"}},{\"id\":\"13377422958\",\"name\":\"A (L2)\",\"parent_item\":{\"id\":\"13377423073\"}},{\"id\":\"13377328406\",\"name\":\"A1 (L3 leaf)\",\"parent_item\":{\"id\":\"13377422958\"}},{\"id\":\"13377325909\",\"name\":\"A2 (L3)\",\"parent_item\":{\"id\":\"13377422958\"}},{\"id\":\"13377337767\",\"name\":\"A2x (L4)\",\"parent_item\":{\"id\":\"13377325909\"}},{\"id\":\"13377337504\",\"name\":\"A2y (L5 leaf)\",\"parent_item\":{\"id\":\"13377337767\"}},{\"id\":\"13377328359\",\"name\":\"B (L2 leaf)\",\"parent_item\":{\"id\":\"13377423073\"}},{\"id\":\"13377422908\",\"name\":\"R3c (empty leaf)\",\"parent_item\":{\"id\":\"13377337505\"}}]}}]},\"extensions\":{\"request_id\":\"559ba753-87fa-980e-bcc0-ca27c3f4c60f\"}}",
+      "responseBody": {
+        "data": {
+          "boards": [
+            {
+              "items_page": {
+                "cursor": null,
+                "items": [
+                  {
+                    "id": "13377308217",
+                    "name": "Item 1",
+                    "parent_item": null
+                  },
+                  {
+                    "id": "13377423073",
+                    "name": "R1 root",
+                    "parent_item": null
+                  },
+                  {
+                    "id": "13377337505",
+                    "name": "R3 empty-child root",
+                    "parent_item": null
+                  },
+                  {
+                    "id": "13377332709",
+                    "name": "Subitem Level 1",
+                    "parent_item": {
+                      "id": "13377308217"
+                    }
+                  },
+                  {
+                    "id": "13377308218",
+                    "name": "Subitem Level 2",
+                    "parent_item": {
+                      "id": "13377332709"
+                    }
+                  },
+                  {
+                    "id": "13377308219",
+                    "name": "Subitem Level 2",
+                    "parent_item": {
+                      "id": "13377332709"
+                    }
+                  },
+                  {
+                    "id": "13377422958",
+                    "name": "A (L2)",
+                    "parent_item": {
+                      "id": "13377423073"
+                    }
+                  },
+                  {
+                    "id": "13377328406",
+                    "name": "A1 (L3 leaf)",
+                    "parent_item": {
+                      "id": "13377422958"
+                    }
+                  },
+                  {
+                    "id": "13377325909",
+                    "name": "A2 (L3)",
+                    "parent_item": {
+                      "id": "13377422958"
+                    }
+                  },
+                  {
+                    "id": "13377337767",
+                    "name": "A2x (L4)",
+                    "parent_item": {
+                      "id": "13377325909"
+                    }
+                  },
+                  {
+                    "id": "13377337504",
+                    "name": "A2y (L5 leaf)",
+                    "parent_item": {
+                      "id": "13377337767"
+                    }
+                  },
+                  {
+                    "id": "13377328359",
+                    "name": "B (L2 leaf)",
+                    "parent_item": {
+                      "id": "13377423073"
+                    }
+                  },
+                  {
+                    "id": "13377422908",
+                    "name": "R3c (empty leaf)",
+                    "parent_item": {
+                      "id": "13377337505"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "extensions": {
+          "request_id": "559ba753-87fa-980e-bcc0-ca27c3f4c60f"
+        }
+      }
+    },
+    {
+      "case": "C1",
+      "endpoint": "https://api.monday.com/v2",
+      "apiVersion": "2026-10",
+      "requestBody": "{\"query\":\"query ($ids: [ID!]) { items(ids: $ids) { id name subitems { id name parent_item { id } } } }\",\"variables\":{\"ids\":[\"13377423073\"]}}",
+      "startedAt": "2026-10-25T02:28:04.909Z",
+      "endedAt": "2026-10-25T02:28:05.575Z",
+      "status": 200,
+      "xRequestId": "9a4f0353-f513-9d23-bfda-3b5902566700",
+      "extensionsRequestId": "9a4f0353-f513-9d23-bfda-3b5902566700",
+      "responseHeaders": {
+        "api-version": "2026-10",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Sun, 25 Oct 2026 02:28:05 GMT",
+        "ratelimit": "\"minuteRate\";r=3318, \"concurrency\";r=199, \"complexityMinute\";r=9991300;t=12",
+        "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\"",
+        "x-request-id": "9a4f0353-f513-9d23-bfda-3b5902566700"
+      },
+      "responseBodyRaw": "{\"data\":{\"items\":[{\"id\":\"13377423073\",\"name\":\"R1 root\",\"subitems\":[{\"id\":\"13377422958\",\"name\":\"A (L2)\",\"parent_item\":{\"id\":\"13377423073\"}},{\"id\":\"13377328406\",\"name\":\"A1 (L3 leaf)\",\"parent_item\":{\"id\":\"13377422958\"}},{\"id\":\"13377325909\",\"name\":\"A2 (L3)\",\"parent_item\":{\"id\":\"13377422958\"}},{\"id\":\"13377337767\",\"name\":\"A2x (L4)\",\"parent_item\":{\"id\":\"13377325909\"}},{\"id\":\"13377337504\",\"name\":\"A2y (L5 leaf)\",\"parent_item\":{\"id\":\"13377337767\"}},{\"id\":\"13377328359\",\"name\":\"B (L2 leaf)\",\"parent_item\":{\"id\":\"13377423073\"}}]}]},\"extensions\":{\"request_id\":\"9a4f0353-f513-9d23-bfda-3b5902566700\"}}",
+      "responseBody": {
+        "data": {
+          "items": [
+            {
+              "id": "13377423073",
+              "name": "R1 root",
+              "subitems": [
+                {
+                  "id": "13377422958",
+                  "name": "A (L2)",
+                  "parent_item": {
+                    "id": "13377423073"
+                  }
+                },
+                {
+                  "id": "13377328406",
+                  "name": "A1 (L3 leaf)",
+                  "parent_item": {
+                    "id": "13377422958"
+                  }
+                },
+                {
+                  "id": "13377325909",
+                  "name": "A2 (L3)",
+                  "parent_item": {
+                    "id": "13377422958"
+                  }
+                },
+                {
+                  "id": "13377337767",
+                  "name": "A2x (L4)",
+                  "parent_item": {
+                    "id": "13377325909"
+                  }
+                },
+                {
+                  "id": "13377337504",
+                  "name": "A2y (L5 leaf)",
+                  "parent_item": {
+                    "id": "13377337767"
+                  }
+                },
+                {
+                  "id": "13377328359",
+                  "name": "B (L2 leaf)",
+                  "parent_item": {
+                    "id": "13377423073"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "extensions": {
+          "request_id": "9a4f0353-f513-9d23-bfda-3b5902566700"
+        }
+      },
+      "observations": [
+        {
+          "path": "R1 root",
+          "id": "13377423073",
+          "expected": [
+            "13377325909",
+            "13377328359",
+            "13377328406",
+            "13377337504",
+            "13377337767",
+            "13377422958"
+          ],
+          "observed": [
+            "13377325909",
+            "13377328359",
+            "13377328406",
+            "13377337504",
+            "13377337767",
+            "13377422958"
+          ],
+          "missing": [],
+          "unexpected": [],
+          "verdict": "PASS"
+        }
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "case": "C2",
+      "endpoint": "https://api.monday.com/v2",
+      "apiVersion": "2026-10",
+      "requestBody": "{\"query\":\"query ($ids: [ID!]) { items(ids: $ids) { id name subitems { id name parent_item { id } } } }\",\"variables\":{\"ids\":[\"13377423073\",\"13377337505\"]}}",
+      "startedAt": "2026-10-25T02:28:06.777Z",
+      "endedAt": "2026-10-25T02:28:07.363Z",
+      "status": 200,
+      "xRequestId": "ae7efd13-f0f8-9b6e-8751-71c5990cb632",
+      "extensionsRequestId": "ae7efd13-f0f8-9b6e-8751-71c5990cb632",
+      "responseHeaders": {
+        "api-version": "2026-10",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Sun, 25 Oct 2026 02:28:07 GMT",
+        "ratelimit": "\"minuteRate\";r=3317, \"concurrency\";r=199, \"complexityMinute\";r=9990510;t=10",
+        "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\"",
+        "x-request-id": "ae7efd13-f0f8-9b6e-8751-71c5990cb632"
+      },
+      "responseBodyRaw": "{\"data\":{\"items\":[{\"id\":\"13377337505\",\"name\":\"R3 empty-child root\",\"subitems\":[{\"id\":\"13377422908\",\"name\":\"R3c (empty leaf)\",\"parent_item\":{\"id\":\"13377337505\"}}]},{\"id\":\"13377423073\",\"name\":\"R1 root\",\"subitems\":[{\"id\":\"13377422958\",\"name\":\"A (L2)\",\"parent_item\":{\"id\":\"13377423073\"}},{\"id\":\"13377328406\",\"name\":\"A1 (L3 leaf)\",\"parent_item\":{\"id\":\"13377422958\"}},{\"id\":\"13377325909\",\"name\":\"A2 (L3)\",\"parent_item\":{\"id\":\"13377422958\"}},{\"id\":\"13377337767\",\"name\":\"A2x (L4)\",\"parent_item\":{\"id\":\"13377325909\"}},{\"id\":\"13377337504\",\"name\":\"A2y (L5 leaf)\",\"parent_item\":{\"id\":\"13377337767\"}},{\"id\":\"13377328359\",\"name\":\"B (L2 leaf)\",\"parent_item\":{\"id\":\"13377423073\"}}]}]},\"extensions\":{\"request_id\":\"ae7efd13-f0f8-9b6e-8751-71c5990cb632\"}}",
+      "responseBody": {
+        "data": {
+          "items": [
+            {
+              "id": "13377337505",
+              "name": "R3 empty-child root",
+              "subitems": [
+                {
+                  "id": "13377422908",
+                  "name": "R3c (empty leaf)",
+                  "parent_item": {
+                    "id": "13377337505"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "13377423073",
+              "name": "R1 root",
+              "subitems": [
+                {
+                  "id": "13377422958",
+                  "name": "A (L2)",
+                  "parent_item": {
+                    "id": "13377423073"
+                  }
+                },
+                {
+                  "id": "13377328406",
+                  "name": "A1 (L3 leaf)",
+                  "parent_item": {
+                    "id": "13377422958"
+                  }
+                },
+                {
+                  "id": "13377325909",
+                  "name": "A2 (L3)",
+                  "parent_item": {
+                    "id": "13377422958"
+                  }
+                },
+                {
+                  "id": "13377337767",
+                  "name": "A2x (L4)",
+                  "parent_item": {
+                    "id": "13377325909"
+                  }
+                },
+                {
+                  "id": "13377337504",
+                  "name": "A2y (L5 leaf)",
+                  "parent_item": {
+                    "id": "13377337767"
+                  }
+                },
+                {
+                  "id": "13377328359",
+                  "name": "B (L2 leaf)",
+                  "parent_item": {
+                    "id": "13377423073"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "extensions": {
+          "request_id": "ae7efd13-f0f8-9b6e-8751-71c5990cb632"
+        }
+      },
+      "observations": [
+        {
+          "path": "R3 empty-child root",
+          "id": "13377337505",
+          "expected": [
+            "13377422908"
+          ],
+          "observed": [
+            "13377422908"
+          ],
+          "missing": [],
+          "unexpected": [],
+          "verdict": "PASS"
+        },
+        {
+          "path": "R1 root",
+          "id": "13377423073",
+          "expected": [
+            "13377325909",
+            "13377328359",
+            "13377328406",
+            "13377337504",
+            "13377337767",
+            "13377422958"
+          ],
+          "observed": [
+            "13377325909",
+            "13377328359",
+            "13377328406",
+            "13377337504",
+            "13377337767",
+            "13377422958"
+          ],
+          "missing": [],
+          "unexpected": [],
+          "verdict": "PASS"
+        }
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "case": "C3",
+      "endpoint": "https://api.monday.com/v2",
+      "apiVersion": "2026-10",
+      "requestBody": "{\"query\":\"query ($ids: [ID!]) { items(ids: $ids) { id name subitems { id name parent_item { id } } } }\",\"variables\":{\"ids\":[\"13377422958\"]}}",
+      "startedAt": "2026-10-25T02:28:08.564Z",
+      "endedAt": "2026-10-25T02:28:09.212Z",
+      "status": 200,
+      "xRequestId": "3fbb4c04-30fb-9ee1-bb46-5982ace3b538",
+      "extensionsRequestId": "3fbb4c04-30fb-9ee1-bb46-5982ace3b538",
+      "responseHeaders": {
+        "api-version": "2026-10",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Sun, 25 Oct 2026 02:28:09 GMT",
+        "ratelimit": "\"minuteRate\";r=3316, \"concurrency\";r=199, \"complexityMinute\";r=9990280;t=8",
+        "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\"",
+        "x-request-id": "3fbb4c04-30fb-9ee1-bb46-5982ace3b538"
+      },
+      "responseBodyRaw": "{\"data\":{\"items\":[{\"id\":\"13377422958\",\"name\":\"A (L2)\",\"subitems\":[{\"id\":\"13377328406\",\"name\":\"A1 (L3 leaf)\",\"parent_item\":{\"id\":\"13377422958\"}},{\"id\":\"13377325909\",\"name\":\"A2 (L3)\",\"parent_item\":{\"id\":\"13377422958\"}}]}]},\"extensions\":{\"request_id\":\"3fbb4c04-30fb-9ee1-bb46-5982ace3b538\"}}",
+      "responseBody": {
+        "data": {
+          "items": [
+            {
+              "id": "13377422958",
+              "name": "A (L2)",
+              "subitems": [
+                {
+                  "id": "13377328406",
+                  "name": "A1 (L3 leaf)",
+                  "parent_item": {
+                    "id": "13377422958"
+                  }
+                },
+                {
+                  "id": "13377325909",
+                  "name": "A2 (L3)",
+                  "parent_item": {
+                    "id": "13377422958"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "extensions": {
+          "request_id": "3fbb4c04-30fb-9ee1-bb46-5982ace3b538"
+        }
+      },
+      "observations": [
+        {
+          "path": "A (L2)",
+          "id": "13377422958",
+          "expected": [
+            "13377325909",
+            "13377328406",
+            "13377337504",
+            "13377337767"
+          ],
+          "observed": [
+            "13377325909",
+            "13377328406"
+          ],
+          "missing": [
+            "13377337504",
+            "13377337767"
+          ],
+          "unexpected": [],
+          "verdict": "DEVIATES"
+        }
+      ],
+      "verdict": "DEVIATES"
+    },
+    {
+      "case": "C4",
+      "endpoint": "https://api.monday.com/v2",
+      "apiVersion": "2026-10",
+      "requestBody": "{\"query\":\"query ($ids: [ID!]) { items(ids: $ids) { id name subitems { id name parent_item { id } } } }\",\"variables\":{\"ids\":[\"13377325909\"]}}",
+      "startedAt": "2026-10-25T02:28:10.413Z",
+      "endedAt": "2026-10-25T02:28:11.011Z",
+      "status": 200,
+      "xRequestId": "eeb4c475-608b-9946-ad0f-6523582f18b7",
+      "extensionsRequestId": "eeb4c475-608b-9946-ad0f-6523582f18b7",
+      "responseHeaders": {
+        "api-version": "2026-10",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Sun, 25 Oct 2026 02:28:11 GMT",
+        "ratelimit": "\"minuteRate\";r=3315, \"concurrency\";r=199, \"complexityMinute\";r=9990160;t=6",
+        "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\"",
+        "x-request-id": "eeb4c475-608b-9946-ad0f-6523582f18b7"
+      },
+      "responseBodyRaw": "{\"data\":{\"items\":[{\"id\":\"13377325909\",\"name\":\"A2 (L3)\",\"subitems\":[{\"id\":\"13377337767\",\"name\":\"A2x (L4)\",\"parent_item\":{\"id\":\"13377325909\"}}]}]},\"extensions\":{\"request_id\":\"eeb4c475-608b-9946-ad0f-6523582f18b7\"}}",
+      "responseBody": {
+        "data": {
+          "items": [
+            {
+              "id": "13377325909",
+              "name": "A2 (L3)",
+              "subitems": [
+                {
+                  "id": "13377337767",
+                  "name": "A2x (L4)",
+                  "parent_item": {
+                    "id": "13377325909"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "extensions": {
+          "request_id": "eeb4c475-608b-9946-ad0f-6523582f18b7"
+        }
+      },
+      "observations": [
+        {
+          "path": "A2 (L3)",
+          "id": "13377325909",
+          "expected": [
+            "13377337504",
+            "13377337767"
+          ],
+          "observed": [
+            "13377337767"
+          ],
+          "missing": [
+            "13377337504"
+          ],
+          "unexpected": [],
+          "verdict": "DEVIATES"
+        }
+      ],
+      "verdict": "DEVIATES"
+    },
+    {
+      "case": "C5",
+      "endpoint": "https://api.monday.com/v2",
+      "apiVersion": "2026-10",
+      "requestBody": "{\"query\":\"query ($ids: [ID!]) { items(ids: $ids) { id name subitems { id name parent_item { id } } } }\",\"variables\":{\"ids\":[\"13377423073\",\"13377422958\"]}}",
+      "startedAt": "2026-10-25T02:28:12.212Z",
+      "endedAt": "2026-10-25T02:28:12.846Z",
+      "status": 200,
+      "xRequestId": "d38db203-86bc-9b6d-bf02-f1a598f5bd6d",
+      "extensionsRequestId": "d38db203-86bc-9b6d-bf02-f1a598f5bd6d",
+      "responseHeaders": {
+        "api-version": "2026-10",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Sun, 25 Oct 2026 02:28:12 GMT",
+        "ratelimit": "\"minuteRate\";r=3314, \"concurrency\";r=199, \"complexityMinute\";r=9989700;t=4",
+        "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\"",
+        "x-request-id": "d38db203-86bc-9b6d-bf02-f1a598f5bd6d"
+      },
+      "responseBodyRaw": "{\"data\":{\"items\":[{\"id\":\"13377422958\",\"name\":\"A (L2)\",\"subitems\":[{\"id\":\"13377328406\",\"name\":\"A1 (L3 leaf)\",\"parent_item\":{\"id\":\"13377422958\"}},{\"id\":\"13377325909\",\"name\":\"A2 (L3)\",\"parent_item\":{\"id\":\"13377422958\"}}]},{\"id\":\"13377423073\",\"name\":\"R1 root\",\"subitems\":[{\"id\":\"13377422958\",\"name\":\"A (L2)\",\"parent_item\":{\"id\":\"13377423073\"}},{\"id\":\"13377328359\",\"name\":\"B (L2 leaf)\",\"parent_item\":{\"id\":\"13377423073\"}}]}]},\"extensions\":{\"request_id\":\"d38db203-86bc-9b6d-bf02-f1a598f5bd6d\"}}",
+      "responseBody": {
+        "data": {
+          "items": [
+            {
+              "id": "13377422958",
+              "name": "A (L2)",
+              "subitems": [
+                {
+                  "id": "13377328406",
+                  "name": "A1 (L3 leaf)",
+                  "parent_item": {
+                    "id": "13377422958"
+                  }
+                },
+                {
+                  "id": "13377325909",
+                  "name": "A2 (L3)",
+                  "parent_item": {
+                    "id": "13377422958"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "13377423073",
+              "name": "R1 root",
+              "subitems": [
+                {
+                  "id": "13377422958",
+                  "name": "A (L2)",
+                  "parent_item": {
+                    "id": "13377423073"
+                  }
+                },
+                {
+                  "id": "13377328359",
+                  "name": "B (L2 leaf)",
+                  "parent_item": {
+                    "id": "13377423073"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "extensions": {
+          "request_id": "d38db203-86bc-9b6d-bf02-f1a598f5bd6d"
+        }
+      },
+      "observations": [
+        {
+          "path": "A (L2)",
+          "id": "13377422958",
+          "expected": [
+            "13377325909",
+            "13377328406",
+            "13377337504",
+            "13377337767"
+          ],
+          "observed": [
+            "13377325909",
+            "13377328406"
+          ],
+          "missing": [
+            "13377337504",
+            "13377337767"
+          ],
+          "unexpected": [],
+          "verdict": "DEVIATES"
+        },
+        {
+          "path": "R1 root",
+          "id": "13377423073",
+          "expected": [
+            "13377325909",
+            "13377328359",
+            "13377328406",
+            "13377337504",
+            "13377337767",
+            "13377422958"
+          ],
+          "observed": [
+            "13377328359",
+            "13377422958"
+          ],
+          "missing": [
+            "13377325909",
+            "13377328406",
+            "13377337504",
+            "13377337767"
+          ],
+          "unexpected": [],
+          "verdict": "DEVIATES"
+        }
+      ],
+      "verdict": "DEVIATES"
+    },
+    {
+      "case": "C6",
+      "endpoint": "https://api.monday.com/v2",
+      "apiVersion": "2026-10",
+      "requestBody": "{\"query\":\"query ($ids: [ID!]) { items(ids: $ids) { id name subitems { id name parent_item { id } } } }\",\"variables\":{\"ids\":[\"13377422958\",\"13377423073\"]}}",
+      "startedAt": "2026-10-25T02:28:14.047Z",
+      "endedAt": "2026-10-25T02:28:14.784Z",
+      "status": 200,
+      "xRequestId": "9d04e76c-f5cc-921f-8391-4e7a50772b82",
+      "extensionsRequestId": "9d04e76c-f5cc-921f-8391-4e7a50772b82",
+      "responseHeaders": {
+        "api-version": "2026-10",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Sun, 25 Oct 2026 02:28:14 GMT",
+        "ratelimit": "\"minuteRate\";r=3313, \"concurrency\";r=199, \"complexityMinute\";r=9989240;t=2",
+        "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\"",
+        "x-request-id": "9d04e76c-f5cc-921f-8391-4e7a50772b82"
+      },
+      "responseBodyRaw": "{\"data\":{\"items\":[{\"id\":\"13377422958\",\"name\":\"A (L2)\",\"subitems\":[{\"id\":\"13377328406\",\"name\":\"A1 (L3 leaf)\",\"parent_item\":{\"id\":\"13377422958\"}},{\"id\":\"13377325909\",\"name\":\"A2 (L3)\",\"parent_item\":{\"id\":\"13377422958\"}}]},{\"id\":\"13377423073\",\"name\":\"R1 root\",\"subitems\":[{\"id\":\"13377422958\",\"name\":\"A (L2)\",\"parent_item\":{\"id\":\"13377423073\"}},{\"id\":\"13377328359\",\"name\":\"B (L2 leaf)\",\"parent_item\":{\"id\":\"13377423073\"}}]}]},\"extensions\":{\"request_id\":\"9d04e76c-f5cc-921f-8391-4e7a50772b82\"}}",
+      "responseBody": {
+        "data": {
+          "items": [
+            {
+              "id": "13377422958",
+              "name": "A (L2)",
+              "subitems": [
+                {
+                  "id": "13377328406",
+                  "name": "A1 (L3 leaf)",
+                  "parent_item": {
+                    "id": "13377422958"
+                  }
+                },
+                {
+                  "id": "13377325909",
+                  "name": "A2 (L3)",
+                  "parent_item": {
+                    "id": "13377422958"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "13377423073",
+              "name": "R1 root",
+              "subitems": [
+                {
+                  "id": "13377422958",
+                  "name": "A (L2)",
+                  "parent_item": {
+                    "id": "13377423073"
+                  }
+                },
+                {
+                  "id": "13377328359",
+                  "name": "B (L2 leaf)",
+                  "parent_item": {
+                    "id": "13377423073"
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        "extensions": {
+          "request_id": "9d04e76c-f5cc-921f-8391-4e7a50772b82"
+        }
+      },
+      "observations": [
+        {
+          "path": "A (L2)",
+          "id": "13377422958",
+          "expected": [
+            "13377325909",
+            "13377328406",
+            "13377337504",
+            "13377337767"
+          ],
+          "observed": [
+            "13377325909",
+            "13377328406"
+          ],
+          "missing": [
+            "13377337504",
+            "13377337767"
+          ],
+          "unexpected": [],
+          "verdict": "DEVIATES"
+        },
+        {
+          "path": "R1 root",
+          "id": "13377423073",
+          "expected": [
+            "13377325909",
+            "13377328359",
+            "13377328406",
+            "13377337504",
+            "13377337767",
+            "13377422958"
+          ],
+          "observed": [
+            "13377328359",
+            "13377422958"
+          ],
+          "missing": [
+            "13377325909",
+            "13377328406",
+            "13377337504",
+            "13377337767"
+          ],
+          "unexpected": [],
+          "verdict": "DEVIATES"
+        }
+      ],
+      "verdict": "DEVIATES"
+    },
+    {
+      "case": "C7",
+      "endpoint": "https://api.monday.com/v2",
+      "apiVersion": "2026-10",
+      "requestBody": "{\"query\":\"query ($b: [ID!]) { boards(ids: $b) { items_page(limit: 50) { items { id name subitems { id name parent_item { id } } } } } }\",\"variables\":{\"b\":[\"18436907623\"]}}",
+      "startedAt": "2026-10-25T02:28:15.984Z",
+      "endedAt": "2026-10-25T02:28:16.714Z",
+      "status": 200,
+      "xRequestId": "1601a74c-ccbe-995e-bd58-72030f448f5b",
+      "extensionsRequestId": "1601a74c-ccbe-995e-bd58-72030f448f5b",
+      "responseHeaders": {
+        "api-version": "2026-10",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Sun, 25 Oct 2026 02:28:16 GMT",
+        "ratelimit": "\"minuteRate\";r=3312, \"concurrency\";r=199, \"complexityMinute\";r=9988090;t=1",
+        "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\"",
+        "x-request-id": "1601a74c-ccbe-995e-bd58-72030f448f5b"
+      },
+      "responseBodyRaw": "{\"data\":{\"boards\":[{\"items_page\":{\"items\":[{\"id\":\"13377308217\",\"name\":\"Item 1\",\"subitems\":[{\"id\":\"13377332709\",\"name\":\"Subitem Level 1\",\"parent_item\":{\"id\":\"13377308217\"}},{\"id\":\"13377308218\",\"name\":\"Subitem Level 2\",\"parent_item\":{\"id\":\"13377332709\"}},{\"id\":\"13377308219\",\"name\":\"Subitem Level 2\",\"parent_item\":{\"id\":\"13377332709\"}}]},{\"id\":\"13377423073\",\"name\":\"R1 root\",\"subitems\":[{\"id\":\"13377422958\",\"name\":\"A (L2)\",\"parent_item\":{\"id\":\"13377423073\"}},{\"id\":\"13377328406\",\"name\":\"A1 (L3 leaf)\",\"parent_item\":{\"id\":\"13377422958\"}},{\"id\":\"13377325909\",\"name\":\"A2 (L3)\",\"parent_item\":{\"id\":\"13377422958\"}},{\"id\":\"13377337767\",\"name\":\"A2x (L4)\",\"parent_item\":{\"id\":\"13377325909\"}},{\"id\":\"13377337504\",\"name\":\"A2y (L5 leaf)\",\"parent_item\":{\"id\":\"13377337767\"}},{\"id\":\"13377328359\",\"name\":\"B (L2 leaf)\",\"parent_item\":{\"id\":\"13377423073\"}}]},{\"id\":\"13377337505\",\"name\":\"R3 empty-child root\",\"subitems\":[{\"id\":\"13377422908\",\"name\":\"R3c (empty leaf)\",\"parent_item\":{\"id\":\"13377337505\"}}]}]}}]},\"extensions\":{\"request_id\":\"1601a74c-ccbe-995e-bd58-72030f448f5b\"}}",
+      "responseBody": {
+        "data": {
+          "boards": [
+            {
+              "items_page": {
+                "items": [
+                  {
+                    "id": "13377308217",
+                    "name": "Item 1",
+                    "subitems": [
+                      {
+                        "id": "13377332709",
+                        "name": "Subitem Level 1",
+                        "parent_item": {
+                          "id": "13377308217"
+                        }
+                      },
+                      {
+                        "id": "13377308218",
+                        "name": "Subitem Level 2",
+                        "parent_item": {
+                          "id": "13377332709"
+                        }
+                      },
+                      {
+                        "id": "13377308219",
+                        "name": "Subitem Level 2",
+                        "parent_item": {
+                          "id": "13377332709"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "13377423073",
+                    "name": "R1 root",
+                    "subitems": [
+                      {
+                        "id": "13377422958",
+                        "name": "A (L2)",
+                        "parent_item": {
+                          "id": "13377423073"
+                        }
+                      },
+                      {
+                        "id": "13377328406",
+                        "name": "A1 (L3 leaf)",
+                        "parent_item": {
+                          "id": "13377422958"
+                        }
+                      },
+                      {
+                        "id": "13377325909",
+                        "name": "A2 (L3)",
+                        "parent_item": {
+                          "id": "13377422958"
+                        }
+                      },
+                      {
+                        "id": "13377337767",
+                        "name": "A2x (L4)",
+                        "parent_item": {
+                          "id": "13377325909"
+                        }
+                      },
+                      {
+                        "id": "13377337504",
+                        "name": "A2y (L5 leaf)",
+                        "parent_item": {
+                          "id": "13377337767"
+                        }
+                      },
+                      {
+                        "id": "13377328359",
+                        "name": "B (L2 leaf)",
+                        "parent_item": {
+                          "id": "13377423073"
+                        }
+                      }
+                    ]
+                  },
+                  {
+                    "id": "13377337505",
+                    "name": "R3 empty-child root",
+                    "subitems": [
+                      {
+                        "id": "13377422908",
+                        "name": "R3c (empty leaf)",
+                        "parent_item": {
+                          "id": "13377337505"
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        "extensions": {
+          "request_id": "1601a74c-ccbe-995e-bd58-72030f448f5b"
+        }
+      },
+      "observations": [
+        {
+          "path": "Item 1",
+          "id": "13377308217",
+          "expected": [
+            "13377308218",
+            "13377308219",
+            "13377332709"
+          ],
+          "observed": [
+            "13377308218",
+            "13377308219",
+            "13377332709"
+          ],
+          "missing": [],
+          "unexpected": [],
+          "verdict": "PASS"
+        },
+        {
+          "path": "R1 root",
+          "id": "13377423073",
+          "expected": [
+            "13377325909",
+            "13377328359",
+            "13377328406",
+            "13377337504",
+            "13377337767",
+            "13377422958"
+          ],
+          "observed": [
+            "13377325909",
+            "13377328359",
+            "13377328406",
+            "13377337504",
+            "13377337767",
+            "13377422958"
+          ],
+          "missing": [],
+          "unexpected": [],
+          "verdict": "PASS"
+        },
+        {
+          "path": "R3 empty-child root",
+          "id": "13377337505",
+          "expected": [
+            "13377422908"
+          ],
+          "observed": [
+            "13377422908"
+          ],
+          "missing": [],
+          "unexpected": [],
+          "verdict": "PASS"
+        }
+      ],
+      "verdict": "PASS"
+    },
+    {
+      "case": "C8",
+      "endpoint": "https://api.monday.com/v2",
+      "apiVersion": "2026-10",
+      "requestBody": "{\"query\":\"query ($ids: [ID!]) { items(ids: $ids) { id name subitems { id name parent_item { id } subitems { id name parent_item { id } subitems { id name } } } } }\",\"variables\":{\"ids\":[\"13377422958\"]}}",
+      "startedAt": "2026-10-25T02:28:17.915Z",
+      "endedAt": "2026-10-25T02:28:19.073Z",
+      "status": 200,
+      "xRequestId": "4e5e63b1-f266-9519-8925-c2de5de90aca",
+      "extensionsRequestId": "4e5e63b1-f266-9519-8925-c2de5de90aca",
+      "responseHeaders": {
+        "api-version": "2026-10",
+        "content-type": "application/json; charset=utf-8",
+        "date": "Sun, 25 Oct 2026 02:28:19 GMT",
+        "ratelimit": "\"minuteRate\";r=3334, \"concurrency\";r=199, \"complexityMinute\";r=9999560;t=59",
+        "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\"",
+        "x-request-id": "4e5e63b1-f266-9519-8925-c2de5de90aca"
+      },
+      "responseBodyRaw": "{\"data\":{\"items\":[{\"id\":\"13377422958\",\"name\":\"A (L2)\",\"subitems\":[{\"id\":\"13377328406\",\"name\":\"A1 (L3 leaf)\",\"parent_item\":{\"id\":\"13377422958\"},\"subitems\":[]},{\"id\":\"13377325909\",\"name\":\"A2 (L3)\",\"parent_item\":{\"id\":\"13377422958\"},\"subitems\":[{\"id\":\"13377337767\",\"name\":\"A2x (L4)\",\"parent_item\":{\"id\":\"13377325909\"},\"subitems\":[{\"id\":\"13377337504\",\"name\":\"A2y (L5 leaf)\"}]}]}]}]},\"extensions\":{\"request_id\":\"4e5e63b1-f266-9519-8925-c2de5de90aca\"}}",
+      "responseBody": {
+        "data": {
+          "items": [
+            {
+              "id": "13377422958",
+              "name": "A (L2)",
+              "subitems": [
+                {
+                  "id": "13377328406",
+                  "name": "A1 (L3 leaf)",
+                  "parent_item": {
+                    "id": "13377422958"
+                  },
+                  "subitems": []
+                },
+                {
+                  "id": "13377325909",
+                  "name": "A2 (L3)",
+                  "parent_item": {
+                    "id": "13377422958"
+                  },
+                  "subitems": [
+                    {
+                      "id": "13377337767",
+                      "name": "A2x (L4)",
+                      "parent_item": {
+                        "id": "13377325909"
+                      },
+                      "subitems": [
+                        {
+                          "id": "13377337504",
+                          "name": "A2y (L5 leaf)"
+                        }
+                      ]
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        "extensions": {
+          "request_id": "4e5e63b1-f266-9519-8925-c2de5de90aca"
+        }
+      },
+      "observations": [
+        {
+          "path": "A (L2)",
+          "id": "13377422958",
+          "expected": [
+            "13377325909",
+            "13377328406",
+            "13377337504",
+            "13377337767"
+          ],
+          "observed": [
+            "13377325909",
+            "13377328406"
+          ],
+          "missing": [
+            "13377337504",
+            "13377337767"
+          ],
+          "unexpected": [],
+          "verdict": "DEVIATES"
+        },
+        {
+          "path": "A (L2) > A1 (L3 leaf)",
+          "id": "13377328406",
+          "expected": [],
+          "observed": [],
+          "missing": [],
+          "unexpected": [],
+          "verdict": "PASS"
+        },
+        {
+          "path": "A (L2) > A2 (L3)",
+          "id": "13377325909",
+          "expected": [
+            "13377337504",
+            "13377337767"
+          ],
+          "observed": [
+            "13377337767"
+          ],
+          "missing": [
+            "13377337504"
+          ],
+          "unexpected": [],
+          "verdict": "DEVIATES"
+        },
+        {
+          "path": "A (L2) > A2 (L3) > A2x (L4)",
+          "id": "13377337767",
+          "expected": [
+            "13377337504"
+          ],
+          "observed": [
+            "13377337504"
+          ],
+          "missing": [],
+          "unexpected": [],
+          "verdict": "PASS"
+        }
+      ],
+      "verdict": "DEVIATES"
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "file": "01-account-2026-10",
+  "case": "setup",
+  "description": "Account slug",
+  "endpoint": "https://api.monday.com/v2",
+  "method": "POST",
+  "requestHeaders": {
+    "API-Version": "2026-10",
+    "Content-Type": "application/json"
+  },
+  "authorizationHeader": "sent; value not recorded",
+  "apiVersion": "2026-10",
+  "requestBody": "{\"query\":\"query { me { account { slug name } } }\",\"variables\":{}}",
+  "query": "query { me { account { slug name } } }",
+  "variables": {},
+  "startedAt": "2026-10-25T02:42:12.420Z",
+  "endedAt": "2026-10-25T02:42:12.567Z",
+  "durationMs": 147,
+  "status": 200,
+  "xRequestId": "166e5ca0-b9b4-97cd-ae49-c4b353bd655e",
+  "rateLimitHeaders": {
+    "ratelimit": "\"minuteRate\";r=3324, \"concurrency\";r=199, \"complexityMinute\";r=9879367;t=22",
+    "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\""
+  },
+  "responseHeaders": {
+    "api-version": "2026-10",
+    "content-type": "application/json; charset=utf-8",
+    "date": "Sun, 25 Oct 2026 02:42:12 GMT",
+    "ratelimit": "\"minuteRate\";r=3324, \"concurrency\";r=199, \"complexityMinute\";r=9879367;t=22",
+    "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\"",
+    "x-request-id": "166e5ca0-b9b4-97cd-ae49-c4b353bd655e"
+  },
+  "extensionsRequestId": "166e5ca0-b9b4-97cd-ae49-c4b353bd655e",
+  "responseBodyRaw": "{\"data\":{\"me\":{\"account\":{\"slug\":\"sandbox-account\",\"name\":\"sandbox-account\"}}},\"extensions\":{\"request_id\":\"166e5ca0-b9b4-97cd-ae49-c4b353bd655e\"}}",
+  "responseBody": {
+    "data": {
+      "me": {
+        "account": {
+          "slug": "sandbox-account",
+          "name": "sandbox-account"
+        }
+      }
+    },
+    "extensions": {
+      "request_id": "166e5ca0-b9b4-97cd-ae49-c4b353bd655e"
+    }
+  }
+}

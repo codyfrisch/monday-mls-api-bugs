@@ -1,0 +1,61 @@
+{
+  "file": "05-create-column-nummax-2026-10",
+  "case": "setup",
+  "description": "create_column Num MAX",
+  "endpoint": "https://api.monday.com/v2",
+  "method": "POST",
+  "requestHeaders": {
+    "API-Version": "2026-10",
+    "Content-Type": "application/json"
+  },
+  "authorizationHeader": "sent; value not recorded",
+  "apiVersion": "2026-10",
+  "requestBody": "{\"query\":\"mutation ($b: ID!, $t: String!, $ty: ColumnType!, $cap: ColumnCapabilitiesInput) { create_column(board_id: $b, title: $t, column_type: $ty, capabilities: $cap) { id title type capabilities { calculated { function } } } }\",\"variables\":{\"b\":\"18436908354\",\"t\":\"Num MAX\",\"ty\":\"numbers\",\"cap\":{\"calculated\":{\"function\":\"MAX\"}}}}",
+  "query": "mutation ($b: ID!, $t: String!, $ty: ColumnType!, $cap: ColumnCapabilitiesInput) { create_column(board_id: $b, title: $t, column_type: $ty, capabilities: $cap) { id title type capabilities { calculated { function } } } }",
+  "variables": {
+    "b": "18436908354",
+    "t": "Num MAX",
+    "ty": "numbers",
+    "cap": {
+      "calculated": {
+        "function": "MAX"
+      }
+    }
+  },
+  "startedAt": "2026-10-25T02:42:25.532Z",
+  "endedAt": "2026-10-25T02:42:26.178Z",
+  "durationMs": 646,
+  "status": 200,
+  "xRequestId": "540141df-6bf2-9af9-8578-4397f14f3420",
+  "rateLimitHeaders": {
+    "ratelimit": "\"minuteRate\";r=3320, \"concurrency\";r=199, \"complexityMinute\";r=9849358;t=9",
+    "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\""
+  },
+  "responseHeaders": {
+    "api-version": "2026-10",
+    "content-type": "application/json; charset=utf-8",
+    "date": "Sun, 25 Oct 2026 02:42:26 GMT",
+    "ratelimit": "\"minuteRate\";r=3320, \"concurrency\";r=199, \"complexityMinute\";r=9849358;t=9",
+    "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\"",
+    "x-request-id": "540141df-6bf2-9af9-8578-4397f14f3420"
+  },
+  "extensionsRequestId": "540141df-6bf2-9af9-8578-4397f14f3420",
+  "responseBodyRaw": "{\"data\":{\"create_column\":{\"id\":\"numeric_mm8f56kg\",\"title\":\"Num MAX\",\"type\":\"numbers\",\"capabilities\":{\"calculated\":{\"function\":\"MAX\"}}}},\"extensions\":{\"request_id\":\"540141df-6bf2-9af9-8578-4397f14f3420\"}}",
+  "responseBody": {
+    "data": {
+      "create_column": {
+        "id": "numeric_mm8f56kg",
+        "title": "Num MAX",
+        "type": "numbers",
+        "capabilities": {
+          "calculated": {
+            "function": "MAX"
+          }
+        }
+      }
+    },
+    "extensions": {
+      "request_id": "540141df-6bf2-9af9-8578-4397f14f3420"
+    }
+  }
+}

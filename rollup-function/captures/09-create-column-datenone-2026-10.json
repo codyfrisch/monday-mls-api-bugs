@@ -1,0 +1,73 @@
+{
+  "file": "09-create-column-datenone-2026-10",
+  "case": "setup",
+  "description": "create_column Date NONE",
+  "endpoint": "https://api.monday.com/v2",
+  "method": "POST",
+  "requestHeaders": {
+    "API-Version": "2026-10",
+    "Content-Type": "application/json"
+  },
+  "authorizationHeader": "sent; value not recorded",
+  "apiVersion": "2026-10",
+  "requestBody": "{\"query\":\"mutation ($b: ID!, $t: String!, $ty: ColumnType!, $cap: ColumnCapabilitiesInput) { create_column(board_id: $b, title: $t, column_type: $ty, capabilities: $cap) { id title type capabilities { calculated { function } } } }\",\"variables\":{\"b\":\"18436908354\",\"t\":\"Date NONE\",\"ty\":\"date\",\"cap\":{\"calculated\":{\"function\":\"NONE\"}}}}",
+  "query": "mutation ($b: ID!, $t: String!, $ty: ColumnType!, $cap: ColumnCapabilitiesInput) { create_column(board_id: $b, title: $t, column_type: $ty, capabilities: $cap) { id title type capabilities { calculated { function } } } }",
+  "variables": {
+    "b": "18436908354",
+    "t": "Date NONE",
+    "ty": "date",
+    "cap": {
+      "calculated": {
+        "function": "NONE"
+      }
+    }
+  },
+  "startedAt": "2026-10-25T02:42:32.837Z",
+  "endedAt": "2026-10-25T02:42:32.975Z",
+  "durationMs": 138,
+  "status": 200,
+  "xRequestId": "82e57958-c4ae-94de-8a16-3a569147b01c",
+  "rateLimitHeaders": {
+    "ratelimit": "\"minuteRate\";r=3316, \"concurrency\";r=199, \"complexityMinute\";r=9849348;t=2",
+    "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\""
+  },
+  "responseHeaders": {
+    "api-version": "2026-10",
+    "content-type": "application/json; charset=utf-8",
+    "date": "Sun, 25 Oct 2026 02:42:32 GMT",
+    "ratelimit": "\"minuteRate\";r=3316, \"concurrency\";r=199, \"complexityMinute\";r=9849348;t=2",
+    "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\"",
+    "x-request-id": "82e57958-c4ae-94de-8a16-3a569147b01c"
+  },
+  "extensionsRequestId": "82e57958-c4ae-94de-8a16-3a569147b01c",
+  "responseBodyRaw": "{\"errors\":[{\"message\":\"Capabilities validation failed\",\"locations\":[{\"line\":1,\"column\":78}],\"path\":[\"create_column\"],\"extensions\":{\"code\":\"INVALID_INPUT\",\"status_code\":400,\"errors\":[\"Invalid capabilities: Invalid calculated function 'none' for column type 'date'. Valid functions: min, max\"]}}],\"data\":{\"create_column\":null},\"extensions\":{\"request_id\":\"82e57958-c4ae-94de-8a16-3a569147b01c\"}}",
+  "responseBody": {
+    "errors": [
+      {
+        "message": "Capabilities validation failed",
+        "locations": [
+          {
+            "line": 1,
+            "column": 78
+          }
+        ],
+        "path": [
+          "create_column"
+        ],
+        "extensions": {
+          "code": "INVALID_INPUT",
+          "status_code": 400,
+          "errors": [
+            "Invalid capabilities: Invalid calculated function 'none' for column type 'date'. Valid functions: min, max"
+          ]
+        }
+      }
+    ],
+    "data": {
+      "create_column": null
+    },
+    "extensions": {
+      "request_id": "82e57958-c4ae-94de-8a16-3a569147b01c"
+    }
+  }
+}

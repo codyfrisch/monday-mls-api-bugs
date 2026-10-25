@@ -1,0 +1,256 @@
+{
+  "file": "31-sandbox-metadata-2026-10",
+  "case": "metadata",
+  "description": "Rollup columns: function, settings, settings_str",
+  "endpoint": "https://api.monday.com/v2",
+  "method": "POST",
+  "requestHeaders": {
+    "API-Version": "2026-10",
+    "Content-Type": "application/json"
+  },
+  "authorizationHeader": "sent; value not recorded",
+  "apiVersion": "2026-10",
+  "requestBody": "{\"query\":\"query ($b: [ID!]) { boards(ids: $b) { id name hierarchy_type columns(capabilities: [CALCULATED]) { id title type settings settings_str capabilities { calculated { function } } } } }\",\"variables\":{\"b\":[\"18436846804\"]}}",
+  "query": "query ($b: [ID!]) { boards(ids: $b) { id name hierarchy_type columns(capabilities: [CALCULATED]) { id title type settings settings_str capabilities { calculated { function } } } } }",
+  "variables": {
+    "b": [
+      "18436846804"
+    ]
+  },
+  "startedAt": "2026-10-25T02:43:41.582Z",
+  "endedAt": "2026-10-25T02:43:41.789Z",
+  "durationMs": 207,
+  "status": 200,
+  "xRequestId": "98df5cc0-3b02-9337-afc6-af25a0186346",
+  "rateLimitHeaders": {
+    "ratelimit": "\"minuteRate\";r=3333, \"concurrency\";r=199, \"complexityMinute\";r=9999590;t=54",
+    "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\""
+  },
+  "responseHeaders": {
+    "api-version": "2026-10",
+    "content-type": "application/json; charset=utf-8",
+    "date": "Sun, 25 Oct 2026 02:43:41 GMT",
+    "ratelimit": "\"minuteRate\";r=3333, \"concurrency\";r=199, \"complexityMinute\";r=9999590;t=54",
+    "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\"",
+    "x-request-id": "98df5cc0-3b02-9337-afc6-af25a0186346"
+  },
+  "extensionsRequestId": "98df5cc0-3b02-9337-afc6-af25a0186346",
+  "responseBodyRaw": "{\"data\":{\"boards\":[{\"id\":\"18436846804\",\"name\":\"MLS Source\",\"hierarchy_type\":\"multi_level\",\"columns\":[{\"id\":\"color_mkv6tatz\",\"title\":\"Status\",\"type\":\"status\",\"settings\":{\"labels\":[{\"id\":0,\"color\":0,\"label\":\"Working on it\",\"index\":0,\"is_done\":false,\"is_deactivated\":false,\"hex\":\"#fdab3d\"},{\"id\":1,\"color\":1,\"label\":\"Done\",\"index\":1,\"is_done\":false,\"is_deactivated\":false,\"hex\":\"#00c875\"},{\"id\":2,\"color\":2,\"label\":\"Stuck\",\"index\":2,\"is_done\":false,\"is_deactivated\":false,\"hex\":\"#df2f4a\"}]},\"settings_str\":\"{\\\"labels\\\":{\\\"0\\\":\\\"Working on it\\\",\\\"1\\\":\\\"Done\\\",\\\"2\\\":\\\"Stuck\\\"},\\\"labels_colors\\\":{\\\"0\\\":{\\\"color\\\":\\\"#fdab3d\\\",\\\"border\\\":\\\"#e99729\\\",\\\"var_name\\\":\\\"orange\\\"},\\\"1\\\":{\\\"color\\\":\\\"#00c875\\\",\\\"border\\\":\\\"#00b461\\\",\\\"var_name\\\":\\\"green-shadow\\\"},\\\"2\\\":{\\\"color\\\":\\\"#df2f4a\\\",\\\"border\\\":\\\"#ce3048\\\",\\\"var_name\\\":\\\"red-shadow\\\"}}}\",\"capabilities\":{\"calculated\":{\"function\":\"COUNT_KEYS\"}}},{\"id\":\"timerange_mkyvnykb\",\"title\":\"Timeline\",\"type\":\"timeline\",\"settings\":{},\"settings_str\":\"{}\",\"capabilities\":{\"calculated\":{\"function\":\"MIN_MAX\"}}},{\"id\":\"numeric_mm8er9xg\",\"title\":\"Num SUM\",\"type\":\"numbers\",\"settings\":{},\"settings_str\":\"{}\",\"capabilities\":{\"calculated\":{\"function\":\"SUM\"}}},{\"id\":\"numeric_mm8esxg1\",\"title\":\"Num MIN\",\"type\":\"numbers\",\"settings\":{},\"settings_str\":\"{}\",\"capabilities\":{\"calculated\":{\"function\":\"MIN\"}}},{\"id\":\"numeric_mm8e1qed\",\"title\":\"Num MAX\",\"type\":\"numbers\",\"settings\":{},\"settings_str\":\"{}\",\"capabilities\":{\"calculated\":{\"function\":\"MAX\"}}},{\"id\":\"numeric_mm8e1myd\",\"title\":\"Num NONE\",\"type\":\"numbers\",\"settings\":{},\"settings_str\":\"{}\",\"capabilities\":{\"calculated\":{\"function\":\"NONE\"}}},{\"id\":\"date_mm8es1zd\",\"title\":\"Date MAX\",\"type\":\"date\",\"settings\":{},\"settings_str\":\"{}\",\"capabilities\":{\"calculated\":{\"function\":\"MAX\"}}},{\"id\":\"date_mm8e937y\",\"title\":\"Date MIN\",\"type\":\"date\",\"settings\":{},\"settings_str\":\"{}\",\"capabilities\":{\"calculated\":{\"function\":\"MIN\"}}},{\"id\":\"color_mm8ecpae\",\"title\":\"Status Keys\",\"type\":\"status\",\"settings\":{\"labels\":[{\"id\":3,\"color\":3,\"label\":\"Three\",\"index\":0,\"is_done\":false,\"is_deactivated\":false,\"hex\":\"#007eb5\"},{\"id\":7,\"color\":7,\"label\":\"Seven\",\"index\":1,\"is_done\":false,\"is_deactivated\":false,\"hex\":\"#579bfc\"},{\"id\":11,\"color\":11,\"label\":\"Eleven\",\"index\":2,\"is_done\":false,\"is_deactivated\":false,\"hex\":\"#bb3354\"}]},\"settings_str\":\"{\\\"labels\\\":{\\\"3\\\":\\\"Three\\\",\\\"7\\\":\\\"Seven\\\",\\\"11\\\":\\\"Eleven\\\"},\\\"labels_colors\\\":{\\\"3\\\":{\\\"color\\\":\\\"#007eb5\\\",\\\"border\\\":\\\"#3db0df\\\",\\\"var_name\\\":\\\"blue-links\\\"},\\\"7\\\":{\\\"color\\\":\\\"#579bfc\\\",\\\"border\\\":\\\"#4387e8\\\",\\\"var_name\\\":\\\"bright-blue\\\"},\\\"11\\\":{\\\"color\\\":\\\"#bb3354\\\",\\\"border\\\":\\\"#a42d4a\\\",\\\"var_name\\\":\\\"dark-red\\\"}}}\",\"capabilities\":{\"calculated\":{\"function\":\"COUNT_KEYS\"}}},{\"id\":\"color_mm8ercwp\",\"title\":\"Status Key Five\",\"type\":\"status\",\"settings\":{\"labels\":[{\"id\":5,\"color\":5,\"label\":\"N/A\",\"index\":0,\"is_done\":false,\"is_deactivated\":false,\"hex\":\"#c4c4c4\"},{\"id\":7,\"color\":7,\"label\":\"Seven\",\"index\":1,\"is_done\":false,\"is_deactivated\":false,\"hex\":\"#579bfc\"}]},\"settings_str\":\"{\\\"labels\\\":{\\\"5\\\":\\\"N/A\\\",\\\"7\\\":\\\"Seven\\\"},\\\"labels_colors\\\":{\\\"5\\\":{\\\"color\\\":\\\"#c4c4c4\\\",\\\"border\\\":\\\"#b0b0b0\\\",\\\"var_name\\\":\\\"grey\\\"},\\\"7\\\":{\\\"color\\\":\\\"#579bfc\\\",\\\"border\\\":\\\"#4387e8\\\",\\\"var_name\\\":\\\"bright-blue\\\"}}}\",\"capabilities\":{\"calculated\":{\"function\":\"COUNT_KEYS\"}}}]}]},\"extensions\":{\"request_id\":\"98df5cc0-3b02-9337-afc6-af25a0186346\"}}",
+  "responseBody": {
+    "data": {
+      "boards": [
+        {
+          "id": "18436846804",
+          "name": "MLS Source",
+          "hierarchy_type": "multi_level",
+          "columns": [
+            {
+              "id": "color_mkv6tatz",
+              "title": "Status",
+              "type": "status",
+              "settings": {
+                "labels": [
+                  {
+                    "id": 0,
+                    "color": 0,
+                    "label": "Working on it",
+                    "index": 0,
+                    "is_done": false,
+                    "is_deactivated": false,
+                    "hex": "#fdab3d"
+                  },
+                  {
+                    "id": 1,
+                    "color": 1,
+                    "label": "Done",
+                    "index": 1,
+                    "is_done": false,
+                    "is_deactivated": false,
+                    "hex": "#00c875"
+                  },
+                  {
+                    "id": 2,
+                    "color": 2,
+                    "label": "Stuck",
+                    "index": 2,
+                    "is_done": false,
+                    "is_deactivated": false,
+                    "hex": "#df2f4a"
+                  }
+                ]
+              },
+              "settings_str": "{\"labels\":{\"0\":\"Working on it\",\"1\":\"Done\",\"2\":\"Stuck\"},\"labels_colors\":{\"0\":{\"color\":\"#fdab3d\",\"border\":\"#e99729\",\"var_name\":\"orange\"},\"1\":{\"color\":\"#00c875\",\"border\":\"#00b461\",\"var_name\":\"green-shadow\"},\"2\":{\"color\":\"#df2f4a\",\"border\":\"#ce3048\",\"var_name\":\"red-shadow\"}}}",
+              "capabilities": {
+                "calculated": {
+                  "function": "COUNT_KEYS"
+                }
+              }
+            },
+            {
+              "id": "timerange_mkyvnykb",
+              "title": "Timeline",
+              "type": "timeline",
+              "settings": {},
+              "settings_str": "{}",
+              "capabilities": {
+                "calculated": {
+                  "function": "MIN_MAX"
+                }
+              }
+            },
+            {
+              "id": "numeric_mm8er9xg",
+              "title": "Num SUM",
+              "type": "numbers",
+              "settings": {},
+              "settings_str": "{}",
+              "capabilities": {
+                "calculated": {
+                  "function": "SUM"
+                }
+              }
+            },
+            {
+              "id": "numeric_mm8esxg1",
+              "title": "Num MIN",
+              "type": "numbers",
+              "settings": {},
+              "settings_str": "{}",
+              "capabilities": {
+                "calculated": {
+                  "function": "MIN"
+                }
+              }
+            },
+            {
+              "id": "numeric_mm8e1qed",
+              "title": "Num MAX",
+              "type": "numbers",
+              "settings": {},
+              "settings_str": "{}",
+              "capabilities": {
+                "calculated": {
+                  "function": "MAX"
+                }
+              }
+            },
+            {
+              "id": "numeric_mm8e1myd",
+              "title": "Num NONE",
+              "type": "numbers",
+              "settings": {},
+              "settings_str": "{}",
+              "capabilities": {
+                "calculated": {
+                  "function": "NONE"
+                }
+              }
+            },
+            {
+              "id": "date_mm8es1zd",
+              "title": "Date MAX",
+              "type": "date",
+              "settings": {},
+              "settings_str": "{}",
+              "capabilities": {
+                "calculated": {
+                  "function": "MAX"
+                }
+              }
+            },
+            {
+              "id": "date_mm8e937y",
+              "title": "Date MIN",
+              "type": "date",
+              "settings": {},
+              "settings_str": "{}",
+              "capabilities": {
+                "calculated": {
+                  "function": "MIN"
+                }
+              }
+            },
+            {
+              "id": "color_mm8ecpae",
+              "title": "Status Keys",
+              "type": "status",
+              "settings": {
+                "labels": [
+                  {
+                    "id": 3,
+                    "color": 3,
+                    "label": "Three",
+                    "index": 0,
+                    "is_done": false,
+                    "is_deactivated": false,
+                    "hex": "#007eb5"
+                  },
+                  {
+                    "id": 7,
+                    "color": 7,
+                    "label": "Seven",
+                    "index": 1,
+                    "is_done": false,
+                    "is_deactivated": false,
+                    "hex": "#579bfc"
+                  },
+                  {
+                    "id": 11,
+                    "color": 11,
+                    "label": "Eleven",
+                    "index": 2,
+                    "is_done": false,
+                    "is_deactivated": false,
+                    "hex": "#bb3354"
+                  }
+                ]
+              },
+              "settings_str": "{\"labels\":{\"3\":\"Three\",\"7\":\"Seven\",\"11\":\"Eleven\"},\"labels_colors\":{\"3\":{\"color\":\"#007eb5\",\"border\":\"#3db0df\",\"var_name\":\"blue-links\"},\"7\":{\"color\":\"#579bfc\",\"border\":\"#4387e8\",\"var_name\":\"bright-blue\"},\"11\":{\"color\":\"#bb3354\",\"border\":\"#a42d4a\",\"var_name\":\"dark-red\"}}}",
+              "capabilities": {
+                "calculated": {
+                  "function": "COUNT_KEYS"
+                }
+              }
+            },
+            {
+              "id": "color_mm8ercwp",
+              "title": "Status Key Five",
+              "type": "status",
+              "settings": {
+                "labels": [
+                  {
+                    "id": 5,
+                    "color": 5,
+                    "label": "N/A",
+                    "index": 0,
+                    "is_done": false,
+                    "is_deactivated": false,
+                    "hex": "#c4c4c4"
+                  },
+                  {
+                    "id": 7,
+                    "color": 7,
+                    "label": "Seven",
+                    "index": 1,
+                    "is_done": false,
+                    "is_deactivated": false,
+                    "hex": "#579bfc"
+                  }
+                ]
+              },
+              "settings_str": "{\"labels\":{\"5\":\"N/A\",\"7\":\"Seven\"},\"labels_colors\":{\"5\":{\"color\":\"#c4c4c4\",\"border\":\"#b0b0b0\",\"var_name\":\"grey\"},\"7\":{\"color\":\"#579bfc\",\"border\":\"#4387e8\",\"var_name\":\"bright-blue\"}}}",
+              "capabilities": {
+                "calculated": {
+                  "function": "COUNT_KEYS"
+                }
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "extensions": {
+      "request_id": "98df5cc0-3b02-9337-afc6-af25a0186346"
+    }
+  }
+}

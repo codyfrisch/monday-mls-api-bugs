@@ -1,0 +1,60 @@
+{
+  "file": "03-column-metadata-2026-04",
+  "case": "metadata",
+  "description": "Rollup columns with capabilities.calculated.function",
+  "endpoint": "https://api.monday.com/v2",
+  "method": "POST",
+  "requestHeaders": {
+    "API-Version": "2026-04",
+    "Content-Type": "application/json"
+  },
+  "authorizationHeader": "sent; value not recorded",
+  "apiVersion": "2026-04",
+  "requestBody": "{\"query\":\"query ($b: [ID!], $c: [String!]) { boards(ids: $b) { columns(ids: $c) { id title type capabilities { calculated { function } } } } }\",\"variables\":{\"b\":[\"18436846804\"],\"c\":[\"numeric_mm8er9xg\",\"numeric_mm8esxg1\",\"numeric_mm8e1qed\",\"numeric_mm8e1myd\",\"date_mm8e937y\",\"date_mm8es1zd\",\"timerange_mkyvnykb\"]}}",
+  "query": "query ($b: [ID!], $c: [String!]) { boards(ids: $b) { columns(ids: $c) { id title type capabilities { calculated { function } } } } }",
+  "variables": {
+    "b": [
+      "18436846804"
+    ],
+    "c": [
+      "numeric_mm8er9xg",
+      "numeric_mm8esxg1",
+      "numeric_mm8e1qed",
+      "numeric_mm8e1myd",
+      "date_mm8e937y",
+      "date_mm8es1zd",
+      "timerange_mkyvnykb"
+    ]
+  },
+  "startedAt": "2026-10-25T02:41:20.315Z",
+  "endedAt": "2026-10-25T02:41:20.514Z",
+  "durationMs": 199,
+  "status": 200,
+  "xRequestId": "c9241907-c348-92b8-bb07-c8fcacaaa4b9",
+  "rateLimitHeaders": {
+    "ratelimit": "\"minuteRate\";r=3314, \"concurrency\";r=199, \"complexityMinute\";r=9729260;t=13",
+    "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\""
+  },
+  "responseHeaders": {
+    "api-version": "2026-04",
+    "content-type": "application/json; charset=utf-8",
+    "date": "Sun, 25 Oct 2026 02:41:20 GMT",
+    "ratelimit": "\"minuteRate\";r=3314, \"concurrency\";r=199, \"complexityMinute\";r=9729260;t=13",
+    "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\"",
+    "x-request-id": "c9241907-c348-92b8-bb07-c8fcacaaa4b9"
+  },
+  "extensionsRequestId": "c9241907-c348-92b8-bb07-c8fcacaaa4b9",
+  "responseBodyRaw": "{\"data\":{\"boards\":[{\"columns\":[]}]},\"extensions\":{\"request_id\":\"c9241907-c348-92b8-bb07-c8fcacaaa4b9\"}}",
+  "responseBody": {
+    "data": {
+      "boards": [
+        {
+          "columns": []
+        }
+      ]
+    },
+    "extensions": {
+      "request_id": "c9241907-c348-92b8-bb07-c8fcacaaa4b9"
+    }
+  }
+}

@@ -1,0 +1,1044 @@
+{
+  "file": "11-ground-truth-2026-10",
+  "case": "ground-truth",
+  "description": "Every item with parent_item and rollup cells (capabilities: [CALCULATED], hierarchy_scope_config: \"allItems\")",
+  "endpoint": "https://api.monday.com/v2",
+  "method": "POST",
+  "requestHeaders": {
+    "API-Version": "2026-10",
+    "Content-Type": "application/json"
+  },
+  "authorizationHeader": "sent; value not recorded",
+  "apiVersion": "2026-10",
+  "requestBody": "{\"query\":\"query ($b: [ID!], $c: [String!]) { boards(ids: $b) { items_page(limit: 100, hierarchy_scope_config: \\\"allItems\\\") { cursor items { id name parent_item { id } column_values(ids: $c, capabilities: [CALCULATED]) { id type text value is_leaf ... on NumbersValue { number } ... on DateValue { date } ... on TimelineValue { from to } } } } } }\",\"variables\":{\"b\":[\"18436846804\"],\"c\":[\"numeric_mm8er9xg\",\"numeric_mm8esxg1\",\"numeric_mm8e1qed\",\"numeric_mm8e1myd\",\"date_mm8e937y\",\"date_mm8es1zd\",\"timerange_mkyvnykb\"]}}",
+  "query": "query ($b: [ID!], $c: [String!]) { boards(ids: $b) { items_page(limit: 100, hierarchy_scope_config: \"allItems\") { cursor items { id name parent_item { id } column_values(ids: $c, capabilities: [CALCULATED]) { id type text value is_leaf ... on NumbersValue { number } ... on DateValue { date } ... on TimelineValue { from to } } } } } }",
+  "variables": {
+    "b": [
+      "18436846804"
+    ],
+    "c": [
+      "numeric_mm8er9xg",
+      "numeric_mm8esxg1",
+      "numeric_mm8e1qed",
+      "numeric_mm8e1myd",
+      "date_mm8e937y",
+      "date_mm8es1zd",
+      "timerange_mkyvnykb"
+    ]
+  },
+  "startedAt": "2026-10-25T02:41:36.362Z",
+  "endedAt": "2026-10-25T02:41:37.511Z",
+  "durationMs": 1149,
+  "status": 200,
+  "xRequestId": "11ca417b-8344-9296-b854-1bf65cfe890a",
+  "rateLimitHeaders": {
+    "ratelimit": "\"minuteRate\";r=3334, \"concurrency\";r=199, \"complexityMinute\";r=9999541;t=58",
+    "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\""
+  },
+  "responseHeaders": {
+    "api-version": "2026-10",
+    "content-type": "application/json; charset=utf-8",
+    "date": "Sun, 25 Oct 2026 02:41:37 GMT",
+    "ratelimit": "\"minuteRate\";r=3334, \"concurrency\";r=199, \"complexityMinute\";r=9999541;t=58",
+    "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\"",
+    "x-request-id": "11ca417b-8344-9296-b854-1bf65cfe890a"
+  },
+  "extensionsRequestId": "11ca417b-8344-9296-b854-1bf65cfe890a",
+  "responseBodyRaw": "{\"data\":{\"boards\":[{\"items_page\":{\"cursor\":null,\"items\":[{\"id\":\"13374291641\",\"name\":\"Item 1\",\"parent_item\":null,\"column_values\":[{\"id\":\"timerange_mkyvnykb\",\"type\":\"timeline\",\"text\":\"2025-12-16 - 2025-12-26\",\"value\":\"{\\\"to\\\":\\\"2025-12-26\\\",\\\"from\\\":\\\"2025-12-16\\\"}\",\"is_leaf\":false,\"from\":\"2025-12-16T00:00:00+00:00\",\"to\":\"2025-12-26T00:00:00+00:00\"},{\"id\":\"numeric_mm8er9xg\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"number\":null},{\"id\":\"numeric_mm8esxg1\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"number\":null},{\"id\":\"numeric_mm8e1qed\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"number\":null},{\"id\":\"numeric_mm8e1myd\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"number\":null},{\"id\":\"date_mm8es1zd\",\"type\":\"date\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"date\":\"\"},{\"id\":\"date_mm8e937y\",\"type\":\"date\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"date\":\"\"}]},{\"id\":\"13374290733\",\"name\":\"R1 root\",\"parent_item\":null,\"column_values\":[{\"id\":\"timerange_mkyvnykb\",\"type\":\"timeline\",\"text\":\"2026-01-05 - 2026-05-20\",\"value\":\"{\\\"to\\\":\\\"2026-05-20\\\",\\\"from\\\":\\\"2026-01-05\\\"}\",\"is_leaf\":false,\"from\":\"2026-01-05T00:00:00+00:00\",\"to\":\"2026-05-20T00:00:00+00:00\"},{\"id\":\"numeric_mm8er9xg\",\"type\":\"numbers\",\"text\":\"136\",\"value\":\"\\\"136\\\"\",\"is_leaf\":false,\"number\":136},{\"id\":\"numeric_mm8esxg1\",\"type\":\"numbers\",\"text\":\"136\",\"value\":\"\\\"136\\\"\",\"is_leaf\":false,\"number\":136},{\"id\":\"numeric_mm8e1qed\",\"type\":\"numbers\",\"text\":\"136\",\"value\":\"\\\"136\\\"\",\"is_leaf\":false,\"number\":136},{\"id\":\"numeric_mm8e1myd\",\"type\":\"numbers\",\"text\":\"136\",\"value\":\"\\\"136\\\"\",\"is_leaf\":false,\"number\":136},{\"id\":\"date_mm8es1zd\",\"type\":\"date\",\"text\":\"2026-01-10\",\"value\":\"{\\\"date\\\":\\\"2026-01-10\\\"}\",\"is_leaf\":false,\"date\":\"2026-01-10\"},{\"id\":\"date_mm8e937y\",\"type\":\"date\",\"text\":\"2026-01-10\",\"value\":\"{\\\"date\\\":\\\"2026-01-10\\\"}\",\"is_leaf\":false,\"date\":\"2026-01-10\"}]},{\"id\":\"13374276846\",\"name\":\"R2 leaf root\",\"parent_item\":null,\"column_values\":[{\"id\":\"timerange_mkyvnykb\",\"type\":\"timeline\",\"text\":\"2026-02-01 - 2026-02-03\",\"value\":\"{\\\"to\\\":\\\"2026-02-03\\\",\\\"from\\\":\\\"2026-02-01\\\"}\",\"is_leaf\":true,\"from\":\"2026-02-01T00:00:00+00:00\",\"to\":\"2026-02-03T00:00:00+00:00\"},{\"id\":\"numeric_mm8er9xg\",\"type\":\"numbers\",\"text\":\"7\",\"value\":\"\\\"7\\\"\",\"is_leaf\":true,\"number\":7},{\"id\":\"numeric_mm8esxg1\",\"type\":\"numbers\",\"text\":\"7\",\"value\":\"\\\"7\\\"\",\"is_leaf\":true,\"number\":7},{\"id\":\"numeric_mm8e1qed\",\"type\":\"numbers\",\"text\":\"7\",\"value\":\"\\\"7\\\"\",\"is_leaf\":true,\"number\":7},{\"id\":\"numeric_mm8e1myd\",\"type\":\"numbers\",\"text\":\"7\",\"value\":\"\\\"7\\\"\",\"is_leaf\":true,\"number\":7},{\"id\":\"date_mm8es1zd\",\"type\":\"date\",\"text\":\"2026-02-02\",\"value\":\"{\\\"date\\\":\\\"2026-02-02\\\"}\",\"is_leaf\":true,\"date\":\"2026-02-02\"},{\"id\":\"date_mm8e937y\",\"type\":\"date\",\"text\":\"2026-02-02\",\"value\":\"{\\\"date\\\":\\\"2026-02-02\\\"}\",\"is_leaf\":true,\"date\":\"2026-02-02\"}]},{\"id\":\"13374267172\",\"name\":\"R3 empty-child root\",\"parent_item\":null,\"column_values\":[{\"id\":\"timerange_mkyvnykb\",\"type\":\"timeline\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"from\":null,\"to\":null},{\"id\":\"numeric_mm8er9xg\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"number\":null},{\"id\":\"numeric_mm8esxg1\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"number\":null},{\"id\":\"numeric_mm8e1qed\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"number\":null},{\"id\":\"numeric_mm8e1myd\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"number\":null},{\"id\":\"date_mm8es1zd\",\"type\":\"date\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"date\":\"\"},{\"id\":\"date_mm8e937y\",\"type\":\"date\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"date\":\"\"}]},{\"id\":\"13377169129\",\"name\":\"DC deep-chain source\",\"parent_item\":null,\"column_values\":[{\"id\":\"timerange_mkyvnykb\",\"type\":\"timeline\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"from\":null,\"to\":null},{\"id\":\"numeric_mm8er9xg\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"number\":null},{\"id\":\"numeric_mm8esxg1\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"number\":null},{\"id\":\"numeric_mm8e1qed\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"number\":null},{\"id\":\"numeric_mm8e1myd\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"number\":null},{\"id\":\"date_mm8es1zd\",\"type\":\"date\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"date\":\"\"},{\"id\":\"date_mm8e937y\",\"type\":\"date\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"date\":\"\"}]},{\"id\":\"13374291640\",\"name\":\"Subitem Level 1\",\"parent_item\":{\"id\":\"13374291641\"},\"column_values\":[{\"id\":\"timerange_mkyvnykb\",\"type\":\"timeline\",\"text\":\"2025-12-16 - 2025-12-26\",\"value\":\"{\\\"to\\\":\\\"2025-12-26\\\",\\\"from\\\":\\\"2025-12-16\\\"}\",\"is_leaf\":false,\"from\":\"2025-12-16T00:00:00+00:00\",\"to\":\"2025-12-26T00:00:00+00:00\"},{\"id\":\"numeric_mm8er9xg\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"number\":null},{\"id\":\"numeric_mm8esxg1\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"number\":null},{\"id\":\"numeric_mm8e1qed\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"number\":null},{\"id\":\"numeric_mm8e1myd\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"number\":null},{\"id\":\"date_mm8es1zd\",\"type\":\"date\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"date\":\"\"},{\"id\":\"date_mm8e937y\",\"type\":\"date\",\"text\":\"\",\"value\":null,\"is_leaf\":false,\"date\":\"\"}]},{\"id\":\"13374291642\",\"name\":\"Subitem Level 2\",\"parent_item\":{\"id\":\"13374291640\"},\"column_values\":[{\"id\":\"timerange_mkyvnykb\",\"type\":\"timeline\",\"text\":\"2025-12-16 - 2025-12-24\",\"value\":\"{\\\"to\\\":\\\"2025-12-24\\\",\\\"from\\\":\\\"2025-12-16\\\",\\\"changed_at\\\":\\\"2025-12-21T13:19:16.072Z\\\"}\",\"is_leaf\":true,\"from\":\"2025-12-16T00:00:00+00:00\",\"to\":\"2025-12-24T00:00:00+00:00\"},{\"id\":\"numeric_mm8er9xg\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"number\":null},{\"id\":\"numeric_mm8esxg1\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"number\":null},{\"id\":\"numeric_mm8e1qed\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"number\":null},{\"id\":\"numeric_mm8e1myd\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"number\":null},{\"id\":\"date_mm8es1zd\",\"type\":\"date\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"date\":\"\"},{\"id\":\"date_mm8e937y\",\"type\":\"date\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"date\":\"\"}]},{\"id\":\"13374291643\",\"name\":\"Subitem Level 2\",\"parent_item\":{\"id\":\"13374291640\"},\"column_values\":[{\"id\":\"timerange_mkyvnykb\",\"type\":\"timeline\",\"text\":\"2025-12-18 - 2025-12-26\",\"value\":\"{\\\"to\\\":\\\"2025-12-26\\\",\\\"from\\\":\\\"2025-12-18\\\",\\\"changed_at\\\":\\\"2025-12-21T13:19:18.831Z\\\"}\",\"is_leaf\":true,\"from\":\"2025-12-18T00:00:00+00:00\",\"to\":\"2025-12-26T00:00:00+00:00\"},{\"id\":\"numeric_mm8er9xg\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"number\":null},{\"id\":\"numeric_mm8esxg1\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"number\":null},{\"id\":\"numeric_mm8e1qed\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"number\":null},{\"id\":\"numeric_mm8e1myd\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"number\":null},{\"id\":\"date_mm8es1zd\",\"type\":\"date\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"date\":\"\"},{\"id\":\"date_mm8e937y\",\"type\":\"date\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"date\":\"\"}]},{\"id\":\"13374271723\",\"name\":\"A (L2)\",\"parent_item\":{\"id\":\"13374290733\"},\"column_values\":[{\"id\":\"timerange_mkyvnykb\",\"type\":\"timeline\",\"text\":\"2026-03-01 - 2026-05-20\",\"value\":\"{\\\"to\\\":\\\"2026-05-20\\\",\\\"from\\\":\\\"2026-03-01\\\"}\",\"is_leaf\":false,\"from\":\"2026-03-01T00:00:00+00:00\",\"to\":\"2026-05-20T00:00:00+00:00\"},{\"id\":\"numeric_mm8er9xg\",\"type\":\"numbers\",\"text\":\"36\",\"value\":\"\\\"36\\\"\",\"is_leaf\":false,\"number\":36},{\"id\":\"numeric_mm8esxg1\",\"type\":\"numbers\",\"text\":\"36\",\"value\":\"\\\"36\\\"\",\"is_leaf\":false,\"number\":36},{\"id\":\"numeric_mm8e1qed\",\"type\":\"numbers\",\"text\":\"36\",\"value\":\"\\\"36\\\"\",\"is_leaf\":false,\"number\":36},{\"id\":\"numeric_mm8e1myd\",\"type\":\"numbers\",\"text\":\"36\",\"value\":\"\\\"36\\\"\",\"is_leaf\":false,\"number\":36},{\"id\":\"date_mm8es1zd\",\"type\":\"date\",\"text\":\"2026-03-02\",\"value\":\"{\\\"date\\\":\\\"2026-03-02\\\"}\",\"is_leaf\":false,\"date\":\"2026-03-02\"},{\"id\":\"date_mm8e937y\",\"type\":\"date\",\"text\":\"2026-03-02\",\"value\":\"{\\\"date\\\":\\\"2026-03-02\\\"}\",\"is_leaf\":false,\"date\":\"2026-03-02\"}]},{\"id\":\"13374266669\",\"name\":\"A1 (L3 leaf)\",\"parent_item\":{\"id\":\"13374271723\"},\"column_values\":[{\"id\":\"timerange_mkyvnykb\",\"type\":\"timeline\",\"text\":\"2026-03-01 - 2026-03-10\",\"value\":\"{\\\"to\\\":\\\"2026-03-10\\\",\\\"from\\\":\\\"2026-03-01\\\"}\",\"is_leaf\":true,\"from\":\"2026-03-01T00:00:00+00:00\",\"to\":\"2026-03-10T00:00:00+00:00\"},{\"id\":\"numeric_mm8er9xg\",\"type\":\"numbers\",\"text\":\"11\",\"value\":\"\\\"11\\\"\",\"is_leaf\":true,\"number\":11},{\"id\":\"numeric_mm8esxg1\",\"type\":\"numbers\",\"text\":\"11\",\"value\":\"\\\"11\\\"\",\"is_leaf\":true,\"number\":11},{\"id\":\"numeric_mm8e1qed\",\"type\":\"numbers\",\"text\":\"11\",\"value\":\"\\\"11\\\"\",\"is_leaf\":true,\"number\":11},{\"id\":\"numeric_mm8e1myd\",\"type\":\"numbers\",\"text\":\"11\",\"value\":\"\\\"11\\\"\",\"is_leaf\":true,\"number\":11},{\"id\":\"date_mm8es1zd\",\"type\":\"date\",\"text\":\"2026-03-02\",\"value\":\"{\\\"date\\\":\\\"2026-03-02\\\"}\",\"is_leaf\":true,\"date\":\"2026-03-02\"},{\"id\":\"date_mm8e937y\",\"type\":\"date\",\"text\":\"2026-03-02\",\"value\":\"{\\\"date\\\":\\\"2026-03-02\\\"}\",\"is_leaf\":true,\"date\":\"2026-03-02\"}]},{\"id\":\"13374259848\",\"name\":\"A2 (L3)\",\"parent_item\":{\"id\":\"13374271723\"},\"column_values\":[{\"id\":\"timerange_mkyvnykb\",\"type\":\"timeline\",\"text\":\"2026-05-01 - 2026-05-20\",\"value\":\"{\\\"to\\\":\\\"2026-05-20\\\",\\\"from\\\":\\\"2026-05-01\\\"}\",\"is_leaf\":false,\"from\":\"2026-05-01T00:00:00+00:00\",\"to\":\"2026-05-20T00:00:00+00:00\"},{\"id\":\"numeric_mm8er9xg\",\"type\":\"numbers\",\"text\":\"25\",\"value\":\"\\\"25\\\"\",\"is_leaf\":false,\"number\":25},{\"id\":\"numeric_mm8esxg1\",\"type\":\"numbers\",\"text\":\"25\",\"value\":\"\\\"25\\\"\",\"is_leaf\":false,\"number\":25},{\"id\":\"numeric_mm8e1qed\",\"type\":\"numbers\",\"text\":\"25\",\"value\":\"\\\"25\\\"\",\"is_leaf\":false,\"number\":25},{\"id\":\"numeric_mm8e1myd\",\"type\":\"numbers\",\"text\":\"25\",\"value\":\"\\\"25\\\"\",\"is_leaf\":false,\"number\":25},{\"id\":\"date_mm8es1zd\",\"type\":\"date\",\"text\":\"2026-05-15\",\"value\":\"{\\\"date\\\":\\\"2026-05-15\\\"}\",\"is_leaf\":false,\"date\":\"2026-05-15\"},{\"id\":\"date_mm8e937y\",\"type\":\"date\",\"text\":\"2026-05-15\",\"value\":\"{\\\"date\\\":\\\"2026-05-15\\\"}\",\"is_leaf\":false,\"date\":\"2026-05-15\"}]},{\"id\":\"13374242116\",\"name\":\"A2x (L4)\",\"parent_item\":{\"id\":\"13374259848\"},\"column_values\":[{\"id\":\"timerange_mkyvnykb\",\"type\":\"timeline\",\"text\":\"2026-05-01 - 2026-05-20\",\"value\":\"{\\\"to\\\":\\\"2026-05-20\\\",\\\"from\\\":\\\"2026-05-01\\\"}\",\"is_leaf\":false,\"from\":\"2026-05-01T00:00:00+00:00\",\"to\":\"2026-05-20T00:00:00+00:00\"},{\"id\":\"numeric_mm8er9xg\",\"type\":\"numbers\",\"text\":\"25\",\"value\":\"\\\"25\\\"\",\"is_leaf\":false,\"number\":25},{\"id\":\"numeric_mm8esxg1\",\"type\":\"numbers\",\"text\":\"25\",\"value\":\"\\\"25\\\"\",\"is_leaf\":false,\"number\":25},{\"id\":\"numeric_mm8e1qed\",\"type\":\"numbers\",\"text\":\"25\",\"value\":\"\\\"25\\\"\",\"is_leaf\":false,\"number\":25},{\"id\":\"numeric_mm8e1myd\",\"type\":\"numbers\",\"text\":\"25\",\"value\":\"\\\"25\\\"\",\"is_leaf\":false,\"number\":25},{\"id\":\"date_mm8es1zd\",\"type\":\"date\",\"text\":\"2026-05-15\",\"value\":\"{\\\"date\\\":\\\"2026-05-15\\\"}\",\"is_leaf\":false,\"date\":\"2026-05-15\"},{\"id\":\"date_mm8e937y\",\"type\":\"date\",\"text\":\"2026-05-15\",\"value\":\"{\\\"date\\\":\\\"2026-05-15\\\"}\",\"is_leaf\":false,\"date\":\"2026-05-15\"}]},{\"id\":\"13374259917\",\"name\":\"A2y (L5 leaf)\",\"parent_item\":{\"id\":\"13374242116\"},\"column_values\":[{\"id\":\"timerange_mkyvnykb\",\"type\":\"timeline\",\"text\":\"2026-05-01 - 2026-05-20\",\"value\":\"{\\\"to\\\":\\\"2026-05-20\\\",\\\"from\\\":\\\"2026-05-01\\\"}\",\"is_leaf\":true,\"from\":\"2026-05-01T00:00:00+00:00\",\"to\":\"2026-05-20T00:00:00+00:00\"},{\"id\":\"numeric_mm8er9xg\",\"type\":\"numbers\",\"text\":\"25\",\"value\":\"\\\"25\\\"\",\"is_leaf\":true,\"number\":25},{\"id\":\"numeric_mm8esxg1\",\"type\":\"numbers\",\"text\":\"25\",\"value\":\"\\\"25\\\"\",\"is_leaf\":true,\"number\":25},{\"id\":\"numeric_mm8e1qed\",\"type\":\"numbers\",\"text\":\"25\",\"value\":\"\\\"25\\\"\",\"is_leaf\":true,\"number\":25},{\"id\":\"numeric_mm8e1myd\",\"type\":\"numbers\",\"text\":\"25\",\"value\":\"\\\"25\\\"\",\"is_leaf\":true,\"number\":25},{\"id\":\"date_mm8es1zd\",\"type\":\"date\",\"text\":\"2026-05-15\",\"value\":\"{\\\"date\\\":\\\"2026-05-15\\\"}\",\"is_leaf\":true,\"date\":\"2026-05-15\"},{\"id\":\"date_mm8e937y\",\"type\":\"date\",\"text\":\"2026-05-15\",\"value\":\"{\\\"date\\\":\\\"2026-05-15\\\"}\",\"is_leaf\":true,\"date\":\"2026-05-15\"}]},{\"id\":\"13374223931\",\"name\":\"B (L2 leaf)\",\"parent_item\":{\"id\":\"13374290733\"},\"column_values\":[{\"id\":\"timerange_mkyvnykb\",\"type\":\"timeline\",\"text\":\"2026-01-05 - 2026-01-12\",\"value\":\"{\\\"to\\\":\\\"2026-01-12\\\",\\\"from\\\":\\\"2026-01-05\\\"}\",\"is_leaf\":true,\"from\":\"2026-01-05T00:00:00+00:00\",\"to\":\"2026-01-12T00:00:00+00:00\"},{\"id\":\"numeric_mm8er9xg\",\"type\":\"numbers\",\"text\":\"100\",\"value\":\"\\\"100\\\"\",\"is_leaf\":true,\"number\":100},{\"id\":\"numeric_mm8esxg1\",\"type\":\"numbers\",\"text\":\"100\",\"value\":\"\\\"100\\\"\",\"is_leaf\":true,\"number\":100},{\"id\":\"numeric_mm8e1qed\",\"type\":\"numbers\",\"text\":\"100\",\"value\":\"\\\"100\\\"\",\"is_leaf\":true,\"number\":100},{\"id\":\"numeric_mm8e1myd\",\"type\":\"numbers\",\"text\":\"100\",\"value\":\"\\\"100\\\"\",\"is_leaf\":true,\"number\":100},{\"id\":\"date_mm8es1zd\",\"type\":\"date\",\"text\":\"2026-01-10\",\"value\":\"{\\\"date\\\":\\\"2026-01-10\\\"}\",\"is_leaf\":true,\"date\":\"2026-01-10\"},{\"id\":\"date_mm8e937y\",\"type\":\"date\",\"text\":\"2026-01-10\",\"value\":\"{\\\"date\\\":\\\"2026-01-10\\\"}\",\"is_leaf\":true,\"date\":\"2026-01-10\"}]},{\"id\":\"13374224094\",\"name\":\"R3c (empty leaf)\",\"parent_item\":{\"id\":\"13374267172\"},\"column_values\":[{\"id\":\"timerange_mkyvnykb\",\"type\":\"timeline\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"from\":null,\"to\":null},{\"id\":\"numeric_mm8er9xg\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"number\":null},{\"id\":\"numeric_mm8esxg1\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"number\":null},{\"id\":\"numeric_mm8e1qed\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"number\":null},{\"id\":\"numeric_mm8e1myd\",\"type\":\"numbers\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"number\":null},{\"id\":\"date_mm8es1zd\",\"type\":\"date\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"date\":\"\"},{\"id\":\"date_mm8e937y\",\"type\":\"date\",\"text\":\"\",\"value\":null,\"is_leaf\":true,\"date\":\"\"}]}]}}]},\"extensions\":{\"request_id\":\"11ca417b-8344-9296-b854-1bf65cfe890a\"}}",
+  "responseBody": {
+    "data": {
+      "boards": [
+        {
+          "items_page": {
+            "cursor": null,
+            "items": [
+              {
+                "id": "13374291641",
+                "name": "Item 1",
+                "parent_item": null,
+                "column_values": [
+                  {
+                    "id": "timerange_mkyvnykb",
+                    "type": "timeline",
+                    "text": "2025-12-16 - 2025-12-26",
+                    "value": "{\"to\":\"2025-12-26\",\"from\":\"2025-12-16\"}",
+                    "is_leaf": false,
+                    "from": "2025-12-16T00:00:00+00:00",
+                    "to": "2025-12-26T00:00:00+00:00"
+                  },
+                  {
+                    "id": "numeric_mm8er9xg",
+                    "type": "numbers",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": false,
+                    "number": null
+                  },
+                  {
+                    "id": "numeric_mm8esxg1",
+                    "type": "numbers",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": false,
+                    "number": null
+                  },
+                  {
+                    "id": "numeric_mm8e1qed",
+                    "type": "numbers",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": false,
+                    "number": null
+                  },
+                  {
+                    "id": "numeric_mm8e1myd",
+                    "type": "numbers",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": false,
+                    "number": null
+                  },
+                  {
+                    "id": "date_mm8es1zd",
+                    "type": "date",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": false,
+                    "date": ""
+                  },
+                  {
+                    "id": "date_mm8e937y",
+                    "type": "date",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": false,
+                    "date": ""
+                  }
+                ]
+              },
+              {
+                "id": "13374290733",
+                "name": "R1 root",
+                "parent_item": null,
+                "column_values": [
+                  {
+                    "id": "timerange_mkyvnykb",
+                    "type": "timeline",
+                    "text": "2026-01-05 - 2026-05-20",
+                    "value": "{\"to\":\"2026-05-20\",\"from\":\"2026-01-05\"}",
+                    "is_leaf": false,
+                    "from": "2026-01-05T00:00:00+00:00",
+                    "to": "2026-05-20T00:00:00+00:00"
+                  },
+                  {
+                    "id": "numeric_mm8er9xg",
+                    "type": "numbers",
+                    "text": "136",
+                    "value": "\"136\"",
+                    "is_leaf": false,
+                    "number": 136
+                  },
+                  {
+                    "id": "numeric_mm8esxg1",
+                    "type": "numbers",
+                    "text": "136",
+                    "value": "\"136\"",
+                    "is_leaf": false,
+                    "number": 136
+                  },
+                  {
+                    "id": "numeric_mm8e1qed",
+                    "type": "numbers",
+                    "text": "136",
+                    "value": "\"136\"",
+                    "is_leaf": false,
+                    "number": 136
+                  },
+                  {
+                    "id": "numeric_mm8e1myd",
+                    "type": "numbers",
+                    "text": "136",
+                    "value": "\"136\"",
+                    "is_leaf": false,
+                    "number": 136
+                  },
+                  {
+                    "id": "date_mm8es1zd",
+                    "type": "date",
+                    "text": "2026-01-10",
+                    "value": "{\"date\":\"2026-01-10\"}",
+                    "is_leaf": false,
+                    "date": "2026-01-10"
+                  },
+                  {
+                    "id": "date_mm8e937y",
+                    "type": "date",
+                    "text": "2026-01-10",
+                    "value": "{\"date\":\"2026-01-10\"}",
+                    "is_leaf": false,
+                    "date": "2026-01-10"
+                  }
+                ]
+              },
+              {
+                "id": "13374276846",
+                "name": "R2 leaf root",
+                "parent_item": null,
+                "column_values": [
+                  {
+                    "id": "timerange_mkyvnykb",
+                    "type": "timeline",
+                    "text": "2026-02-01 - 2026-02-03",
+                    "value": "{\"to\":\"2026-02-03\",\"from\":\"2026-02-01\"}",
+                    "is_leaf": true,
+                    "from": "2026-02-01T00:00:00+00:00",
+                    "to": "2026-02-03T00:00:00+00:00"
+                  },
+                  {
+                    "id": "numeric_mm8er9xg",
+                    "type": "numbers",
+                    "text": "7",
+                    "value": "\"7\"",
+                    "is_leaf": true,
+                    "number": 7
+                  },
+                  {
+                    "id": "numeric_mm8esxg1",
+                    "type": "numbers",
+                    "text": "7",
+                    "value": "\"7\"",
+                    "is_leaf": true,
+                    "number": 7
+                  },
+                  {
+                    "id": "numeric_mm8e1qed",
+                    "type": "numbers",
+                    "text": "7",
+                    "value": "\"7\"",
+                    "is_leaf": true,
+                    "number": 7
+                  },
+                  {
+                    "id": "numeric_mm8e1myd",
+                    "type": "numbers",
+                    "text": "7",
+                    "value": "\"7\"",
+                    "is_leaf": true,
+                    "number": 7
+                  },
+                  {
+                    "id": "date_mm8es1zd",
+                    "type": "date",
+                    "text": "2026-02-02",
+                    "value": "{\"date\":\"2026-02-02\"}",
+                    "is_leaf": true,
+                    "date": "2026-02-02"
+                  },
+                  {
+                    "id": "date_mm8e937y",
+                    "type": "date",
+                    "text": "2026-02-02",
+                    "value": "{\"date\":\"2026-02-02\"}",
+                    "is_leaf": true,
+                    "date": "2026-02-02"
+                  }
+                ]
+              },
+              {
+                "id": "13374267172",
+                "name": "R3 empty-child root",
+                "parent_item": null,
+                "column_values": [
+                  {
+                    "id": "timerange_mkyvnykb",
+                    "type": "timeline",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": false,
+                    "from": null,
+                    "to": null
+                  },
+                  {
+                    "id": "numeric_mm8er9xg",
+                    "type": "numbers",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": false,
+                    "number": null
+                  },
+                  {
+                    "id": "numeric_mm8esxg1",
+                    "type": "numbers",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": false,
+                    "number": null
+                  },
+                  {
+                    "id": "numeric_mm8e1qed",
+                    "type": "numbers",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": false,
+                    "number": null
+                  },
+                  {
+                    "id": "numeric_mm8e1myd",
+                    "type": "numbers",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": false,
+                    "number": null
+                  },
+                  {
+                    "id": "date_mm8es1zd",
+                    "type": "date",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": false,
+                    "date": ""
+                  },
+                  {
+                    "id": "date_mm8e937y",
+                    "type": "date",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": false,
+                    "date": ""
+                  }
+                ]
+              },
+              {
+                "id": "13377169129",
+                "name": "DC deep-chain source",
+                "parent_item": null,
+                "column_values": [
+                  {
+                    "id": "timerange_mkyvnykb",
+                    "type": "timeline",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": true,
+                    "from": null,
+                    "to": null
+                  },
+                  {
+                    "id": "numeric_mm8er9xg",
+                    "type": "numbers",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": true,
+                    "number": null
+                  },
+                  {
+                    "id": "numeric_mm8esxg1",
+                    "type": "numbers",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": true,
+                    "number": null
+                  },
+                  {
+                    "id": "numeric_mm8e1qed",
+                    "type": "numbers",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": true,
+                    "number": null
+                  },
+                  {
+                    "id": "numeric_mm8e1myd",
+                    "type": "numbers",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": true,
+                    "number": null
+                  },
+                  {
+                    "id": "date_mm8es1zd",
+                    "type": "date",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": true,
+                    "date": ""
+                  },
+                  {
+                    "id": "date_mm8e937y",
+                    "type": "date",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": true,
+                    "date": ""
+                  }
+                ]
+              },
+              {
+                "id": "13374291640",
+                "name": "Subitem Level 1",
+                "parent_item": {
+                  "id": "13374291641"
+                },
+                "column_values": [
+                  {
+                    "id": "timerange_mkyvnykb",
+                    "type": "timeline",
+                    "text": "2025-12-16 - 2025-12-26",
+                    "value": "{\"to\":\"2025-12-26\",\"from\":\"2025-12-16\"}",
+                    "is_leaf": false,
+                    "from": "2025-12-16T00:00:00+00:00",
+                    "to": "2025-12-26T00:00:00+00:00"
+                  },
+                  {
+                    "id": "numeric_mm8er9xg",
+                    "type": "numbers",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": false,
+                    "number": null
+                  },
+                  {
+                    "id": "numeric_mm8esxg1",
+                    "type": "numbers",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": false,
+                    "number": null
+                  },
+                  {
+                    "id": "numeric_mm8e1qed",
+                    "type": "numbers",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": false,
+                    "number": null
+                  },
+                  {
+                    "id": "numeric_mm8e1myd",
+                    "type": "numbers",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": false,
+                    "number": null
+                  },
+                  {
+                    "id": "date_mm8es1zd",
+                    "type": "date",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": false,
+                    "date": ""
+                  },
+                  {
+                    "id": "date_mm8e937y",
+                    "type": "date",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": false,
+                    "date": ""
+                  }
+                ]
+              },
+              {
+                "id": "13374291642",
+                "name": "Subitem Level 2",
+                "parent_item": {
+                  "id": "13374291640"
+                },
+                "column_values": [
+                  {
+                    "id": "timerange_mkyvnykb",
+                    "type": "timeline",
+                    "text": "2025-12-16 - 2025-12-24",
+                    "value": "{\"to\":\"2025-12-24\",\"from\":\"2025-12-16\",\"changed_at\":\"2025-12-21T13:19:16.072Z\"}",
+                    "is_leaf": true,
+                    "from": "2025-12-16T00:00:00+00:00",
+                    "to": "2025-12-24T00:00:00+00:00"
+                  },
+                  {
+                    "id": "numeric_mm8er9xg",
+                    "type": "numbers",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": true,
+                    "number": null
+                  },
+                  {
+                    "id": "numeric_mm8esxg1",
+                    "type": "numbers",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": true,
+                    "number": null
+                  },
+                  {
+                    "id": "numeric_mm8e1qed",
+                    "type": "numbers",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": true,
+                    "number": null
+                  },
+                  {
+                    "id": "numeric_mm8e1myd",
+                    "type": "numbers",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": true,
+                    "number": null
+                  },
+                  {
+                    "id": "date_mm8es1zd",
+                    "type": "date",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": true,
+                    "date": ""
+                  },
+                  {
+                    "id": "date_mm8e937y",
+                    "type": "date",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": true,
+                    "date": ""
+                  }
+                ]
+              },
+              {
+                "id": "13374291643",
+                "name": "Subitem Level 2",
+                "parent_item": {
+                  "id": "13374291640"
+                },
+                "column_values": [
+                  {
+                    "id": "timerange_mkyvnykb",
+                    "type": "timeline",
+                    "text": "2025-12-18 - 2025-12-26",
+                    "value": "{\"to\":\"2025-12-26\",\"from\":\"2025-12-18\",\"changed_at\":\"2025-12-21T13:19:18.831Z\"}",
+                    "is_leaf": true,
+                    "from": "2025-12-18T00:00:00+00:00",
+                    "to": "2025-12-26T00:00:00+00:00"
+                  },
+                  {
+                    "id": "numeric_mm8er9xg",
+                    "type": "numbers",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": true,
+                    "number": null
+                  },
+                  {
+                    "id": "numeric_mm8esxg1",
+                    "type": "numbers",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": true,
+                    "number": null
+                  },
+                  {
+                    "id": "numeric_mm8e1qed",
+                    "type": "numbers",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": true,
+                    "number": null
+                  },
+                  {
+                    "id": "numeric_mm8e1myd",
+                    "type": "numbers",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": true,
+                    "number": null
+                  },
+                  {
+                    "id": "date_mm8es1zd",
+                    "type": "date",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": true,
+                    "date": ""
+                  },
+                  {
+                    "id": "date_mm8e937y",
+                    "type": "date",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": true,
+                    "date": ""
+                  }
+                ]
+              },
+              {
+                "id": "13374271723",
+                "name": "A (L2)",
+                "parent_item": {
+                  "id": "13374290733"
+                },
+                "column_values": [
+                  {
+                    "id": "timerange_mkyvnykb",
+                    "type": "timeline",
+                    "text": "2026-03-01 - 2026-05-20",
+                    "value": "{\"to\":\"2026-05-20\",\"from\":\"2026-03-01\"}",
+                    "is_leaf": false,
+                    "from": "2026-03-01T00:00:00+00:00",
+                    "to": "2026-05-20T00:00:00+00:00"
+                  },
+                  {
+                    "id": "numeric_mm8er9xg",
+                    "type": "numbers",
+                    "text": "36",
+                    "value": "\"36\"",
+                    "is_leaf": false,
+                    "number": 36
+                  },
+                  {
+                    "id": "numeric_mm8esxg1",
+                    "type": "numbers",
+                    "text": "36",
+                    "value": "\"36\"",
+                    "is_leaf": false,
+                    "number": 36
+                  },
+                  {
+                    "id": "numeric_mm8e1qed",
+                    "type": "numbers",
+                    "text": "36",
+                    "value": "\"36\"",
+                    "is_leaf": false,
+                    "number": 36
+                  },
+                  {
+                    "id": "numeric_mm8e1myd",
+                    "type": "numbers",
+                    "text": "36",
+                    "value": "\"36\"",
+                    "is_leaf": false,
+                    "number": 36
+                  },
+                  {
+                    "id": "date_mm8es1zd",
+                    "type": "date",
+                    "text": "2026-03-02",
+                    "value": "{\"date\":\"2026-03-02\"}",
+                    "is_leaf": false,
+                    "date": "2026-03-02"
+                  },
+                  {
+                    "id": "date_mm8e937y",
+                    "type": "date",
+                    "text": "2026-03-02",
+                    "value": "{\"date\":\"2026-03-02\"}",
+                    "is_leaf": false,
+                    "date": "2026-03-02"
+                  }
+                ]
+              },
+              {
+                "id": "13374266669",
+                "name": "A1 (L3 leaf)",
+                "parent_item": {
+                  "id": "13374271723"
+                },
+                "column_values": [
+                  {
+                    "id": "timerange_mkyvnykb",
+                    "type": "timeline",
+                    "text": "2026-03-01 - 2026-03-10",
+                    "value": "{\"to\":\"2026-03-10\",\"from\":\"2026-03-01\"}",
+                    "is_leaf": true,
+                    "from": "2026-03-01T00:00:00+00:00",
+                    "to": "2026-03-10T00:00:00+00:00"
+                  },
+                  {
+                    "id": "numeric_mm8er9xg",
+                    "type": "numbers",
+                    "text": "11",
+                    "value": "\"11\"",
+                    "is_leaf": true,
+                    "number": 11
+                  },
+                  {
+                    "id": "numeric_mm8esxg1",
+                    "type": "numbers",
+                    "text": "11",
+                    "value": "\"11\"",
+                    "is_leaf": true,
+                    "number": 11
+                  },
+                  {
+                    "id": "numeric_mm8e1qed",
+                    "type": "numbers",
+                    "text": "11",
+                    "value": "\"11\"",
+                    "is_leaf": true,
+                    "number": 11
+                  },
+                  {
+                    "id": "numeric_mm8e1myd",
+                    "type": "numbers",
+                    "text": "11",
+                    "value": "\"11\"",
+                    "is_leaf": true,
+                    "number": 11
+                  },
+                  {
+                    "id": "date_mm8es1zd",
+                    "type": "date",
+                    "text": "2026-03-02",
+                    "value": "{\"date\":\"2026-03-02\"}",
+                    "is_leaf": true,
+                    "date": "2026-03-02"
+                  },
+                  {
+                    "id": "date_mm8e937y",
+                    "type": "date",
+                    "text": "2026-03-02",
+                    "value": "{\"date\":\"2026-03-02\"}",
+                    "is_leaf": true,
+                    "date": "2026-03-02"
+                  }
+                ]
+              },
+              {
+                "id": "13374259848",
+                "name": "A2 (L3)",
+                "parent_item": {
+                  "id": "13374271723"
+                },
+                "column_values": [
+                  {
+                    "id": "timerange_mkyvnykb",
+                    "type": "timeline",
+                    "text": "2026-05-01 - 2026-05-20",
+                    "value": "{\"to\":\"2026-05-20\",\"from\":\"2026-05-01\"}",
+                    "is_leaf": false,
+                    "from": "2026-05-01T00:00:00+00:00",
+                    "to": "2026-05-20T00:00:00+00:00"
+                  },
+                  {
+                    "id": "numeric_mm8er9xg",
+                    "type": "numbers",
+                    "text": "25",
+                    "value": "\"25\"",
+                    "is_leaf": false,
+                    "number": 25
+                  },
+                  {
+                    "id": "numeric_mm8esxg1",
+                    "type": "numbers",
+                    "text": "25",
+                    "value": "\"25\"",
+                    "is_leaf": false,
+                    "number": 25
+                  },
+                  {
+                    "id": "numeric_mm8e1qed",
+                    "type": "numbers",
+                    "text": "25",
+                    "value": "\"25\"",
+                    "is_leaf": false,
+                    "number": 25
+                  },
+                  {
+                    "id": "numeric_mm8e1myd",
+                    "type": "numbers",
+                    "text": "25",
+                    "value": "\"25\"",
+                    "is_leaf": false,
+                    "number": 25
+                  },
+                  {
+                    "id": "date_mm8es1zd",
+                    "type": "date",
+                    "text": "2026-05-15",
+                    "value": "{\"date\":\"2026-05-15\"}",
+                    "is_leaf": false,
+                    "date": "2026-05-15"
+                  },
+                  {
+                    "id": "date_mm8e937y",
+                    "type": "date",
+                    "text": "2026-05-15",
+                    "value": "{\"date\":\"2026-05-15\"}",
+                    "is_leaf": false,
+                    "date": "2026-05-15"
+                  }
+                ]
+              },
+              {
+                "id": "13374242116",
+                "name": "A2x (L4)",
+                "parent_item": {
+                  "id": "13374259848"
+                },
+                "column_values": [
+                  {
+                    "id": "timerange_mkyvnykb",
+                    "type": "timeline",
+                    "text": "2026-05-01 - 2026-05-20",
+                    "value": "{\"to\":\"2026-05-20\",\"from\":\"2026-05-01\"}",
+                    "is_leaf": false,
+                    "from": "2026-05-01T00:00:00+00:00",
+                    "to": "2026-05-20T00:00:00+00:00"
+                  },
+                  {
+                    "id": "numeric_mm8er9xg",
+                    "type": "numbers",
+                    "text": "25",
+                    "value": "\"25\"",
+                    "is_leaf": false,
+                    "number": 25
+                  },
+                  {
+                    "id": "numeric_mm8esxg1",
+                    "type": "numbers",
+                    "text": "25",
+                    "value": "\"25\"",
+                    "is_leaf": false,
+                    "number": 25
+                  },
+                  {
+                    "id": "numeric_mm8e1qed",
+                    "type": "numbers",
+                    "text": "25",
+                    "value": "\"25\"",
+                    "is_leaf": false,
+                    "number": 25
+                  },
+                  {
+                    "id": "numeric_mm8e1myd",
+                    "type": "numbers",
+                    "text": "25",
+                    "value": "\"25\"",
+                    "is_leaf": false,
+                    "number": 25
+                  },
+                  {
+                    "id": "date_mm8es1zd",
+                    "type": "date",
+                    "text": "2026-05-15",
+                    "value": "{\"date\":\"2026-05-15\"}",
+                    "is_leaf": false,
+                    "date": "2026-05-15"
+                  },
+                  {
+                    "id": "date_mm8e937y",
+                    "type": "date",
+                    "text": "2026-05-15",
+                    "value": "{\"date\":\"2026-05-15\"}",
+                    "is_leaf": false,
+                    "date": "2026-05-15"
+                  }
+                ]
+              },
+              {
+                "id": "13374259917",
+                "name": "A2y (L5 leaf)",
+                "parent_item": {
+                  "id": "13374242116"
+                },
+                "column_values": [
+                  {
+                    "id": "timerange_mkyvnykb",
+                    "type": "timeline",
+                    "text": "2026-05-01 - 2026-05-20",
+                    "value": "{\"to\":\"2026-05-20\",\"from\":\"2026-05-01\"}",
+                    "is_leaf": true,
+                    "from": "2026-05-01T00:00:00+00:00",
+                    "to": "2026-05-20T00:00:00+00:00"
+                  },
+                  {
+                    "id": "numeric_mm8er9xg",
+                    "type": "numbers",
+                    "text": "25",
+                    "value": "\"25\"",
+                    "is_leaf": true,
+                    "number": 25
+                  },
+                  {
+                    "id": "numeric_mm8esxg1",
+                    "type": "numbers",
+                    "text": "25",
+                    "value": "\"25\"",
+                    "is_leaf": true,
+                    "number": 25
+                  },
+                  {
+                    "id": "numeric_mm8e1qed",
+                    "type": "numbers",
+                    "text": "25",
+                    "value": "\"25\"",
+                    "is_leaf": true,
+                    "number": 25
+                  },
+                  {
+                    "id": "numeric_mm8e1myd",
+                    "type": "numbers",
+                    "text": "25",
+                    "value": "\"25\"",
+                    "is_leaf": true,
+                    "number": 25
+                  },
+                  {
+                    "id": "date_mm8es1zd",
+                    "type": "date",
+                    "text": "2026-05-15",
+                    "value": "{\"date\":\"2026-05-15\"}",
+                    "is_leaf": true,
+                    "date": "2026-05-15"
+                  },
+                  {
+                    "id": "date_mm8e937y",
+                    "type": "date",
+                    "text": "2026-05-15",
+                    "value": "{\"date\":\"2026-05-15\"}",
+                    "is_leaf": true,
+                    "date": "2026-05-15"
+                  }
+                ]
+              },
+              {
+                "id": "13374223931",
+                "name": "B (L2 leaf)",
+                "parent_item": {
+                  "id": "13374290733"
+                },
+                "column_values": [
+                  {
+                    "id": "timerange_mkyvnykb",
+                    "type": "timeline",
+                    "text": "2026-01-05 - 2026-01-12",
+                    "value": "{\"to\":\"2026-01-12\",\"from\":\"2026-01-05\"}",
+                    "is_leaf": true,
+                    "from": "2026-01-05T00:00:00+00:00",
+                    "to": "2026-01-12T00:00:00+00:00"
+                  },
+                  {
+                    "id": "numeric_mm8er9xg",
+                    "type": "numbers",
+                    "text": "100",
+                    "value": "\"100\"",
+                    "is_leaf": true,
+                    "number": 100
+                  },
+                  {
+                    "id": "numeric_mm8esxg1",
+                    "type": "numbers",
+                    "text": "100",
+                    "value": "\"100\"",
+                    "is_leaf": true,
+                    "number": 100
+                  },
+                  {
+                    "id": "numeric_mm8e1qed",
+                    "type": "numbers",
+                    "text": "100",
+                    "value": "\"100\"",
+                    "is_leaf": true,
+                    "number": 100
+                  },
+                  {
+                    "id": "numeric_mm8e1myd",
+                    "type": "numbers",
+                    "text": "100",
+                    "value": "\"100\"",
+                    "is_leaf": true,
+                    "number": 100
+                  },
+                  {
+                    "id": "date_mm8es1zd",
+                    "type": "date",
+                    "text": "2026-01-10",
+                    "value": "{\"date\":\"2026-01-10\"}",
+                    "is_leaf": true,
+                    "date": "2026-01-10"
+                  },
+                  {
+                    "id": "date_mm8e937y",
+                    "type": "date",
+                    "text": "2026-01-10",
+                    "value": "{\"date\":\"2026-01-10\"}",
+                    "is_leaf": true,
+                    "date": "2026-01-10"
+                  }
+                ]
+              },
+              {
+                "id": "13374224094",
+                "name": "R3c (empty leaf)",
+                "parent_item": {
+                  "id": "13374267172"
+                },
+                "column_values": [
+                  {
+                    "id": "timerange_mkyvnykb",
+                    "type": "timeline",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": true,
+                    "from": null,
+                    "to": null
+                  },
+                  {
+                    "id": "numeric_mm8er9xg",
+                    "type": "numbers",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": true,
+                    "number": null
+                  },
+                  {
+                    "id": "numeric_mm8esxg1",
+                    "type": "numbers",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": true,
+                    "number": null
+                  },
+                  {
+                    "id": "numeric_mm8e1qed",
+                    "type": "numbers",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": true,
+                    "number": null
+                  },
+                  {
+                    "id": "numeric_mm8e1myd",
+                    "type": "numbers",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": true,
+                    "number": null
+                  },
+                  {
+                    "id": "date_mm8es1zd",
+                    "type": "date",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": true,
+                    "date": ""
+                  },
+                  {
+                    "id": "date_mm8e937y",
+                    "type": "date",
+                    "text": "",
+                    "value": null,
+                    "is_leaf": true,
+                    "date": ""
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "extensions": {
+      "request_id": "11ca417b-8344-9296-b854-1bf65cfe890a"
+    }
+  }
+}

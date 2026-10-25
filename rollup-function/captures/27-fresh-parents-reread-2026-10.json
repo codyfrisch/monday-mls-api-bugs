@@ -1,0 +1,201 @@
+{
+  "file": "27-fresh-parents-reread-2026-10",
+  "case": "parents-reread",
+  "description": "Parents' rollup values, 10 s later",
+  "endpoint": "https://api.monday.com/v2",
+  "method": "POST",
+  "requestHeaders": {
+    "API-Version": "2026-10",
+    "Content-Type": "application/json"
+  },
+  "authorizationHeader": "sent; value not recorded",
+  "apiVersion": "2026-10",
+  "requestBody": "{\"query\":\"query ($i: [ID!], $c: [String!]) { items(ids: $i) { id name column_values(ids: $c, capabilities: [CALCULATED]) { id type text value is_leaf ... on NumbersValue { number } ... on DateValue { date } ... on TimelineValue { from to } } } }\",\"variables\":{\"i\":[\"13377371463\",\"13377349365\"],\"c\":[\"numeric_mm8fkv6k\",\"numeric_mm8f3jz3\",\"numeric_mm8f56kg\",\"numeric_mm8fbpj2\",\"date_mm8fftdz\",\"date_mm8fswrb\",\"date_mm8f2n8y\",\"timerange_mm8fcct0\"]}}",
+  "query": "query ($i: [ID!], $c: [String!]) { items(ids: $i) { id name column_values(ids: $c, capabilities: [CALCULATED]) { id type text value is_leaf ... on NumbersValue { number } ... on DateValue { date } ... on TimelineValue { from to } } } }",
+  "variables": {
+    "i": [
+      "13377371463",
+      "13377349365"
+    ],
+    "c": [
+      "numeric_mm8fkv6k",
+      "numeric_mm8f3jz3",
+      "numeric_mm8f56kg",
+      "numeric_mm8fbpj2",
+      "date_mm8fftdz",
+      "date_mm8fswrb",
+      "date_mm8f2n8y",
+      "timerange_mm8fcct0"
+    ]
+  },
+  "startedAt": "2026-10-25T02:43:34.267Z",
+  "endedAt": "2026-10-25T02:43:34.870Z",
+  "durationMs": 603,
+  "status": 200,
+  "xRequestId": "e9c6d5cc-b2e2-9a3f-81b7-0079cc28b1ad",
+  "rateLimitHeaders": {
+    "ratelimit": "\"minuteRate\";r=3319, \"concurrency\";r=199, \"complexityMinute\";r=9759227;t=2",
+    "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\""
+  },
+  "responseHeaders": {
+    "api-version": "2026-10",
+    "content-type": "application/json; charset=utf-8",
+    "date": "Sun, 25 Oct 2026 02:43:34 GMT",
+    "ratelimit": "\"minuteRate\";r=3319, \"concurrency\";r=199, \"complexityMinute\";r=9759227;t=2",
+    "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\"",
+    "x-request-id": "e9c6d5cc-b2e2-9a3f-81b7-0079cc28b1ad"
+  },
+  "extensionsRequestId": "e9c6d5cc-b2e2-9a3f-81b7-0079cc28b1ad",
+  "responseBodyRaw": "{\"data\":{\"items\":[{\"id\":\"13377349365\",\"name\":\"Q1 (L2 parent)\",\"column_values\":[{\"id\":\"numeric_mm8fkv6k\",\"type\":\"numbers\",\"text\":\"47\",\"value\":\"\\\"47\\\"\",\"is_leaf\":false,\"number\":47},{\"id\":\"numeric_mm8f3jz3\",\"type\":\"numbers\",\"text\":\"47\",\"value\":\"\\\"47\\\"\",\"is_leaf\":false,\"number\":47},{\"id\":\"numeric_mm8f56kg\",\"type\":\"numbers\",\"text\":\"47\",\"value\":\"\\\"47\\\"\",\"is_leaf\":false,\"number\":47},{\"id\":\"numeric_mm8fbpj2\",\"type\":\"numbers\",\"text\":\"47\",\"value\":\"\\\"47\\\"\",\"is_leaf\":false,\"number\":47},{\"id\":\"date_mm8fftdz\",\"type\":\"date\",\"text\":\"2026-03-03\",\"value\":\"{\\\"date\\\":\\\"2026-03-03\\\"}\",\"is_leaf\":false,\"date\":\"2026-03-03\"},{\"id\":\"date_mm8fswrb\",\"type\":\"date\",\"text\":\"2026-03-03\",\"value\":\"{\\\"date\\\":\\\"2026-03-03\\\"}\",\"is_leaf\":false,\"date\":\"2026-03-03\"},{\"id\":\"date_mm8f2n8y\",\"type\":\"date\",\"text\":\"2026-03-03\",\"value\":\"{\\\"date\\\":\\\"2026-03-03\\\"}\",\"is_leaf\":false,\"date\":\"2026-03-03\"},{\"id\":\"timerange_mm8fcct0\",\"type\":\"timeline\",\"text\":\"2026-03-01 - 2026-07-15\",\"value\":\"{\\\"to\\\":\\\"2026-07-15\\\",\\\"from\\\":\\\"2026-03-01\\\"}\",\"is_leaf\":false,\"from\":\"2026-03-01T00:00:00+00:00\",\"to\":\"2026-07-15T00:00:00+00:00\"}]},{\"id\":\"13377371463\",\"name\":\"P1 (L1 parent)\",\"column_values\":[{\"id\":\"numeric_mm8fkv6k\",\"type\":\"numbers\",\"text\":\"247\",\"value\":\"\\\"247\\\"\",\"is_leaf\":false,\"number\":247},{\"id\":\"numeric_mm8f3jz3\",\"type\":\"numbers\",\"text\":\"247\",\"value\":\"\\\"247\\\"\",\"is_leaf\":false,\"number\":247},{\"id\":\"numeric_mm8f56kg\",\"type\":\"numbers\",\"text\":\"247\",\"value\":\"\\\"247\\\"\",\"is_leaf\":false,\"number\":247},{\"id\":\"numeric_mm8fbpj2\",\"type\":\"numbers\",\"text\":\"247\",\"value\":\"\\\"247\\\"\",\"is_leaf\":false,\"number\":247},{\"id\":\"date_mm8fftdz\",\"type\":\"date\",\"text\":\"2026-01-20\",\"value\":\"{\\\"date\\\":\\\"2026-01-20\\\"}\",\"is_leaf\":false,\"date\":\"2026-01-20\"},{\"id\":\"date_mm8fswrb\",\"type\":\"date\",\"text\":\"2026-01-20\",\"value\":\"{\\\"date\\\":\\\"2026-01-20\\\"}\",\"is_leaf\":false,\"date\":\"2026-01-20\"},{\"id\":\"date_mm8f2n8y\",\"type\":\"date\",\"text\":\"2026-01-20\",\"value\":\"{\\\"date\\\":\\\"2026-01-20\\\"}\",\"is_leaf\":false,\"date\":\"2026-01-20\"},{\"id\":\"timerange_mm8fcct0\",\"type\":\"timeline\",\"text\":\"2026-01-10 - 2026-07-15\",\"value\":\"{\\\"to\\\":\\\"2026-07-15\\\",\\\"from\\\":\\\"2026-01-10\\\"}\",\"is_leaf\":false,\"from\":\"2026-01-10T00:00:00+00:00\",\"to\":\"2026-07-15T00:00:00+00:00\"}]}]},\"extensions\":{\"request_id\":\"e9c6d5cc-b2e2-9a3f-81b7-0079cc28b1ad\"}}",
+  "responseBody": {
+    "data": {
+      "items": [
+        {
+          "id": "13377349365",
+          "name": "Q1 (L2 parent)",
+          "column_values": [
+            {
+              "id": "numeric_mm8fkv6k",
+              "type": "numbers",
+              "text": "47",
+              "value": "\"47\"",
+              "is_leaf": false,
+              "number": 47
+            },
+            {
+              "id": "numeric_mm8f3jz3",
+              "type": "numbers",
+              "text": "47",
+              "value": "\"47\"",
+              "is_leaf": false,
+              "number": 47
+            },
+            {
+              "id": "numeric_mm8f56kg",
+              "type": "numbers",
+              "text": "47",
+              "value": "\"47\"",
+              "is_leaf": false,
+              "number": 47
+            },
+            {
+              "id": "numeric_mm8fbpj2",
+              "type": "numbers",
+              "text": "47",
+              "value": "\"47\"",
+              "is_leaf": false,
+              "number": 47
+            },
+            {
+              "id": "date_mm8fftdz",
+              "type": "date",
+              "text": "2026-03-03",
+              "value": "{\"date\":\"2026-03-03\"}",
+              "is_leaf": false,
+              "date": "2026-03-03"
+            },
+            {
+              "id": "date_mm8fswrb",
+              "type": "date",
+              "text": "2026-03-03",
+              "value": "{\"date\":\"2026-03-03\"}",
+              "is_leaf": false,
+              "date": "2026-03-03"
+            },
+            {
+              "id": "date_mm8f2n8y",
+              "type": "date",
+              "text": "2026-03-03",
+              "value": "{\"date\":\"2026-03-03\"}",
+              "is_leaf": false,
+              "date": "2026-03-03"
+            },
+            {
+              "id": "timerange_mm8fcct0",
+              "type": "timeline",
+              "text": "2026-03-01 - 2026-07-15",
+              "value": "{\"to\":\"2026-07-15\",\"from\":\"2026-03-01\"}",
+              "is_leaf": false,
+              "from": "2026-03-01T00:00:00+00:00",
+              "to": "2026-07-15T00:00:00+00:00"
+            }
+          ]
+        },
+        {
+          "id": "13377371463",
+          "name": "P1 (L1 parent)",
+          "column_values": [
+            {
+              "id": "numeric_mm8fkv6k",
+              "type": "numbers",
+              "text": "247",
+              "value": "\"247\"",
+              "is_leaf": false,
+              "number": 247
+            },
+            {
+              "id": "numeric_mm8f3jz3",
+              "type": "numbers",
+              "text": "247",
+              "value": "\"247\"",
+              "is_leaf": false,
+              "number": 247
+            },
+            {
+              "id": "numeric_mm8f56kg",
+              "type": "numbers",
+              "text": "247",
+              "value": "\"247\"",
+              "is_leaf": false,
+              "number": 247
+            },
+            {
+              "id": "numeric_mm8fbpj2",
+              "type": "numbers",
+              "text": "247",
+              "value": "\"247\"",
+              "is_leaf": false,
+              "number": 247
+            },
+            {
+              "id": "date_mm8fftdz",
+              "type": "date",
+              "text": "2026-01-20",
+              "value": "{\"date\":\"2026-01-20\"}",
+              "is_leaf": false,
+              "date": "2026-01-20"
+            },
+            {
+              "id": "date_mm8fswrb",
+              "type": "date",
+              "text": "2026-01-20",
+              "value": "{\"date\":\"2026-01-20\"}",
+              "is_leaf": false,
+              "date": "2026-01-20"
+            },
+            {
+              "id": "date_mm8f2n8y",
+              "type": "date",
+              "text": "2026-01-20",
+              "value": "{\"date\":\"2026-01-20\"}",
+              "is_leaf": false,
+              "date": "2026-01-20"
+            },
+            {
+              "id": "timerange_mm8fcct0",
+              "type": "timeline",
+              "text": "2026-01-10 - 2026-07-15",
+              "value": "{\"to\":\"2026-07-15\",\"from\":\"2026-01-10\"}",
+              "is_leaf": false,
+              "from": "2026-01-10T00:00:00+00:00",
+              "to": "2026-07-15T00:00:00+00:00"
+            }
+          ]
+        }
+      ]
+    },
+    "extensions": {
+      "request_id": "e9c6d5cc-b2e2-9a3f-81b7-0079cc28b1ad"
+    }
+  }
+}

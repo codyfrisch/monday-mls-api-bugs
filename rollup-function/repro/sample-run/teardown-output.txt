@@ -1,0 +1,4 @@
+{
+  "account": "sandbox-account",
+  "deletedBoard": "18436908247"
+}

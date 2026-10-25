@@ -1,0 +1,68 @@
+{
+  "account": "sandbox-account",
+  "apiVersion": "2026-10",
+  "createdAt": "2026-10-25T02:40:28.686Z",
+  "board": {
+    "id": "18436908272",
+    "name": "G1 rollup repro 2026-10-25T02:39:53.950Z",
+    "hierarchy_type": "multi_level"
+  },
+  "columns": {
+    "numSum": {
+      "id": "numeric_mm8f7gpj",
+      "title": "Num SUM",
+      "type": "numbers",
+      "requestedFunction": "SUM",
+      "returnedFunction": "SUM"
+    },
+    "numMin": {
+      "id": "numeric_mm8fw5v",
+      "title": "Num MIN",
+      "type": "numbers",
+      "requestedFunction": "MIN",
+      "returnedFunction": "MIN"
+    },
+    "numMax": {
+      "id": "numeric_mm8fg75y",
+      "title": "Num MAX",
+      "type": "numbers",
+      "requestedFunction": "MAX",
+      "returnedFunction": "MAX"
+    },
+    "numNone": {
+      "id": "numeric_mm8f2jnp",
+      "title": "Num NONE",
+      "type": "numbers",
+      "requestedFunction": "NONE",
+      "returnedFunction": "NONE"
+    },
+    "dateMin": {
+      "id": "date_mm8ftj9y",
+      "title": "Date MIN",
+      "type": "date",
+      "requestedFunction": "MIN",
+      "returnedFunction": "MIN"
+    },
+    "dateMax": {
+      "id": "date_mm8fyzvy",
+      "title": "Date MAX",
+      "type": "date",
+      "requestedFunction": "MAX",
+      "returnedFunction": "MAX"
+    },
+    "timeline": {
+      "id": "timerange_mm8fjt8t",
+      "title": "Timeline",
+      "type": "timeline",
+      "requestedFunction": "MIN_MAX",
+      "returnedFunction": "MIN_MAX"
+    }
+  },
+  "items": {
+    "R1": "13377361084",
+    "A": "13377349123",
+    "A1": "13377355978",
+    "A2": "13377353920",
+    "B": "13377349285"
+  }
+}

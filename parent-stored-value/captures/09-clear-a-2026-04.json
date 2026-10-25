@@ -1,0 +1,49 @@
+{
+  "file": "09-clear-a-2026-04",
+  "case": "clear",
+  "description": "Clear A's own rollup cells (null)",
+  "endpoint": "https://api.monday.com/v2",
+  "method": "POST",
+  "requestHeaders": {
+    "API-Version": "2026-04",
+    "Content-Type": "application/json"
+  },
+  "authorizationHeader": "sent; value not recorded",
+  "apiVersion": "2026-04",
+  "requestBody": "{\"query\":\"mutation ($b: ID!, $i: ID!, $v: JSON!) { change_multiple_column_values(board_id: $b, item_id: $i, column_values: $v) { id } }\",\"variables\":{\"b\":\"18436846804\",\"i\":\"13374271723\",\"v\":\"{\\\"numeric_mm8er9xg\\\":null,\\\"numeric_mm8esxg1\\\":null,\\\"numeric_mm8e1qed\\\":null,\\\"numeric_mm8e1myd\\\":null,\\\"date_mm8e937y\\\":null,\\\"date_mm8es1zd\\\":null,\\\"timerange_mkyvnykb\\\":null}\"}}",
+  "query": "mutation ($b: ID!, $i: ID!, $v: JSON!) { change_multiple_column_values(board_id: $b, item_id: $i, column_values: $v) { id } }",
+  "variables": {
+    "b": "18436846804",
+    "i": "13374271723",
+    "v": "{\"numeric_mm8er9xg\":null,\"numeric_mm8esxg1\":null,\"numeric_mm8e1qed\":null,\"numeric_mm8e1myd\":null,\"date_mm8e937y\":null,\"date_mm8es1zd\":null,\"timerange_mkyvnykb\":null}"
+  },
+  "startedAt": "2026-10-25T02:41:32.385Z",
+  "endedAt": "2026-10-25T02:41:33.273Z",
+  "durationMs": 888,
+  "status": 200,
+  "xRequestId": "d2b84514-c353-9a56-ace3-32fb619e4c30",
+  "rateLimitHeaders": {
+    "ratelimit": "\"minuteRate\";r=3308, \"concurrency\";r=199, \"complexityMinute\";r=9609192;t=1",
+    "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\""
+  },
+  "responseHeaders": {
+    "api-version": "2026-04",
+    "content-type": "application/json; charset=utf-8",
+    "date": "Sun, 25 Oct 2026 02:41:33 GMT",
+    "ratelimit": "\"minuteRate\";r=3308, \"concurrency\";r=199, \"complexityMinute\";r=9609192;t=1",
+    "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\"",
+    "x-request-id": "d2b84514-c353-9a56-ace3-32fb619e4c30"
+  },
+  "extensionsRequestId": "d2b84514-c353-9a56-ace3-32fb619e4c30",
+  "responseBodyRaw": "{\"data\":{\"change_multiple_column_values\":{\"id\":\"13374271723\"}},\"extensions\":{\"request_id\":\"d2b84514-c353-9a56-ace3-32fb619e4c30\"}}",
+  "responseBody": {
+    "data": {
+      "change_multiple_column_values": {
+        "id": "13374271723"
+      }
+    },
+    "extensions": {
+      "request_id": "d2b84514-c353-9a56-ace3-32fb619e4c30"
+    }
+  }
+}

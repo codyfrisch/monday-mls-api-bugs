@@ -1,0 +1,68 @@
+{
+  "file": "06-c3-mid-level-alone-2026-04",
+  "case": "C3",
+  "description": "mid-level subitem alone [A]",
+  "endpoint": "https://api.monday.com/v2",
+  "method": "POST",
+  "requestHeaders": {
+    "API-Version": "2026-04",
+    "Content-Type": "application/json"
+  },
+  "authorizationHeader": "sent; value not recorded",
+  "apiVersion": "2026-04",
+  "requestBody": "{\"query\":\"query ($ids: [ID!]) { items(ids: $ids) { id name subitems { id name parent_item { id } } } }\",\"variables\":{\"ids\":[\"13374271723\"]}}",
+  "query": "query ($ids: [ID!]) { items(ids: $ids) { id name subitems { id name parent_item { id } } } }",
+  "variables": {
+    "ids": [
+      "13374271723"
+    ]
+  },
+  "startedAt": "2026-10-25T02:29:30.993Z",
+  "endedAt": "2026-10-25T02:29:31.549Z",
+  "durationMs": 556,
+  "status": 200,
+  "xRequestId": "aedda396-4daf-9b95-a399-51a189405f9e",
+  "rateLimitHeaders": {
+    "ratelimit": "\"minuteRate\";r=3328, \"concurrency\";r=199, \"complexityMinute\";r=9997470;t=52",
+    "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\""
+  },
+  "responseHeaders": {
+    "api-version": "2026-04",
+    "content-type": "application/json; charset=utf-8",
+    "date": "Sun, 25 Oct 2026 02:29:31 GMT",
+    "ratelimit": "\"minuteRate\";r=3328, \"concurrency\";r=199, \"complexityMinute\";r=9997470;t=52",
+    "ratelimit-policy": "\"minuteRate\";q=3335;w=60, \"concurrency\";q=200;qu=\"concurrent-requests\", \"complexityMinute\";q=10000000;w=60;qu=\"content-bytes\"",
+    "x-request-id": "aedda396-4daf-9b95-a399-51a189405f9e"
+  },
+  "extensionsRequestId": "aedda396-4daf-9b95-a399-51a189405f9e",
+  "responseBodyRaw": "{\"data\":{\"items\":[{\"id\":\"13374271723\",\"name\":\"A (L2)\",\"subitems\":[{\"id\":\"13374266669\",\"name\":\"A1 (L3 leaf)\",\"parent_item\":{\"id\":\"13374271723\"}},{\"id\":\"13374259848\",\"name\":\"A2 (L3)\",\"parent_item\":{\"id\":\"13374271723\"}}]}]},\"extensions\":{\"request_id\":\"aedda396-4daf-9b95-a399-51a189405f9e\"}}",
+  "responseBody": {
+    "data": {
+      "items": [
+        {
+          "id": "13374271723",
+          "name": "A (L2)",
+          "subitems": [
+            {
+              "id": "13374266669",
+              "name": "A1 (L3 leaf)",
+              "parent_item": {
+                "id": "13374271723"
+              }
+            },
+            {
+              "id": "13374259848",
+              "name": "A2 (L3)",
+              "parent_item": {
+                "id": "13374271723"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    "extensions": {
+      "request_id": "aedda396-4daf-9b95-a399-51a189405f9e"
+    }
+  }
+}
